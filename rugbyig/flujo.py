@@ -50,10 +50,15 @@ AYUDA = (
 
 
 NOVEDADES = (
-    "🆕 <b>Novedades</b>\n"
-    "· Menú por niveles: Nacionales · Copa del Rey · Regionales (Castilla y León) y M23.\n"
-    "· 🎨 <b>Estilo</b>: 5 estilos visuales con muestras (botón de abajo).\n"
-    "· Todo va bastante más rápido."
+    "🆕 <b>Novedades</b>
+"
+    "· 🗺 Regionales senior: Madrid, Cataluña, Andalucía, Euskadi y Castilla y León.
+"
+    "· 📈 Más estadísticas: ensayadores, puntos al pie, tarjetas, banquillo y la liga en números.
+"
+    "· 🎨 Estilos nuevos de verdad: Noche, Brutal, Prensa, Tele y Retro (botón 🎨 Estilo).
+"
+    "· Menú por niveles y todo más rápido."
 )
 
 
@@ -211,7 +216,7 @@ def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
 # ---------- Menús con botones: liga -> qué -> jornada ----------
 
 TECLADO_FIJO = [["📋 Pedir", "🎨 Estilo", "❓ Ayuda"]]
-VERSION_TECLADO = 2  # súbelo al cambiar el teclado fijo para que se reenvíe
+VERSION_TECLADO = 3  # súbelo al cambiar el teclado fijo para que se reenvíe
 COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
             ("estilo", "Cambiar el estilo visual"),
             ("semana", "Mandar ya los carruseles de esta semana"),

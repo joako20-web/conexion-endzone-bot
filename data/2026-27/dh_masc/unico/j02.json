@@ -3565,6 +3565,388 @@
       }
     ]
   },
+  "rankings": {
+    "ensayadores": [
+      {
+        "nombre": "ADRIAN FERNANDEZ COUVREUR",
+        "equipo": "CRC POZUELO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "AMPO ORDIZIA"
+      },
+      {
+        "nombre": "BALTAZAR TAIBO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 1,
+        "detalle": "12 puntos",
+        "rival": "COMPLUTENSE CISNEROS"
+      },
+      {
+        "nombre": "SANTIAGO ORTEGA GRANDELA",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "7 puntos",
+        "rival": "INVERSUS LICEO FRANCES"
+      },
+      {
+        "nombre": "ADRIAN LOUIS GABAS RUIZ",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "VULCANIZADOS ALVAREZ EL SALVADOR"
+      },
+      {
+        "nombre": "ALAIN ARAÑA OIARBIDE",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "CRC POZUELO RUGBY"
+      },
+      {
+        "nombre": "ALVARO VILCHEZ PEINADO",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "UNIO ESPORTIVA SANTBOIANA"
+      },
+      {
+        "nombre": "ANDER ALBERDI MENDIZABAL",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "CRC POZUELO RUGBY"
+      }
+    ],
+    "pateadores": [
+      {
+        "nombre": "SANTIAGO IGNACIO MANSILLA",
+        "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+        "valor": 18,
+        "detalle": "6 golpes",
+        "rival": "SILICIUS ALCOBENDAS RUGBY"
+      },
+      {
+        "nombre": "AGUSTIN ALTAMIRANO DECICCO",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 11,
+        "detalle": "4 transf. · 1 drop",
+        "rival": "UNIO ESPORTIVA SANTBOIANA"
+      },
+      {
+        "nombre": "BEAU FINNIAN PEART",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 10,
+        "detalle": "5 transf.",
+        "rival": "CRC POZUELO RUGBY"
+      },
+      {
+        "nombre": "ALFONSO ENCISO TEJERINA",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 8,
+        "detalle": "4 transf.",
+        "rival": "INVERSUS LICEO FRANCES"
+      },
+      {
+        "nombre": "ADRIAN ARIAS LASTRA",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 7,
+        "detalle": "2 transf. · 1 golpe",
+        "rival": "VULCANIZADOS ALVAREZ EL SALVADOR"
+      },
+      {
+        "nombre": "BALTAZAR TAIBO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 7,
+        "detalle": "2 transf. · 1 golpe",
+        "rival": "COMPLUTENSE CISNEROS"
+      },
+      {
+        "nombre": "ALBERT MILLAN DIAZ",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 6,
+        "detalle": "3 transf.",
+        "rival": "HUESITOS LA VILA RUGBY CLUB"
+      }
+    ],
+    "ensayadores_t": [
+      {
+        "nombre": "PEDRO CANE SGRO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "BALTAZAR MONTOYA QUIROGA",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 2,
+        "detalle": "12 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIAN FERNANDEZ COUVREUR",
+        "equipo": "CRC POZUELO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIANO TALEMAISUVA",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "AGUSTIN SEBASTIAN GIL COMESAÑA",
+        "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "BORJA IBAÑEZ ESCALERA",
+        "equipo": "CRC POZUELO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "DIEGO BLASCO PRIETO",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": ""
+      }
+    ],
+    "pateadores_t": [
+      {
+        "nombre": "SANTIAGO IGNACIO MANSILLA",
+        "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+        "valor": 42,
+        "detalle": "3 transf. · 12 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIAN ARIAS LASTRA",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 17,
+        "detalle": "4 transf. · 3 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "ALBERT MILLAN DIAZ",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 16,
+        "detalle": "5 transf. · 2 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "BALTAZAR TAIBO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 15,
+        "detalle": "6 transf. · 1 golpe",
+        "rival": ""
+      },
+      {
+        "nombre": "BEAU FINNIAN PEART",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 15,
+        "detalle": "6 transf. · 1 golpe",
+        "rival": ""
+      },
+      {
+        "nombre": "HUGO DOUGLAS VENTOSA",
+        "equipo": "CRC POZUELO RUGBY",
+        "valor": 14,
+        "detalle": "4 transf. · 2 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "SANTIAGO ORTEGA GRANDELA",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 14,
+        "detalle": "1 transf. · 4 golpes",
+        "rival": ""
+      }
+    ],
+    "disciplina": [
+      {
+        "nombre": "BEÑAT AZURMENDI SENAR",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "FERNANDO MARTIN LOPEZ PEREZ",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "DIEGO CARVAJALES RODRIGUEZ",
+        "equipo": "SILICIUS ALCOBENDAS RUGBY",
+        "valor": 1,
+        "detalle": "1 roja",
+        "rival": ""
+      },
+      {
+        "nombre": "NICOLAS PONCE SOLTERO",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 1,
+        "detalle": "1 roja",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIAN MUNYARADZI ZIVANAI",
+        "equipo": "SILICIUS ALCOBENDAS RUGBY",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
+        "nombre": "ALEJANDRO SUAREZ RODRIGUEZ",
+        "equipo": "SILICIUS ALCOBENDAS RUGBY",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
+        "nombre": "ARNAU URPINAS TORRENTS",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      }
+    ],
+    "banquillo": [
+      {
+        "nombre": "SANTIAGO ORTEGA GRANDELA",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 7,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIAN LOUIS GABAS RUIZ",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "ANDER ALBERDI MENDIZABAL",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "ASIER PEREZ CERVILLA",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "BERNAT FERNANDEZ SIERRA",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "NICHOLAS GOLDSPINK BOREL",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "ROCKLYN JOHN KENNEALLY",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      }
+    ],
+    "equipos": [
+      {
+        "titulo": "Mejor ataque",
+        "unidad": "pts a favor",
+        "filas": [
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 67
+          },
+          {
+            "equipo": "UNIO ESPORTIVA SANTBOIANA",
+            "valor": 63
+          },
+          {
+            "equipo": "VRAC QUESOS ENTREPINARES",
+            "valor": 62
+          }
+        ]
+      },
+      {
+        "titulo": "Mejor defensa",
+        "unidad": "pts en contra",
+        "filas": [
+          {
+            "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+            "valor": 35
+          },
+          {
+            "equipo": "VRAC QUESOS ENTREPINARES",
+            "valor": 36
+          },
+          {
+            "equipo": "SILICIUS ALCOBENDAS RUGBY",
+            "valor": 37
+          }
+        ]
+      },
+      {
+        "titulo": "Más ensayos",
+        "unidad": "ensayos",
+        "filas": [
+          {
+            "equipo": "VRAC QUESOS ENTREPINARES",
+            "valor": 9
+          },
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 9
+          },
+          {
+            "equipo": "AMPO ORDIZIA",
+            "valor": 9
+          }
+        ]
+      },
+      {
+        "titulo": "Más tarjetas",
+        "unidad": "tarjetas",
+        "filas": [
+          {
+            "equipo": "SILICIUS ALCOBENDAS RUGBY",
+            "valor": 5
+          },
+          {
+            "equipo": "AMPO ORDIZIA",
+            "valor": 4
+          },
+          {
+            "equipo": "VRAC QUESOS ENTREPINARES",
+            "valor": 3
+          }
+        ]
+      }
+    ]
+  },
   "datos_jornada": [
     {
       "clave": "datos",
