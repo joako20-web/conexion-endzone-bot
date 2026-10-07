@@ -99,6 +99,7 @@ EXTRA = ["datos"]
 # Rankings bajo pedido (ver docstring del módulo)
 RANKINGS = ["ensayadores", "pateadores", "ensayadores_t", "pateadores_t", "disciplina", "banquillo", "equipos"]
 TAMANOS = {"post": (1080, 1350), "historia": (1080, 1920)}
+ESCALA = 2  # imágenes finales de 2160x2700 (post) y 2160x3840 (historia)
 
 
 def zonas_de(comp: str, grupo: str) -> list[dict]:
@@ -254,9 +255,9 @@ def _escudo_uri(url: str) -> str:
         img = Image.open(io.BytesIO(compartido().imagen(url))).convert("RGB")
     except Exception:
         return ""
-    img.thumbnail((200, 200))
+    img.thumbnail((480, 480))  # se pinta a doble resolución: hasta 230 px CSS -> 460 px reales
     buf = io.BytesIO()
-    img.save(buf, "JPEG", quality=90)
+    img.save(buf, "JPEG", quality=94)
     return _data_uri(buf.getvalue(), "image/jpeg")
 
 
@@ -337,7 +338,8 @@ class _Navegador:
             self.pw = sync_playwright().start()
             canal = os.environ.get("PLAYWRIGHT_CHANNEL")  # "chrome" en GitHub: ya viene instalado
             self.nav = self.pw.chromium.launch(channel=canal) if canal else self.pw.chromium.launch()
-        pagina = self.nav.new_page(viewport={"width": ancho, "height": alto})
+        # Doble resolución: texto y escudos nítidos aunque Telegram vuelva a comprimir
+        pagina = self.nav.new_page(viewport={"width": ancho, "height": alto}, device_scale_factor=ESCALA)
         return pagina
 
     def cerrar(self):
@@ -368,7 +370,7 @@ def renderizar_slides(
         pagina.evaluate("document.fonts.ready")
         for sec, s in zip(pagina.query_selector_all("section.slide"), slides):
             jpg = destino / f"{len(generados) + 1:02d}_{s['clave']}.jpg"
-            sec.screenshot(path=str(jpg), type="jpeg", quality=92)
+            sec.screenshot(path=str(jpg), type="jpeg", quality=95)
             generados.append(jpg)
     finally:
         pagina.close()
