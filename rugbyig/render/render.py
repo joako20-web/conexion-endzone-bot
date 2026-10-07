@@ -81,7 +81,7 @@ def fila_anotador(x: dict, temporada: bool = False) -> dict:
             partes.append(_n(x["golpes"], "golpe", "golpes"))
         if x.get("drops"):
             partes.append(_n(x["drops"], "drop", "drops"))
-    else:
+    elif x.get("id") is not None:  # tabla oficial: partidos jugados reales
         partes.append(_n(x["pj"], "partido", "partidos"))
     return {
         "nombre": x["nombre"],

@@ -26,7 +26,9 @@ from rugbyig.telegram import Telegram
 # Claves de slide abreviadas para caber en los 64 bytes de un botón.
 ABREV = {"portada": "p", "resultados": "r", "anotadores": "a", "xv": "x",
          "clasificacion": "c", "previa": "v", "temporada": "t", "datos": "d",
-         "grupos": "g", "cuadro": "k"}
+         "grupos": "g", "cuadro": "k",
+         "ensayadores": "y", "ensayadores_t": "Y", "pateadores": "f", "pateadores_t": "F",
+         "disciplina": "j", "banquillo": "b", "equipos": "q"}
 # Imágenes de nivel competición (no dependen de un grupo ni de una jornada).
 DE_COMPETICION = {"grupos", "cuadro"}
 DESABREV = {v: k for k, v in ABREV.items()}
@@ -217,9 +219,16 @@ COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
 QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("📅 Próxima jornada", "v"),
        ("🔢 Clasificación", "c"), ("🗂 Todos los grupos", "g"), ("🏆 Cuadro / play-off", "k"),
        ("⭐ XV ideal", "x"), ("🎯 Anotadores", "a"), ("📈 Anotadores temporada", "t"),
-       ("💡 El dato de la jornada", "d"), ("🖼 Portada", "p")]
+       ("💡 El dato de la jornada", "d"), ("🖼 Portada", "p"),
+       ("🏉 Ensayadores (jornada)", "y"), ("🏉 Ensayadores (temporada)", "Y"),
+       ("🦶 Puntos al pie (jornada)", "f"), ("🦶 Pateadores (temporada)", "F"),
+       ("🟨 Tarjetas", "j"), ("🔄 Desde el banquillo", "b"), ("📊 La liga en números", "q")]
+# Submenú "Más estadísticas"
+FILAS_STATS = [["t"], ["y", "Y"], ["f", "F"], ["j", "b"], ["q"], ["d"]]
+# Imágenes de temporada: no se elige jornada
+DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k"}
 # Filas del menú "¿qué quieres?" (agrupadas por tema)
-FILAS_QUE = [["*"], ["r", "v"], ["c", "g", "k"], ["x", "a"], ["t", "d"], ["p"]]
+FILAS_QUE = [["*"], ["r", "v"], ["c", "g", "k"], ["x", "a"], ["+"], ["p"]]
 CATEGORIAS = {"nacional": "🇪🇸 Nacionales", "copa": "🏆 Copa del Rey", "regional": "🗺 Regionales"}
 
 
@@ -306,6 +315,9 @@ def _menu_que(liga: str) -> tuple[str, list]:
     etiqueta = {c: t for t, c in QUE}
     filas = []
     for fila in FILAS_QUE:
+        if fila == ["+"]:
+            filas.append([("📈 Más estadísticas ▸", f"ms|{liga}")])
+            continue
         botones = [(etiqueta[c], f"m3|{liga}|{c}") for c in fila if c not in ocultar]
         if botones:
             filas.append(botones)
@@ -318,10 +330,16 @@ def _menu_que(liga: str) -> tuple[str, list]:
     return f"<b>{_nombre_liga(liga)}</b>\n¿Qué quieres?", filas
 
 
+def _menu_stats(liga: str) -> tuple[str, list]:
+    etiqueta = {c: t for t, c in QUE}
+    filas = [[(etiqueta[c], f"m3|{liga}|{c}") for c in fila] for fila in FILAS_STATS]
+    return f"<b>{_nombre_liga(liga)}</b>\n📈 Más estadísticas", filas + [[("⬅️ Volver", f"m2|{liga}")]]
+
+
 def _menu_jornada(liga: str, cod: str) -> tuple[str, list] | None:
     comp, grupo = liga.split("/")
     grupo_ref = next(iter(cargar_config()["competiciones"][comp]["grupos"])) if grupo == "*" else grupo
-    if cod in ("v", "g", "k"):
+    if cod in DE_TEMPORADA:
         return None  # siempre lo último
     jugadas = jornadas_jugadas(comp, grupo_ref)
     if len(jugadas) <= 1:
@@ -344,6 +362,8 @@ def _menu(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
         tg.editar(chat_id, mid, *_menu_grupos(partes[1]))
     elif paso == "m2":
         tg.editar(chat_id, mid, *_menu_que(partes[1]))
+    elif paso == "ms":
+        tg.editar(chat_id, mid, *_menu_stats(partes[1]))
     elif paso in ("m3", "m4"):
         liga, cod = partes[1], partes[2]
         if paso == "m3" and (menu := _menu_jornada(liga, cod)):

@@ -36,6 +36,11 @@ TIPOS = [
     ("portada", r"portada|mvp|mejor jugador"),
     ("datos", r"\bdatos?\b|curiosidad|record"),
     ("grupos", r"todos los grupos|fase de grupos|\bgrupos\b"),
+    ("ensayadores", r"ensayador|\btry\b|\btries\b"),
+    ("pateadores", r"pateador|pie\b|patada|pateo|palos"),
+    ("disciplina", r"tarjeta|amarilla|roja|disciplina|expulsi"),
+    ("banquillo", r"banquillo|suplente"),
+    ("equipos", r"en numeros|mejor ataque|mejor defensa|\bequipos\b"),
     ("cuadro", r"cuadro|play.?off|eliminatoria|semifinal|cruces"),
 ]
 TODO = r"\btodo\b|carrusel|completo|resumen|\bpost\b"
@@ -75,8 +80,11 @@ def interpretar(texto: str) -> Pedido | None:
     if not ligas:
         return None
     claves = []
+    temporada = re.search(r"temporada|de la liga|acumulad|total", t)
     for clave, patron in TIPOS:
         if re.search(patron, t) and not (clave == "anotadores" and "temporada" in claves):
+            if temporada and clave in ("ensayadores", "pateadores"):
+                clave += "_t"
             claves.append(clave)
     if re.search(TODO, t) or not claves:
         claves = None

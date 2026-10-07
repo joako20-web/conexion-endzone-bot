@@ -9,6 +9,7 @@ from pathlib import Path
 import yaml
 
 from rugbyig.core import datos as D
+from rugbyig.models import JugadorTemporada
 from rugbyig.core import rankings as R
 from rugbyig.core import estadisticas as E
 from rugbyig.scraper.isquad import ISquad, cliente_para
@@ -70,6 +71,22 @@ def _fila_resumen(ln: E.LineaJugador) -> list:
             ln.tarjetas.count("amarilla"), rojas, ln.dorsal]
 
 
+def jugadores_desde_resumen(resumen: dict[str, list]) -> list[JugadorTemporada]:
+    """Tabla de temporada (puntos, ensayos, tarjetas) sumando el resumen de partidos."""
+    acum: dict[tuple[str, str], JugadorTemporada] = {}
+    for filas in resumen.values():
+        for f in filas:
+            nombre, equipo, puntos, ensayos = f[0], f[1], f[2], f[3]
+            j = acum.setdefault((nombre, equipo), JugadorTemporada(None, nombre, equipo, 0, 0, 0, 0, 0))
+            j.pj += 1  # partidos con alguna anotación o tarjeta
+            j.puntos += puntos
+            j.ensayos += ensayos
+            if len(f) > 8:
+                j.amarillas += f[7]
+                j.rojas += f[8]
+    return [j for j in acum.values() if j.puntos or j.ensayos]
+
+
 def resumen_temporada(comp: str, grupo: str, competicion, cliente: ISquad) -> dict[str, list]:
     """Estadísticas de cada jugador en cada partido jugado de la temporada.
 
@@ -125,6 +142,8 @@ def preparar_jornada(
         lineas += E.lineas_partido(p, acta)
         actas_jornada.append((_partido(p), [asdict(e) for e in acta.eventos]))
     resumen = resumen_temporada(comp, grupo, competicion, cliente)
+    # MatchReady no publica tabla de jugadores: se calcula con las actas de la temporada
+    jugadores_temporada = competicion.jugadores or jugadores_desde_resumen(resumen)
 
     xv = E.xv_ideal(lineas) if cfg.get("xv_ideal") and lineas else {}
     mejores = sorted(xv.values(), key=lambda ln: -ln.nota) + E.anotadores(lineas, 5)
@@ -158,11 +177,11 @@ def preparar_jornada(
         "escudos": {f.equipo: f.escudo for f in clasificacion if f.escudo},
         "temporada_anotadores": [
             asdict(j)
-            for j in sorted(competicion.jugadores, key=lambda j: (-j.puntos, -j.ensayos))[:10]
+            for j in sorted(jugadores_temporada, key=lambda j: (-j.puntos, -j.ensayos))[:10]
         ],
         "temporada_ensayadores": [
             asdict(j)
-            for j in sorted(competicion.jugadores, key=lambda j: (-j.ensayos, -j.puntos))[:5]
+            for j in sorted(jugadores_temporada, key=lambda j: (-j.ensayos, -j.puntos))[:5]
         ],
         "proxima_jornada": {
             "numero": jornada + 1,
