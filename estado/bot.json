@@ -1,7 +1,29 @@
 {
-  "offset": 736686236,
+  "offset": 736686256,
   "chat_id": 8634024483,
   "esperando": null,
   "teclado": 3,
-  "tema": "tele"
+  "tema": "tele",
+  "finales2": [
+    "dh_elite:17733",
+    "dh_elite:17734",
+    "dh_elite:17735",
+    "dh_elite:17736",
+    "dh_elite:17737",
+    "dh_elite:17739",
+    "dh_elite:17740",
+    "dh_elite:17741",
+    "dh_elite:17742",
+    "dh_masc:17643",
+    "dh_masc:17644",
+    "dh_masc:17645",
+    "dh_masc:17646",
+    "dh_masc:17647",
+    "dh_masc:17648",
+    "dh_masc:17649",
+    "dh_masc:17650",
+    "dh_masc:17651",
+    "dh_masc:17652"
+  ],
+  "finales_vistos": {}
 }
