@@ -1,0 +1,18 @@
+{
+  "2026-27_dhb_masc_C_j02": {
+    "competicion": "dhb_masc",
+    "grupo": "C",
+    "jornada": 2,
+    "json": "data/2026-27/dhb_masc/C/j02.json",
+    "actas_pendientes": [],
+    "jugados": 4
+  },
+  "2026-27_dh_masc_unico_j02": {
+    "competicion": "dh_masc",
+    "grupo": "unico",
+    "jornada": 2,
+    "json": "data/2026-27/dh_masc/unico/j02.json",
+    "actas_pendientes": [],
+    "jugados": 5
+  }
+}
