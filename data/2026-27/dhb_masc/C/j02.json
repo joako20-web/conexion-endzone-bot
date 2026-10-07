@@ -14,7 +14,9 @@
       "puntos_local": 32,
       "puntos_visitante": 26,
       "campo": "Estadio Municipal Luisón Abad",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
     },
     {
       "id": 18023,
@@ -25,7 +27,9 @@
       "puntos_local": 55,
       "puntos_visitante": 5,
       "campo": "Parque Deportivo Puerta de Hierro",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
     },
     {
       "id": 18024,
@@ -36,7 +40,9 @@
       "puntos_local": 30,
       "puntos_visitante": 24,
       "campo": "CAMPO DE RUGBY LAS LAGUNILLAS",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
     },
     {
       "id": 18026,
@@ -47,7 +53,115 @@
       "puntos_local": 33,
       "puntos_visitante": 10,
       "campo": "Las Terrazas",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    }
+  ],
+  "partidos_temporada": [
+    {
+      "id": 18019,
+      "jornada": 1,
+      "fecha": "2026-09-26T16:00:00",
+      "local": "CAR SEVILLA",
+      "visitante": "HERMO SOTO DEL REAL",
+      "puntos_local": 50,
+      "puntos_visitante": 7,
+      "campo": "IMD SAN Pablo",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    },
+    {
+      "id": 18020,
+      "jornada": 1,
+      "fecha": "2026-09-26T16:00:00",
+      "local": "COMPLUTENSE CISNEROS ZETA",
+      "visitante": "CLUB JAEN RUGBY",
+      "puntos_local": 47,
+      "puntos_visitante": 44,
+      "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 2",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    },
+    {
+      "id": 18022,
+      "jornada": 1,
+      "fecha": "2026-09-26T16:00:00",
+      "local": "C.A.R. CACERES",
+      "visitante": "RUGBY MAJADAHONDA",
+      "puntos_local": 24,
+      "puntos_visitante": 49,
+      "campo": "COMPLEJO DEPORTIVO EL CUARTILLO",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    },
+    {
+      "id": 18021,
+      "jornada": 1,
+      "fecha": "2026-09-26T18:45:00",
+      "local": "SILICIUS ALCOBENDAS RUGBY B",
+      "visitante": "CLUB RUGBY ALCALA",
+      "puntos_local": 20,
+      "puntos_visitante": 38,
+      "campo": "Las Terrazas",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    },
+    {
+      "id": 18025,
+      "jornada": 2,
+      "fecha": "2026-10-03T14:00:00",
+      "local": "CLUB RUGBY ALCALA",
+      "visitante": "COMPLUTENSE CISNEROS ZETA",
+      "puntos_local": 32,
+      "puntos_visitante": 26,
+      "campo": "Estadio Municipal Luisón Abad",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    },
+    {
+      "id": 18023,
+      "jornada": 2,
+      "fecha": "2026-10-03T16:00:00",
+      "local": "HERMO SOTO DEL REAL",
+      "visitante": "C.A.R. CACERES",
+      "puntos_local": 55,
+      "puntos_visitante": 5,
+      "campo": "Parque Deportivo Puerta de Hierro",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    },
+    {
+      "id": 18024,
+      "jornada": 2,
+      "fecha": "2026-10-03T16:00:00",
+      "local": "CLUB JAEN RUGBY",
+      "visitante": "CAR SEVILLA",
+      "puntos_local": 30,
+      "puntos_visitante": 24,
+      "campo": "CAMPO DE RUGBY LAS LAGUNILLAS",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
+    },
+    {
+      "id": 18026,
+      "jornada": 2,
+      "fecha": "2026-10-03T17:00:00",
+      "local": "SILICIUS ALCOBENDAS RUGBY B",
+      "visitante": "RUGBY MAJADAHONDA",
+      "puntos_local": 33,
+      "puntos_visitante": 10,
+      "campo": "Las Terrazas",
+      "estado": "jugado",
+      "grupo": 1302,
+      "ronda": ""
     }
   ],
   "actas_pendientes": [],
@@ -2828,7 +2942,9 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "CAMPO JUAN ANTONIO ARENAS POSADAS",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": 1302,
+        "ronda": ""
       },
       {
         "id": 18027,
@@ -2839,7 +2955,9 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "Parque Deportivo Puerta de Hierro",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": 1302,
+        "ronda": ""
       },
       {
         "id": 18029,
@@ -2850,7 +2968,9 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 2",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": 1302,
+        "ronda": ""
       },
       {
         "id": 18030,
@@ -2861,8 +2981,42 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "COMPLEJO DEPORTIVO EL CUARTILLO",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": 1302,
+        "ronda": ""
       }
     ]
-  }
+  },
+  "datos_jornada": [
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 81,
+      "numero": "50",
+      "unidad": "puntos de diferencia",
+      "titular": "Exhibición de Soto Real",
+      "contexto": "Soto Real 55-5 C.A.R. Caceres. La mayor diferencia de la temporada.",
+      "equipo": "HERMO SOTO DEL REAL"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 81,
+      "numero": "26",
+      "unidad": "puntos de desventaja remontados",
+      "titular": "Remontada de Alcala",
+      "contexto": "Llegó a perder de 26 ante Cisneros Zeta: Alcala 32-26 Cisneros Zeta.",
+      "equipo": "CLUB RUGBY ALCALA"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 65,
+      "numero": "10",
+      "unidad": "puntos de desventaja remontados",
+      "titular": "Remontada de Alcobendas B",
+      "contexto": "Llegó a perder de 10 ante Majadahonda: Alcobendas B 33-10 Majadahonda.",
+      "equipo": "SILICIUS ALCOBENDAS RUGBY B"
+    }
+  ]
 }

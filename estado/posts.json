@@ -14,5 +14,28 @@
     "json": "data/2026-27/dh_masc/unico/j02.json",
     "actas_pendientes": [],
     "jugados": 5
+  },
+  "2026-27_cyl_masc_unico_j01": {
+    "competicion": "cyl_masc",
+    "grupo": "unico",
+    "jornada": 1,
+    "json": "data/2026-27/cyl_masc/unico/j01.json",
+    "actas_pendientes": [
+      18287,
+      18286
+    ],
+    "jugados": 2
+  },
+  "2026-27_cyl_fem_unico_j01": {
+    "competicion": "cyl_fem",
+    "grupo": "unico",
+    "jornada": 1,
+    "json": "data/2026-27/cyl_fem/unico/j01.json",
+    "actas_pendientes": [
+      18388,
+      18387,
+      18386
+    ],
+    "jugados": 2
   }
 }
