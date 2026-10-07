@@ -69,5 +69,13 @@
     "json": "data/2026-27/mad_fem2/unico/j01.json",
     "actas_pendientes": [],
     "jugados": 3
+  },
+  "2026-27_mad_2r_B_j01": {
+    "competicion": "mad_2r",
+    "grupo": "B",
+    "jornada": 1,
+    "json": "data/2026-27/mad_2r/B/j01.json",
+    "actas_pendientes": [],
+    "jugados": 6
   }
 }
