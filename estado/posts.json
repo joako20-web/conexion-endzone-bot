@@ -53,5 +53,21 @@
     "json": "data/2026-27/mad_fem1/unico/j01.json",
     "actas_pendientes": [],
     "jugados": 5
+  },
+  "2026-27_dh_elite_unico_j02": {
+    "competicion": "dh_elite",
+    "grupo": "unico",
+    "jornada": 2,
+    "json": "data/2026-27/dh_elite/unico/j02.json",
+    "actas_pendientes": [],
+    "jugados": 4
+  },
+  "2026-27_mad_fem2_unico_j01": {
+    "competicion": "mad_fem2",
+    "grupo": "unico",
+    "jornada": 1,
+    "json": "data/2026-27/mad_fem2/unico/j01.json",
+    "actas_pendientes": [],
+    "jugados": 3
   }
 }
