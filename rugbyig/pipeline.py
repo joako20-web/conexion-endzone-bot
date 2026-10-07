@@ -10,7 +10,7 @@ import yaml
 
 from rugbyig.core import datos as D
 from rugbyig.core import estadisticas as E
-from rugbyig.scraper.isquad import ISquad, compartido
+from rugbyig.scraper.isquad import ISquad, cliente_para
 
 FOTO_MIN_PX = 600
 
@@ -55,7 +55,7 @@ def _partido(p) -> dict:
 
 def jornadas_jugadas(comp: str, grupo: str = "unico", cliente: ISquad | None = None) -> list[int]:
     cfg = cargar_config()["competiciones"][comp]
-    cliente = cliente or compartido()
+    cliente = cliente or cliente_para(cfg)
     id_grupo = cfg["grupos"][grupo]
     equipos = {f.equipo for f in cliente.clasificacion(id_grupo)}
     competicion = cliente.competicion(id_grupo).filtrar(id_grupo, equipos)
@@ -89,7 +89,7 @@ def preparar_jornada(
 ) -> Path:
     cfg = cargar_config()["competiciones"][comp]
     id_grupo = cfg["grupos"][grupo]
-    cliente = cliente or compartido()
+    cliente = cliente or cliente_para(cfg)
 
     clasificacion = cliente.clasificacion(id_grupo)
     competicion = cliente.competicion(id_grupo).filtrar(id_grupo, {f.equipo for f in clasificacion})
@@ -103,8 +103,7 @@ def preparar_jornada(
     actas_jornada = []
     for p in partidos:
         if not p.jugado:
-            pendientes.append(p.id)
-            continue
+            continue  # aplazado o sin resultado: sale como "Sin resultado", no es un acta pendiente
         acta = cliente.acta(p.id)
         if acta.marcador_por_eventos() != (p.puntos_local, p.puntos_visitante):
             # Acta incompleta: el marcador vale, pero no sus estadísticas.

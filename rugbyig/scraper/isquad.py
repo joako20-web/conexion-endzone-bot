@@ -113,3 +113,18 @@ def compartido() -> ISquad:
     if _COMPARTIDO is None:
         _COMPARTIDO = ISquad()
     return _COMPARTIDO
+
+
+_MATCHREADY: dict[str, ISquad] = {}
+
+
+def cliente_para(cfg_comp: dict) -> ISquad:
+    """Cliente de la plataforma de esa competición (iSquad por defecto, o MatchReady)."""
+    if cfg_comp.get("fuente") == "matchready":
+        from rugbyig.scraper.matchready import MatchReady
+
+        base = cfg_comp["base"]
+        if base not in _MATCHREADY:
+            _MATCHREADY[base] = MatchReady(base)
+        return _MATCHREADY[base]
+    return compartido()

@@ -112,3 +112,51 @@ competiciones:
     xv_ideal: true
     directo: false
     semanal: false
+
+  # ---- Regionales en MatchReady (fuente: matchready; grupo = "<temporada>/<competicion>") ----
+  # Los ids salen de la URL del iframe de cada federación: .../public/calendar/67/54/combined/
+  mad_1r:
+    {categoria: regional, region: "Madrid", fuente: matchready, base: "https://rugbymadrid.matchready.es/es",
+     nombre: "1ª Regional Madrid", corto: "1ª Reg. Madrid", grupos: {unico: "67/1"}, xv_ideal: true, directo: false, semanal: false}
+  mad_2r:
+    {categoria: regional, region: "Madrid", fuente: matchready, base: "https://rugbymadrid.matchready.es/es",
+     nombre: "2ª Regional Madrid", corto: "2ª Reg. Madrid", grupos: {A: "67/2", B: "67/12"}, xv_ideal: true, directo: false, semanal: false}
+  mad_3r:
+    {categoria: regional, region: "Madrid", fuente: matchready, base: "https://rugbymadrid.matchready.es/es",
+     nombre: "3ª Regional Madrid", corto: "3ª Reg. Madrid", grupos: {A: "67/3", B: "67/13"}, xv_ideal: true, directo: false, semanal: false}
+  mad_fem1:
+    {categoria: regional, region: "Madrid", fuente: matchready, base: "https://rugbymadrid.matchready.es/es",
+     nombre: "Femenina 1ª División Madrid", corto: "Fem 1ª Madrid", grupos: {unico: "67/54"}, xv_ideal: true, directo: false, semanal: false}
+  mad_fem2:
+    {categoria: regional, region: "Madrid", fuente: matchready, base: "https://rugbymadrid.matchready.es/es",
+     nombre: "Femenina 2ª División Madrid", corto: "Fem 2ª Madrid", grupos: {unico: "67/55"}, xv_ideal: true, directo: false, semanal: false}
+  cat_dhc:
+    {categoria: regional, region: "Cataluña", fuente: matchready, base: "https://matchready.es/rugbycat/web/es",
+     nombre: "Divisió d'Honor Catalana", corto: "DHCat", grupos: {unico: "56/115"}, xv_ideal: true, directo: false, semanal: false}
+  cat_1a:
+    {categoria: regional, region: "Cataluña", fuente: matchready, base: "https://matchready.es/rugbycat/web/es",
+     nombre: "1a Catalana", corto: "1a Cat", grupos: {unico: "56/36"}, xv_ideal: true, directo: false, semanal: false}
+  cat_2a:
+    {categoria: regional, region: "Cataluña", fuente: matchready, base: "https://matchready.es/rugbycat/web/es",
+     nombre: "2a Catalana", corto: "2a Cat", grupos: {unico: "56/37"}, xv_ideal: true, directo: false, semanal: false}
+  cat_3a:
+    {categoria: regional, region: "Cataluña", fuente: matchready, base: "https://matchready.es/rugbycat/web/es",
+     nombre: "3a Catalana", corto: "3a Cat", grupos: {A: "56/165", B: "56/166"}, xv_ideal: true, directo: false, semanal: false}
+  cat_dhc_fem:
+    {categoria: regional, region: "Cataluña", fuente: matchready, base: "https://matchready.es/rugbycat/web/es",
+     nombre: "Divisió d'Honor Catalana Femenina", corto: "DHCat Fem", grupos: {unico: "57/112"}, xv_ideal: true, directo: false, semanal: false}
+  cat_copa_fem:
+    {categoria: regional, region: "Cataluña", fuente: matchready, base: "https://matchready.es/rugbycat/web/es",
+     nombre: "Copa Catalana Femenina", corto: "Copa Cat Fem", grupos: {A: "57/102", B: "57/103"}, xv_ideal: true, directo: false, semanal: false}
+  and_1t:
+    {categoria: regional, region: "Andalucía", fuente: matchready, base: "https://farugby.matchready.es/es",
+     nombre: "1ª Territorial Andalucía", corto: "1ª And.", grupos: {unico: "35/85"}, xv_ideal: true, directo: false, semanal: false}
+  eus_s1:
+    {categoria: regional, region: "Euskadi", fuente: matchready, base: "https://euskadirugby.matchready.es/es",
+     nombre: "Euskal Liga Senior 1", corto: "Euskal 1", grupos: {unico: "31/1"}, xv_ideal: true, directo: false, semanal: false}
+  eus_s2:
+    {categoria: regional, region: "Euskadi", fuente: matchready, base: "https://euskadirugby.matchready.es/es",
+     nombre: "Euskal Liga Senior 2", corto: "Euskal 2", grupos: {unico: "31/2"}, xv_ideal: true, directo: false, semanal: false}
+  eus_fem:
+    {categoria: regional, region: "Euskadi", fuente: matchready, base: "https://euskadirugby.matchready.es/es",
+     nombre: "Euskal Liga Senior Femenina", corto: "Euskal Fem", grupos: {unico: "31/60"}, xv_ideal: true, directo: false, semanal: false}

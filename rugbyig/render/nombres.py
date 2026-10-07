@@ -27,6 +27,8 @@ def titulo(s: str) -> str:
     def cap(p: str) -> str:
         if "." in p.strip("."):  # siglas tipo C.A.R. o A.D.
             return p.upper()
+        if 2 <= len(p) <= 4 and p.isalpha() and not set(p) & set("aeiouáéíóú"):  # CRC, UES
+            return p.upper()
         return "-".join(x[:1].upper() + x[1:] for x in p.split("-"))
 
     palabras = s.lower().split()
@@ -36,7 +38,10 @@ def titulo(s: str) -> str:
 def equipo_corto(oficial: str) -> str:
     if oficial in _equipos():
         return _equipos()[oficial]["corto"]
-    utiles = [p for p in oficial.split() if p not in _RELLENO]
+    limpio = " ".join(oficial.replace(" -", " - ").split())
+    if len(limpio) <= 18:  # corto de por sí: entero
+        return titulo(limpio)
+    utiles = [p for p in limpio.split() if p not in _RELLENO and p.strip("-")]
     return titulo(" ".join(utiles[-2:] if len(utiles) > 2 else utiles))
 
 

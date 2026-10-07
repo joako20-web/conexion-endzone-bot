@@ -10,7 +10,7 @@ from rugbyig.core import estadisticas as E
 from rugbyig.pipeline import cargar_config
 from rugbyig.render import nombres
 from rugbyig.render.render import MESES, fila_anotador, renderizar_slides
-from rugbyig.scraper.isquad import ISquad, compartido
+from rugbyig.scraper.isquad import ISquad, cliente_para
 
 ESPERA_ACTA_MIN = 40  # si el acta no cuadra, se espera esto antes de mandar solo el marcador
 MAX_RECORDADOS = 600
@@ -28,8 +28,8 @@ def historia_final(comp: str, grupo: str, id_partido: int, destino: Path,
                    cliente: ISquad | None = None, forzar: bool = True) -> Path | None:
     """Genera la historia del partido. Con forzar=False devuelve None si el acta
     aún no cuadra con el marcador (para esperar a que se complete)."""
-    cliente = cliente or compartido()
     cfg = cargar_config()
+    cliente = cliente or cliente_para(cfg["competiciones"][comp])
     id_grupo = cfg["competiciones"][comp]["grupos"][grupo]
     clasificacion = cliente.clasificacion(id_grupo)
     competicion = cliente.competicion(id_grupo).filtrar(id_grupo, {f.equipo for f in clasificacion})
@@ -70,36 +70,39 @@ def comprobar(tg, b: dict, cliente: ISquad | None = None) -> int:
     La primera vez solo memoriza los partidos ya jugados (no manda el pasado).
     Devuelve cuántos se han mandado.
     """
-    cliente = cliente or compartido()
-    primera_vez = "finales" not in b
-    enviados = set(b.get("finales", []))
+    # Claves "comp:id_partido" (los ids de iSquad y MatchReady pueden coincidir)
+    primera_vez = "finales2" not in b
+    enviados = set(b.get("finales2", []))
     vistos: dict = b.get("finales_vistos", {})
     ahora = datetime.now().timestamp()
     n = 0
     for comp, grupo, id_grupo in _ligas():
+        cli = cliente or cliente_para(cargar_config()["competiciones"][comp])
         try:
-            clasificacion = cliente.clasificacion(id_grupo)
-            competicion = cliente.competicion(id_grupo).filtrar(id_grupo, {f.equipo for f in clasificacion})
+            clasificacion = cli.clasificacion(id_grupo)
+            competicion = cli.competicion(id_grupo).filtrar(id_grupo, {f.equipo for f in clasificacion})
         except Exception:
             continue
         for p in competicion.partidos:
-            if not p.jugado or p.id in enviados:
+            clave = f"{comp}:{p.id}"
+            if not p.jugado or clave in enviados:
                 continue
             if primera_vez:
-                enviados.add(p.id)
+                enviados.add(clave)
                 continue
             visto = vistos.setdefault(str(p.id), ahora)
             forzar = ahora - visto > ESPERA_ACTA_MIN * 60
             with tempfile.TemporaryDirectory() as tmp:
-                img = historia_final(comp, grupo, p.id, Path(tmp), cliente, forzar)
+                img = historia_final(comp, grupo, p.id, Path(tmp), cli, forzar)
                 if img is None:
                     continue  # acta aún incompleta: se reintenta en la siguiente vuelta
                 tg.foto(b["chat_id"], img)
             tg.mensaje(b["chat_id"], f"🏁 <b>Final</b> · {nombres.equipo_corto(p.local)} {p.puntos_local}-{p.puntos_visitante} {nombres.equipo_corto(p.visitante)}",
                        [[("📦 Original", f"fo|{comp}/{grupo}|{p.id}")]])
-            enviados.add(p.id)
+            enviados.add(clave)
             vistos.pop(str(p.id), None)
             n += 1
-    b["finales"] = sorted(enviados)[-MAX_RECORDADOS:]
+    b["finales2"] = sorted(enviados)[-MAX_RECORDADOS:]
+    b.pop("finales", None)
     b["finales_vistos"] = vistos
     return n
