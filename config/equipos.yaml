@@ -63,3 +63,4 @@
 "TÀRREGA/INEF LLEIDA B": {corto: "Tàrrega / INEF Lleida", abr: "TAR"}
 "RCLH/RCS/SHARC": {corto: "L'Hospitalet / RCS / Sharc", abr: "RCL"}
 "RCS/CRT B": {corto: "RCS / CRT B", abr: "RCS"}
+"OLÍMPICO - OSAS": {corto: "Olímpico / Osos del Pardo", abr: "OLO", clubes: ["OLIMPICO DE POZUELO RUGBY", "OSOS DEL PARDO"]}
