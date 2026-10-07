@@ -40,3 +40,8 @@
 "C.R. EL SALVADOR EMERGING": {corto: "El Salvador Emerging", abr: "SAL"}
 "CLUB DEPORTIVO UNIVERSIDAD DE SALAMANCA": {corto: "Universidad Salamanca", abr: "USA"}
 "CORMORAN RUGBY CLUB DE SANTANDER": {corto: "Cormorán", abr: "COR"}
+# Equipos conjunto (varios clubes): `clubes` = nombre de cada club tal y como aparece
+# en alguna liga que leemos; se dibujan sus escudos juntos en el mismo círculo.
+"SAN ISIDRO - CISNEROS": {corto: "San Isidro / Cisneros", abr: "SIC", clubes: ["SAN ISIDRO", "CISNEROS"]}
+"SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN": {corto: "Toledo / Alcorcón", abr: "TOA", clubes: ["TOLEDO", "ALCORCON"]}
+"XV HORTALEZA - GORILAS - LICEO FRANCÉS": {corto: "Hortaleza / Gorilas / Liceo", abr: "HGL", clubes: ["HORTALEZA", "GORILAS", "LICEO FRANCES"]}

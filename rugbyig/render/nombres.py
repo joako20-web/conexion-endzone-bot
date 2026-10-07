@@ -74,3 +74,9 @@ def jugador(nombre: str) -> dict:
         corto.pop()
     return {"nombre": partes[0], "apellidos": " ".join(apellidos), "completo": " ".join(partes),
             "corto": " ".join(corto)}
+
+
+def clubes_conjunto(oficial: str) -> list[str] | None:
+    """Clubes de un equipo conjunto (config/equipos.yaml: `clubes: [...]`), o None."""
+    cfg = _equipos().get(oficial) or {}
+    return cfg.get("clubes")

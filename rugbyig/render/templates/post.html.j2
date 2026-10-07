@@ -239,7 +239,7 @@ tr[class^="z-"] td.p { color: var(--texto); }
   <div class="cabecera">
     <div class="meta">
       <div class="meta-comp">{{ comp.nombre }}</div>
-      <div class="meta-sub">{% if comp.grupo %}{{ comp.grupo }}, {% endif %}{% if jornada and s.tipo != "portada" %}jornada {{ jornada }}{% else %}temporada {{ temporada }}{% endif %}</div>
+      <div class="meta-sub">{% if comp.sub %}{{ comp.sub }}{% else %}{% if comp.grupo %}{{ comp.grupo }}, {% endif %}{% if jornada and s.tipo != "portada" %}jornada {{ jornada }}{% else %}temporada {{ temporada }}{% endif %}{% endif %}</div>
     </div>
     <div class="escudo">
       {% if not loop.last %}<div class="flechas">»</div>{% endif %}

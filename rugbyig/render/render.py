@@ -267,18 +267,76 @@ def _foto(foto: dict) -> str:
 
 
 @lru_cache(maxsize=512)
-def _escudo_uri(url: str) -> str:
-    """Escudo reducido a 200 px (los originales son JPEG de 800 px con fondo blanco)."""
+def _imagen_escudo(url: str):
+    """Escudo como imagen RGB sobre fondo blanco (los PNG transparentes salían negros)."""
     from PIL import Image
 
-    try:
-        img = Image.open(io.BytesIO(compartido().imagen(url))).convert("RGB")
-    except Exception:
-        return ""
-    img.thumbnail((480, 480))  # se pinta a doble resolución: hasta 230 px CSS -> 460 px reales
+    img = Image.open(io.BytesIO(compartido().imagen(url)))
+    if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
+        img = img.convert("RGBA")
+        fondo = Image.new("RGB", img.size, (255, 255, 255))
+        fondo.paste(img, mask=img.split()[-1])
+        return fondo
+    return img.convert("RGB")
+
+
+def _jpeg_uri(img) -> str:
     buf = io.BytesIO()
     img.save(buf, "JPEG", quality=94)
     return _data_uri(buf.getvalue(), "image/jpeg")
+
+
+@lru_cache(maxsize=512)
+def _escudo_uri(url: str) -> str:
+    """Escudo reducido (se pinta a doble resolución: hasta 230 px CSS -> 460 px reales)."""
+    try:
+        img = _imagen_escudo(url)
+    except Exception:
+        return ""
+    img.thumbnail((480, 480))
+    return _jpeg_uri(img)
+
+
+@lru_cache(maxsize=64)
+def _escudo_conjunto(urls: tuple[str, ...]) -> str:
+    """Varios escudos en un mismo círculo (equipos que son conjunto de 2-3 clubes)."""
+    from PIL import Image
+
+    lienzo = Image.new("RGB", (480, 480), (255, 255, 255))
+    # Huecos dentro del círculo inscrito (radio 240) para 2 o 3 escudos
+    huecos = {2: [(30, 135, 205), (245, 135, 205)],
+              3: [(165, 45, 150), (68, 245, 150), (262, 245, 150)]}[min(len(urls), 3)]
+    for url, (x, y, lado) in zip(urls, huecos):
+        try:
+            img = _imagen_escudo(url)
+        except Exception:
+            continue
+        img.thumbnail((lado, lado))
+        lienzo.paste(img, (x + (lado - img.width) // 2, y + (lado - img.height) // 2))
+    return _jpeg_uri(lienzo)
+
+
+def escudos_de_clubes(clubes: list[str]) -> tuple[str, ...]:
+    """Busca el escudo de cada club (por nombre) entre todos los equipos que leemos."""
+    from rugbyig.fichas import indice_equipos, norm
+
+    indice = [c for c in indice_equipos() if c.get("escudo")]
+    urls = []
+    for club in clubes:
+        n = norm(club)
+        candidatos = [c for c in indice if n in norm(c["equipo"]) and " - " not in c["equipo"]]
+        if candidatos:  # el nombre más corto suele ser el club "puro" (sin filial ni patrocinador)
+            urls.append(min(candidatos, key=lambda c: len(c["equipo"]))["escudo"])
+    return tuple(urls)
+
+
+def escudo_equipo(equipo: str, escudos: dict) -> str:
+    conjunto = nombres.clubes_conjunto(equipo)
+    if conjunto:
+        urls = escudos_de_clubes(conjunto)
+        if len(urls) >= 2:
+            return _escudo_conjunto(urls)
+    return _escudo_uri(escudos[equipo]) if equipo in escudos else ""
 
 
 TEMAS = {"noche": "Noche", "brutal": "Brutal", "prensa": "Prensa", "tele": "Tele", "retro": "Retro"}
@@ -325,7 +383,7 @@ def html_post(datos: dict, slides: list[dict], formato: str = "post", tema: str 
     logo = _data_uri((RAIZ / marca["logo"]).read_bytes(), "image/png")
     escudos = datos.get("escudos", {})
     env = _env()
-    env.filters["escudo"] = lambda equipo: _escudo_uri(escudos[equipo]) if equipo in escudos else ""
+    env.filters["escudo"] = lambda equipo: escudo_equipo(equipo, escudos)
     return (
         env
         .get_template("post.html.j2")
@@ -342,6 +400,8 @@ def html_post(datos: dict, slides: list[dict], formato: str = "post", tema: str 
                 "nombre": cfg["nombre"],
                 "corto": cfg["corto"],
                 "grupo": None if datos["grupo"] == "unico" else f"Grupo {datos['grupo']}",
+                # Cabecera propia para imágenes que no son de una liga (agenda...)
+                **(datos.get("cabecera") or {}),
             },
         )
     )

@@ -10,12 +10,13 @@ from __future__ import annotations
 
 import html
 import json
+import re
 import tempfile
 import time
 import traceback
 from pathlib import Path
 
-from rugbyig import caption, directo, especiales, estado, evolucion, torneo
+from rugbyig import agenda, caption, destacado, directo, especiales, estado, evolucion, fichas, historico, torneo
 from rugbyig.core.editar import cambiar_xv
 from rugbyig.pedidos import interpretar
 from rugbyig.pipeline import RAIZ, cargar_config, jornadas_jugadas, preparar_jornada
@@ -30,7 +31,8 @@ ABREV = {"portada": "p", "resultados": "r", "anotadores": "a", "xv": "x",
          "ensayadores": "y", "ensayadores_t": "Y", "pateadores": "f", "pateadores_t": "F",
          "disciplina": "j", "banquillo": "b", "equipos": "q",
          "encuesta_mvp": "u", "encuesta_partido": "w", "evolucion": "e",
-         "xv_temporada": "X", "mvp_temporada": "M"}
+         "xv_temporada": "X", "mvp_temporada": "M",
+         "partido_jornada": "z", "palmares": "P", "hace_un_ano": "H"}
 # Imágenes de nivel competición (no dependen de un grupo ni de una jornada).
 DE_COMPETICION = {"grupos", "cuadro"}
 DESABREV = {v: k for k, v in ABREV.items()}
@@ -216,6 +218,10 @@ def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
 TECLADO_FIJO = [["📋 Pedir", "🎨 Estilo", "❓ Ayuda"]]
 VERSION_TECLADO = 3  # súbelo al cambiar el teclado fijo para que se reenvíe
 COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
+            ("agenda", "Agenda del finde (nacionales)"),
+            ("equipo", "Ficha de un equipo: /equipo vrac"),
+            ("jugador", "Ficha de un jugador: /jugador mansilla"),
+            ("cara", "Cara a cara: /cara vrac vs salvador"),
             ("estilo", "Cambiar el estilo visual"),
             ("semana", "Mandar ya los carruseles de esta semana"),
             ("ayuda", "Cómo funciona")]
@@ -227,15 +233,19 @@ QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("📅 Próxim
        ("🦶 Puntos al pie (jornada)", "f"), ("🦶 Pateadores (temporada)", "F"),
        ("🟨 Tarjetas", "j"), ("🔄 Desde el banquillo", "b"), ("📊 La liga en números", "q"),
        ("🗳 Vota el MVP", "u"), ("❓ ¿Quién gana?", "w"), ("📉 Así va la liga", "e"),
-       ("⭐ XV de la temporada", "X"), ("🏅 MVP de la temporada", "M")]
+       ("⭐ XV de la temporada", "X"), ("🏅 MVP de la temporada", "M"),
+       ("⚔️ Partido de la jornada", "z"), ("🏆 Palmarés", "P"), ("⏪ Hace un año", "H")]
 # Submenú "Más estadísticas"
-FILAS_STATS = [["X", "M"], ["e"], ["t"], ["y", "Y"], ["f", "F"], ["j", "b"], ["q"], ["d"]]
+FILAS_STATS = [["X", "M"], ["e"], ["t"], ["y", "Y"], ["f", "F"], ["j", "b"], ["q"], ["d"], ["P", "H"]]
 # Imágenes de temporada: no se elige jornada
-DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k", "w", "e", "X", "M"}
+DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k", "w", "e", "X", "M", "z", "P", "H"}
 # Imágenes especiales (módulo especiales/evolucion): clave -> (función, admite formato post/historia)
-ESPECIALES = {"encuesta_mvp", "encuesta_partido", "evolucion", "xv_temporada", "mvp_temporada"}
+ESPECIALES = {"encuesta_mvp", "encuesta_partido", "evolucion", "xv_temporada", "mvp_temporada",
+              "partido_jornada", "palmares", "hace_un_ano"}
+# Histórico: solo competiciones de iSquad con temporadas anteriores
+HISTORICO = {"dh_masc", "dh_fem", "dh_elite", "copa"}
 # Filas del menú "¿qué quieres?" (agrupadas por tema)
-FILAS_QUE = [["*"], ["r", "v"], ["c", "g", "k"], ["x", "a"], ["u", "w"], ["+"], ["p"]]
+FILAS_QUE = [["*"], ["r", "v"], ["z"], ["c", "g", "k"], ["x", "a"], ["u", "w"], ["+"], ["p"]]
 CATEGORIAS = {"nacional": "🇪🇸 Nacionales", "copa": "🏆 Copa del Rey", "regional": "🗺 Regionales"}
 
 
@@ -284,7 +294,17 @@ def _menu_inicio() -> tuple[str, list]:
             botones.append((etiqueta, _boton_liga(*next(iter(comps.items())))[1]))
         else:
             botones.append((etiqueta, f"mc|{cat}"))
-    return "📋 <b>¿Qué competición?</b>", _filas(botones, 2)
+    filas = _filas(botones, 2)
+    filas.append([("📅 Agenda del finde", "ma")])
+    filas.append([("🔎 Buscar equipo o jugador", "mb")])
+    return "📋 <b>¿Qué quieres?</b>", filas
+
+
+def _menu_agenda() -> tuple[str, list]:
+    filas = [[("🇪🇸 Nacionales", "ag|n|h|0"), ("🏆 Copa", "ag|c|h|0")],
+             [("🗺 Todas las regionales", "ag|r|h|0"), ("Todo", "ag|*|h|0")]]
+    filas += _filas([(r, f"ag|R{i}|h|0") for i, r in enumerate(_regiones())], 3)
+    return "📅 <b>Agenda del finde</b>\n¿De qué?", filas + [[("⬅️ Volver", "m1")]]
 
 
 def _menu_categoria(cat: str) -> tuple[str, list]:
@@ -339,7 +359,9 @@ def _menu_que(liga: str) -> tuple[str, list]:
 
 def _menu_stats(liga: str) -> tuple[str, list]:
     etiqueta = {c: t for t, c in QUE}
-    filas = [[(etiqueta[c], f"m3|{liga}|{c}") for c in fila] for fila in FILAS_STATS]
+    ocultar = set() if liga.split("/")[0] in HISTORICO else {"P", "H"}
+    filas = [[(etiqueta[c], f"m3|{liga}|{c}") for c in fila if c not in ocultar] for fila in FILAS_STATS]
+    filas = [f for f in filas if f]
     return f"<b>{_nombre_liga(liga)}</b>\n📈 Más estadísticas", filas + [[("⬅️ Volver", f"m2|{liga}")]]
 
 
@@ -361,6 +383,11 @@ def _menu(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
     paso, mid = partes[0], cq["message"]["message_id"]
     if paso == "m1":
         tg.editar(chat_id, mid, *_menu_inicio())
+    elif paso == "ma":
+        tg.editar(chat_id, mid, *_menu_agenda())
+    elif paso == "mb":
+        tg.editar(chat_id, mid, "🔎 <b>Buscar</b>\nEscribe:\n· <code>/equipo vrac</code>\n· <code>/jugador mansilla</code>\n"
+                  "· <code>/cara vrac vs salvador</code> (cara a cara histórico)", [[("⬅️ Volver", "m1")]])
     elif paso == "mc":
         tg.editar(chat_id, mid, *_menu_categoria(partes[1]))
     elif paso == "mr":
@@ -415,6 +442,13 @@ def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: 
         return especiales.renderizar_xv_temporada(comp, grupo, destino, formato=formato)
     if clave == "mvp_temporada":
         return especiales.renderizar_mvp_temporada(comp, grupo, destino, formato=formato)
+    if clave == "partido_jornada":
+        return destacado.partido_jornada(comp, grupo, formato=formato, destino=destino)[1]
+    if clave == "palmares":
+        return historico.palmares(comp, formato, destino)
+    if clave == "hace_un_ano":
+        jugadas = jornadas_jugadas(comp, grupo)
+        return historico.hace_un_ano(comp, jugadas[-1], formato, destino) if jugadas else []
     return []
 
 
@@ -476,6 +510,103 @@ def _servir(tg: Telegram, chat_id, ligas: list[tuple[str, str]], claves: list[st
             tg.mensaje(chat_id, f"<b>{_titulo(post)}</b>: esa jornada aún no se ha jugado.")
             continue
         enviar(tg, chat_id, pid, post, claves)
+
+
+# ---------- Agenda, fichas y cara a cara ----------
+
+def _mandar(tg: Telegram, chat_id, imagenes: list[Path], base_cb: str, formato: str, original: bool,
+            titulo: str = "") -> None:
+    """Manda imágenes y, salvo que sean originales, los botones de otro formato / original."""
+    tg.album(chat_id, imagenes, como_archivo=original)
+    if original:
+        return
+    f = formato[0]
+    botones = [("📦 Original", f"{base_cb}|{f}|1")]
+    if formato == "post":
+        botones.insert(0, ("📱 Historia", f"{base_cb}|h|0"))
+    else:
+        botones.insert(0, ("🖼 Post", f"{base_cb}|p|0"))
+    tg.mensaje(chat_id, titulo or "👆", [botones])
+
+
+def _formato(partes: list[str]) -> tuple[str, bool]:
+    return ("historia" if partes[-2] == "h" else "post"), partes[-1] == "1"
+
+
+def enviar_agenda(tg: Telegram, chat_id, filtro: str, formato: str = "historia", original: bool = False) -> None:
+    cats, region = None, None
+    if filtro == "n":
+        cats = ["nacional"]
+    elif filtro == "c":
+        cats = ["copa"]
+    elif filtro == "r":
+        cats = ["regional"]
+    elif filtro.startswith("R"):
+        region = _regiones()[int(filtro[1:])]
+    if not original:
+        tg.mensaje(chat_id, "⏳ Preparando la agenda (tarda unos segundos)…")
+    with tempfile.TemporaryDirectory() as tmp:
+        imgs = agenda.agenda(categorias=cats, region=region, formato=formato, destino=Path(tmp))
+        if not imgs:
+            tg.mensaje(chat_id, "No hay partidos pendientes con fecha para esa selección.")
+            return
+        _mandar(tg, chat_id, imgs, f"ag|{filtro}", formato, original, "📅 <b>Agenda del finde</b>")
+    if not original and formato == "historia":
+        datos = agenda.datos_agenda(categorias=cats, region=region)
+        tg.mensaje(chat_id, html.escape(agenda.texto_agenda(datos)))
+
+
+def _ficha(tg: Telegram, chat_id, tipo: str, id_: str, formato: str = "post", original: bool = False) -> None:
+    funcion = fichas.ficha_equipo if tipo == "fe" else fichas.ficha_jugador
+    with tempfile.TemporaryDirectory() as tmp:
+        imgs = funcion(id_, formato, Path(tmp))
+        if not imgs:
+            tg.mensaje(chat_id, "No hay datos suficientes para esa ficha.")
+            return
+        _mandar(tg, chat_id, imgs, f"{tipo}|{id_}", formato, original)
+
+
+def _buscar(tg: Telegram, chat_id, tipo: str, texto: str) -> None:
+    if not texto:
+        tg.mensaje(chat_id, f"Escribe también el nombre, p. ej. <code>/{'equipo vrac' if tipo == 'fe' else 'jugador mansilla'}</code>")
+        return
+    tg.mensaje(chat_id, "🔎 Buscando…")
+    cands = (fichas.buscar_equipo if tipo == "fe" else fichas.buscar_jugador)(texto)
+    if not cands:
+        tg.mensaje(chat_id, f"No encuentro a «{html.escape(texto)}».")
+    elif len(cands) == 1:
+        _ficha(tg, chat_id, tipo, cands[0]["id"])
+    else:
+        def etiqueta(c):
+            if tipo == "fe":
+                return f"{c.get('corto') or c['equipo']} · {c.get('liga', '')}"[:60]
+            return f"{nombres.titulo(c.get('nombre', ''))} · {nombres.equipo_corto(c.get('equipo', ''))}"[:60]
+        tg.mensaje(chat_id, "¿Cuál?", [[(etiqueta(c), f"{tipo}|{c['id']}|p|0")] for c in cands[:8]])
+
+
+def _cara(tg: Telegram, chat_id, texto: str, formato: str = "post", original: bool = False) -> None:
+    lados = re.split(r"\s+(?:vs|contra|-)\s+", texto, flags=re.I)
+    if len(lados) != 2:
+        tg.mensaje(chat_id, "Escríbelo así: <code>/cara vrac vs salvador</code>")
+        return
+    elegidos = []
+    for lado in lados:
+        cands = fichas.buscar_equipo(lado)
+        if not cands:
+            tg.mensaje(chat_id, f"No encuentro a «{html.escape(lado)}».")
+            return
+        elegidos.append(cands[0])
+    _cara_ids(tg, chat_id, elegidos[0]["id"], elegidos[1]["id"], formato, original)
+
+
+def _cara_ids(tg: Telegram, chat_id, id_a: str, id_b: str, formato: str = "post", original: bool = False) -> None:
+    a, b = fichas.equipo_por_id(id_a), fichas.equipo_por_id(id_b)
+    with tempfile.TemporaryDirectory() as tmp:
+        imgs = historico.cara_a_cara(a, b, formato, Path(tmp)) if a and b else []
+        if not imgs:
+            tg.mensaje(chat_id, "No hay partidos entre esos dos equipos en las temporadas guardadas (desde 2023/24, solo nacionales).")
+            return
+        _mandar(tg, chat_id, imgs, f"cc|{id_a}|{id_b}", formato, original)
 
 
 # ---------- Estilo visual ----------
@@ -573,6 +704,18 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
             img = directo.historia_final(comp, grupo, int(partes[2]), Path(tmp))
             tg.album(chat_id, [img], como_archivo=True)
         return
+    if partes[0] == "ag":
+        formato, original = _formato(partes)
+        enviar_agenda(tg, chat_id, partes[1], formato, original)
+        return
+    if partes[0] in ("fe", "fj"):
+        formato, original = _formato(partes) if len(partes) >= 4 else ("post", False)
+        _ficha(tg, chat_id, partes[0], partes[1], formato, original)
+        return
+    if partes[0] == "cc":
+        formato, original = _formato(partes)
+        _cara_ids(tg, chat_id, partes[1], partes[2], formato, original)
+        return
     if partes[0] in ("eh", "eo"):  # historias / original de imágenes especiales
         comp, grupo = partes[1].split("/")
         clave = DESABREV[partes[2]]
@@ -613,6 +756,14 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
 
     if texto.startswith(("/start", "/ayuda", "/help")) or texto == "❓ Ayuda":
         tg.mensaje(chat_id, AYUDA, teclado_fijo=TECLADO_FIJO)
+    elif texto.startswith("/equipo"):
+        _buscar(tg, chat_id, "fe", texto[len("/equipo"):].strip())
+    elif texto.startswith("/jugador"):
+        _buscar(tg, chat_id, "fj", texto[len("/jugador"):].strip())
+    elif texto.startswith("/cara"):
+        _cara(tg, chat_id, texto[len("/cara"):].strip())
+    elif texto.startswith("/agenda"):
+        enviar_agenda(tg, chat_id, "n")
     elif texto.startswith("/estilo") or texto == "🎨 Estilo":
         _menu_estilo(tg, chat_id)
     elif texto.startswith("/pedir") or texto == "📋 Pedir":
@@ -704,6 +855,11 @@ def bucle(tg: Telegram, minutos: float) -> None:
                 semana(tg, chat_id)
             elif _toca(b, "semana_martes", 1, 10):
                 semana(tg, chat_id, reintento=True)
+            elif _toca(b, "agenda_jueves", 3, 10):
+                try:
+                    enviar_agenda(tg, chat_id, "n")
+                except Exception:
+                    traceback.print_exc()
             if time.monotonic() - ultimo_directo > _cada_cuanto_directo():
                 ultimo_directo = time.monotonic()
                 try:

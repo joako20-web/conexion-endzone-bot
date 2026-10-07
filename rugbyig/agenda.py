@@ -8,7 +8,6 @@ Uso:
 """
 from __future__ import annotations
 
-from html import escape
 import tempfile
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -19,7 +18,7 @@ from pathlib import Path
 from rugbyig.core.partido_jornada import etiqueta_dia, proximo_finde, rango_fechas
 from rugbyig.pipeline import cargar_config
 from rugbyig.render.nombres import equipo_corto
-from rugbyig.render.render import _NAV, TAMANOS, html_post
+from rugbyig.render.render import renderizar_slides
 from rugbyig.scraper.isquad import cliente_para
 
 ORDEN_CATEGORIA = {"nacional": 0, "copa": 1, "regional": 2}
@@ -206,29 +205,9 @@ def slides_agenda(datos: dict, formato: str = "historia") -> tuple[list[dict], s
 
 def _renderizar(base: dict, slides: list[dict], destino: Path, formato: str, tema: str | None,
                 etiqueta: str, pie: str) -> list[Path]:
-    """Como renderizar_slides, pero con la etiqueta y el pie de la agenda en vez de
-    los de una competición (la plantilla base los toma de `base["competicion"]`)."""
-    cfg = cargar_config()["competiciones"][base["competicion"]]
-    html = html_post(base, slides, formato, tema)
-    html = html.replace(f'<div class="etiqueta">{cfg["corto"]}</div>', f'<div class="etiqueta">{escape(etiqueta)}</div>')
-    html = html.replace(f'<span class="comp"><b>{escape(cfg["nombre"])}</b> · {base["temporada"]}</span>',
-                        f'<span class="comp"><b>{escape(pie)}</b></span>')
-    destino.mkdir(parents=True, exist_ok=True)
-    for viejo in destino.glob("*.jpg"):
-        viejo.unlink()
-    ancho, alto = TAMANOS[formato]
-    rutas: list[Path] = []
-    pagina = _NAV.pagina(ancho, alto)
-    try:
-        pagina.set_content(html, wait_until="load")
-        pagina.evaluate("document.fonts.ready")
-        for sec, s in zip(pagina.query_selector_all("section.slide"), slides):
-            jpg = destino / f"{len(rutas) + 1:02d}_{s['clave']}.jpg"
-            sec.screenshot(path=str(jpg), type="jpeg", quality=95)
-            rutas.append(jpg)
-    finally:
-        pagina.close()
-    return rutas
+    """renderizar_slides con cabecera propia (la agenda no es de una sola competición)."""
+    base = {**base, "cabecera": {"nombre": etiqueta, "sub": pie, "grupo": None}}
+    return renderizar_slides(base, slides, destino, formato, tema)
 
 
 def agenda(desde: date | None = None, categorias: list[str] | None = None, region: str | None = None,
