@@ -20,7 +20,7 @@ from rugbyig.core.editar import cambiar_xv
 from rugbyig.pedidos import interpretar
 from rugbyig.pipeline import RAIZ, cargar_config, jornadas_jugadas, preparar_jornada
 from rugbyig.render import nombres
-from rugbyig.render.render import CLAVES, renderizar_jornada
+from rugbyig.render.render import CLAVES, TEMAS, hoja_muestras, renderizar_jornada, tema_actual
 from rugbyig.telegram import Telegram
 
 # Claves de slide abreviadas para caber en los 64 bytes de un botón.
@@ -42,7 +42,8 @@ AYUDA = (
     "✏️ <b>Cambiar XV</b>: después escribe el dorsal y el nombre, p. ej. <code>9 Araña</code>.\n"
     "📷 <b>Foto portada</b>: después mándame la foto.\n\n"
     "📋 <b>Pedir</b> (botón de abajo o /pedir): eliges liga, qué quieres y jornada.\n"
-    "/semana manda ya los carruseles de la semana."
+    "/semana manda ya los carruseles de la semana.\n"
+    "/estilo cambia el estilo visual (5 opciones, con muestras)."
 )
 
 
@@ -198,6 +199,10 @@ def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
 # ---------- Menús con botones: liga -> qué -> jornada ----------
 
 TECLADO_FIJO = [["📋 Pedir", "❓ Ayuda"]]
+COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
+            ("semana", "Mandar ya los carruseles de esta semana"),
+            ("estilo", "Cambiar el estilo visual"),
+            ("ayuda", "Cómo funciona")]
 QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("🎯 Anotadores", "a"),
        ("⭐ XV ideal", "x"), ("🔢 Clasificación", "c"), ("📅 Próxima jornada", "v"),
        ("📈 Anotadores temporada", "t"), ("💡 El dato de la jornada", "d"), ("🖼 Portada", "p"),
@@ -321,6 +326,34 @@ def _servir(tg: Telegram, chat_id, ligas: list[tuple[str, str]], claves: list[st
         enviar(tg, chat_id, pid, post, claves)
 
 
+# ---------- Estilo visual ----------
+
+def _menu_estilo(tg: Telegram, chat_id) -> None:
+    actual = tema_actual()
+    botones = [(("✅ " if k == actual else "") + v, f"es|{k}") for k, v in TEMAS.items()]
+    tg.mensaje(chat_id, "🎨 <b>Estilo de las imágenes</b>\nElige uno o mira antes las muestras.",
+               _filas(botones, 3) + [[("👀 Ver muestras de todos", "es|ver")]])
+
+
+def _estilo(tg: Telegram, chat_id, b: dict, eleccion: str) -> None:
+    if eleccion == "ver":
+        tg.mensaje(chat_id, "⏳ Preparando muestras de los 5 estilos (tarda un minuto)…")
+        posts = estado.posts()
+        post = next((p for p in posts.values() if p.get("json") and p.get("competicion") == "dh_masc"), None)
+        if not post:
+            _, post = preparar("dh_masc", "unico")
+        datos = json.loads((RAIZ / post["json"]).read_text(encoding="utf-8"))
+        with tempfile.TemporaryDirectory() as tmp:
+            for k, nombre in TEMAS.items():
+                tg.foto(chat_id, hoja_muestras(datos, k, Path(tmp)), nombre)
+        _menu_estilo(tg, chat_id)
+        return
+    if eleccion in TEMAS:
+        b["tema"] = eleccion
+        estado.guardar_bot(b)
+        tg.mensaje(chat_id, f"🎨 Estilo cambiado a <b>{TEMAS[eleccion]}</b>. Todo lo que te mande a partir de ahora saldrá así.")
+
+
 def _atender_pedido(tg: Telegram, chat_id, texto: str) -> bool:
     pedido = interpretar(texto)
     if pedido is None:
@@ -345,9 +378,7 @@ def procesar(tg: Telegram, actualizaciones: list[dict]) -> None:
             if (u.get("message") or {}).get("text", "").startswith("/start"):
                 b["chat_id"] = chat_id
                 estado.guardar_bot(b)
-                tg.comandos([("pedir", "Pedir resultados, XV, clasificación…"),
-                             ("semana", "Mandar ya los carruseles de esta semana"),
-                             ("ayuda", "Cómo funciona")])
+                tg.comandos(COMANDOS)
                 tg.mensaje(chat_id, "👋 Listo, este chat queda vinculado a Conexión Endzone.\n\n" + AYUDA,
                            teclado_fijo=TECLADO_FIJO)
             continue
@@ -375,6 +406,9 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
     if partes[0].startswith("m"):
         b["esperando"] = None
         _menu(tg, chat_id, cq, partes)
+        return
+    if partes[0] == "es":
+        _estilo(tg, chat_id, b, partes[1])
         return
     if partes[0] in ("th", "to"):  # historias / original de imágenes de competición
         cod = partes[2]
@@ -421,6 +455,8 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
 
     if texto.startswith(("/start", "/ayuda", "/help")) or texto == "❓ Ayuda":
         tg.mensaje(chat_id, AYUDA, teclado_fijo=TECLADO_FIJO)
+    elif texto.startswith("/estilo"):
+        _menu_estilo(tg, chat_id)
     elif texto.startswith("/pedir") or texto == "📋 Pedir":
         b["esperando"] = None
         tg.mensaje(chat_id, *_menu_ligas())
@@ -493,6 +529,10 @@ def _cada_cuanto_directo() -> int:
 def bucle(tg: Telegram, minutos: float) -> None:
     fin = time.monotonic() + minutos * 60
     ultimo_directo = 0.0
+    try:
+        tg.comandos(COMANDOS)  # por si se han añadido comandos nuevos
+    except Exception:
+        pass
     while (restante := fin - time.monotonic()) > 5:
         b = estado.bot()
         chat_id = b.get("chat_id")

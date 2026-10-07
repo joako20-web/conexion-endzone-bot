@@ -216,7 +216,19 @@ def _escudo_uri(url: str) -> str:
     return _data_uri(buf.getvalue(), "image/jpeg")
 
 
-def html_post(datos: dict, slides: list[dict], formato: str = "post") -> str:
+TEMAS = {"noche": "Noche", "tiza": "Tiza", "estadio": "Estadio", "prensa": "Prensa", "cesped": "Césped"}
+
+
+def tema_actual() -> str:
+    """Tema elegido en Telegram (/estilo) o el de config/marca.yaml."""
+    from rugbyig import estado
+
+    marca = yaml.safe_load((CONFIG / "marca.yaml").read_text(encoding="utf-8"))
+    tema = estado.bot().get("tema") or marca.get("tema", "noche")
+    return tema if tema in TEMAS else "noche"
+
+
+def html_post(datos: dict, slides: list[dict], formato: str = "post", tema: str | None = None) -> str:
     cfg = cargar_config()["competiciones"][datos["competicion"]]
     marca = yaml.safe_load((CONFIG / "marca.yaml").read_text(encoding="utf-8"))
     logo = _data_uri((RAIZ / marca["logo"]).read_bytes(), "image/png")
@@ -229,6 +241,7 @@ def html_post(datos: dict, slides: list[dict], formato: str = "post") -> str:
         .render(
             slides=slides,
             formato=formato,
+            tema=tema or tema_actual(),
             marca=marca,
             logo=logo,
             jornada=datos["jornada"],
@@ -243,7 +256,7 @@ def html_post(datos: dict, slides: list[dict], formato: str = "post") -> str:
 
 
 def renderizar_slides(
-    datos: dict, slides: list[dict], destino: Path, formato: str = "post"
+    datos: dict, slides: list[dict], destino: Path, formato: str = "post", tema: str | None = None
 ) -> list[Path]:
     """Pinta los slides dados como JPEG (1080x1350 o 1080x1920)."""
     destino.mkdir(parents=True, exist_ok=True)
@@ -256,7 +269,7 @@ def renderizar_slides(
     with sync_playwright() as pw:
         nav = pw.chromium.launch()
         pagina = nav.new_page(viewport={"width": ancho, "height": alto})
-        pagina.set_content(html_post(datos, slides, formato), wait_until="networkidle")
+        pagina.set_content(html_post(datos, slides, formato, tema), wait_until="networkidle")
         pagina.evaluate("document.fonts.ready")
         for sec, s in zip(pagina.query_selector_all("section.slide"), slides):
             jpg = destino / f"{len(generados) + 1:02d}_{s['clave']}.jpg"
@@ -279,3 +292,18 @@ def renderizar_jornada(
     slides = slides_de_jornada(datos)
     slides = [s for s in slides if s["clave"] in claves] if claves else [s for s in slides if s["clave"] in CLAVES]
     return renderizar_slides(datos, slides, destino, formato)
+
+
+def hoja_muestras(datos: dict, tema: str, destino: Path) -> Path:
+    """Una imagen con 4 slides de ejemplo en ese tema, para elegir estilo."""
+    from PIL import Image
+
+    slides = {s["clave"]: s for s in slides_de_jornada(datos)}
+    elegidos = [slides[c] for c in ("portada", "resultados", "clasificacion", "xv") if c in slides]
+    imgs = renderizar_slides(datos, elegidos, destino / tema, "post", tema)
+    hoja = Image.new("RGB", (2 * 540 + 20, 2 * 675 + 20), (40, 40, 40))
+    for i, img in enumerate(imgs[:4]):
+        hoja.paste(Image.open(img).resize((540, 675)), ((i % 2) * 560, (i // 2) * 695))
+    salida = destino / f"{tema}.jpg"
+    hoja.save(salida, quality=88)
+    return salida

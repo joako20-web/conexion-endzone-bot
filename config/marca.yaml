@@ -1,3 +1,4 @@
 nombre: "Conexión Endzone"
 handle: "@conexionendzone"
 logo: "assets/logo_original.png"
+tema: "noche"  # noche | tiza | estadio | prensa | cesped (se puede cambiar desde Telegram con /estilo)
