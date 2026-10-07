@@ -9,6 +9,7 @@ from pathlib import Path
 import yaml
 
 from rugbyig.core import datos as D
+from rugbyig.core import rankings as R
 from rugbyig.core import estadisticas as E
 from rugbyig.scraper.isquad import ISquad, cliente_para
 
@@ -62,14 +63,26 @@ def jornadas_jugadas(comp: str, grupo: str = "unico", cliente: ISquad | None = N
     return sorted({p.jornada for p in competicion.partidos if p.jugado})
 
 
+def _fila_resumen(ln: E.LineaJugador) -> list:
+    """[nombre, equipo, puntos, ensayos, conversiones, golpes, drops, amarillas, rojas, dorsal]"""
+    rojas = sum(t in ("roja", "roja20") for t in ln.tarjetas)
+    return [ln.nombre, ln.equipo, ln.puntos, ln.ensayos, ln.conversiones, ln.golpes, ln.drops,
+            ln.tarjetas.count("amarilla"), rojas, ln.dorsal]
+
+
 def resumen_temporada(comp: str, grupo: str, competicion, cliente: ISquad) -> dict[str, list]:
-    """Puntos y ensayos de cada jugador en cada partido jugado de la temporada.
+    """Estadísticas de cada jugador en cada partido jugado de la temporada.
 
     Se guarda en data/ (se commitea) para no volver a bajar las actas antiguas.
-    Formato: {id_partido: [[nombre, equipo, puntos, ensayos], ...]}.
+    Formato: {id_partido: [[nombre, equipo, puntos, ensayos, conversiones, golpes,
+    drops, amarillas, rojas, dorsal], ...]} — solo jugadores con puntos o tarjetas.
+    Si el fichero tiene el formato antiguo ([nombre, equipo, puntos, ensayos]) se
+    regenera (las actas están en caché).
     """
     ruta = ruta_jornada(comp, grupo, 0).with_name("resumen_partidos.json")
     resumen = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
+    if any(len(j) != R.CAMPOS_RESUMEN for jugadores in resumen.values() for j in jugadores):
+        resumen = {}  # formato antiguo
     for p in competicion.partidos:
         if not p.jugado or str(p.id) in resumen:
             continue
@@ -77,7 +90,7 @@ def resumen_temporada(comp: str, grupo: str, competicion, cliente: ISquad) -> di
         if acta.marcador_por_eventos() != (p.puntos_local, p.puntos_visitante):
             continue  # acta incompleta: se reintenta la próxima vez
         resumen[str(p.id)] = [
-            [ln.nombre, ln.equipo, ln.puntos, ln.ensayos] for ln in E.lineas_partido(p, acta) if ln.puntos
+            _fila_resumen(ln) for ln in E.lineas_partido(p, acta) if ln.puntos or ln.tarjetas
         ]
     ruta.parent.mkdir(parents=True, exist_ok=True)
     ruta.write_text(json.dumps(resumen, ensure_ascii=False), encoding="utf-8")
@@ -164,6 +177,7 @@ def preparar_jornada(
     if anterior.exists():
         clas_ant = json.loads(anterior.read_text(encoding="utf-8")).get("clasificacion") or []
         lider_anterior = clas_ant[0]["equipo"] if clas_ant else None
+    datos["rankings"] = R.calcular([asdict(ln) for ln in lineas], resumen, datos["clasificacion"])
     datos["datos_jornada"] = D.calcular(
         datos["partidos_temporada"], jornada, datos["candidatos_xv"] + [
             asdict(ln) for ln in lineas if not 1 <= ln.dorsal <= 15],

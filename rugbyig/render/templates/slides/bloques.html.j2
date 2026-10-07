@@ -1,0 +1,38 @@
+{# Varios mini-rankings de equipos en una rejilla 2x2. Estilos locales con las
+   variables del tema, para no depender del CSS común. #}
+<style>
+.blq-rejilla { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 36px; }
+.blq { background: var(--panel); border: 2px solid var(--linea); border-radius: 18px; padding: 22px 24px 14px; }
+.blq-tit { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-weight: 600; font-size: 46px; line-height: 1; color: var(--acento-txt); margin-bottom: 10px; }
+.blq-fila { display: grid; grid-template-columns: 28px 54px 1fr auto; align-items: center; gap: 10px; height: 98px; border-top: 1px solid var(--linea); }
+.blq-fila:first-of-type { border-top: 0; }
+.blq-pos { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-size: 34px; color: var(--gris); padding-top: 4px; }
+.blq-eq { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-weight: 500; font-size: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 4px; }
+.blq-val { text-align: right; line-height: 1; }
+.blq-val b { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-weight: 600; font-size: 54px; display: block; }
+.blq-fila:first-of-type .blq-val b { color: var(--acento-txt); }
+.blq-val small { font-size: 24px; color: var(--gris); }
+.crest.blq-c { width: 50px; height: 50px; padding: 5px; }
+.f-historia .blq-fila { height: 128px; }
+</style>
+<div class="titulo">
+  <h1>{{ s.titulo }}</h1>
+  <div class="bajada">{{ s.sup }}</div>
+</div>
+<div class="cuerpo">
+  <div class="blq-rejilla">
+  {% for b in s.bloques %}
+    <div class="blq">
+      <div class="blq-tit">{{ b.titulo }}</div>
+      {% for f in b.filas %}
+      <div class="blq-fila">
+        <span class="blq-pos">{{ loop.index }}</span>
+        <span>{% if f.equipo|escudo %}<img class="crest blq-c" src="{{ f.equipo|escudo }}">{% endif %}</span>
+        <span class="blq-eq">{{ f.equipo|corto }}</span>
+        <span class="blq-val"><b>{{ f.valor }}</b><small>{{ b.unidad }}</small></span>
+      </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  </div>
+</div>

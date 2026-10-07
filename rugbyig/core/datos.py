@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
+from rugbyig.core.rankings import PUNTOS
 from rugbyig.render import nombres
 
 
@@ -129,7 +130,7 @@ def reglas_partidos(actas: list[tuple[dict, list[dict]]]) -> list[dict]:
 
 def reglas_jugadores(lineas: list[dict], resumen: dict[str, list]) -> list[dict]:
     out = []
-    record = max((j[2] for jugadores in resumen.values() for j in jugadores), default=0)
+    record = max((j[PUNTOS] for jugadores in resumen.values() for j in jugadores), default=0)
     for ln in lineas:
         if ln["ensayos"] >= 3:
             out.append(_tarjeta(55 + 8 * ln["ensayos"], ln["ensayos"], "ensayos en un partido",

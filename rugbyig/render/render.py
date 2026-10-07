@@ -1,4 +1,17 @@
-"""JSON de jornada -> carrusel JPEG 1080x1350 (Jinja2 + Playwright)."""
+"""JSON de jornada -> carrusel JPEG 1080x1350 (Jinja2 + Playwright).
+
+Claves de slide:
+- CLAVES (carrusel por defecto): portada, resultados, anotadores, xv, clasificacion, previa, temporada.
+- EXTRA: datos (tarjetas de "el dato de la jornada").
+- RANKINGS (solo bajo pedido, no entran en el carrusel):
+  · ensayadores    "Máximos ensayadores" de la jornada (ensayos, puntos, rival).
+  · pateadores     "Puntos al pie" de la jornada (transformaciones, golpes y drops).
+  · ensayadores_t  "Ensayadores de la liga": ensayos en la temporada.
+  · pateadores_t   "Pateadores de la liga": puntos al pie en la temporada, con desglose.
+  · disciplina     "Tarjetas": jugadores con más amarillas/rojas en la temporada.
+  · banquillo      "Desde el banquillo": puntos de suplentes (dorsal 16-23) en la temporada.
+  · equipos        "La liga en números": mejor ataque, mejor defensa, más ensayos y más tarjetas.
+"""
 from __future__ import annotations
 
 import atexit
@@ -83,6 +96,8 @@ def fila_anotador(x: dict, temporada: bool = False) -> dict:
 CLAVES = ["portada", "resultados", "anotadores", "xv", "clasificacion", "previa", "temporada"]
 # Slides que van aparte del carrusel (tarjetas de "el dato de la jornada").
 EXTRA = ["datos"]
+# Rankings bajo pedido (ver docstring del módulo)
+RANKINGS = ["ensayadores", "pateadores", "ensayadores_t", "pateadores_t", "disciplina", "banquillo", "equipos"]
 TAMANOS = {"post": (1080, 1350), "historia": (1080, 1920)}
 
 
@@ -187,6 +202,33 @@ def slides_de_jornada(datos: dict) -> list[dict]:
             }
         )
     slides += [dict(t) for t in datos.get("datos_jornada", [])]
+    slides += slides_rankings(datos)
+    return slides
+
+
+def slides_rankings(datos: dict) -> list[dict]:
+    """Slides de RANKINGS; se omiten los que no tienen datos."""
+    r = datos.get("rankings") or {}
+    j, temp = datos["jornada"], f"Temporada {datos['temporada']}"
+    defs = [
+        ("ensayadores", "Máximos ensayadores", f"Jornada {j}", "ENS"),
+        ("pateadores", "Puntos al pie", f"Jornada {j}", "PTS"),
+        ("ensayadores_t", "Ensayadores de la liga", temp, "ENS"),
+        ("pateadores_t", "Pateadores de la liga", temp, "PTS"),
+        ("disciplina", "Tarjetas", temp, "TARJ"),
+        ("banquillo", "Desde el banquillo", f"Puntos de suplentes · {temp}", "PTS"),
+    ]
+    slides = []
+    for clave, titulo, sup, unidad in defs:
+        filas = r.get(clave) or []
+        if not filas:
+            continue
+        filas = [{**f, "extra": f"vs {nombres.equipo_corto(f['rival'])}" if f.get("rival") else ""} for f in filas]
+        slides.append({"tipo": "ranking", "clave": clave, "titulo": titulo, "sup": sup, "unidad": unidad,
+                       "filas": filas})
+    if r.get("equipos"):
+        slides.append({"tipo": "bloques", "clave": "equipos", "titulo": "La liga en números",
+                       "sup": f"Tras la jornada {j}", "bloques": r["equipos"]})
     return slides
 
 
