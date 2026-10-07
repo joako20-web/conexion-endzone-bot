@@ -37,5 +37,21 @@
       18386
     ],
     "jugados": 2
+  },
+  "2026-27_mad_1r_unico_j01": {
+    "competicion": "mad_1r",
+    "grupo": "unico",
+    "jornada": 1,
+    "json": "data/2026-27/mad_1r/unico/j01.json",
+    "actas_pendientes": [],
+    "jugados": 4
+  },
+  "2026-27_mad_fem1_unico_j01": {
+    "competicion": "mad_fem1",
+    "grupo": "unico",
+    "jornada": 1,
+    "json": "data/2026-27/mad_fem1/unico/j01.json",
+    "actas_pendientes": [],
+    "jugados": 5
   }
 }
