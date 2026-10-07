@@ -1,0 +1,8 @@
+# Hashtags que se añaden al texto del post.
+hashtags:
+  comunes: ["#rugby", "#rugbyespaña", "#rugbyespanol", "#conexionendzone"]
+  dh_masc: ["#DivisionDeHonor", "#DHRugby"]
+  dh_fem: ["#LigaIberdrola", "#LigaIberdrolaRugby", "#rugbyfemenino"]
+  dh_elite: ["#DHElite"]
+  dhb_masc: ["#DivisionDeHonorB", "#DHB"]
+  dhb_fem: ["#DivisionDeHonorB", "#rugbyfemenino"]

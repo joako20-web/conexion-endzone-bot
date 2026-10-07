@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=block" rel="stylesheet">
+<style>
+:root {
+  --negro: #0a0a0a;
+  --panel: #161616;
+  --linea: #2a2a2a;
+  --blanco: #f6f5f0;
+  --gris: #9a9a95;
+  --apagado: #5f5f5b;
+  --acento: #d4ff3d;
+  --rojo: #ff5a4f;
+  --amarillo: #ffd23f;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #000; font-family: "Barlow Condensed", sans-serif; color: var(--blanco); }
+.slide {
+  width: 1080px; height: 1350px; position: relative; overflow: hidden;
+  background: radial-gradient(900px 600px at 50% -5%, #1c1c1c, transparent 70%), var(--negro);
+  padding: 64px 64px 0; display: flex; flex-direction: column; margin-bottom: 20px;
+}
+/* Marca de agua del escudo, muy tenue */
+.slide::after {
+  content: ""; position: absolute; width: 900px; height: 900px; right: -330px; bottom: -300px;
+  background: url("{{ logo }}") center/contain no-repeat; opacity: .035; filter: invert(1); pointer-events: none;
+}
+.cabecera { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 2; }
+.etiqueta { font-weight: 600; font-size: 28px; letter-spacing: 3px; text-transform: uppercase; color: var(--acento); padding-top: 18px; }
+.escudo { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.escudo img { width: 96px; height: 96px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,.15); }
+.escudo .flechas { font-family: Teko; font-weight: 600; font-size: 40px; line-height: .6; letter-spacing: -6px; color: var(--blanco); }
+
+.titulo { text-align: center; margin-top: 8px; position: relative; z-index: 2; }
+h1 { font-family: Teko; font-weight: 600; font-size: 108px; line-height: .82; padding: 0 70px; }
+.bajada { font-size: 32px; color: var(--gris); margin-top: 12px; font-weight: 500; }
+.cuerpo { flex: 1; margin-top: 40px; display: flex; flex-direction: column; position: relative; z-index: 2; }
+.pie { height: 110px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; }
+.comp { font-weight: 600; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: var(--gris); border: 2px solid var(--linea); border-radius: 999px; padding: 8px 24px; }
+.comp b { color: var(--blanco); }
+
+/* Portada con foto (mismo formato que las noticias de la cuenta) */
+.t-portada { padding: 0; }
+.t-portada .foto { position: absolute; inset: 0; background-size: cover; background-position: center 18%; }
+.t-portada .foto::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,.35) 0%, rgba(10,10,10,0) 22%, rgba(10,10,10,0) 40%, rgba(10,10,10,.85) 62%, var(--negro) 76%); }
+.t-portada .cabecera { padding: 64px 64px 0; }
+.t-portada .etiqueta { background: var(--acento); color: var(--negro); padding: 8px 18px; border-radius: 6px; margin-top: 14px; }
+.t-portada .texto { margin-top: auto; padding: 0 72px 0; text-align: center; position: relative; z-index: 2; }
+.t-portada h1 { font-size: 200px; line-height: .78; }
+.t-portada h1 span { color: var(--acento); }
+.t-portada .bajada { font-size: 38px; color: var(--blanco); line-height: 1.2; margin-top: 18px; }
+.t-portada .credito { font-size: 24px; color: var(--gris); margin-top: 22px; letter-spacing: 1px; }
+.t-portada .credito b { color: var(--acento); font-weight: 600; }
+.t-portada .mvp { position: relative; z-index: 2; margin: 40px 64px 0; padding: 40px 0 0; border-top: 3px solid var(--acento); text-align: center; }
+.t-portada .mvp-motivo { font-weight: 600; font-size: 30px; letter-spacing: 4px; text-transform: uppercase; color: var(--acento); }
+.t-portada .mvp-pila { font-family: Teko; font-weight: 400; font-size: 84px; line-height: .9; margin-top: 30px; color: var(--gris); }
+.t-portada .mvp-apellido { font-family: Teko; font-weight: 700; font-size: 180px; line-height: .78; text-transform: uppercase; }
+.t-portada .mvp-datos { display: flex; justify-content: center; gap: 18px; margin-top: 28px; font-size: 30px; font-weight: 600; }
+.t-portada .mvp-equipo { background: var(--blanco); color: var(--negro); padding: 4px 16px; border-radius: 6px; }
+.t-portada .mvp-pos { color: var(--gris); padding: 4px 0; }
+.t-portada .mvp-linea { margin-top: 22px; font-size: 32px; color: var(--gris); }
+.t-portada .mvp-linea b { color: var(--blanco); }
+.t-portada .sin-foto { position: absolute; top: 120px; left: 0; right: 0; text-align: center; font-family: Teko; font-weight: 700; font-size: 760px; line-height: 1; color: var(--acento); opacity: .9; }
+
+/* Escudos de los clubes: siempre en círculo blanco (vienen con fondo blanco) */
+.crest { border-radius: 50%; background: #fff; object-fit: contain; flex: none; }
+.crest.r { width: 76px; height: 76px; padding: 8px; }
+.crest.c { width: 54px; height: 54px; padding: 5px; vertical-align: middle; margin-right: 16px; }
+.crest.a { width: 62px; height: 62px; padding: 6px; }
+.crest.p { width: 44px; height: 44px; padding: 4px; vertical-align: middle; margin-right: 12px; position: relative; top: -4px; }
+.crest.x { width: 30px; height: 30px; padding: 3px; vertical-align: middle; margin-right: 6px; }
+.crest.m { width: 150px; height: 150px; padding: 16px; margin: 0 auto 26px; display: block; }
+
+/* Resultados */
+.partido { display: grid; grid-template-columns: 1fr 260px 1fr; align-items: center; height: 150px; border-bottom: 2px solid var(--linea); }
+.partido:last-of-type { border-bottom: 0; }
+.equipo { min-width: 0; display: flex; align-items: center; gap: 18px; }
+.equipo.vis { justify-content: flex-end; text-align: right; }
+.equipo .nom { font-family: Teko; font-weight: 500; font-size: 54px; line-height: .9; }
+.equipo.pierde .nom { color: var(--apagado); }
+.marcador { text-align: center; font-family: Teko; font-weight: 600; font-size: 104px; line-height: 1; padding-top: 10px; }
+.marcador .g { color: var(--acento); }
+.marcador .p { color: var(--apagado); }
+.marcador .sep { color: var(--linea); margin: 0 8px; }
+.pend { font-size: 38px; color: var(--gris); font-family: "Barlow Condensed"; }
+.nota-pie { font-size: 22px; color: var(--gris); margin-top: auto; padding-bottom: 12px; text-align: center; }
+
+/* Rankings */
+.fila { display: grid; grid-template-columns: 50px 62px 1fr auto; align-items: center; gap: 22px; height: 116px; border-bottom: 2px solid var(--linea); }
+.fila:first-child { background: var(--acento); color: var(--negro); border-radius: 14px; border: 0; padding: 0 28px; margin: 0 -28px 10px; height: 140px; }
+.fila:first-child .jug-eq, .fila:first-child .det { color: rgba(10,10,10,.7); }
+.fila:first-child .pts { font-size: 116px; }
+.pos { font-family: Teko; font-weight: 600; font-size: 52px; color: var(--apagado); padding-top: 8px; }
+.fila:first-child .pos { color: var(--negro); }
+.jug-nom { font-family: Teko; font-weight: 500; font-size: 52px; line-height: .9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.jug-eq { font-size: 24px; color: var(--gris); margin-top: 2px; }
+.pts { font-family: Teko; font-weight: 600; font-size: 84px; text-align: right; line-height: .85; padding-top: 10px; }
+.pts small { font-size: 30px; margin-left: 6px; }
+.det { font-size: 22px; text-align: right; color: var(--gris); margin-top: 2px; }
+
+/* XV ideal */
+.campo { flex: 1; margin: 0 -20px 10px; border-radius: 22px; position: relative; display: flex; flex-direction: column; justify-content: space-evenly; padding: 6px 0;
+  background: repeating-linear-gradient(180deg, transparent 0 20%, rgba(255,255,255,.05) 20% calc(20% + 2px)), linear-gradient(180deg, #151515, #0f0f0f);
+  border: 2px solid var(--linea); }
+.campo .fila-xv { display: flex; justify-content: center; gap: 26px; }
+.ficha { width: 190px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.ficha .dorsal { width: 58px; height: 58px; border-radius: 50%; background: var(--blanco); color: var(--negro); display: grid; place-items: center; font-family: Teko; font-weight: 600; font-size: 40px; padding-top: 6px; }
+.ficha.top .dorsal { background: var(--acento); }
+.ficha .n1 { font-size: 19px; color: var(--gris); margin-top: 6px; white-space: nowrap; }
+.ficha .n2 { font-family: Teko; font-weight: 500; font-size: 36px; line-height: .85; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+.ficha .n2.l { font-size: 31px; }
+.ficha .n2.xl { font-size: 27px; }
+.ficha .eq { display: flex; align-items: center; margin-top: 4px; font-size: 18px; font-weight: 700; letter-spacing: 1.5px; color: var(--acento); }
+
+/* Clasificación */
+table { width: 100%; border-collapse: collapse; }
+th { font-weight: 600; font-size: 24px; letter-spacing: 2px; color: var(--gris); text-align: center; padding-bottom: 10px; border-bottom: 2px solid var(--linea); }
+th.izq, td.izq { text-align: left; }
+td { height: 84px; text-align: center; font-family: Teko; font-weight: 500; font-size: 44px; border-bottom: 1px solid var(--linea); padding-top: 8px; }
+td.eq { font-size: 46px; }
+td.pt { color: var(--acento); font-weight: 600; font-size: 52px; }
+td.p { color: var(--gris); width: 64px; }
+td.n, th.n { width: 62px; }
+td.dif, th.dif { width: 96px; }
+td.pt, th.pt { width: 92px; }
+tr.zona-alta td.p { color: var(--acento); }
+tr.zona-baja td.p { color: var(--rojo); }
+
+/* Previa */
+.previa { display: grid; grid-template-columns: 170px 1fr; align-items: center; border-bottom: 2px solid var(--linea); padding: 20px 0; gap: 28px; }
+.previa:last-child { border-bottom: 0; }
+.previa .dia { font-weight: 600; font-size: 26px; color: var(--acento); letter-spacing: 2px; text-transform: uppercase; }
+.previa .hora { font-family: Teko; font-weight: 600; font-size: 72px; line-height: .85; }
+.previa .cruce { font-family: Teko; font-weight: 500; font-size: 50px; line-height: .9; white-space: nowrap; }
+.previa .cruce span { color: var(--gris); font-family: "Barlow Condensed"; font-size: 28px; margin-right: 12px; }
+.previa .lugar { font-size: 22px; color: var(--gris); margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+</style>
+</head>
+<body>
+{% for s in slides %}
+<section class="slide t-{{ s.tipo }}">
+  {% if s.tipo == "portada" and s.foto %}<div class="foto" style="background-image:url('{{ s.foto }}')"></div>{% endif %}
+  <div class="cabecera">
+    <div class="etiqueta">{{ comp.corto }}{% if comp.grupo %} · {{ comp.grupo }}{% endif %} · Jornada {{ jornada }}</div>
+    <div class="escudo">
+      <img src="{{ logo }}" alt="">
+      {% if not loop.last %}<div class="flechas">»</div>{% endif %}
+    </div>
+  </div>
+  {% include "slides/" ~ s.tipo ~ ".html.j2" %}
+  {% if s.tipo != "portada" %}
+  <div class="pie"><span class="comp"><b>{{ comp.nombre }}</b> · {{ temporada }}</span></div>
+  {% endif %}
+</section>
+{% endfor %}
+</body>
+</html>

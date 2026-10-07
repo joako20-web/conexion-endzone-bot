@@ -1,0 +1,12 @@
+# Nombre oficial en iSquad -> nombre corto y abreviatura para las imágenes.
+# Si un equipo no aparece aquí se acorta automáticamente (ver render/nombres.py).
+"VRAC QUESOS ENTREPINARES": {corto: "VRAC Entrepinares", abr: "VRAC"}
+"RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES": {corto: "Aparejadores Burgos", abr: "BUR"}
+"VULCANIZADOS ALVAREZ EL SALVADOR": {corto: "El Salvador", abr: "SAL"}
+"AMPO ORDIZIA": {corto: "Ordizia", abr: "ORD"}
+"SILICIUS ALCOBENDAS RUGBY": {corto: "Alcobendas", abr: "ALC"}
+"UNIO ESPORTIVA SANTBOIANA": {corto: "Santboiana", abr: "UES"}
+"HUESITOS LA VILA RUGBY CLUB": {corto: "La Vila", abr: "VIL"}
+"INVERSUS LICEO FRANCES": {corto: "Liceo Francés", abr: "LIC"}
+"COMPLUTENSE CISNEROS": {corto: "Cisneros", abr: "CIS"}
+"CRC POZUELO RUGBY": {corto: "CRC Pozuelo", abr: "CRC"}

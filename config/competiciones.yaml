@@ -1,0 +1,35 @@
+# Ids de iSquad (resultadosrugby.isquad.es). Se revisan una vez por temporada:
+# en competicion.php?id_competicion=<comp>&id_temp=<temporada> el desplegable
+# "grupo" muestra el id de cada fase/grupo.
+temporada: "2026/27"
+
+# Foto de portada sacada de las fichas de iSquad (a menudo selfis o fotos de
+# carnet). Desactivado: la portada es gráfica salvo que se añada una foto a mano.
+foto_portada_auto: false
+
+competiciones:
+  dh_masc:
+    nombre: "División de Honor"
+    corto: "DH"
+    grupos: {unico: 1296}
+    xv_ideal: true
+  dh_fem:
+    nombre: "Liga Iberdrola"
+    corto: "DH Fem"
+    grupos: {unico: 1298}
+    xv_ideal: true
+  dh_elite:
+    nombre: "División de Honor Élite"
+    corto: "DH Élite"
+    grupos: {unico: 1297}
+    xv_ideal: true
+  dhb_masc:
+    nombre: "División de Honor B"
+    corto: "DH B"
+    grupos: {A: 1300, B: 1301, C: 1302, D: 1303}
+    xv_ideal: true
+  dhb_fem:
+    nombre: "División de Honor B Femenina"
+    corto: "DH B Fem"
+    grupos: {unico: 1299}
+    xv_ideal: true

@@ -1,0 +1,57 @@
+# Bot de Telegram de Conexión Endzone.
+# Cada ejecución escucha Telegram 14 minutos y se relevan cada cuarto de hora,
+# así el bot responde en segundos. Los lunes a las 10:00 (Madrid) manda los
+# carruseles de la semana; los martes reintenta los que tenían actas incompletas.
+name: bot
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: bot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - run: uv sync --frozen
+
+      - name: Caché del navegador y de iSquad
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            .cache/isquad
+          key: navegador-${{ hashFiles('uv.lock') }}-${{ github.run_id }}
+          restore-keys: navegador-${{ hashFiles('uv.lock') }}-
+
+      - run: uv run playwright install --with-deps chromium
+
+      - name: Escuchar Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        run: uv run python -m rugbyig bot --minutos 14
+
+      - name: Guardar estado
+        if: always()
+        run: |
+          git config user.name "conexion-endzone-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add estado data
+          git diff --cached --quiet && exit 0
+          git commit -m "Estado del bot"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1
