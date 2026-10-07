@@ -28,4 +28,5 @@ def limpiar(s: str) -> str:
         except (UnicodeEncodeError, UnicodeDecodeError):
             pass
     s = s.replace("BAR?A", "BARÇA")  # iSquad guarda a veces la Ç como "?"
+    s = re.sub(r"(?<=[A-Z])\?(?=[A-Z])", "Ñ", s)  # ...y la Ñ ("CORU?A" -> "CORUÑA")
     return re.sub(r"\s+", " ", s).strip()
