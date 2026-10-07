@@ -223,6 +223,7 @@ COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
             ("jugador", "Ficha de un jugador: /jugador mansilla"),
             ("cara", "Cara a cara: /cara vrac vs salvador"),
             ("arbitros", "Un equipo con cada árbitro: /arbitros vrac"),
+            ("usuarios", "Quién tiene acceso al bot (solo administrador)"),
             ("estilo", "Cambiar el estilo visual"),
             ("semana", "Mandar ya los carruseles de esta semana"),
             ("ayuda", "Cómo funciona")]
@@ -668,8 +669,9 @@ def _estilo(tg: Telegram, chat_id, b: dict, eleccion: str) -> None:
         _menu_estilo(tg, chat_id)
         return
     if eleccion in TEMAS:
-        b["tema"] = eleccion
-        estado.guardar_bot(b)
+        real = estado.bot()  # b es el contexto del chat: el tema se guarda en el estado general
+        real["tema"] = eleccion
+        estado.guardar_bot(real)
         tg.mensaje(chat_id, f"🎨 Estilo cambiado a <b>{TEMAS[eleccion]}</b>. Todo lo que te mande a partir de ahora saldrá así.")
 
 
@@ -684,10 +686,84 @@ def _atender_pedido(tg: Telegram, chat_id, texto: str) -> bool:
     return True
 
 
+class Difusion:
+    """Envuelve el cliente de Telegram: lo que se manda al dueño se manda también
+    a los usuarios invitados (para los envíos automáticos)."""
+
+    def __init__(self, tg: Telegram, b: dict):
+        self.tg, self.dueno, self.invitados = tg, b.get("chat_id"), list(b.get("invitados", {}))
+
+    def _todos(self, chat_id):
+        return [chat_id] + ([int(i) for i in self.invitados] if chat_id == self.dueno else [])
+
+    def mensaje(self, chat_id, *a, **k):
+        r = None
+        for c in self._todos(chat_id):
+            try:
+                r = self.tg.mensaje(c, *a, **k)
+            except Exception:
+                traceback.print_exc()
+        return r
+
+    def album(self, chat_id, *a, **k):
+        for c in self._todos(chat_id):
+            try:
+                self.tg.album(c, *a, **k)
+            except Exception:
+                traceback.print_exc()
+
+    def foto(self, chat_id, *a, **k):
+        for c in self._todos(chat_id):
+            try:
+                self.tg.foto(c, *a, **k)
+            except Exception:
+                traceback.print_exc()
+
+    def __getattr__(self, nombre):
+        return getattr(self.tg, nombre)
+
+
+def _quien(u: dict) -> str:
+    de = (u.get("message") or {}).get("from") or {}
+    nombre = " ".join(x for x in (de.get("first_name"), de.get("last_name")) if x) or "Alguien"
+    return nombre + (f" (@{de['username']})" if de.get("username") else "")
+
+
+def _invitacion(tg: Telegram, b: dict, u: dict, chat_id) -> None:
+    """Alguien que no es el dueño ni invitado escribe al bot: pedir permiso al dueño."""
+    texto = (u.get("message") or {}).get("text", "")
+    pendientes = b.setdefault("solicitudes", {})
+    if not texto.startswith("/start") or str(chat_id) in pendientes:
+        return
+    pendientes[str(chat_id)] = _quien(u)
+    tg.mensaje(chat_id, "👋 He avisado al administrador. Cuando te dé acceso te escribo.")
+    tg.mensaje(b["chat_id"], f"🔑 <b>{html.escape(_quien(u))}</b> quiere usar el bot.",
+               [[("✅ Aceptar", f"inv|ok|{chat_id}"), ("❌ Rechazar", f"inv|no|{chat_id}")]])
+
+
+def _gestionar_invitacion(tg: Telegram, b: dict, partes: list[str]) -> None:
+    accion, otro = partes[1], partes[2]
+    nombre = b.get("solicitudes", {}).pop(otro, None) or b.get("invitados", {}).get(otro, otro)
+    if accion == "ok":
+        b.setdefault("invitados", {})[otro] = nombre
+        tg.mensaje(b["chat_id"], f"✅ {html.escape(nombre)} ya puede usar el bot.")
+        tg.mensaje(int(otro), "✅ ¡Tienes acceso! Te llegarán también los envíos automáticos.\n\n" + AYUDA,
+                   teclado_fijo=TECLADO_FIJO)
+    elif accion == "no":
+        tg.mensaje(b["chat_id"], f"❌ Rechazada la solicitud de {html.escape(nombre)}.")
+    elif accion == "del":
+        b.get("invitados", {}).pop(otro, None)
+        tg.mensaje(b["chat_id"], f"🗑 {html.escape(nombre)} ya no tiene acceso.")
+        try:
+            tg.mensaje(int(otro), "Tu acceso al bot se ha retirado.")
+        except Exception:
+            pass
+
+
 def procesar(tg: Telegram, actualizaciones: list[dict]) -> None:
-    b = estado.bot()
     posts = estado.posts()
     for u in actualizaciones:
+        b = estado.bot()
         b["offset"] = u["update_id"] + 1
         estado.guardar_bot(b)
         msg = u.get("message") or (u.get("callback_query") or {}).get("message") or {}
@@ -701,16 +777,29 @@ def procesar(tg: Telegram, actualizaciones: list[dict]) -> None:
                 tg.mensaje(chat_id, "👋 Listo, este chat queda vinculado a Conexión Endzone.\n\n" + AYUDA,
                            teclado_fijo=TECLADO_FIJO)
             continue
-        if chat_id != b["chat_id"]:
-            continue  # solo atiendo al chat vinculado
+        es_dueno = chat_id == b["chat_id"]
+        if not es_dueno and str(chat_id) not in b.get("invitados", {}):
+            _invitacion(tg, b, u, chat_id)
+            estado.guardar_bot(b)
+            continue
+        if es_dueno and "callback_query" in u and u["callback_query"].get("data", "").startswith("inv|"):
+            tg.responder_boton(u["callback_query"]["id"])
+            _gestionar_invitacion(tg, b, u["callback_query"]["data"].split("|"))
+            estado.guardar_bot(b)
+            continue
 
+        # Contexto de este chat: cada usuario tiene su propia edición en curso
+        esperas = b.setdefault("esperas", {})
+        ctx = {**b, "chat_id": chat_id, "esperando": esperas.get(str(chat_id)), "es_dueno": es_dueno}
         try:
             if "callback_query" in u:
-                _boton(tg, b, posts, u["callback_query"])
+                _boton(tg, ctx, posts, u["callback_query"])
             else:
-                _mensaje(tg, b, posts, u["message"])
+                _mensaje(tg, ctx, posts, u["message"])
         except Exception:
             tg.mensaje(chat_id, f"❗ Algo ha fallado:\n<code>{html.escape(traceback.format_exc()[-700:])}</code>")
+        b = estado.bot()  # puede haber cambiado (estilo, semana...)
+        b.setdefault("esperas", {})[str(chat_id)] = ctx.get("esperando")
         estado.guardar_bot(b)
         posts = estado.posts()
 
@@ -799,6 +888,13 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
 
     if texto.startswith(("/start", "/ayuda", "/help")) or texto == "❓ Ayuda":
         tg.mensaje(chat_id, AYUDA, teclado_fijo=TECLADO_FIJO)
+    elif texto.startswith("/usuarios") and b.get("es_dueno"):
+        invitados = estado.bot().get("invitados", {})
+        if not invitados:
+            tg.mensaje(chat_id, "Solo tú usas el bot. Para invitar a alguien: que busque el bot en Telegram y le dé a Iniciar.")
+        else:
+            tg.mensaje(chat_id, "👥 <b>Usuarios con acceso</b>",
+                       [[(f"🗑 Quitar a {n[:40]}", f"inv|del|{i}")] for i, n in invitados.items()])
     elif texto.startswith("/equipo"):
         _buscar(tg, chat_id, "fe", texto[len("/equipo"):].strip())
     elif texto.startswith("/jugador"):
@@ -901,22 +997,23 @@ def bucle(tg: Telegram, minutos: float) -> None:
     while (restante := fin - time.monotonic()) > 5:
         b = estado.bot()
         chat_id = b.get("chat_id")
+        tg_todos = Difusion(tg, b)  # lo automático llega al dueño y a los invitados
         if chat_id:
             if _toca(b, "semana_lunes", 0, 10):
-                semana(tg, chat_id)
+                semana(tg_todos, chat_id)
             elif _toca(b, "semana_martes", 1, 10):
-                semana(tg, chat_id, reintento=True)
+                semana(tg_todos, chat_id, reintento=True)
             elif _toca(b, "agenda_jueves", 3, 10):
                 try:
-                    enviar_agenda(tg, chat_id, "n")
+                    enviar_agenda(tg_todos, chat_id, "n")
                     for comp in ARBITROS:
-                        enviar_arbitros(tg, chat_id, comp, "d")
+                        enviar_arbitros(tg_todos, chat_id, comp, "d")
                 except Exception:
                     traceback.print_exc()
             if time.monotonic() - ultimo_directo > _cada_cuanto_directo():
                 ultimo_directo = time.monotonic()
                 try:
-                    directo.comprobar(tg, b)
+                    directo.comprobar(tg_todos, b)
                 except Exception:
                     traceback.print_exc()
                 estado.guardar_bot(b)
