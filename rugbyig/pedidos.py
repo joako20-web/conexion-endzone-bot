@@ -36,6 +36,11 @@ TIPOS = [
     ("portada", r"portada|mvp|mejor jugador"),
     ("datos", r"\bdatos?\b|curiosidad|record"),
     ("grupos", r"todos los grupos|fase de grupos|\bgrupos\b"),
+    ("encuesta_mvp", r"vota|votacion|encuesta mvp"),
+    ("encuesta_partido", r"quien gana|pronostico|encuesta partido"),
+    ("evolucion", r"evolucion|grafico|asi va"),
+    ("xv_temporada", r"xv de la temporada|equipo de la temporada"),
+    ("mvp_temporada", r"mvp de la temporada"),
     ("ensayadores", r"ensayador|\btry\b|\btries\b"),
     ("pateadores", r"pateador|pie\b|patada|pateo|palos"),
     ("disciplina", r"tarjeta|amarilla|roja|disciplina|expulsi"),
@@ -86,6 +91,10 @@ def interpretar(texto: str) -> Pedido | None:
             if temporada and clave in ("ensayadores", "pateadores"):
                 clave += "_t"
             claves.append(clave)
+    # Las versiones "de temporada" mandan sobre las de jornada
+    for largo, corto in (("xv_temporada", "xv"), ("mvp_temporada", "portada"), ("encuesta_mvp", "portada")):
+        if largo in claves and corto in claves:
+            claves.remove(corto)
     if re.search(TODO, t) or not claves:
         claves = None
     m = re.search(r"\b(?:jornada|j)\s*(\d{1,2})\b", t)

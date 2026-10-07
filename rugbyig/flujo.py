@@ -15,7 +15,7 @@ import time
 import traceback
 from pathlib import Path
 
-from rugbyig import caption, directo, estado, torneo
+from rugbyig import caption, directo, especiales, estado, evolucion, torneo
 from rugbyig.core.editar import cambiar_xv
 from rugbyig.pedidos import interpretar
 from rugbyig.pipeline import RAIZ, cargar_config, jornadas_jugadas, preparar_jornada
@@ -28,7 +28,9 @@ ABREV = {"portada": "p", "resultados": "r", "anotadores": "a", "xv": "x",
          "clasificacion": "c", "previa": "v", "temporada": "t", "datos": "d",
          "grupos": "g", "cuadro": "k",
          "ensayadores": "y", "ensayadores_t": "Y", "pateadores": "f", "pateadores_t": "F",
-         "disciplina": "j", "banquillo": "b", "equipos": "q"}
+         "disciplina": "j", "banquillo": "b", "equipos": "q",
+         "encuesta_mvp": "u", "encuesta_partido": "w", "evolucion": "e",
+         "xv_temporada": "X", "mvp_temporada": "M"}
 # Imágenes de nivel competición (no dependen de un grupo ni de una jornada).
 DE_COMPETICION = {"grupos", "cuadro"}
 DESABREV = {v: k for k, v in ABREV.items()}
@@ -223,13 +225,17 @@ QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("📅 Próxim
        ("💡 El dato de la jornada", "d"), ("🖼 Portada", "p"),
        ("🏉 Ensayadores (jornada)", "y"), ("🏉 Ensayadores (temporada)", "Y"),
        ("🦶 Puntos al pie (jornada)", "f"), ("🦶 Pateadores (temporada)", "F"),
-       ("🟨 Tarjetas", "j"), ("🔄 Desde el banquillo", "b"), ("📊 La liga en números", "q")]
+       ("🟨 Tarjetas", "j"), ("🔄 Desde el banquillo", "b"), ("📊 La liga en números", "q"),
+       ("🗳 Vota el MVP", "u"), ("❓ ¿Quién gana?", "w"), ("📉 Así va la liga", "e"),
+       ("⭐ XV de la temporada", "X"), ("🏅 MVP de la temporada", "M")]
 # Submenú "Más estadísticas"
-FILAS_STATS = [["t"], ["y", "Y"], ["f", "F"], ["j", "b"], ["q"], ["d"]]
+FILAS_STATS = [["X", "M"], ["e"], ["t"], ["y", "Y"], ["f", "F"], ["j", "b"], ["q"], ["d"]]
 # Imágenes de temporada: no se elige jornada
-DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k"}
+DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k", "w", "e", "X", "M"}
+# Imágenes especiales (módulo especiales/evolucion): clave -> (función, admite formato post/historia)
+ESPECIALES = {"encuesta_mvp", "encuesta_partido", "evolucion", "xv_temporada", "mvp_temporada"}
 # Filas del menú "¿qué quieres?" (agrupadas por tema)
-FILAS_QUE = [["*"], ["r", "v"], ["c", "g", "k"], ["x", "a"], ["+"], ["p"]]
+FILAS_QUE = [["*"], ["r", "v"], ["c", "g", "k"], ["x", "a"], ["u", "w"], ["+"], ["p"]]
 CATEGORIAS = {"nacional": "🇪🇸 Nacionales", "copa": "🏆 Copa del Rey", "regional": "🗺 Regionales"}
 
 
@@ -398,7 +404,53 @@ def enviar_competicion(tg: Telegram, chat_id, comp: str, claves: list[str],
     return True
 
 
+def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: str, jornada: int | None) -> list[Path]:
+    if clave == "encuesta_mvp":
+        return especiales.renderizar_vota_mvp(comp, grupo, destino, jornada=jornada)
+    if clave == "encuesta_partido":
+        return especiales.renderizar_quien_gana(comp, grupo, destino)
+    if clave == "evolucion":
+        return evolucion.renderizar_evolucion(comp, grupo, destino, formato=formato)
+    if clave == "xv_temporada":
+        return especiales.renderizar_xv_temporada(comp, grupo, destino, formato=formato)
+    if clave == "mvp_temporada":
+        return especiales.renderizar_mvp_temporada(comp, grupo, destino, formato=formato)
+    return []
+
+
+def enviar_especial(tg: Telegram, chat_id, clave: str, comp: str, grupo: str, jornada: int | None = None,
+                    formato: str = "post", original: bool = False) -> bool:
+    with tempfile.TemporaryDirectory() as tmp:
+        imagenes = _render_especial(clave, comp, grupo, Path(tmp), formato, jornada)
+        if not imagenes:
+            return False
+        tg.album(chat_id, imagenes, como_archivo=original)
+    if original:
+        return True
+    cod, liga = ABREV[clave], f"{comp}/{grupo}"
+    es_historia = clave.startswith("encuesta") or formato == "historia"
+    botones = [("📦 Original", f"eo|{liga}|{cod}|{'h' if formato == 'historia' else 'p'}")]
+    if not es_historia:
+        botones.insert(0, ("📱 Historias", f"eh|{liga}|{cod}"))
+    nota = "\nPega encima la encuesta de Instagram en el hueco." if clave.startswith("encuesta") else ""
+    tg.mensaje(chat_id, f"<b>{_nombre_liga(liga)}</b>{nota}", [botones])
+    return True
+
+
 def _servir(tg: Telegram, chat_id, ligas: list[tuple[str, str]], claves: list[str] | None, jornada: int | None) -> None:
+    esp = [c for c in (claves or []) if c in ESPECIALES]
+    if esp:
+        for comp, grupo in ligas:
+            for clave in esp:
+                try:
+                    hecho = enviar_especial(tg, chat_id, clave, comp, grupo, jornada)
+                except RuntimeError:
+                    hecho = False
+                if not hecho:
+                    tg.mensaje(chat_id, f"<b>{_nombre_liga(f'{comp}/{grupo}')}</b>: todavía no hay datos suficientes para esto.")
+        claves = [c for c in claves if c not in ESPECIALES]
+        if not claves:
+            return
     de_comp = [c for c in (claves or []) if c in DE_COMPETICION]
     if de_comp:
         for comp in dict.fromkeys(c for c, _ in ligas):
@@ -520,6 +572,12 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             img = directo.historia_final(comp, grupo, int(partes[2]), Path(tmp))
             tg.album(chat_id, [img], como_archivo=True)
+        return
+    if partes[0] in ("eh", "eo"):  # historias / original de imágenes especiales
+        comp, grupo = partes[1].split("/")
+        clave = DESABREV[partes[2]]
+        formato = "historia" if partes[0] == "eh" or (len(partes) > 3 and partes[3] == "h") else "post"
+        enviar_especial(tg, chat_id, clave, comp, grupo, formato=formato, original=partes[0] == "eo")
         return
     accion, pid, cod = (partes + ["", ""])[:3]
     if accion in ("h", "o") and pid in posts:
