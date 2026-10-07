@@ -4,10 +4,10 @@
 </div>
 <div class="cuerpo">
 <table>
-  <thead><tr><th></th><th class="izq">Equipo</th><th class="n">PJ</th><th class="n">G</th><th class="n">E</th><th class="n">P</th><th class="dif">DIF</th><th class="n">BO</th><th class="n">BD</th><th class="pt">PTS</th></tr></thead>
+  <thead><tr><th class="p"></th><th class="izq">Equipo</th><th class="n">PJ</th><th class="n">G</th><th class="n">E</th><th class="n">P</th><th class="dif">DIF</th><th class="n">BO</th><th class="n">BD</th><th class="pt">PTS</th></tr></thead>
   <tbody>
   {% for f in s.filas %}
-    <tr class="{{ 'zona-alta' if f.posicion <= s.zona_alta }}{{ ' zona-baja' if s.zona_baja and f.posicion > s.filas|length - s.zona_baja }}">
+    <tr class="{{ 'z-' ~ f.zona if f.zona }}">
       <td class="p">{{ f.posicion }}</td>
       <td class="eq izq">{% if f.equipo|escudo %}<img class="crest c" src="{{ f.equipo|escudo }}">{% endif %}{{ f.equipo|corto }}</td>
       <td class="n">{{ f.pj }}</td><td class="n">{{ f.pg }}</td><td class="n">{{ f.pe }}</td><td class="n">{{ f.pp }}</td>
@@ -17,4 +17,9 @@
   {% endfor %}
   </tbody>
 </table>
+{% if s.leyenda %}
+<div class="leyenda">
+  {% for z in s.leyenda %}<span class="ley z-{{ z.color }}"><i></i>{{ z.texto }}</span>{% endfor %}
+</div>
+{% endif %}
 </div>

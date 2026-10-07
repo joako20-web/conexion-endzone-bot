@@ -5,7 +5,7 @@ from functools import lru_cache
 
 import yaml
 
-from rugbyig.pipeline import CONFIG
+from rugbyig.rutas import CONFIG
 
 _RELLENO = {"RUGBY", "CLUB", "RC", "CR", "C.R.", "R.C.", "RT", "DE", "DEL", "LA", "EL", "DH", "DHB", "XV"}
 _MINUSCULAS = {"de", "del", "la", "el", "y", "i"}
@@ -25,6 +25,8 @@ def _equipos() -> dict:
 
 def titulo(s: str) -> str:
     def cap(p: str) -> str:
+        if "." in p.strip("."):  # siglas tipo C.A.R. o A.D.
+            return p.upper()
         return "-".join(x[:1].upper() + x[1:] for x in p.split("-"))
 
     palabras = s.lower().split()

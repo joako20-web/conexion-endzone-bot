@@ -27,3 +27,10 @@ def test_interpretar(texto, ligas, claves, jornada):
 
 def test_sin_liga():
     assert interpretar("hola qué tal") is None
+
+
+def test_copa_y_cuadro():
+    p = interpretar("cuadro de la copa")
+    assert p.ligas[0][0] == "copa" and len(p.ligas) == 6 and p.claves == ["cuadro"]
+    p = interpretar("todos los grupos dhb")
+    assert p.claves == ["grupos"]

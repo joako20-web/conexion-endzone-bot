@@ -10,13 +10,20 @@ próxima jornada y anotadores de la temporada. Las imágenes se suben a mano.
 
 ## Qué hace el bot
 
-- **Lunes 10:00**: manda el carrusel de la última jornada de cada liga, con el texto del post aparte para copiar.
+- **Lunes 10:00**: manda el carrusel de la última jornada de cada liga, el texto del post para copiar
+  y las tarjetas de **💡 el dato de la jornada** (rachas, remontadas, récords, nuevo líder...).
+  En la Copa, un resumen único (resultados, fase de grupos y cuadro); en la DH B, además, todos los grupos en una imagen.
 - **Martes 10:00**: reenvía los que tenían actas sin completar en la web de la federación.
-- **📋 Pedir** (o `/pedir`): menú con botones *liga → qué → jornada*.
+- **Fin de semana**: en cuanto acaba un partido de DH, Élite, Iberdrola o Copa, manda su **🏁 resultado final** como historia.
+- **📋 Pedir** (o `/pedir`): menú con botones *liga → qué → jornada* (incluye todos los grupos y el cuadro / play-off).
+- **📱 Historias** y **📦 Original** debajo de cada envío: versión 9:16 y archivos sin comprimir.
 - **✏️ Cambiar XV**: escribe `9 Araña` para poner a ese jugador de 9; `listo` para ver la imagen.
 - **📷 Foto portada**: manda una foto y la portada pasa a llevarla a sangre.
 - `/semana` manda ya los carruseles de la semana.
-- Atajo de texto: `xv dhb grupo A`, `clasificación élite`, `resultados dh jornada 1`...
+- Atajo de texto: `xv dhb grupo A`, `clasificación élite`, `cuadro copa`, `resultados dh jornada 1`...
+
+Las clasificaciones llevan una franja de color por zona (título, ascenso, promoción, descenso) con su leyenda,
+configurada en `config/competiciones.yaml` según el formato oficial de cada temporada.
 
 ## Puesta en marcha (una vez)
 
@@ -29,7 +36,7 @@ próxima jornada y anotadores de la temporada. Las imágenes se suben a mano.
 
 | Qué | Dónde |
 |---|---|
-| Ids de las ligas de cada temporada | `config/competiciones.yaml` |
+| Ids de las ligas, zonas de clasificación, play-off y ligas con resultado en directo | `config/competiciones.yaml` |
 | Nombres cortos y abreviaturas de equipos | `config/equipos.yaml` |
 | Cómo mostrar el nombre de un jugador | `config/jugadores.yaml` |
 | Hashtags | `config/publicacion.yaml` |

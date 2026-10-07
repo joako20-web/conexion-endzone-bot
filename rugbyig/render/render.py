@@ -55,7 +55,7 @@ def _n(n: int, singular: str, plural: str) -> str:
     return f"{n} {singular if n == 1 else plural}"
 
 
-def _fila_anotador(x: dict, temporada: bool = False) -> dict:
+def fila_anotador(x: dict, temporada: bool = False) -> dict:
     partes = []
     if x.get("ensayos"):
         partes.append(_n(x["ensayos"], "ensayo", "ensayos"))
@@ -79,6 +79,31 @@ def _fila_anotador(x: dict, temporada: bool = False) -> dict:
 
 # Claves de slide, en orden de carrusel. Sirven para pedir slides sueltos.
 CLAVES = ["portada", "resultados", "anotadores", "xv", "clasificacion", "previa", "temporada"]
+# Slides que van aparte del carrusel (tarjetas de "el dato de la jornada").
+EXTRA = ["datos"]
+TAMANOS = {"post": (1080, 1350), "historia": (1080, 1920)}
+
+
+def zonas_de(comp: str, grupo: str) -> list[dict]:
+    cfg = cargar_config()["competiciones"][comp]
+    return cfg.get("zonas_grupo", {}).get(grupo) or cfg.get("zonas", [])
+
+
+def con_zonas(clasificacion: list[dict], comp: str, grupo: str) -> tuple[list[dict], list[dict]]:
+    """Añade a cada fila su zona (franja de color) y devuelve la leyenda."""
+    n = len(clasificacion)
+    zonas = []
+    for z in zonas_de(comp, grupo):
+        desde = z["desde"] if z["desde"] > 0 else n + 1 + z["desde"]
+        hasta = z["hasta"] if z["hasta"] > 0 else n + 1 + z["hasta"]
+        zonas.append({**z, "desde": desde, "hasta": hasta})
+    filas, usadas = [], []
+    for f in clasificacion:
+        z = next((z for z in zonas if z["desde"] <= f["posicion"] <= z["hasta"]), None)
+        filas.append({**f, "zona": z["color"] if z else ""})
+        if z and z not in usadas:
+            usadas.append(z)
+    return filas, [{"color": z["color"], "texto": z["texto"]} for z in usadas]
 
 
 def slides_de_jornada(datos: dict) -> list[dict]:
@@ -99,11 +124,11 @@ def slides_de_jornada(datos: dict) -> list[dict]:
     if datos.get("xv_ideal"):
         mvp = max(datos["xv_ideal"].values(), key=lambda x: x["nota"])
         destacado = {"motivo": "Mejor jugador de la jornada", "jugador": mvp["nombre"], "equipo": mvp["equipo"],
-                     "dorsal": mvp["dorsal"], "linea": _fila_anotador(mvp)["detalle"], "puntos": mvp["puntos"]}
+                     "dorsal": mvp["dorsal"], "linea": fila_anotador(mvp)["detalle"], "puntos": mvp["puntos"]}
     elif datos["anotadores"]:
         top = datos["anotadores"][0]
         destacado = {"motivo": "Máximo anotador de la jornada", "jugador": top["nombre"], "equipo": top["equipo"],
-                     "dorsal": top["dorsal"], "linea": _fila_anotador(top)["detalle"], "puntos": top["puntos"]}
+                     "dorsal": top["dorsal"], "linea": fila_anotador(top)["detalle"], "puntos": top["puntos"]}
     slides.append(
         {
             "tipo": "portada",
@@ -124,7 +149,7 @@ def slides_de_jornada(datos: dict) -> list[dict]:
                 "sup": f"Jornada {j}",
                 "titulo": "Máximos anotadores",
                 "unidad": "PTS",
-                "filas": [_fila_anotador(x) for x in datos["anotadores"][:7]],
+                "filas": [fila_anotador(x) for x in datos["anotadores"][:7]],
             }
         )
     if datos.get("xv_ideal"):
@@ -133,16 +158,8 @@ def slides_de_jornada(datos: dict) -> list[dict]:
         slides.append(
             {"tipo": "xv", "clave": "xv", "xv": xv, "mvp": int(mvp), "filas": [{"dorsales": d} for d in FILAS_XV]}
         )
-    n = len(datos["clasificacion"])
-    slides.append(
-        {
-            "tipo": "clasificacion",
-            "clave": "clasificacion",
-            "filas": datos["clasificacion"],
-            "zona_alta": 6 if n >= 10 else 0,
-            "zona_baja": 1 if n >= 10 else 0,
-        }
-    )
+    filas, leyenda = con_zonas(datos["clasificacion"], datos["competicion"], datos["grupo"])
+    slides.append({"tipo": "clasificacion", "clave": "clasificacion", "filas": filas, "leyenda": leyenda})
     prox = datos.get("proxima_jornada")
     if prox and prox["partidos"]:
         partidos = []
@@ -164,9 +181,10 @@ def slides_de_jornada(datos: dict) -> list[dict]:
                 "sup": f"Temporada {datos['temporada']}",
                 "titulo": "Anotadores de la liga",
                 "unidad": "PTS",
-                "filas": [_fila_anotador(x, True) for x in datos["temporada_anotadores"][:7]],
+                "filas": [fila_anotador(x, True) for x in datos["temporada_anotadores"][:7]],
             }
         )
+    slides += [dict(t) for t in datos.get("datos_jornada", [])]
     return slides
 
 
@@ -198,7 +216,7 @@ def _escudo_uri(url: str) -> str:
     return _data_uri(buf.getvalue(), "image/jpeg")
 
 
-def html_post(datos: dict, slides: list[dict]) -> str:
+def html_post(datos: dict, slides: list[dict], formato: str = "post") -> str:
     cfg = cargar_config()["competiciones"][datos["competicion"]]
     marca = yaml.safe_load((CONFIG / "marca.yaml").read_text(encoding="utf-8"))
     logo = _data_uri((RAIZ / marca["logo"]).read_bytes(), "image/png")
@@ -210,6 +228,7 @@ def html_post(datos: dict, slides: list[dict]) -> str:
         .get_template("post.html.j2")
         .render(
             slides=slides,
+            formato=formato,
             marca=marca,
             logo=logo,
             jornada=datos["jornada"],
@@ -223,25 +242,21 @@ def html_post(datos: dict, slides: list[dict]) -> str:
     )
 
 
-def renderizar_jornada(
-    ruta_json: Path, destino: Path | None = None, claves: list[str] | None = None
+def renderizar_slides(
+    datos: dict, slides: list[dict], destino: Path, formato: str = "post"
 ) -> list[Path]:
-    """Genera el carrusel (o solo los slides de `claves`) como JPEG."""
-    datos = json.loads(Path(ruta_json).read_text(encoding="utf-8"))
-    destino = destino or OUT / datos["competicion"] / datos["grupo"] / f"j{datos['jornada']:02d}"
+    """Pinta los slides dados como JPEG (1080x1350 o 1080x1920)."""
     destino.mkdir(parents=True, exist_ok=True)
     for viejo in destino.glob("*.jpg"):
         viejo.unlink()
-    slides = slides_de_jornada(datos)
-    if claves:
-        slides = [s for s in slides if s["clave"] in claves]
     if not slides:
         return []
+    ancho, alto = TAMANOS[formato]
     generados: list[Path] = []
     with sync_playwright() as pw:
         nav = pw.chromium.launch()
-        pagina = nav.new_page(viewport={"width": 1080, "height": 1350})
-        pagina.set_content(html_post(datos, slides), wait_until="networkidle")
+        pagina = nav.new_page(viewport={"width": ancho, "height": alto})
+        pagina.set_content(html_post(datos, slides, formato), wait_until="networkidle")
         pagina.evaluate("document.fonts.ready")
         for sec, s in zip(pagina.query_selector_all("section.slide"), slides):
             jpg = destino / f"{len(generados) + 1:02d}_{s['clave']}.jpg"
@@ -249,3 +264,18 @@ def renderizar_jornada(
             generados.append(jpg)
         nav.close()
     return generados
+
+
+def renderizar_jornada(
+    ruta_json: Path, destino: Path | None = None, claves: list[str] | None = None,
+    formato: str = "post",
+) -> list[Path]:
+    """Genera el carrusel (o solo los slides de `claves`) como JPEG.
+
+    Sin `claves` se genera el carrusel; las tarjetas de datos solo si se piden.
+    """
+    datos = json.loads(Path(ruta_json).read_text(encoding="utf-8"))
+    destino = destino or OUT / datos["competicion"] / datos["grupo"] / f"j{datos['jornada']:02d}"
+    slides = slides_de_jornada(datos)
+    slides = [s for s in slides if s["clave"] in claves] if claves else [s for s in slides if s["clave"] in CLAVES]
+    return renderizar_slides(datos, slides, destino, formato)

@@ -58,13 +58,19 @@ class Telegram:
     def comandos(self, lista: list[tuple[str, str]]) -> None:
         self._post("setMyCommands", commands=[{"command": c, "description": d} for c, d in lista])
 
-    def album(self, chat_id, imagenes: list[Path]) -> None:
-        """Envía hasta 10 imágenes como un álbum."""
+    def album(self, chat_id, imagenes: list[Path], como_archivo: bool = False) -> None:
+        """Envía hasta 10 imágenes por álbum. `como_archivo` las manda sin comprimir."""
+        tipo = "document" if como_archivo else "photo"
+        if len(imagenes) == 1:
+            with open(imagenes[0], "rb") as f:
+                metodo = "sendDocument" if como_archivo else "sendPhoto"
+                self._post(metodo, files={tipo: f}, chat_id=chat_id)
+            return
         for i in range(0, len(imagenes), 10):
             lote = imagenes[i : i + 10]
             with ExitStack() as pila:
                 files = {f"f{j}": pila.enter_context(open(p, "rb")) for j, p in enumerate(lote)}
-                media = [{"type": "photo", "media": f"attach://f{j}"} for j in range(len(lote))]
+                media = [{"type": tipo, "media": f"attach://f{j}"} for j in range(len(lote))]
                 self._post("sendMediaGroup", files=files, chat_id=chat_id, media=media)
 
     def foto(self, chat_id, imagen: Path, texto: str = "") -> None:

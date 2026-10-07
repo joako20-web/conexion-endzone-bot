@@ -15,7 +15,7 @@ import time
 import traceback
 from pathlib import Path
 
-from rugbyig import caption, estado
+from rugbyig import caption, directo, estado, torneo
 from rugbyig.core.editar import cambiar_xv
 from rugbyig.pedidos import interpretar
 from rugbyig.pipeline import RAIZ, cargar_config, jornadas_jugadas, preparar_jornada
@@ -25,17 +25,24 @@ from rugbyig.telegram import Telegram
 
 # Claves de slide abreviadas para caber en los 64 bytes de un botón.
 ABREV = {"portada": "p", "resultados": "r", "anotadores": "a", "xv": "x",
-         "clasificacion": "c", "previa": "v", "temporada": "t"}
+         "clasificacion": "c", "previa": "v", "temporada": "t", "datos": "d",
+         "grupos": "g", "cuadro": "k"}
+# Imágenes de nivel competición (no dependen de un grupo ni de una jornada).
+DE_COMPETICION = {"grupos", "cuadro"}
 DESABREV = {v: k for k, v in ABREV.items()}
 
 AYUDA = (
-    "Cada lunes te mando el carrusel de cada liga listo para subir, con el texto "
-    "del post aparte para copiarlo.\n\n"
+    "<b>Cada lunes</b> te mando el carrusel de cada liga listo para subir, el texto del post "
+    "para copiar y las tarjetas de <b>💡 el dato de la jornada</b>.\n"
+    "<b>El fin de semana</b>, en cuanto acaba un partido de DH, Élite o Iberdrola, te llega "
+    "su <b>🏁 resultado final</b> en formato historia.\n\n"
+    "Debajo de cada envío:\n"
+    "📱 <b>Historias</b>: lo mismo en vertical 9:16.\n"
+    "📦 <b>Original</b>: como archivo, sin la compresión de Telegram.\n"
     "✏️ <b>Cambiar XV</b>: después escribe el dorsal y el nombre, p. ej. <code>9 Araña</code>.\n"
     "📷 <b>Foto portada</b>: después mándame la foto.\n\n"
-    "📋 <b>Pedir</b> (botón de abajo o /pedir): eliges liga, qué quieres y jornada, y te lo mando.\n"
-    "/semana manda ya los carruseles de la semana.\n\n"
-    "Atajo: también puedes escribirlo, p. ej. <code>xv dhb grupo A</code> o <code>clasificación élite</code>."
+    "📋 <b>Pedir</b> (botón de abajo o /pedir): eliges liga, qué quieres y jornada.\n"
+    "/semana manda ya los carruseles de la semana."
 )
 
 
@@ -72,42 +79,86 @@ def preparar(comp: str, grupo: str, jornada: int | None = None) -> tuple[str, di
     return pid, post
 
 
-def enviar(tg: Telegram, chat_id, pid: str, post: dict, claves: list[str] | None = None, nota: str = "") -> None:
-    """Genera las imágenes (todas o solo `claves`) y las manda con sus botones."""
+def enviar(tg: Telegram, chat_id, pid: str, post: dict, claves: list[str] | None = None,
+           nota: str = "", formato: str = "post", original: bool = False) -> None:
+    """Genera las imágenes (el carrusel o solo `claves`) y las manda con sus botones.
+
+    formato: "post" (4:5) o "historia" (9:16). original: como archivo, sin compresión.
+    """
     datos = json.loads((RAIZ / post["json"]).read_text(encoding="utf-8"))
     with tempfile.TemporaryDirectory() as tmp:
-        imagenes = renderizar_jornada(RAIZ / post["json"], Path(tmp), claves)
+        imagenes = renderizar_jornada(RAIZ / post["json"], Path(tmp), claves, formato)
         if not imagenes:
             tg.mensaje(chat_id, f"No hay nada que enseñar de <b>{_titulo(post)}</b> todavía.")
             return
-        if len(imagenes) == 1:
-            tg.foto(chat_id, imagenes[0])
-        else:
-            tg.album(chat_id, imagenes)
+        tg.album(chat_id, imagenes, como_archivo=original)
+    if original:
+        return  # los originales van sin botones ni textos: ya se mandó la versión normal
 
-    lineas = [f"<b>{_titulo(post)}</b>"]
+    cod, fmt = _cod(claves), formato[0]
+    lineas = [f"<b>{_titulo(post)}</b>" + (" · 📱 historias" if formato == "historia" else "")]
     if nota:
         lineas.append(nota)
-    if datos["actas_pendientes"]:
+    if datos["actas_pendientes"] and formato == "post":
         lineas.append(
             f"⚠️ {len(datos['actas_pendientes'])} acta(s) sin completar en la web de la federación: "
             "sus estadísticas aún no cuentan."
         )
     completo = claves is None
-    botones = []
-    if datos.get("xv_ideal") and (completo or "xv" in claves):
-        botones.append(("✏️ Cambiar XV", f"xv|{pid}|{_cod(claves)}"))
-    if completo or "portada" in claves:
-        botones.append(("📷 Foto portada", f"foto|{pid}|{_cod(claves)}"))
-    tg.mensaje(chat_id, "\n".join(lineas), [botones] if botones else None)
-    if completo:
+    filas = []
+    if formato == "post":
+        edicion = []
+        if datos.get("xv_ideal") and (completo or "xv" in claves):
+            edicion.append(("✏️ Cambiar XV", f"xv|{pid}|{cod}"))
+        if completo or "portada" in claves:
+            edicion.append(("📷 Foto portada", f"foto|{pid}|{cod}"))
+        if edicion:
+            filas.append(edicion)
+        filas.append([("📱 Historias", f"h|{pid}|{cod}"), ("📦 Original", f"o|{pid}|{cod}|p")])
+    else:
+        filas.append([("📦 Original", f"o|{pid}|{cod}|h")])
+    tg.mensaje(chat_id, "\n".join(lineas), filas)
+    if completo and formato == "post":
         tg.mensaje(chat_id, "📋 Texto para el post (mantén pulsado para copiar):")
         tg.mensaje(chat_id, html.escape(caption.texto_post(datos)))
+
+
+def _novedad_competicion(comp: str) -> str | None:
+    """Clave que cambia cuando hay algo nuevo a nivel competición (jornada de
+    grupos o eliminatoria jugada). None si no hay nada jugado."""
+    dc = torneo.datos_competicion(comp)
+    j = torneo.ultima_jornada(dc)
+    elim = sum(p["puntos_local"] is not None for p in dc["eliminatorias"])
+    if not j and not elim:
+        return None
+    return f"{cargar_config()['temporada'].replace('/', '-')}_{comp}_comp_j{j or 0}_e{elim}"
+
+
+def _semana_competicion(tg: Telegram, chat_id, comp: str, claves: list[str], nota: str) -> str | None:
+    try:
+        clave = _novedad_competicion(comp)
+    except Exception:
+        tg.mensaje(chat_id, f"❗ Error preparando {comp}:\n<code>{html.escape(traceback.format_exc()[-700:])}</code>")
+        return None
+    posts = estado.posts()
+    if not clave or clave in posts:
+        return None
+    if enviar_competicion(tg, chat_id, comp, claves, nota=nota):
+        posts[clave] = {"competicion": comp, "enviado": estado.ahora().isoformat()}
+        estado.guardar_posts(posts)
+        return clave
+    return None
 
 
 def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
     hechos = []
     for comp, cfg in cargar_config()["competiciones"].items():
+        if cfg.get("torneo"):
+            if not reintento and (h := _semana_competicion(
+                    tg, chat_id, comp, ["resultados", "grupos", "cuadro"], "Resumen de la semana")):
+                hechos.append(h)
+            continue
+        enviados_antes = len(hechos)
         for grupo in cfg["grupos"]:
             try:
                 pid, post = preparar(comp, grupo)
@@ -124,11 +175,23 @@ def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
             else:
                 nota = ""
             enviar(tg, chat_id, pid, post, None, nota)
+            if json.loads((RAIZ / post["json"]).read_text(encoding="utf-8")).get("datos_jornada"):
+                enviar(tg, chat_id, pid, post, ["datos"], "💡 El dato de la jornada: para post suelto o historias.")
             posts = estado.posts()
             posts[pid]["enviado"] = estado.ahora().isoformat()
             posts[pid]["pendientes_al_enviar"] = bool(post["actas_pendientes"])
             estado.guardar_posts(posts)
             hechos.append(pid)
+        if reintento or len(hechos) == enviados_antes:
+            continue
+        extra = (["grupos"] if len(cfg["grupos"]) > 1 else []) + (["cuadro"] if cfg.get("playoff") else [])
+        if extra:
+            # El cuadro "si acabara hoy" solo va en los pedidos; aquí solo el real
+            dc = torneo.datos_competicion(comp)
+            if "cuadro" in extra and not dc["eliminatorias"]:
+                extra.remove("cuadro")
+            if extra:
+                enviar_competicion(tg, chat_id, comp, extra, nota="Visión de toda la competición")
     return hechos
 
 
@@ -136,8 +199,9 @@ def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
 
 TECLADO_FIJO = [["📋 Pedir", "❓ Ayuda"]]
 QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("🎯 Anotadores", "a"),
-       ("⭐ XV ideal", "x"), ("🏆 Clasificación", "c"), ("📅 Próxima jornada", "v"),
-       ("📈 Anotadores temporada", "t"), ("🖼 Portada", "p")]
+       ("⭐ XV ideal", "x"), ("🔢 Clasificación", "c"), ("📅 Próxima jornada", "v"),
+       ("📈 Anotadores temporada", "t"), ("💡 El dato de la jornada", "d"), ("🖼 Portada", "p"),
+       ("🗂 Todos los grupos", "g"), ("🏆 Cuadro / play-off", "k")]
 
 
 def _filas(botones: list[tuple[str, str]], ancho: int) -> list[list[tuple[str, str]]]:
@@ -165,7 +229,16 @@ def _menu_ligas() -> tuple[str, list]:
 
 
 def _menu_que(liga: str) -> tuple[str, list]:
-    botones = [(t, f"m3|{liga}|{c}") for t, c in QUE]
+    comp = liga.split("/")[0]
+    cfg = cargar_config()["competiciones"][comp]
+    ocultar = set()
+    if len(cfg["grupos"]) < 2:
+        ocultar.add("g")
+    if not torneo.tiene_cuadro(comp):
+        ocultar.add("k")
+    if not cfg.get("xv_ideal"):
+        ocultar.add("x")
+    botones = [(t, f"m3|{liga}|{c}") for t, c in QUE if c not in ocultar]
     return f"<b>{_nombre_liga(liga)}</b>\n¿Qué quieres?", _filas(botones, 2) + [[("⬅️ Volver", "m1")]]
 
 
@@ -173,7 +246,7 @@ def _menu_jornada(liga: str, cod: str) -> tuple[str, list] | None:
     comp, grupo = liga.split("/")
     grupo_ref = next(iter(cargar_config()["competiciones"][comp]["grupos"])) if grupo == "*" else grupo
     jugadas = jornadas_jugadas(comp, grupo_ref)
-    if cod == "v" or len(jugadas) <= 1:
+    if cod in ("v", "g", "k") or len(jugadas) <= 1:
         return None  # nada que elegir: la última
     ultimas = jugadas[-8:]
     botones = [(f"Última (J{ultimas[-1]})", f"m4|{liga}|{cod}|0")]
@@ -201,7 +274,40 @@ def _menu(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
         tg.mensaje(chat_id, "¿Algo más?", [[("📋 Pedir otra cosa", "m0")]])
 
 
+def enviar_competicion(tg: Telegram, chat_id, comp: str, claves: list[str],
+                       formato: str = "post", original: bool = False, nota: str = "") -> bool:
+    """Imágenes de toda la competición (todos los grupos, cuadro, resultados de todos los grupos)."""
+    with tempfile.TemporaryDirectory() as tmp:
+        imagenes = torneo.renderizar(comp, claves, Path(tmp), formato)
+        if not imagenes:
+            return False
+        tg.album(chat_id, imagenes, como_archivo=original)
+    if original:
+        return True
+    cod = _cod(claves)
+    nombre = cargar_config()["competiciones"][comp]["nombre"]
+    botones = [[("📦 Original", f"to|{comp}|{cod}|{formato[0]}")]]
+    if formato == "post":
+        botones[0].insert(0, ("📱 Historias", f"th|{comp}|{cod}"))
+    tg.mensaje(chat_id, f"<b>{nombre}</b>" + (f"\n{nota}" if nota else ""), botones)
+    return True
+
+
 def _servir(tg: Telegram, chat_id, ligas: list[tuple[str, str]], claves: list[str] | None, jornada: int | None) -> None:
+    de_comp = [c for c in (claves or []) if c in DE_COMPETICION]
+    if de_comp:
+        for comp in dict.fromkeys(c for c, _ in ligas):
+            if not enviar_competicion(tg, chat_id, comp, de_comp):
+                tg.mensaje(chat_id, "No hay nada que enseñar todavía (sin grupos o sin play-off).")
+        claves = [c for c in claves if c not in DE_COMPETICION]
+        if not claves:
+            return
+    # Torneo (Copa) pedido completo para todos los grupos: un único resumen
+    comps = {c for c, _ in ligas}
+    if claves is None and len(ligas) > 1 and len(comps) == 1 and \
+            cargar_config()["competiciones"][next(iter(comps))].get("torneo"):
+        enviar_competicion(tg, chat_id, next(iter(comps)), ["resultados", "grupos", "cuadro"])
+        return
     for comp, grupo in ligas:
         try:
             pid, post = preparar(comp, grupo, jornada)
@@ -270,7 +376,22 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
         b["esperando"] = None
         _menu(tg, chat_id, cq, partes)
         return
+    if partes[0] in ("th", "to"):  # historias / original de imágenes de competición
+        cod = partes[2]
+        formato = "historia" if partes[0] == "th" or (len(partes) > 3 and partes[3] == "h") else "post"
+        enviar_competicion(tg, chat_id, partes[1], _decod(cod) or [], formato, original=partes[0] == "to")
+        return
+    if partes[0] == "fo":  # original de una historia de resultado final
+        comp, grupo = partes[1].split("/")
+        with tempfile.TemporaryDirectory() as tmp:
+            img = directo.historia_final(comp, grupo, int(partes[2]), Path(tmp))
+            tg.album(chat_id, [img], como_archivo=True)
+        return
     accion, pid, cod = (partes + ["", ""])[:3]
+    if accion in ("h", "o") and pid in posts:
+        formato = "historia" if accion == "h" or (len(partes) > 3 and partes[3] == "h") else "post"
+        enviar(tg, chat_id, pid, posts[pid], _decod(cod), formato=formato, original=accion == "o")
+        return
     post = posts.get(pid)
     if not post:
         tg.mensaje(chat_id, "Ese contenido ya no existe.")
@@ -361,8 +482,17 @@ def _toca(b: dict, clave: str, dia: int, hora: int) -> bool:
     return False
 
 
+def _cada_cuanto_directo() -> int:
+    """Segundos entre comprobaciones de resultados: a menudo el finde, poco entre semana."""
+    ahora = estado.ahora()
+    if ahora.weekday() >= 5 and 11 <= ahora.hour < 23:
+        return 4 * 60
+    return 30 * 60
+
+
 def bucle(tg: Telegram, minutos: float) -> None:
     fin = time.monotonic() + minutos * 60
+    ultimo_directo = 0.0
     while (restante := fin - time.monotonic()) > 5:
         b = estado.bot()
         chat_id = b.get("chat_id")
@@ -371,5 +501,12 @@ def bucle(tg: Telegram, minutos: float) -> None:
                 semana(tg, chat_id)
             elif _toca(b, "semana_martes", 1, 10):
                 semana(tg, chat_id, reintento=True)
+            if time.monotonic() - ultimo_directo > _cada_cuanto_directo():
+                ultimo_directo = time.monotonic()
+                try:
+                    directo.comprobar(tg, b)
+                except Exception:
+                    traceback.print_exc()
+                estado.guardar_bot(b)
         espera = int(min(50, max(1, restante - 5)))
         procesar(tg, tg.actualizaciones(b.get("offset", 0), espera))

@@ -7,29 +7,70 @@ temporada: "2026/27"
 # carnet). Desactivado: la portada es gráfica salvo que se añada una foto a mano.
 foto_portada_auto: false
 
+# Zonas de la clasificación (franja de color + leyenda). Posiciones negativas
+# cuentan desde el final (-1 = último). Colores: titulo, ascenso, promocion, descenso, fase.
+# Formato 2026/27 según la FER (revisar cada temporada).
+
 competiciones:
   dh_masc:
     nombre: "División de Honor"
     corto: "DH"
     grupos: {unico: 1296}
     xv_ideal: true
+    directo: true   # resultado final al momento el fin de semana
+    playoff: [[1, 4], [2, 3]]  # semifinales "si acabara hoy"
+    zonas:
+      - {desde: 1, hasta: 4, color: titulo, texto: "Semifinales por el título"}
+      - {desde: -1, hasta: -1, color: descenso, texto: "Desciende a DH Élite"}
   dh_fem:
     nombre: "Liga Iberdrola"
     corto: "DH Fem"
     grupos: {unico: 1298}
     xv_ideal: true
+    directo: true   # resultado final al momento el fin de semana
+    playoff: [[1, 4], [2, 3]]
+    zonas:
+      - {desde: 1, hasta: 4, color: titulo, texto: "Play-off por el título"}
+      - {desde: -2, hasta: -2, color: promocion, texto: "Promoción ante el 2º de DHB"}
+      - {desde: -1, hasta: -1, color: descenso, texto: "Desciende a DHB Femenina"}
   dh_elite:
     nombre: "División de Honor Élite"
     corto: "DH Élite"
     grupos: {unico: 1297}
     xv_ideal: true
+    directo: true   # resultado final al momento el fin de semana
+    playoff: [[1, 4], [2, 3]]
+    zonas:
+      - {desde: 1, hasta: 4, color: titulo, texto: "Play-off por el ascenso a DH"}
+      - {desde: -1, hasta: -1, color: descenso, texto: "Desciende a DH B"}
   dhb_masc:
     nombre: "División de Honor B"
     corto: "DH B"
     grupos: {A: 1300, B: 1301, C: 1302, D: 1303}
     xv_ideal: true
+    directo: false
+    zonas:
+      - {desde: 1, hasta: 3, color: ascenso, texto: "Grupo de ascenso a DH Élite"}
+      - {desde: -1, hasta: -1, color: descenso, texto: "Desciende"}
+    zonas_grupo:  # el grupo D solo clasifica al primero (la FER habla de 5 descensos, pero el grupo tiene 5 equipos: sin confirmar)
+      D:
+        - {desde: 1, hasta: 1, color: ascenso, texto: "Grupo de ascenso a DH Élite"}
   dhb_fem:
     nombre: "División de Honor B Femenina"
     corto: "DH B Fem"
     grupos: {unico: 1299}
     xv_ideal: true
+    directo: false
+    zonas:
+      - {desde: 1, hasta: 4, color: titulo, texto: "Grupo A de la 2ª fase (título)"}
+      - {desde: 5, hasta: 8, color: fase, texto: "Grupo B de la 2ª fase"}
+  copa:
+    nombre: "Copa del Rey"
+    corto: "Copa"
+    grupos: {A: 1322, B: 1323, C: 1324, D: 1325, E: 1326, F: 1327}
+    xv_ideal: false
+    directo: true
+    torneo: true  # fase de grupos + cuadro final: resumen conjunto en vez de un carrusel por grupo
+    exentos: ["SILICIUS ALCOBENDAS RUGBY", "VRAC QUESOS ENTREPINARES"]  # directos a cuartos
+    zonas:
+      - {desde: 1, hasta: 1, color: titulo, texto: "Pasa a cuartos de final"}

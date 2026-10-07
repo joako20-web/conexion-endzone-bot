@@ -18,6 +18,8 @@ class Partido:
     puntos_visitante: int | None
     campo: str
     estado: str  # "jugado" | "pendiente" | ...
+    grupo: int | None = None  # id de grupo/fase de iSquad
+    ronda: str = ""  # "Cuartos de Final", "Semifinales", "Final"... (eliminatorias)
 
     @property
     def jugado(self) -> bool:
@@ -108,11 +110,11 @@ class Competicion:
     def jornada(self, n: int) -> list[Partido]:
         return [p for p in self.partidos if p.jornada == n]
 
-    def filtrar(self, equipos: set[str]) -> Competicion:
-        """Solo los partidos y jugadores de esos equipos (la página de
-        estadísticas mezcla todos los grupos de una competición)."""
+    def filtrar(self, id_grupo: int, equipos: set[str]) -> Competicion:
+        """Solo los partidos de ese grupo/fase y los jugadores de esos equipos
+        (la página de estadísticas mezcla todas las fases y grupos)."""
         return Competicion(
-            [p for p in self.partidos if p.local in equipos or p.visitante in equipos],
+            [p for p in self.partidos if p.grupo in (id_grupo, None)],
             [j for j in self.jugadores if j.equipo in equipos],
         )
 

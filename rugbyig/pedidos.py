@@ -34,12 +34,19 @@ TIPOS = [
     ("clasificacion", r"clasific|\btabla\b|posiciones"),
     ("previa", r"previa|proxim|siguiente|calendario|horario|cuando juega"),
     ("portada", r"portada|mvp|mejor jugador"),
+    ("datos", r"\bdatos?\b|curiosidad|record"),
+    ("grupos", r"todos los grupos|fase de grupos|\bgrupos\b"),
+    ("cuadro", r"cuadro|play.?off|eliminatoria|semifinal|cruces"),
 ]
 TODO = r"\btodo\b|carrusel|completo|resumen|\bpost\b"
 
 
 def _ligas(t: str) -> list[tuple[str, str]]:
     cfg = cargar_config()["competiciones"]
+    if re.search(r"\bcopa\b", t):
+        m = re.search(r"\bgrupo ([a-f])\b", t)
+        grupos = list(cfg["copa"]["grupos"])
+        return [("copa", m.group(1).upper())] if m else [("copa", g) for g in grupos]
     fem = re.search(r"\bfem|femenin|chicas|mujeres|\bdhf\b|iberdrola", t)
     es_b = re.search(r"\bdhb\w*|honor b\b|\bdh b\b", t)
     if es_b and fem:

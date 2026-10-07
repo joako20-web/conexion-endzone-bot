@@ -8,6 +8,7 @@ from pathlib import Path
 
 import yaml
 
+from rugbyig.core import datos as D
 from rugbyig.core import estadisticas as E
 from rugbyig.scraper.isquad import ISquad
 
@@ -34,9 +35,7 @@ def elegir_foto_portada(candidatos: list[E.LineaJugador], cliente: ISquad) -> di
             return {"url": ln.foto, "jugador": ln.nombre, "equipo": ln.equipo, "motivo": ""}
     return None
 
-RAIZ = Path(__file__).resolve().parent.parent
-CONFIG = RAIZ / "config"
-DATA = RAIZ / "data"
+from rugbyig.rutas import CONFIG, DATA, RAIZ  # noqa: F401  (se reexportan)
 
 
 def cargar_config() -> dict:
@@ -59,8 +58,30 @@ def jornadas_jugadas(comp: str, grupo: str = "unico", cliente: ISquad | None = N
     cliente = cliente or ISquad()
     id_grupo = cfg["grupos"][grupo]
     equipos = {f.equipo for f in cliente.clasificacion(id_grupo)}
-    competicion = cliente.competicion(id_grupo).filtrar(equipos)
+    competicion = cliente.competicion(id_grupo).filtrar(id_grupo, equipos)
     return sorted({p.jornada for p in competicion.partidos if p.jugado})
+
+
+def resumen_temporada(comp: str, grupo: str, competicion, cliente: ISquad) -> dict[str, list]:
+    """Puntos y ensayos de cada jugador en cada partido jugado de la temporada.
+
+    Se guarda en data/ (se commitea) para no volver a bajar las actas antiguas.
+    Formato: {id_partido: [[nombre, equipo, puntos, ensayos], ...]}.
+    """
+    ruta = ruta_jornada(comp, grupo, 0).with_name("resumen_partidos.json")
+    resumen = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
+    for p in competicion.partidos:
+        if not p.jugado or str(p.id) in resumen:
+            continue
+        acta = cliente.acta(p.id)
+        if acta.marcador_por_eventos() != (p.puntos_local, p.puntos_visitante):
+            continue  # acta incompleta: se reintenta la próxima vez
+        resumen[str(p.id)] = [
+            [ln.nombre, ln.equipo, ln.puntos, ln.ensayos] for ln in E.lineas_partido(p, acta) if ln.puntos
+        ]
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    ruta.write_text(json.dumps(resumen, ensure_ascii=False), encoding="utf-8")
+    return resumen
 
 
 def preparar_jornada(
@@ -71,7 +92,7 @@ def preparar_jornada(
     cliente = cliente or ISquad()
 
     clasificacion = cliente.clasificacion(id_grupo)
-    competicion = cliente.competicion(id_grupo).filtrar({f.equipo for f in clasificacion})
+    competicion = cliente.competicion(id_grupo).filtrar(id_grupo, {f.equipo for f in clasificacion})
     jornada = jornada or competicion.ultima_jornada_jugada()
     if jornada is None:
         raise RuntimeError(f"{comp}/{grupo}: aún no hay jornadas jugadas")
@@ -79,6 +100,7 @@ def preparar_jornada(
     partidos = competicion.jornada(jornada)
     lineas: list[E.LineaJugador] = []
     pendientes = []
+    actas_jornada = []
     for p in partidos:
         if not p.jugado:
             pendientes.append(p.id)
@@ -89,6 +111,8 @@ def preparar_jornada(
             pendientes.append(p.id)
             continue
         lineas += E.lineas_partido(p, acta)
+        actas_jornada.append((_partido(p), [asdict(e) for e in acta.eventos]))
+    resumen = resumen_temporada(comp, grupo, competicion, cliente)
 
     xv = E.xv_ideal(lineas) if cfg.get("xv_ideal") and lineas else {}
     mejores = sorted(xv.values(), key=lambda ln: -ln.nota) + E.anotadores(lineas, 5)
@@ -108,6 +132,7 @@ def preparar_jornada(
         "temporada": cargar_config()["temporada"],
         "jornada": jornada,
         "partidos": [_partido(p) for p in partidos],
+        "partidos_temporada": [_partido(p) for p in competicion.partidos if p.jugado],
         "actas_pendientes": pendientes,
         "anotadores": [asdict(x) for x in E.anotadores(lineas, 10)],
         "ensayadores": [asdict(x) for x in E.maximos_ensayadores(lineas, 5)],
@@ -134,6 +159,18 @@ def preparar_jornada(
         if siguiente
         else None,
     }
+
+    anterior = ruta_jornada(comp, grupo, jornada - 1)
+    lider_anterior = None
+    if anterior.exists():
+        clas_ant = json.loads(anterior.read_text(encoding="utf-8")).get("clasificacion") or []
+        lider_anterior = clas_ant[0]["equipo"] if clas_ant else None
+    datos["datos_jornada"] = D.calcular(
+        datos["partidos_temporada"], jornada, datos["candidatos_xv"] + [
+            asdict(ln) for ln in lineas if not 1 <= ln.dorsal <= 15],
+        actas_jornada, resumen, datos["clasificacion"], lider_anterior,
+        [asdict(j) for j in competicion.jugadores],
+    )
 
     ruta = ruta_jornada(comp, grupo, jornada)
     ruta.parent.mkdir(parents=True, exist_ok=True)

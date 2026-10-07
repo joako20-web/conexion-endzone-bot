@@ -71,10 +71,12 @@ def estadisticas(raw: bytes) -> Competicion:
             fecha = datetime.strptime(_txt(td[1]), "%d/%m/%Y %H:%M")
         except ValueError:
             fecha = None
+        etiqueta = _txt(td[0])
+        es_jornada = re.fullmatch(r"J\d+", etiqueta)
         comp.partidos.append(
             Partido(
                 id=_qs(tr["data-href"], "id_partido"),
-                jornada=_int(_txt(td[0])),
+                jornada=_int(etiqueta) if es_jornada else 0,
                 fecha=fecha,
                 local=_txt(td[2]),
                 visitante=_txt(td[4]),
@@ -82,6 +84,8 @@ def estadisticas(raw: bytes) -> Competicion:
                 puntos_visitante=int(res[1]) if len(res) == 2 else None,
                 campo=_txt(td[5]),
                 estado=tr.get("data-stx-estado", ""),
+                grupo=int(tr["data-stx-grupo"]) if tr.get("data-stx-grupo", "").isdigit() else None,
+                ronda="" if es_jornada else etiqueta,
             )
         )
 
@@ -157,7 +161,7 @@ def acta(raw: bytes, id_partido: int) -> Acta:
 def clasificacion(raw: bytes) -> list[FilaClasificacion]:
     s = _soup(raw)
     filas = []
-    for tr in s.find("table", class_="clasificacion").find_all("tr")[1:]:
+    for i, tr in enumerate(s.find("table", class_="clasificacion").find_all("tr")[1:], 1):
         td = tr.find_all("td")
         if len(td) < 16:
             continue
@@ -172,7 +176,8 @@ def clasificacion(raw: bytes) -> list[FilaClasificacion]:
         if escudo.startswith("//"):
             escudo = "https:" + escudo
         filas.append(
-            FilaClasificacion(_int(_txt(td[0])), nombre, [r for r in racha if r != "-"], *n, escudo=escudo)
+            # Sin partidos jugados iSquad pone posición 0: se usa el orden de la tabla
+            FilaClasificacion(_int(_txt(td[0])) or i, nombre, [r for r in racha if r != "-"], *n, escudo=escudo)
         )
     return filas
 
