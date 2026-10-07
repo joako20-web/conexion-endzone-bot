@@ -10,7 +10,7 @@
   <div class="partido">
     <div class="equipo {{ 'pierde' if gv }}">{% if p.local|escudo %}<img class="crest r" src="{{ p.local|escudo }}">{% endif %}<div class="nom">{{ p.local|corto }}</div></div>
     <div class="marcador">
-      {% if jug %}<span class="{{ 'g' if gl else 'p' if gv }}">{{ p.puntos_local }}</span><span class="sep">–</span><span class="{{ 'g' if gv else 'p' if gl }}">{{ p.puntos_visitante }}</span>
+      {% if jug %}<span class="{{ 'g' if gl else 'p' if gv }}">{{ p.puntos_local }}</span><span class="sep"></span><span class="{{ 'g' if gv else 'p' if gl }}">{{ p.puntos_visitante }}</span>
       {% else %}<span class="pend">Sin resultado</span>{% endif %}
     </div>
     <div class="equipo vis {{ 'pierde' if gl }}"><div class="nom">{{ p.visitante|corto }}</div>{% if p.visitante|escudo %}<img class="crest r" src="{{ p.visitante|escudo }}">{% endif %}</div>

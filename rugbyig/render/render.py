@@ -50,8 +50,28 @@ def _env() -> Environment:
         jugador=nombres.jugador,
         titulo=nombres.titulo,
         posicion=lambda d: POSICIONES.get(int(d), ""),
+        sep=_sin_puntos,
+        unidad=_unidad,
     )
     return env
+
+
+def _sin_puntos(texto) -> str:
+    """El punto medio como separador universal es un tic de diseño generado:
+    en las imágenes se usa coma."""
+    return str(texto or "").replace(" · ", ", ")
+
+
+UNIDADES = {"PTS": ("pt", "pts"), "ENS": ("ensayo", "ensayos"), "TARJ": ("tarjeta", "tarjetas")}
+
+
+def _unidad(unidad: str, valor=None) -> str:
+    """Unidad en palabras y en minúscula (nada de "ENS" o "TARJ")."""
+    singular, plural = UNIDADES.get(str(unidad).upper(), (str(unidad).lower(), str(unidad).lower()))
+    try:
+        return singular if int(valor) == 1 else plural
+    except (TypeError, ValueError):
+        return plural
 
 
 def _rango_fechas(partidos: list[dict]) -> str:
@@ -87,7 +107,7 @@ def fila_anotador(x: dict, temporada: bool = False) -> dict:
         "nombre": x["nombre"],
         "equipo": x["equipo"],
         "valor": x["puntos"],
-        "detalle": " · ".join(partes),
+        "detalle": ", ".join(partes),
         "extra": f"vs {nombres.equipo_corto(x['rival'])}" if x.get("rival") else "",
     }
 
@@ -217,7 +237,7 @@ def slides_rankings(datos: dict) -> list[dict]:
         ("ensayadores_t", "Ensayadores de la liga", temp, "ENS"),
         ("pateadores_t", "Pateadores de la liga", temp, "PTS"),
         ("disciplina", "Tarjetas", temp, "TARJ"),
-        ("banquillo", "Desde el banquillo", f"Puntos de suplentes · {temp}", "PTS"),
+        ("banquillo", "Desde el banquillo", f"Puntos de suplentes, {temp}", "PTS"),
     ]
     slides = []
     for clave, titulo, sup, unidad in defs:

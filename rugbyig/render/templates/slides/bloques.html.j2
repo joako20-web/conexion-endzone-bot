@@ -1,23 +1,22 @@
-{# Varios mini-rankings de equipos en una rejilla 2x2. Estilos locales con las
-   variables del tema, para no depender del CSS común. #}
+{# Varios mini-rankings de equipos en una rejilla 2x2. Sin tarjetas: cada
+   bloque es un título con filete y sus filas, como una tabla de periódico. #}
 <style>
-.blq-rejilla { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 36px; }
-.blq { background: var(--panel); border: 2px solid var(--linea); border-radius: 18px; padding: 22px 24px 14px; }
-.blq-tit { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-weight: 600; font-size: 46px; line-height: 1; color: var(--acento-txt); margin-bottom: 10px; }
-.blq-fila { display: grid; grid-template-columns: 28px 54px 1fr auto; align-items: center; gap: 10px; height: 98px; border-top: 1px solid var(--linea); }
-.blq-fila:first-of-type { border-top: 0; }
-.blq-pos { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-size: 34px; color: var(--gris); padding-top: 4px; }
-.blq-eq { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-weight: 500; font-size: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 4px; }
+.blq-rejilla { display: grid; grid-template-columns: 1fr 1fr; gap: 56px 48px; }
+.blq-tit { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 600; font-size: 46px; line-height: 1; padding-bottom: 12px; border-bottom: var(--filete) solid var(--texto); }
+.blq-fila { display: grid; grid-template-columns: 30px 54px 1fr auto; align-items: center; gap: 12px; height: 104px; }
+.blq-fila + .blq-fila { border-top: 1px solid var(--linea); }
+.blq-pos { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-size: 32px; color: var(--gris); }
+.blq-eq { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-weight: 600; font-size: 34px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .blq-val { text-align: right; line-height: 1; }
-.blq-val b { font-family: var(--f-tit); font-size-adjust: cap-height 0.64; font-weight: 600; font-size: 54px; display: block; }
+.blq-val b { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-weight: 700; font-size: 56px; display: block; }
 .blq-fila:first-of-type .blq-val b { color: var(--acento-txt); }
 .blq-val small { font-size: 24px; color: var(--gris); }
 .crest.blq-c { width: 50px; height: 50px; padding: 5px; }
-.f-historia .blq-fila { height: 128px; }
+.f-historia .blq-fila { height: 132px; }
 </style>
 <div class="titulo">
   <h1>{{ s.titulo }}</h1>
-  <div class="bajada">{{ s.sup }}</div>
+  <div class="bajada">{{ s.sup|sep }}</div>
 </div>
 <div class="cuerpo">
   <div class="blq-rejilla">

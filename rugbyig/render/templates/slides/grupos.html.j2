@@ -21,7 +21,7 @@
   </div>
   {% if s.exentos %}
   <div class="exentos">Directos a cuartos:
-    {% for e in s.exentos %}{% if e|escudo %}<img class="crest x" src="{{ e|escudo }}">{% endif %}<b>{{ e|corto }}</b>{% if not loop.last %} · {% endif %}{% endfor %}
+    {% for e in s.exentos %}{% if e|escudo %}<img class="crest x" src="{{ e|escudo }}">{% endif %}<b>{{ e|corto }}</b>{% if not loop.last %} y {% endif %}{% endfor %}
   </div>
   {% endif %}
   {% if s.leyenda %}
