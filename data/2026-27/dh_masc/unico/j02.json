@@ -14,7 +14,9 @@
       "puntos_local": 36,
       "puntos_visitante": 33,
       "campo": "Estadio de Rugby de Villajoyosa",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
     },
     {
       "id": 17651,
@@ -25,7 +27,9 @@
       "puntos_local": 45,
       "puntos_visitante": 24,
       "campo": "ALTAMIRA ESTADIOA",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
     },
     {
       "id": 17652,
@@ -36,7 +40,9 @@
       "puntos_local": 45,
       "puntos_visitante": 20,
       "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
     },
     {
       "id": 17649,
@@ -47,7 +53,9 @@
       "puntos_local": 12,
       "puntos_visitante": 22,
       "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 1",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
     },
     {
       "id": 17650,
@@ -58,7 +66,141 @@
       "puntos_local": 18,
       "puntos_visitante": 15,
       "campo": "CAMPO DE RUGBY BIENVENIDO NIETO",
-      "estado": "jugado"
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    }
+  ],
+  "partidos_temporada": [
+    {
+      "id": 17643,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:00:00",
+      "local": "VRAC QUESOS ENTREPINARES",
+      "visitante": "HUESITOS LA VILA RUGBY CLUB",
+      "puntos_local": 40,
+      "puntos_visitante": 24,
+      "campo": "CAMPOS DE RUGBY DE PEPE ROJO (INSTALACIONES DEPORTIVAS CIUDAD DE VALLADOLID)",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17647,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:00:00",
+      "local": "UNIO ESPORTIVA SANTBOIANA",
+      "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "puntos_local": 30,
+      "puntos_visitante": 22,
+      "campo": "ESTADI BALDIRI ALEU",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17644,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:30:00",
+      "local": "SILICIUS ALCOBENDAS RUGBY",
+      "visitante": "COMPLUTENSE CISNEROS",
+      "puntos_local": 29,
+      "puntos_visitante": 19,
+      "campo": "Las Terrazas",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17646,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:30:00",
+      "local": "INVERSUS LICEO FRANCES",
+      "visitante": "AMPO ORDIZIA",
+      "puntos_local": 25,
+      "puntos_visitante": 15,
+      "campo": "ESTADIO RAMON URTUBI",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17645,
+      "jornada": 1,
+      "fecha": "2026-09-27T13:00:00",
+      "local": "CRC POZUELO RUGBY",
+      "visitante": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "puntos_local": 20,
+      "puntos_visitante": 39,
+      "campo": "ECOPILAS VALLE DE LAS CAÑAS",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17648,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:00:00",
+      "local": "HUESITOS LA VILA RUGBY CLUB",
+      "visitante": "UNIO ESPORTIVA SANTBOIANA",
+      "puntos_local": 36,
+      "puntos_visitante": 33,
+      "campo": "Estadio de Rugby de Villajoyosa",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17651,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:00:00",
+      "local": "AMPO ORDIZIA",
+      "visitante": "CRC POZUELO RUGBY",
+      "puntos_local": 45,
+      "puntos_visitante": 24,
+      "campo": "ALTAMIRA ESTADIOA",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17652,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:00:00",
+      "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "visitante": "INVERSUS LICEO FRANCES",
+      "puntos_local": 45,
+      "puntos_visitante": 20,
+      "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17649,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:30:00",
+      "local": "COMPLUTENSE CISNEROS",
+      "visitante": "VRAC QUESOS ENTREPINARES",
+      "puntos_local": 12,
+      "puntos_visitante": 22,
+      "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17650,
+      "jornada": 2,
+      "fecha": "2026-10-04T13:00:00",
+      "local": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "visitante": "SILICIUS ALCOBENDAS RUGBY",
+      "puntos_local": 18,
+      "puntos_visitante": 15,
+      "campo": "CAMPO DE RUGBY BIENVENIDO NIETO",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
     }
   ],
   "actas_pendientes": [],
@@ -3365,7 +3507,9 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "ESTADI BALDIRI ALEU",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
       },
       {
         "id": 17653,
@@ -3376,7 +3520,9 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "Estadio de Rugby de Villajoyosa",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
       },
       {
         "id": 17654,
@@ -3387,7 +3533,9 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "CAMPOS DE RUGBY DE PEPE ROJO (INSTALACIONES DEPORTIVAS CIUDAD DE VALLADOLID)",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
       },
       {
         "id": 17655,
@@ -3398,7 +3546,9 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "Las Terrazas",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
       },
       {
         "id": 17656,
@@ -3409,8 +3559,42 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "ECOPILAS VALLE DE LAS CAÑAS",
-        "estado": "pendiente"
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
       }
     ]
-  }
+  },
+  "datos_jornada": [
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 74,
+      "numero": "19",
+      "unidad": "puntos de desventaja remontados",
+      "titular": "Remontada de La Vila",
+      "contexto": "Llegó a perder de 19 ante Santboiana: La Vila 36-33 Santboiana.",
+      "equipo": "HUESITOS LA VILA RUGBY CLUB"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 73,
+      "numero": "25",
+      "unidad": "puntos de diferencia",
+      "titular": "Exhibición de El Salvador",
+      "contexto": "El Salvador 45-20 Liceo Francés. La mayor diferencia de la temporada.",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 62,
+      "numero": "79'",
+      "unidad": "minuto de la victoria",
+      "titular": "Aparejadores Burgos gana en el último suspiro",
+      "contexto": "Se puso por delante en el minuto 79: Aparejadores Burgos 18-15 Alcobendas.",
+      "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES"
+    }
+  ]
 }
