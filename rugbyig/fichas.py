@@ -26,6 +26,7 @@ from pathlib import Path
 
 from rugbyig.core.estadisticas import POSICIONES
 from rugbyig.pipeline import (
+    actualizar_resumen,
     DATA,
     cargar_config,
     jugadores_desde_resumen,
@@ -281,8 +282,13 @@ def indice_jugadores() -> list[dict]:
             resumen = json.loads(ruta.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             continue
+        if resumen and max(len(js) for js in resumen.values()) < 26:  # formato antiguo: solo anotadores
+            try:
+                resumen = actualizar_resumen(comp, grupo)
+            except Exception:
+                pass
         cfg = comps[comp]
-        for j in jugadores_desde_resumen(resumen):
+        for j in jugadores_desde_resumen(resumen, todos=True):
             indice.append({
                 "id": _id("j", comp, grupo, j.nombre, j.equipo), "nombre": j.nombre, "equipo": j.equipo,
                 "liga": _liga(cfg, grupo), "comp": comp, "grupo": grupo,

@@ -16,7 +16,7 @@ import time
 import traceback
 from pathlib import Path
 
-from rugbyig import agenda, caption, destacado, directo, especiales, estado, evolucion, fichas, historico, torneo
+from rugbyig import agenda, arbitros, caption, destacado, directo, especiales, estado, evolucion, fichas, historico, torneo
 from rugbyig.core.editar import cambiar_xv
 from rugbyig.pedidos import interpretar
 from rugbyig.pipeline import RAIZ, cargar_config, jornadas_jugadas, preparar_jornada
@@ -222,6 +222,7 @@ COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
             ("equipo", "Ficha de un equipo: /equipo vrac"),
             ("jugador", "Ficha de un jugador: /jugador mansilla"),
             ("cara", "Cara a cara: /cara vrac vs salvador"),
+            ("arbitros", "Un equipo con cada árbitro: /arbitros vrac"),
             ("estilo", "Cambiar el estilo visual"),
             ("semana", "Mandar ya los carruseles de esta semana"),
             ("ayuda", "Cómo funciona")]
@@ -242,6 +243,8 @@ DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k", "w", "e", "X", "M",
 # Imágenes especiales (módulo especiales/evolucion): clave -> (función, admite formato post/historia)
 ESPECIALES = {"encuesta_mvp", "encuesta_partido", "evolucion", "xv_temporada", "mvp_temporada",
               "partido_jornada", "palmares", "hace_un_ano"}
+# Estadísticas de árbitros (designación y actas de iSquad desde 2023/24)
+ARBITROS = {"dh_masc", "dh_fem"}
 # Histórico: solo competiciones de iSquad con temporadas anteriores
 HISTORICO = {"dh_masc", "dh_fem", "dh_elite", "copa"}
 # Filas del menú "¿qué quieres?" (agrupadas por tema)
@@ -362,7 +365,38 @@ def _menu_stats(liga: str) -> tuple[str, list]:
     ocultar = set() if liga.split("/")[0] in HISTORICO else {"P", "H"}
     filas = [[(etiqueta[c], f"m3|{liga}|{c}") for c in fila if c not in ocultar] for fila in FILAS_STATS]
     filas = [f for f in filas if f]
+    if liga.split("/")[0] in ARBITROS:
+        filas.insert(0, [("🟥 Árbitros ▸", f"mar|{liga.split('/')[0]}")])
     return f"<b>{_nombre_liga(liga)}</b>\n📈 Más estadísticas", filas + [[("⬅️ Volver", f"m2|{liga}")]]
+
+
+def _menu_arbitros(comp: str) -> tuple[str, list]:
+    nombre = cargar_config()["competiciones"][comp]["nombre"]
+    filas = [[("🟨 Los más tarjeteros", f"ar|{comp}|t|p|0")],
+             [("🤔 Datos curiosos", f"ar|{comp}|c|p|0")],
+             [("🧑‍⚖️ Quién pita la jornada", f"ar|{comp}|d|p|0")],
+             [("⬅️ Volver", f"ms|{comp}/unico")]]
+    return (f"🟥 <b>Árbitros · {nombre}</b>\nDatos desde 2023/24. Para un equipo concreto escribe "
+            f"<code>/arbitros vrac</code>."), filas
+
+
+def enviar_arbitros(tg: Telegram, chat_id, comp: str, tipo: str, formato: str = "post",
+                    original: bool = False, equipo: str = "") -> bool:
+    funciones = {"t": arbitros.renderizar_tarjeteros, "c": arbitros.renderizar_curiosidades,
+                 "d": arbitros.renderizar_designaciones}
+    if not original:
+        tg.mensaje(chat_id, "⏳ Preparando… (la primera vez puede tardar un par de minutos: repasa tres temporadas)")
+    with tempfile.TemporaryDirectory() as tmp:
+        if tipo == "e":
+            imgs = arbitros.renderizar_equipo(comp, equipo, Path(tmp), formato)
+        else:
+            imgs = funciones[tipo](comp, Path(tmp), formato)
+        if not imgs:
+            tg.mensaje(chat_id, "No hay muestra suficiente (o aún no hay designaciones publicadas).")
+            return False
+        base = f"ar|{comp}|{tipo}" if tipo != "e" else f"ae|{comp}|{equipo[:24]}"
+        _mandar(tg, chat_id, imgs, base, formato, original, "🟥 <b>Árbitros</b>")
+    return True
 
 
 def _menu_jornada(liga: str, cod: str) -> tuple[str, list] | None:
@@ -398,6 +432,8 @@ def _menu(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
         tg.editar(chat_id, mid, *_menu_que(partes[1]))
     elif paso == "ms":
         tg.editar(chat_id, mid, *_menu_stats(partes[1]))
+    elif paso == "mar":
+        tg.editar(chat_id, mid, *_menu_arbitros(partes[1]))
     elif paso in ("m3", "m4"):
         liga, cod = partes[1], partes[2]
         if paso == "m3" and (menu := _menu_jornada(liga, cod)):
@@ -704,6 +740,13 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
             img = directo.historia_final(comp, grupo, int(partes[2]), Path(tmp))
             tg.album(chat_id, [img], como_archivo=True)
         return
+    if partes[0] in ("ar", "ae"):
+        formato, original = _formato(partes)
+        if partes[0] == "ar":
+            enviar_arbitros(tg, chat_id, partes[1], partes[2], formato, original)
+        else:
+            enviar_arbitros(tg, chat_id, partes[1], "e", formato, original, equipo=partes[2])
+        return
     if partes[0] == "ag":
         formato, original = _formato(partes)
         enviar_agenda(tg, chat_id, partes[1], formato, original)
@@ -762,6 +805,14 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
         _buscar(tg, chat_id, "fj", texto[len("/jugador"):].strip())
     elif texto.startswith("/cara"):
         _cara(tg, chat_id, texto[len("/cara"):].strip())
+    elif texto.startswith("/arbitros") or texto.startswith("/árbitros"):
+        equipo = texto.split(maxsplit=1)[1].strip() if " " in texto else ""
+        if not equipo:
+            tg.mensaje(chat_id, "Escribe el equipo, p. ej. <code>/arbitros vrac</code>")
+        else:
+            cands = [c for c in fichas.buscar_equipo(equipo) if c["comp"] in ARBITROS]
+            comp = cands[0]["comp"] if cands else "dh_masc"
+            enviar_arbitros(tg, chat_id, comp, "e", equipo=equipo)
     elif texto.startswith("/agenda"):
         enviar_agenda(tg, chat_id, "n")
     elif texto.startswith("/estilo") or texto == "🎨 Estilo":
@@ -858,6 +909,8 @@ def bucle(tg: Telegram, minutos: float) -> None:
             elif _toca(b, "agenda_jueves", 3, 10):
                 try:
                     enviar_agenda(tg, chat_id, "n")
+                    for comp in ARBITROS:
+                        enviar_arbitros(tg, chat_id, comp, "d")
                 except Exception:
                     traceback.print_exc()
             if time.monotonic() - ultimo_directo > _cada_cuanto_directo():

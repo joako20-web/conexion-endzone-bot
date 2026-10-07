@@ -71,20 +71,30 @@ def _fila_resumen(ln: E.LineaJugador) -> list:
             ln.tarjetas.count("amarilla"), rojas, ln.dorsal]
 
 
-def jugadores_desde_resumen(resumen: dict[str, list]) -> list[JugadorTemporada]:
+def jugadores_desde_resumen(resumen: dict[str, list], todos: bool = False) -> list[JugadorTemporada]:
     """Tabla de temporada (puntos, ensayos, tarjetas) sumando el resumen de partidos."""
     acum: dict[tuple[str, str], JugadorTemporada] = {}
     for filas in resumen.values():
         for f in filas:
             nombre, equipo, puntos, ensayos = f[0], f[1], f[2], f[3]
             j = acum.setdefault((nombre, equipo), JugadorTemporada(None, nombre, equipo, 0, 0, 0, 0, 0))
-            j.pj += 1  # partidos con alguna anotación o tarjeta
+            j.pj += 1  # partidos convocado
             j.puntos += puntos
             j.ensayos += ensayos
             if len(f) > 8:
                 j.amarillas += f[7]
                 j.rojas += f[8]
-    return [j for j in acum.values() if j.puntos or j.ensayos]
+    return list(acum.values()) if todos else [j for j in acum.values() if j.puntos or j.ensayos]
+
+
+def actualizar_resumen(comp: str, grupo: str) -> dict[str, list]:
+    """Rehace/completa el resumen de partidos de una competición (actas en caché)."""
+    cfg = cargar_config()["competiciones"][comp]
+    cliente = cliente_para(cfg)
+    id_grupo = cfg["grupos"][grupo]
+    equipos = {f.equipo for f in cliente.clasificacion(id_grupo)}
+    competicion = cliente.competicion(id_grupo).filtrar(id_grupo, equipos)
+    return resumen_temporada(comp, grupo, competicion, cliente)
 
 
 def resumen_temporada(comp: str, grupo: str, competicion, cliente: ISquad) -> dict[str, list]:
@@ -92,13 +102,15 @@ def resumen_temporada(comp: str, grupo: str, competicion, cliente: ISquad) -> di
 
     Se guarda en data/ (se commitea) para no volver a bajar las actas antiguas.
     Formato: {id_partido: [[nombre, equipo, puntos, ensayos, conversiones, golpes,
-    drops, amarillas, rojas, dorsal], ...]} — solo jugadores con puntos o tarjetas.
+    drops, amarillas, rojas, dorsal], ...]} — solo jugadores convocado.
     Si el fichero tiene el formato antiguo ([nombre, equipo, puntos, ensayos]) se
     regenera (las actas están en caché).
     """
     ruta = ruta_jornada(comp, grupo, 0).with_name("resumen_partidos.json")
     resumen = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
-    if any(len(j) != R.CAMPOS_RESUMEN for jugadores in resumen.values() for j in jugadores):
+    # Formato antiguo (menos campos, o solo anotadores: pocas filas por partido) -> rehacer
+    if any(len(j) != R.CAMPOS_RESUMEN for jugadores in resumen.values() for j in jugadores) or (
+            resumen and max(len(js) for js in resumen.values()) < 26):
         resumen = {}  # formato antiguo
     for p in competicion.partidos:
         if not p.jugado or str(p.id) in resumen:
@@ -107,7 +119,7 @@ def resumen_temporada(comp: str, grupo: str, competicion, cliente: ISquad) -> di
         if acta.marcador_por_eventos() != (p.puntos_local, p.puntos_visitante):
             continue  # acta incompleta: se reintenta la próxima vez
         resumen[str(p.id)] = [
-            _fila_resumen(ln) for ln in E.lineas_partido(p, acta) if ln.puntos or ln.tarjetas
+            _fila_resumen(ln) for ln in E.lineas_partido(p, acta)  # todos los convocados
         ]
     ruta.parent.mkdir(parents=True, exist_ok=True)
     ruta.write_text(json.dumps(resumen, ensure_ascii=False), encoding="utf-8")
