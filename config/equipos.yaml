@@ -45,3 +45,21 @@
 "SAN ISIDRO - CISNEROS": {corto: "San Isidro / Cisneros", abr: "SIC", clubes: ["SAN ISIDRO", "CISNEROS"]}
 "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN": {corto: "Toledo / Alcorcón", abr: "TOA", clubes: ["TOLEDO", "ALCORCON"]}
 "XV HORTALEZA - GORILAS - LICEO FRANCÉS": {corto: "Hortaleza / Gorilas / Liceo", abr: "HGL", clubes: ["HORTALEZA", "GORILAS", "LICEO FRANCES"]}
+# Madrid
+"CRC - FILO- GEO": {corto: "CRC / Filo / Geológicas", abr: "CFG", clubes: ["CRC POZUELO", "FILO", "GEOLOGICAS"]}
+"CRC - FILO FARMA - GEO": {corto: "CRC / Filo / Geológicas", abr: "CFG", clubes: ["CRC POZUELO", "FILO", "GEOLOGICAS"]}
+"TORRELODONES - VILLALBA": {corto: "Torrelodones / Villalba", abr: "TOV", clubes: ["TORRELODONES", "INDUSTRIALES VILLALBA"]}
+"TORRELODONES - ARQUITECTURA": {corto: "Torrelodones / Arquitectura", abr: "TOA", clubes: ["TORRELODONES", "ARQUITECTURA"]}
+"MAD BOADILLA - RUGBY ALCORCÓN": {corto: "Boadilla / Alcorcón", abr: "BOA", clubes: ["BOADILLA", "RUGBY ALCORCON"]}
+"QUIJOTE - GORILAS": {corto: "Quijote / Gorilas", abr: "QUG"}
+# Cataluña (siglas: CEU, BUC, CRUC... se buscan por el nombre del club)
+"AVRFCB/CEU": {corto: "Barça / CEU", abr: "FCB", clubes: ["BARCA RUGBY", "CEU"]}
+"CEU/AVRFCB": {corto: "CEU / Barça", abr: "CEU", clubes: ["CEU", "BARCA RUGBY"]}
+"CORNE/CRUC": {corto: "Cornellà / CRUC", abr: "COR", clubes: ["CORNELLA", "CRUC"]}
+"CR TARRAGONA/SEL VNG": {corto: "Tarragona / Vilanova", abr: "TAR", clubes: ["CR TARRAGONA", "SEL VILANOVA"]}
+"BUC/SENGLARS/BADALONA": {corto: "BUC / Senglars / Badalona", abr: "BUC", clubes: ["BUC", "SENGLARS"]}
+"COCOS/LIONS BARBARIANS": {corto: "Cocos / Lions", abr: "COC"}
+"COQUES RSV/INEF BCN": {corto: "Coques / INEF BCN", abr: "COQ"}
+"TÀRREGA/INEF LLEIDA B": {corto: "Tàrrega / INEF Lleida", abr: "TAR"}
+"RCLH/RCS/SHARC": {corto: "L'Hospitalet / RCS / Sharc", abr: "RCL"}
+"RCS/CRT B": {corto: "RCS / CRT B", abr: "RCS"}
