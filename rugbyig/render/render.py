@@ -260,16 +260,22 @@ def _escudo_uri(url: str) -> str:
     return _data_uri(buf.getvalue(), "image/jpeg")
 
 
-TEMAS = {"noche": "Noche", "tiza": "Tiza", "estadio": "Estadio", "prensa": "Prensa", "cesped": "Césped"}
-# Tipografía de titulares de cada tema (el texto siempre va en Barlow Condensed)
-FUENTE_TEMA = {"noche": "Teko", "tiza": "Teko", "estadio": "Bebas Neue", "prensa": "Oswald", "cesped": "Anton"}
+TEMAS = {"noche": "Noche", "brutal": "Brutal", "prensa": "Prensa", "tele": "Tele", "retro": "Retro"}
+# Tipografías de cada tema (titulares y datos/texto); ver templates/temas.css
+FUENTES_TEMA = {
+    "noche": {"Teko", "Barlow Condensed"},
+    "brutal": {"Anton", "Archivo Narrow"},
+    "prensa": {"Playfair Display", "IBM Plex Sans Condensed"},
+    "tele": {"Oswald", "Roboto Condensed"},
+    "retro": {"Alfa Slab One", "Barlow Condensed"},
+}
 FUENTES = RAIZ / "assets" / "fuentes"
 
 
 @lru_cache(maxsize=8)
 def css_fuentes(tema: str) -> str:
     """@font-face con las fuentes del tema incrustadas (sin pedir nada a Google)."""
-    familias = {"Barlow Condensed", FUENTE_TEMA.get(tema, "Teko"), "Teko"}
+    familias = FUENTES_TEMA.get(tema, FUENTES_TEMA["noche"])
     reglas = []
     for f in json.loads((FUENTES / "fuentes.json").read_text()):
         if f["familia"] not in familias:

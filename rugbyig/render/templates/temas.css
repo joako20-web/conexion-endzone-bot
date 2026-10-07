@@ -1,0 +1,225 @@
+/* =====================================================================
+   TEMAS. Cada uno cambia colores, tipografías (titular / datos / texto),
+   formas y disposición. La maqueta base está arriba; aquí van los cambios.
+   --aj-*: altura de mayúscula a la que se normaliza cada tipografía, para
+   que fuentes más anchas o más altas no rompan la maqueta.
+   ===================================================================== */
+
+/* ---------- NOCHE: el estilo original (negro, lima, Teko) ---------- */
+:root, .tema-noche {
+  --fondo: #0a0a0a; --panel: #161616; --linea: #2a2a2a; --texto: #f6f5f0; --gris: #a3a39e; --apagado: #66665f;
+  --acento: #d4ff3d; --acento-txt: #d4ff3d; --sobre-acento: #0a0a0a; --sobre-acento-suave: rgba(10,10,10,.7);
+  --f-tit: Teko, sans-serif; --f-num: Teko, sans-serif; --f-txt: "Barlow Condensed", sans-serif;
+  --aj-tit: 0.64; --aj-num: 0.64; --aj-txt: 0.70; --k-tit: 1;
+  --textura: radial-gradient(900px 600px at 50% -5%, #1c1c1c, transparent 70%);
+  --marca-opacidad: .035; --marca-filtro: invert(1);
+}
+
+/* ---------- BRUTAL: "sports brutalism" — rejilla a la vista, mayúsculas
+   gigantes alineadas a la izquierda, filetes negros gruesos, esquinas
+   rectas y un único acento flúor. ---------- */
+.tema-brutal {
+  --fondo: #eeeee8; --panel: #e0e0d8; --linea: #0a0a0a; --texto: #0a0a0a; --gris: #45453f; --apagado: #9b9b93;
+  --acento: #ff4d00; --acento-txt: #e04300; --sobre-acento: #0a0a0a; --sobre-acento-suave: rgba(10,10,10,.75);
+  --f-tit: Anton, sans-serif; --f-num: Anton, sans-serif; --f-txt: "Archivo Narrow", sans-serif;
+  --aj-tit: 0.64; --aj-num: 0.6; --aj-txt: 0.62;
+  --textura: repeating-linear-gradient(90deg, rgba(0,0,0,.07) 0 2px, transparent 2px 135px),
+             repeating-linear-gradient(0deg, rgba(0,0,0,.07) 0 2px, transparent 2px 135px);
+  --marca-opacidad: .05; --marca-filtro: none;
+  --z-titulo: #ff4d00; --z-ascenso: #1f5fff; --z-promocion: #e8a400; --z-descenso: #0a0a0a; --z-fase: #7b4dff;
+}
+.tema-brutal .etiqueta { background: var(--texto); color: var(--fondo); padding: 10px 18px 8px; margin-top: 14px; font-weight: 700; }
+.tema-brutal .titulo { text-align: left; border-top: 12px solid var(--texto); padding-top: 18px; margin-top: 20px; }
+.tema-brutal h1 { text-transform: uppercase; font-size: 118px; line-height: .86; padding: 0; letter-spacing: -1px; }
+.tema-brutal .bajada { text-transform: uppercase; letter-spacing: 3px; font-weight: 700; color: var(--texto); font-size: 30px; }
+.tema-brutal .bajada::before { content: ""; display: inline-block; width: 22px; height: 22px; background: var(--acento); margin-right: 12px; vertical-align: -2px; }
+.tema-brutal .comp { border-radius: 0; border: 4px solid var(--texto); color: var(--texto); font-weight: 700; }
+.tema-brutal .pie { justify-content: flex-start; }
+.tema-brutal .crest { box-shadow: 0 0 0 3px var(--texto); }
+.tema-brutal .partido { border-bottom: 4px solid var(--texto); }
+.tema-brutal .marcador .p { color: var(--apagado); }
+.tema-brutal .marcador .g { color: var(--acento); }
+.tema-brutal .marcador .sep { color: var(--texto); }
+.tema-brutal .equipo .nom, .tema-brutal .jug-nom, .tema-brutal td.eq, .tema-brutal .cnom, .tema-brutal .geq,
+.tema-brutal .previa .cruce { text-transform: uppercase; }
+.tema-brutal .fila { border-bottom: 4px solid var(--texto); }
+.tema-brutal .fila:first-child { border-radius: 0; border: 4px solid var(--texto); box-shadow: 10px 10px 0 var(--texto); margin: 0 -24px 22px; }
+.tema-brutal th { color: var(--texto); border-bottom: 6px solid var(--texto); text-transform: uppercase; }
+.tema-brutal td { border-bottom: 2px solid var(--texto); height: 72px; }
+.tema-brutal tr[class^="z-"] td.p::before, .tema-brutal .ley i, .tema-brutal .gfila[class*="z-"]::before { border-radius: 0; }
+.tema-brutal .campo { border-radius: 0; border: 4px solid var(--texto); background: repeating-linear-gradient(180deg, transparent 0 20%, rgba(0,0,0,.25) 20% calc(20% + 2px)), var(--fondo); }
+.tema-brutal .ficha .dorsal { border-radius: 0; }
+.tema-brutal .cuadro .cruce { border-radius: 0; border: 4px solid var(--texto); background: var(--fondo); }
+.tema-brutal .cuadro .cruce.final { border-color: var(--acento); box-shadow: 8px 8px 0 var(--texto); }
+.tema-brutal .previa { border-bottom: 4px solid var(--texto); padding: 15px 0; }
+.tema-brutal .grupo-tit { color: var(--texto); border-bottom: 6px solid var(--texto); text-transform: uppercase; }
+.tema-brutal .t-portada .mvp, .tema-brutal .dato { text-align: left; align-items: flex-start; }
+.tema-brutal .t-portada .mvp { border-top: 12px solid var(--texto); }
+.tema-brutal .t-portada .mvp-datos { justify-content: flex-start; }
+.tema-brutal .t-portada .mvp-equipo { border-radius: 0; }
+.tema-brutal .t-portada .crest.m, .tema-brutal .dato .crest.m { margin: 0 0 26px; }
+.tema-brutal .t-portada .texto { text-align: left; }
+.tema-brutal .t-portada h1 { font-size: 200px; }
+.tema-brutal .dato-num { color: var(--acento); }
+.tema-brutal .dato-titular { text-transform: uppercase; padding: 0; }
+.tema-brutal .dato-contexto { padding: 0; }
+.tema-brutal .final-tag { border-radius: 0; color: var(--texto); }
+
+/* ---------- PRENSA: periódico deportivo — titulares en serif, cabecero con
+   doble filete, texto en grotesca estrecha, columnas y filetes finos. ---------- */
+.tema-prensa {
+  --fondo: #fbfaf6; --panel: #f1eee6; --linea: #d8d2c4; --texto: #141414; --gris: #55524b; --apagado: #a6a197;
+  --acento: #c8102e; --acento-txt: #c8102e; --sobre-acento: #ffffff; --sobre-acento-suave: rgba(255,255,255,.85);
+  --f-tit: "Playfair Display", serif; --f-num: "IBM Plex Sans Condensed", sans-serif; --f-txt: "IBM Plex Sans Condensed", sans-serif;
+  --aj-tit: 0.54; --aj-num: 0.54; --aj-txt: 0.6;
+  --textura: none;
+  --marca-opacidad: .04; --marca-filtro: none;
+  --z-titulo: #141414; --z-ascenso: #1f5fbf; --z-promocion: #c98a00; --z-descenso: #c8102e; --z-fase: #6b4fbf;
+}
+.tema-prensa .cabecera { border-bottom: 6px double var(--texto); padding-bottom: 14px; align-items: center; }
+.tema-prensa .etiqueta { color: var(--acento); font-weight: 700; letter-spacing: 5px; padding-top: 0; }
+.tema-prensa .escudo { flex-direction: row; gap: 14px; }
+.tema-prensa .escudo img { width: 84px; height: 84px; box-shadow: 0 0 0 1px var(--linea); }
+.tema-prensa .flechas { color: var(--acento); }
+.tema-prensa .titulo { text-align: left; margin-top: 34px; padding-bottom: 20px; border-bottom: 1px solid var(--texto); }
+.tema-prensa h1 { padding: 0; font-weight: 900; font-size: 124px; line-height: .98; letter-spacing: -1px; }
+.tema-prensa .bajada { text-transform: uppercase; letter-spacing: 4px; color: var(--acento); font-weight: 600; font-size: 28px; margin-top: 16px; }
+.tema-prensa .comp { border: 0; border-radius: 0; border-top: 1px solid var(--texto); border-bottom: 1px solid var(--texto); padding: 10px 30px; color: var(--texto); }
+.tema-prensa .crest { box-shadow: 0 0 0 1px var(--linea); }
+.tema-prensa .equipo .nom { font-weight: 600; }
+.tema-prensa .marcador { font-weight: 700; }
+.tema-prensa .marcador .g { color: var(--texto); }
+.tema-prensa .marcador .sep { color: var(--acento); }
+.tema-prensa .partido { border-bottom: 1px solid var(--linea); }
+.tema-prensa .fila { border-bottom: 1px solid var(--linea); }
+.tema-prensa .fila:first-child { background: none; color: var(--texto); border-radius: 0; border-left: 12px solid var(--acento); border-bottom: 1px solid var(--texto); padding-left: 24px; margin: 0 0 6px; }
+.tema-prensa .fila:first-child .jug-eq, .tema-prensa .fila:first-child .det { color: var(--gris); }
+.tema-prensa .fila:first-child .pos, .tema-prensa .fila:first-child .pts { color: var(--acento); }
+.tema-prensa .pos { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 900; }
+.tema-prensa th { color: var(--texto); border-bottom: 2px solid var(--texto); text-transform: uppercase; font-size: 24px; }
+.tema-prensa td.pt { color: var(--texto); font-weight: 700; }
+.tema-prensa .campo { border-radius: 4px; border: 1px solid var(--texto); background: repeating-linear-gradient(180deg, transparent 0 20%, var(--linea) 20% calc(20% + 1px)), var(--fondo); }
+.tema-prensa .ficha .eq { color: var(--acento); }
+.tema-prensa .cuadro .cruce { border-radius: 2px; border: 1px solid var(--texto); background: var(--fondo); }
+.tema-prensa .cuadro .cruce.final { border: 3px double var(--acento); }
+.tema-prensa .grupo-tit { color: var(--texto); border-bottom: 2px solid var(--texto); }
+.tema-prensa .gpt { color: var(--texto); }
+.tema-prensa .previa .hora { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 900; }
+.tema-prensa .t-portada .mvp { text-align: left; border-top: 6px double var(--texto); }
+.tema-prensa .t-portada .mvp-datos { justify-content: flex-start; }
+.tema-prensa .t-portada .crest.m { margin: 0 0 26px; }
+.tema-prensa .t-portada .mvp-apellido { text-transform: none; font-weight: 900; font-size: 190px; }
+.tema-prensa .t-portada .mvp-pila { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); }
+.tema-prensa .t-portada .texto { text-align: left; border-top: 1px solid var(--texto); padding-top: 20px; margin-left: 64px; margin-right: 64px; padding-left: 0; padding-right: 0; }
+.tema-prensa .t-portada h1 { font-size: 190px; }
+.tema-prensa .t-portada .etiqueta { border-radius: 0; color: var(--sobre-acento); padding: 8px 18px; }
+.tema-prensa .dato-num { color: var(--acento); font-weight: 900; }
+.tema-prensa .dato-unidad { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); letter-spacing: 3px; margin-top: 34px; }
+.tema-prensa .final-tag { border-radius: 0; font-weight: 900; }
+
+/* ---------- TELE: rótulos de televisión — barra superior a sangre, placas
+   en diagonal, marcadores en caja y titular en placa amarilla. ---------- */
+.tema-tele {
+  --fondo: #0a1430; --panel: #142450; --linea: #24386d; --texto: #ffffff; --gris: #b3c0de; --apagado: #6a789e;
+  --acento: #ffcc00; --acento-txt: #ffcc00; --sobre-acento: #0a1430; --sobre-acento-suave: rgba(10,20,48,.75);
+  --f-tit: Oswald, sans-serif; --f-num: Oswald, sans-serif; --f-txt: "Roboto Condensed", sans-serif;
+  --aj-tit: 0.64; --aj-num: 0.6; --aj-txt: 0.6;
+  --textura: linear-gradient(118deg, transparent 0 58%, rgba(255,255,255,.04) 58% 66%, transparent 66%),
+             linear-gradient(180deg, #13265a 0%, #0a1430 55%);
+  --marca-opacidad: .04; --marca-filtro: invert(1);
+}
+.tema-tele .cabecera { margin: -64px -64px 0; padding: 22px 64px 20px; background: linear-gradient(90deg, var(--acento) 0 22px, #ffffff 22px); align-items: center; }
+.tema-tele .etiqueta { color: #0a1430; font-weight: 700; padding-top: 0; font-size: 30px; }
+.tema-tele .escudo { flex-direction: row; gap: 12px; }
+.tema-tele .escudo img { width: 80px; height: 80px; box-shadow: 0 0 0 3px #0a1430; }
+.tema-tele .escudo .flechas { color: #0a1430; padding-top: 22px; }
+.tema-tele .titulo { text-align: left; margin-top: 44px; }
+.tema-tele h1 { display: inline-block; background: var(--acento); color: var(--sobre-acento); text-transform: uppercase; font-weight: 700;
+  font-size: 96px; line-height: 1; padding: 16px 70px 12px 64px; margin-left: -64px; clip-path: polygon(0 0, 100% 0, calc(100% - 46px) 100%, 0 100%); }
+.tema-tele .bajada { text-transform: uppercase; letter-spacing: 3px; font-weight: 700; margin-top: 18px; }
+.tema-tele .comp { border: 0; border-radius: 0; background: var(--panel); clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%); padding: 10px 40px; }
+.tema-tele .partido { background: var(--panel); border: 0; height: 128px; margin-bottom: 14px; padding: 0 36px; clip-path: polygon(22px 0, 100% 0, calc(100% - 22px) 100%, 0 100%); grid-template-columns: 1fr 250px 1fr; }
+.tema-tele .equipo .nom { text-transform: uppercase; font-size: 46px; }
+.tema-tele .marcador { background: var(--fondo); align-self: stretch; display: flex; align-items: center; justify-content: center; font-size: 92px; }
+.tema-tele .marcador .sep { color: var(--acento); }
+.tema-tele .fila { background: var(--panel); border: 0; height: 108px; margin-bottom: 10px; padding: 0 30px; clip-path: polygon(16px 0, 100% 0, calc(100% - 16px) 100%, 0 100%); }
+.tema-tele .fila:first-child { background: var(--acento); border-radius: 0; margin: 0 0 14px; height: 132px; }
+.tema-tele .jug-nom { text-transform: uppercase; font-size: 46px; }
+.tema-tele th { background: var(--acento); color: var(--sobre-acento); border: 0; padding: 10px 0 8px; text-transform: uppercase; }
+.tema-tele td { border-bottom: 0; }
+.tema-tele tbody tr:nth-child(odd) td { background: rgba(255,255,255,.05); }
+.tema-tele td.eq { text-transform: uppercase; font-size: 40px; }
+.tema-tele .campo { border-radius: 0; border: 0; border-top: 6px solid var(--acento); }
+.tema-tele .ficha .dorsal { border-radius: 8px; background: var(--acento); color: var(--sobre-acento); }
+.tema-tele .ficha.top .dorsal { background: #ffffff; }
+.tema-tele .ficha .n2 { text-transform: uppercase; }
+.tema-tele .cuadro .cruce { border: 0; border-radius: 0; border-left: 8px solid var(--linea); }
+.tema-tele .cuadro .cruce.final { border-left-color: var(--acento); }
+.tema-tele .previa { background: var(--panel); border: 0; margin-bottom: 12px; padding: 18px 30px; clip-path: polygon(16px 0, 100% 0, calc(100% - 16px) 100%, 0 100%); }
+.tema-tele .previa .cruce { text-transform: uppercase; font-size: 44px; }
+.tema-tele .grupo-tit { background: var(--acento); color: var(--sobre-acento); border: 0; padding: 6px 16px 2px; text-transform: uppercase; }
+.tema-tele .t-portada .mvp { text-align: left; border-top: 0; margin-top: 70px; background: var(--panel); padding: 34px 44px 30px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%); }
+.tema-tele .t-portada .crest.m { margin: 0 0 22px; }
+.tema-tele .t-portada .mvp-motivo { display: inline-block; background: var(--acento); color: var(--sobre-acento); padding: 6px 16px 4px; letter-spacing: 3px; }
+.tema-tele .t-portada .mvp-datos { justify-content: flex-start; }
+.tema-tele .t-portada .mvp-apellido { font-size: 160px; }
+.tema-tele .t-portada .texto { text-align: left; }
+.tema-tele .t-portada h1 { font-size: 150px; }
+.tema-tele .t-portada .etiqueta { background: none; padding: 0; border-radius: 0; margin: 0; }
+.tema-tele .t-portada .cabecera { margin: 0; padding: 22px 64px 20px; }
+.tema-tele h1 span { color: var(--sobre-acento); }
+.tema-tele .dato-num { color: var(--acento); }
+.tema-tele .dato-titular { text-transform: uppercase; }
+.tema-tele .final-tag { border-radius: 0; clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%); padding: 14px 44px 8px; }
+
+/* ---------- RETRO: póster de los 80-90 — papel crema, slab gordísima con
+   sombra desplazada, franjas diagonales y tarjetas tipo pegatina. ---------- */
+.tema-retro {
+  --fondo: #f3e6cb; --panel: #fbf1dc; --linea: #2b1a10; --texto: #2b1a10; --gris: #6b533f; --apagado: #b09679;
+  --acento: #e2572b; --acento-txt: #c4421a; --sobre-acento: #fff6e4; --sobre-acento-suave: rgba(255,246,228,.85);
+  --f-tit: "Alfa Slab One", serif; --f-num: "Barlow Condensed", sans-serif; --f-txt: "Barlow Condensed", sans-serif;
+  --aj-tit: 0.48; --aj-num: 0.66; --aj-txt: 0.7;
+  --textura: linear-gradient(135deg, transparent 0 88%, #e2572b 88% 90%, #f2b134 90% 92%, #2a8c82 92% 94%, transparent 94%),
+             radial-gradient(rgba(43,26,16,.06) 1.5px, transparent 1.6px) 0 0 / 18px 18px;
+  --marca-opacidad: .05; --marca-filtro: none;
+  --z-titulo: #e2572b; --z-ascenso: #2a8c82; --z-promocion: #f2b134; --z-descenso: #8f2d1f; --z-fase: #7a5aa8;
+}
+.tema-retro .etiqueta { background: var(--acento); color: var(--sobre-acento); padding: 10px 22px 8px; border-radius: 999px; border: 3px solid var(--texto); box-shadow: 4px 4px 0 var(--texto); margin-top: 14px; font-weight: 700; }
+.tema-retro .escudo img { box-shadow: 0 0 0 4px var(--texto), 5px 5px 0 4px var(--acento); }
+.tema-retro h1 { color: var(--texto); text-shadow: 6px 6px 0 var(--acento); font-weight: 400; font-size: 92px; line-height: 1.02; padding: 0; }
+.tema-retro .bajada { font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--gris); }
+.tema-retro .comp { border: 3px solid var(--texto); background: var(--panel); box-shadow: 4px 4px 0 var(--texto); color: var(--texto); }
+.tema-retro .crest { box-shadow: 0 0 0 3px var(--texto); }
+.tema-retro .equipo .nom, .tema-retro .jug-nom, .tema-retro td.eq, .tema-retro .cnom, .tema-retro .geq, .tema-retro .previa .cruce { font-weight: 700; }
+.tema-retro .partido { background: var(--panel); border: 3px solid var(--texto); border-radius: 22px; box-shadow: 6px 6px 0 var(--texto); height: 128px; margin-bottom: 18px; padding: 0 26px; }
+.tema-retro .partido:last-of-type { border-bottom: 3px solid var(--texto); }
+.tema-retro .marcador { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; font-size: 96px; }
+.tema-retro .marcador .sep { color: var(--acento); }
+.tema-retro .fila { border-bottom: 3px dotted var(--texto); }
+.tema-retro .fila:first-child { border: 3px solid var(--texto); border-radius: 22px; box-shadow: 6px 6px 0 var(--texto); margin: 0 -18px 18px; }
+.tema-retro .pts, .tema-retro .pos { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; }
+.tema-retro th { color: var(--texto); border-bottom: 3px solid var(--texto); text-transform: uppercase; }
+.tema-retro td { border-bottom: 2px dotted var(--apagado); font-weight: 700; }
+.tema-retro td.pt { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; }
+.tema-retro .campo { border: 3px solid var(--texto); border-radius: 26px; box-shadow: 8px 8px 0 var(--texto); background: repeating-linear-gradient(180deg, transparent 0 20%, rgba(43,26,16,.18) 20% calc(20% + 2px)), #e9d5ad; }
+.tema-retro .ficha .dorsal { border: 3px solid var(--texto); background: var(--panel); color: var(--texto); font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; }
+.tema-retro .ficha.top .dorsal { background: var(--acento); color: var(--sobre-acento); }
+.tema-retro .cuadro .cruce { border: 3px solid var(--texto); border-radius: 18px; box-shadow: 5px 5px 0 var(--texto); }
+.tema-retro .cuadro .cruce.final { background: #fde6b8; }
+.tema-retro .previa { border-bottom: 3px dotted var(--texto); }
+.tema-retro .previa .hora { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; color: var(--acento-txt); }
+.tema-retro .grupo-tit { font-weight: 400; color: var(--texto); text-shadow: 3px 3px 0 var(--acento); border-bottom: 3px solid var(--texto); }
+.tema-retro .gpt { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; }
+.tema-retro .t-portada .mvp { border-top: 0; background: var(--panel); border: 3px solid var(--texto); border-radius: 30px; box-shadow: 10px 10px 0 var(--texto); padding: 36px 30px 34px; }
+.tema-retro .t-portada .mvp-apellido { font-weight: 400; text-shadow: 6px 6px 0 var(--acento); font-size: 150px; text-transform: none; }
+.tema-retro .t-portada .mvp-pila { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-weight: 700; }
+.tema-retro .t-portada .mvp-equipo { border-radius: 999px; }
+.tema-retro .t-portada h1 { font-size: 168px; }
+.tema-retro .t-portada h1 span { color: var(--acento); text-shadow: 6px 6px 0 var(--texto); }
+.tema-retro .dato-num { font-weight: 400; color: var(--acento); text-shadow: 10px 10px 0 var(--texto); }
+.tema-retro .dato-unidad { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-weight: 700; letter-spacing: 2px; }
+.tema-retro .dato-titular { font-weight: 400; }
+.tema-retro .final-tag { border-radius: 999px; border: 3px solid var(--texto); box-shadow: 5px 5px 0 var(--texto); font-weight: 400; }
+.tema-retro .final-marcador { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; }
+.tema-retro .campeon b { font-weight: 400; }
