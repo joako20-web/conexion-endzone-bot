@@ -1,5 +1,5 @@
 {
-  "offset": 736686304,
+  "offset": 736686348,
   "chat_id": 8634024483,
   "esperando": null,
   "teclado": 3,
@@ -25,5 +25,14 @@
     "dh_masc:17651",
     "dh_masc:17652"
   ],
-  "finales_vistos": {}
+  "finales_vistos": {},
+  "solicitudes": {},
+  "invitados": {
+    "1146846131": "ALE (@Lafulafuente)"
+  },
+  "esperas": {
+    "8634024483": null,
+    "7110376476": null,
+    "1146846131": null
+  }
 }
