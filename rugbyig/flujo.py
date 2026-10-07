@@ -50,14 +50,10 @@ AYUDA = (
 
 
 NOVEDADES = (
-    "🆕 <b>Novedades</b>
-"
-    "· 🗺 Regionales senior: Madrid, Cataluña, Andalucía, Euskadi y Castilla y León.
-"
-    "· 📈 Más estadísticas: ensayadores, puntos al pie, tarjetas, banquillo y la liga en números.
-"
-    "· 🎨 Estilos nuevos de verdad: Noche, Brutal, Prensa, Tele y Retro (botón 🎨 Estilo).
-"
+    "🆕 <b>Novedades</b>\n"
+    "· 🗺 Regionales senior: Madrid, Cataluña, Andalucía, Euskadi y Castilla y León.\n"
+    "· 📈 Más estadísticas: ensayadores, puntos al pie, tarjetas, banquillo y la liga en números.\n"
+    "· 🎨 Estilos nuevos de verdad: Noche, Brutal, Prensa, Tele y Retro (botón 🎨 Estilo).\n"
     "· Menú por niveles y todo más rápido."
 )
 

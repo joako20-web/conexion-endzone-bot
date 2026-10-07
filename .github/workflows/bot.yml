@@ -61,6 +61,7 @@ jobs:
           fi
 
       - name: Escuchar Telegram
+        id: escuchar
         if: steps.token.outputs.ok == 'true'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -80,7 +81,8 @@ jobs:
           exit 1
 
       - name: Relevo (lanza la siguiente ejecución; el cron queda de respaldo)
-        if: always() && steps.token.outputs.ok == 'true'
+        # Si el bot falla no se relanza en bucle: el cron lo reintenta
+        if: always() && steps.token.outputs.ok == 'true' && steps.escuchar.outcome != 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run bot.yml --ref main
