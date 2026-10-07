@@ -21,15 +21,27 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
+      - name: ¿Está el token de Telegram?
+        id: token
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        run: |
+          if [ -n "$TELEGRAM_TOKEN" ]; then echo "ok=true" >> "$GITHUB_OUTPUT";
+          else echo "::notice::Falta el secreto TELEGRAM_TOKEN: no hago nada"; fi
+
       - uses: actions/checkout@v4
+        if: steps.token.outputs.ok == 'true'
 
       - uses: astral-sh/setup-uv@v6
+        if: steps.token.outputs.ok == 'true'
         with:
           enable-cache: true
 
       - run: uv sync --frozen
+        if: steps.token.outputs.ok == 'true'
 
       - name: Caché del navegador y de iSquad
+        if: steps.token.outputs.ok == 'true'
         uses: actions/cache@v4
         with:
           path: |
@@ -39,17 +51,20 @@ jobs:
           restore-keys: navegador-${{ hashFiles('uv.lock') }}-
 
       - run: uv run playwright install --with-deps chromium
+        if: steps.token.outputs.ok == 'true'
 
       - name: Escuchar Telegram
+        if: steps.token.outputs.ok == 'true'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         run: uv run python -m rugbyig bot --minutos 14
 
       - name: Guardar estado
-        if: always()
+        if: always() && steps.token.outputs.ok == 'true'
         run: |
           git config user.name "conexion-endzone-bot"
           git config user.email "bot@users.noreply.github.com"
+          mkdir -p estado data
           git add estado data
           git diff --cached --quiet && exit 0
           git commit -m "Estado del bot"
