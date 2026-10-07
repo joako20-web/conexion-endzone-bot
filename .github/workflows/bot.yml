@@ -1,6 +1,6 @@
 # Bot de Telegram de Conexión Endzone.
-# Cada ejecución escucha Telegram 14 minutos y se relevan cada cuarto de hora,
-# así el bot responde en segundos. Los lunes a las 10:00 (Madrid) manda los
+# Cada ejecución escucha Telegram 14 minutos y al acabar lanza la siguiente
+# (relevo); el cron de cada cuarto de hora es el respaldo. Así responde en segundos. Los lunes a las 10:00 (Madrid) manda los
 # carruseles de la semana; los martes reintenta los que tenían actas incompletas.
 name: bot
 
@@ -15,6 +15,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write  # para lanzar el relevo
 
 jobs:
   bot:
@@ -70,3 +71,9 @@ jobs:
           git commit -m "Estado del bot"
           for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
           exit 1
+
+      - name: Relevo (lanza la siguiente ejecución; el cron queda de respaldo)
+        if: always() && steps.token.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run bot.yml --ref main
