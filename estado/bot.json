@@ -1,7 +1,12 @@
 {
-  "offset": 736686171,
+  "offset": 736686174,
   "chat_id": 8634024483,
-  "esperando": null,
+  "esperando": {
+    "accion": "foto",
+    "post": "2026-27_dh_elite_unico_j02",
+    "claves": "p",
+    "cambios": 0
+  },
   "teclado": 3,
   "tema": "tele"
 }
