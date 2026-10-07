@@ -47,6 +47,14 @@ AYUDA = (
 )
 
 
+NOVEDADES = (
+    "🆕 <b>Novedades</b>\n"
+    "· Menú por niveles: Nacionales · Copa del Rey · Regionales (Castilla y León) y M23.\n"
+    "· 🎨 <b>Estilo</b>: 5 estilos visuales con muestras (botón de abajo).\n"
+    "· Todo va bastante más rápido."
+)
+
+
 def _rel(p: Path) -> str:
     return str(p.relative_to(RAIZ))
 
@@ -154,6 +162,8 @@ def _semana_competicion(tg: Telegram, chat_id, comp: str, claves: list[str], not
 def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
     hechos = []
     for comp, cfg in cargar_config()["competiciones"].items():
+        if cfg.get("semanal", True) is False:
+            continue
         if cfg.get("torneo"):
             if not reintento and (h := _semana_competicion(
                     tg, chat_id, comp, ["resultados", "grupos", "cuadro"], "Resumen de la semana")):
@@ -198,19 +208,33 @@ def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
 
 # ---------- Menús con botones: liga -> qué -> jornada ----------
 
-TECLADO_FIJO = [["📋 Pedir", "❓ Ayuda"]]
+TECLADO_FIJO = [["📋 Pedir", "🎨 Estilo", "❓ Ayuda"]]
+VERSION_TECLADO = 2  # súbelo al cambiar el teclado fijo para que se reenvíe
 COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
-            ("semana", "Mandar ya los carruseles de esta semana"),
             ("estilo", "Cambiar el estilo visual"),
+            ("semana", "Mandar ya los carruseles de esta semana"),
             ("ayuda", "Cómo funciona")]
-QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("🎯 Anotadores", "a"),
-       ("⭐ XV ideal", "x"), ("🔢 Clasificación", "c"), ("📅 Próxima jornada", "v"),
-       ("📈 Anotadores temporada", "t"), ("💡 El dato de la jornada", "d"), ("🖼 Portada", "p"),
-       ("🗂 Todos los grupos", "g"), ("🏆 Cuadro / play-off", "k")]
+QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("📅 Próxima jornada", "v"),
+       ("🔢 Clasificación", "c"), ("🗂 Todos los grupos", "g"), ("🏆 Cuadro / play-off", "k"),
+       ("⭐ XV ideal", "x"), ("🎯 Anotadores", "a"), ("📈 Anotadores temporada", "t"),
+       ("💡 El dato de la jornada", "d"), ("🖼 Portada", "p")]
+# Filas del menú "¿qué quieres?" (agrupadas por tema)
+FILAS_QUE = [["*"], ["r", "v"], ["c", "g", "k"], ["x", "a"], ["t", "d"], ["p"]]
+CATEGORIAS = {"nacional": "🇪🇸 Nacionales", "copa": "🏆 Copa del Rey", "regional": "🗺 Regionales"}
 
 
 def _filas(botones: list[tuple[str, str]], ancho: int) -> list[list[tuple[str, str]]]:
     return [botones[i : i + ancho] for i in range(0, len(botones), ancho)]
+
+
+def _comps(categoria: str | None = None, region: str | None = None) -> dict[str, dict]:
+    return {k: v for k, v in cargar_config()["competiciones"].items()
+            if (categoria is None or v.get("categoria", "nacional") == categoria)
+            and (region is None or v.get("region") == region)}
+
+
+def _regiones() -> list[str]:
+    return sorted({v["region"] for v in _comps("regional").values() if v.get("region")})
 
 
 def _nombre_liga(liga: str) -> str:
@@ -221,20 +245,56 @@ def _nombre_liga(liga: str) -> str:
     return cfg["nombre"] + ("" if grupo == "unico" else f" · Grupo {grupo}")
 
 
-def _menu_ligas() -> tuple[str, list]:
+def _boton_liga(comp: str, cfg: dict) -> tuple[str, str]:
+    if len(cfg["grupos"]) > 1 and not cfg.get("torneo"):
+        return (f"{cfg['nombre']} ▸", f"mg|{comp}")
+    return (cfg["nombre"], f"m2|{comp}/{'*' if cfg.get('torneo') else next(iter(cfg['grupos']))}")
+
+
+def _atras_de(comp: str) -> str:
+    cfg = cargar_config()["competiciones"][comp]
+    if cfg.get("categoria") == "regional" and len(_regiones()) > 1:
+        return f"mr|{_regiones().index(cfg['region'])}"
+    return f"mc|{cfg.get('categoria', 'nacional')}"
+
+
+def _menu_inicio() -> tuple[str, list]:
     botones = []
-    for comp, cfg in cargar_config()["competiciones"].items():
-        grupos = list(cfg["grupos"])
-        for g in grupos:
-            etiqueta = cfg["corto"] + ("" if g == "unico" else f" {g}")
-            botones.append((etiqueta, f"m2|{comp}/{g}"))
-        if len(grupos) > 1:
-            botones.append((f"{cfg['corto']} (todos)", f"m2|{comp}/*"))
-    return "📋 ¿De qué liga?", _filas(botones, 3)
+    for cat, etiqueta in CATEGORIAS.items():
+        comps = _comps(cat)
+        if not comps:
+            continue
+        if cat == "copa" and len(comps) == 1:  # una sola copa: directo a ella
+            botones.append((etiqueta, _boton_liga(*next(iter(comps.items())))[1]))
+        else:
+            botones.append((etiqueta, f"mc|{cat}"))
+    return "📋 <b>¿Qué competición?</b>", _filas(botones, 2)
+
+
+def _menu_categoria(cat: str) -> tuple[str, list]:
+    if cat == "regional" and len(_regiones()) > 1:
+        botones = [(r, f"mr|{i}") for i, r in enumerate(_regiones())]
+        return "🗺 <b>Regionales</b>\n¿Qué federación?", _filas(botones, 2) + [[("⬅️ Volver", "m1")]]
+    botones = [_boton_liga(k, v) for k, v in _comps(cat).items()]
+    titulo = CATEGORIAS[cat] + (f" · {_regiones()[0]}" if cat == "regional" and _regiones() else "")
+    return f"<b>{titulo}</b>\n¿Qué liga?", _filas(botones, 1) + [[("⬅️ Volver", "m1")]]
+
+
+def _menu_region(i: int) -> tuple[str, list]:
+    region = _regiones()[i]
+    botones = [_boton_liga(k, v) for k, v in _comps("regional", region).items()]
+    return f"🗺 <b>{region}</b>\n¿Qué liga?", _filas(botones, 1) + [[("⬅️ Volver", "mc|regional")]]
+
+
+def _menu_grupos(comp: str) -> tuple[str, list]:
+    cfg = cargar_config()["competiciones"][comp]
+    botones = [(f"Grupo {g}", f"m2|{comp}/{g}") for g in cfg["grupos"]]
+    filas = _filas(botones, 4) + [[("Todos los grupos", f"m2|{comp}/*")], [("⬅️ Volver", _atras_de(comp))]]
+    return f"<b>{cfg['nombre']}</b>\n¿Qué grupo?", filas
 
 
 def _menu_que(liga: str) -> tuple[str, list]:
-    comp = liga.split("/")[0]
+    comp, grupo = liga.split("/")
     cfg = cargar_config()["competiciones"][comp]
     ocultar = set()
     if len(cfg["grupos"]) < 2:
@@ -243,15 +303,28 @@ def _menu_que(liga: str) -> tuple[str, list]:
         ocultar.add("k")
     if not cfg.get("xv_ideal"):
         ocultar.add("x")
-    botones = [(t, f"m3|{liga}|{c}") for t, c in QUE if c not in ocultar]
-    return f"<b>{_nombre_liga(liga)}</b>\n¿Qué quieres?", _filas(botones, 2) + [[("⬅️ Volver", "m1")]]
+    etiqueta = {c: t for t, c in QUE}
+    filas = []
+    for fila in FILAS_QUE:
+        botones = [(etiqueta[c], f"m3|{liga}|{c}") for c in fila if c not in ocultar]
+        if botones:
+            filas.append(botones)
+    if cfg.get("torneo"):  # Copa: acceso a cada grupo
+        filas.append([(f"Grupo {g}", f"m2|{comp}/{g}") for g in cfg["grupos"]][:6])
+    atras = f"mg|{comp}" if len(cfg["grupos"]) > 1 and not cfg.get("torneo") else _atras_de(comp)
+    if cfg.get("torneo") and grupo != "*":
+        atras = f"m2|{comp}/*"
+    filas.append([("⬅️ Volver", atras)])
+    return f"<b>{_nombre_liga(liga)}</b>\n¿Qué quieres?", filas
 
 
 def _menu_jornada(liga: str, cod: str) -> tuple[str, list] | None:
     comp, grupo = liga.split("/")
     grupo_ref = next(iter(cargar_config()["competiciones"][comp]["grupos"])) if grupo == "*" else grupo
+    if cod in ("v", "g", "k"):
+        return None  # siempre lo último
     jugadas = jornadas_jugadas(comp, grupo_ref)
-    if cod in ("v", "g", "k") or len(jugadas) <= 1:
+    if len(jugadas) <= 1:
         return None  # nada que elegir: la última
     ultimas = jugadas[-8:]
     botones = [(f"Última (J{ultimas[-1]})", f"m4|{liga}|{cod}|0")]
@@ -262,7 +335,13 @@ def _menu_jornada(liga: str, cod: str) -> tuple[str, list] | None:
 def _menu(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
     paso, mid = partes[0], cq["message"]["message_id"]
     if paso == "m1":
-        tg.editar(chat_id, mid, *_menu_ligas())
+        tg.editar(chat_id, mid, *_menu_inicio())
+    elif paso == "mc":
+        tg.editar(chat_id, mid, *_menu_categoria(partes[1]))
+    elif paso == "mr":
+        tg.editar(chat_id, mid, *_menu_region(int(partes[1])))
+    elif paso == "mg":
+        tg.editar(chat_id, mid, *_menu_grupos(partes[1]))
     elif paso == "m2":
         tg.editar(chat_id, mid, *_menu_que(partes[1]))
     elif paso in ("m3", "m4"):
@@ -276,7 +355,7 @@ def _menu(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
         comp, grupo = liga.split("/")
         grupos = list(cargar_config()["competiciones"][comp]["grupos"]) if grupo == "*" else [grupo]
         _servir(tg, chat_id, [(comp, g) for g in grupos], _decod(cod), jornada)
-        tg.mensaje(chat_id, "¿Algo más?", [[("📋 Pedir otra cosa", "m0")]])
+        tg.mensaje(chat_id, "¿Algo más?", [[("🔁 Otra cosa de esta liga", f"m0|{liga}"), ("📋 Otra competición", "m0")]])
 
 
 def enviar_competicion(tg: Telegram, chat_id, comp: str, claves: list[str],
@@ -401,7 +480,7 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
     partes = cq.get("data", "").split("|")
     tg.responder_boton(cq["id"])
     if partes[0] == "m0":
-        tg.mensaje(chat_id, *_menu_ligas())
+        tg.mensaje(chat_id, *(_menu_que(partes[1]) if len(partes) > 1 else _menu_inicio()))
         return
     if partes[0].startswith("m"):
         b["esperando"] = None
@@ -455,11 +534,11 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
 
     if texto.startswith(("/start", "/ayuda", "/help")) or texto == "❓ Ayuda":
         tg.mensaje(chat_id, AYUDA, teclado_fijo=TECLADO_FIJO)
-    elif texto.startswith("/estilo"):
+    elif texto.startswith("/estilo") or texto == "🎨 Estilo":
         _menu_estilo(tg, chat_id)
     elif texto.startswith("/pedir") or texto == "📋 Pedir":
         b["esperando"] = None
-        tg.mensaje(chat_id, *_menu_ligas())
+        tg.mensaje(chat_id, *_menu_inicio())
     elif texto.startswith("/semana"):
         tg.mensaje(chat_id, "⏳ Preparando los carruseles de esta semana…")
         if not semana(tg, chat_id):
@@ -504,7 +583,7 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
         pass
     else:
         tg.mensaje(chat_id, "No te he entendido 🤔 Usa el menú:")
-        tg.mensaje(chat_id, *_menu_ligas())
+        tg.mensaje(chat_id, *_menu_inicio())
 
 
 def _toca(b: dict, clave: str, dia: int, hora: int) -> bool:
@@ -533,6 +612,11 @@ def bucle(tg: Telegram, minutos: float) -> None:
         tg.comandos(COMANDOS)  # por si se han añadido comandos nuevos
     except Exception:
         pass
+    b = estado.bot()
+    if b.get("chat_id") and b.get("teclado") != VERSION_TECLADO:
+        tg.mensaje(b["chat_id"], NOVEDADES, teclado_fijo=TECLADO_FIJO)
+        b["teclado"] = VERSION_TECLADO
+        estado.guardar_bot(b)
     while (restante := fin - time.monotonic()) > 5:
         b = estado.bot()
         chat_id = b.get("chat_id")

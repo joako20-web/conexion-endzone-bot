@@ -9,7 +9,7 @@ from pathlib import Path
 from rugbyig.models import Partido
 from rugbyig.pipeline import cargar_config
 from rugbyig.render.render import con_zonas, renderizar_slides
-from rugbyig.scraper.isquad import ISquad
+from rugbyig.scraper.isquad import ISquad, compartido
 
 # Rondas de eliminatoria de menos a más avanzada (por palabra clave).
 RONDAS = [("dieciseisavo", "Dieciseisavos"), ("octavo", "Octavos"), ("cuarto", "Cuartos"),
@@ -33,7 +33,7 @@ def _p(p: Partido) -> dict:
 
 def datos_competicion(comp: str, cliente: ISquad | None = None) -> dict:
     """Clasificación y partidos de todos los grupos de una competición."""
-    cliente = cliente or ISquad()
+    cliente = cliente or compartido()
     cfg = cargar_config()["competiciones"][comp]
     grupos, escudos, partidos, eliminatorias = [], {}, [], {}
     for g, id_grupo in cfg["grupos"].items():

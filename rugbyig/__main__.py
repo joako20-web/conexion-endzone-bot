@@ -2,6 +2,7 @@
   python -m rugbyig generar dh_masc [--grupo A] [--jornada 2]   # imágenes en out/
   python -m rugbyig semana [--reintento]                        # carruseles -> Telegram
   python -m rugbyig bot [--minutos 14]                          # escucha Telegram
+  python -m rugbyig descubrir [--temporada 2627]                # ligas disponibles en iSquad
 """
 import argparse
 import os
@@ -21,6 +22,8 @@ def main() -> None:
     g.add_argument("--sin-imagenes", action="store_true")
     s = sub.add_parser("semana", help="manda a Telegram el carrusel de la última jornada de cada liga")
     s.add_argument("--reintento", action="store_true", help="solo reenvía los que tenían actas incompletas")
+    d = sub.add_parser("descubrir", help="lista las ligas publicadas en iSquad (para añadirlas a config)")
+    d.add_argument("--temporada", type=int, default=2627, help="p. ej. 2627 = 2026/27")
     b = sub.add_parser("bot", help="escucha Telegram durante unos minutos")
     b.add_argument("--minutos", type=float, default=14)
     args = ap.parse_args()
@@ -31,6 +34,13 @@ def main() -> None:
         if not args.sin_imagenes:
             for img in renderizar_jornada(ruta):
                 print(f"  {img}")
+        return
+
+    if args.cmd == "descubrir":
+        from rugbyig.scraper.isquad import compartido
+
+        for x in compartido().descubrir(args.temporada):
+            print(f"{x['id_grupo']:>6}  {x['territorial'][:28]:28}  {x['competicion'][:40]:40}  {x['fase']} / {x['grupo']}")
         return
 
     from rugbyig import estado, flujo

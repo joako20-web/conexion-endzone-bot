@@ -1,8 +1,10 @@
 """JSON de jornada -> carrusel JPEG 1080x1350 (Jinja2 + Playwright)."""
 from __future__ import annotations
 
+import atexit
 import base64
 import io
+import os
 import json
 from functools import lru_cache
 from datetime import datetime
@@ -15,7 +17,7 @@ from playwright.sync_api import sync_playwright
 from rugbyig.core.estadisticas import POSICIONES
 from rugbyig.pipeline import CONFIG, RAIZ, cargar_config
 from rugbyig.render import nombres
-from rugbyig.scraper.isquad import ISquad
+from rugbyig.scraper.isquad import compartido
 
 TEMPLATES = Path(__file__).parent / "templates"
 OUT = RAIZ / "out"
@@ -198,7 +200,7 @@ def _foto(foto: dict) -> str:
         ruta = RAIZ / foto["archivo"]
         mime = "image/png" if ruta.suffix.lower() == ".png" else "image/jpeg"
         return _data_uri(ruta.read_bytes(), mime)
-    return _data_uri(ISquad().imagen(foto["url"]), "image/jpeg")
+    return _data_uri(compartido().imagen(foto["url"]), "image/jpeg")
 
 
 @lru_cache(maxsize=512)
@@ -207,7 +209,7 @@ def _escudo_uri(url: str) -> str:
     from PIL import Image
 
     try:
-        img = Image.open(io.BytesIO(ISquad().imagen(url))).convert("RGB")
+        img = Image.open(io.BytesIO(compartido().imagen(url))).convert("RGB")
     except Exception:
         return ""
     img.thumbnail((200, 200))
@@ -217,6 +219,26 @@ def _escudo_uri(url: str) -> str:
 
 
 TEMAS = {"noche": "Noche", "tiza": "Tiza", "estadio": "Estadio", "prensa": "Prensa", "cesped": "Césped"}
+# Tipografía de titulares de cada tema (el texto siempre va en Barlow Condensed)
+FUENTE_TEMA = {"noche": "Teko", "tiza": "Teko", "estadio": "Bebas Neue", "prensa": "Oswald", "cesped": "Anton"}
+FUENTES = RAIZ / "assets" / "fuentes"
+
+
+@lru_cache(maxsize=8)
+def css_fuentes(tema: str) -> str:
+    """@font-face con las fuentes del tema incrustadas (sin pedir nada a Google)."""
+    familias = {"Barlow Condensed", FUENTE_TEMA.get(tema, "Teko"), "Teko"}
+    reglas = []
+    for f in json.loads((FUENTES / "fuentes.json").read_text()):
+        if f["familia"] not in familias:
+            continue
+        datos = base64.b64encode((FUENTES / f["archivo"]).read_bytes()).decode()
+        reglas.append(
+            f"@font-face {{ font-family: '{f['familia']}'; font-weight: {f['peso']}; font-style: normal;"
+            f" font-display: block; src: url(data:font/woff2;base64,{datos}) format('woff2');"
+            f" unicode-range: {f['rango']}; }}"
+        )
+    return "\n".join(reglas)
 
 
 def tema_actual() -> str:
@@ -241,7 +263,8 @@ def html_post(datos: dict, slides: list[dict], formato: str = "post", tema: str 
         .render(
             slides=slides,
             formato=formato,
-            tema=tema or tema_actual(),
+            tema=(tema := tema or tema_actual()),
+            fuentes=css_fuentes(tema),
             marca=marca,
             logo=logo,
             jornada=datos["jornada"],
@@ -255,6 +278,31 @@ def html_post(datos: dict, slides: list[dict], formato: str = "post", tema: str 
     )
 
 
+class _Navegador:
+    """Un único Chromium para todo el proceso (arrancarlo cuesta ~1 s)."""
+
+    def __init__(self):
+        self.pw = self.nav = None
+
+    def pagina(self, ancho: int, alto: int):
+        if self.nav is None or not self.nav.is_connected():
+            self.pw = sync_playwright().start()
+            canal = os.environ.get("PLAYWRIGHT_CHANNEL")  # "chrome" en GitHub: ya viene instalado
+            self.nav = self.pw.chromium.launch(channel=canal) if canal else self.pw.chromium.launch()
+        pagina = self.nav.new_page(viewport={"width": ancho, "height": alto})
+        return pagina
+
+    def cerrar(self):
+        if self.nav:
+            self.nav.close()
+            self.pw.stop()
+            self.nav = self.pw = None
+
+
+_NAV = _Navegador()
+atexit.register(_NAV.cerrar)
+
+
 def renderizar_slides(
     datos: dict, slides: list[dict], destino: Path, formato: str = "post", tema: str | None = None
 ) -> list[Path]:
@@ -266,16 +314,16 @@ def renderizar_slides(
         return []
     ancho, alto = TAMANOS[formato]
     generados: list[Path] = []
-    with sync_playwright() as pw:
-        nav = pw.chromium.launch()
-        pagina = nav.new_page(viewport={"width": ancho, "height": alto})
-        pagina.set_content(html_post(datos, slides, formato, tema), wait_until="networkidle")
+    pagina = _NAV.pagina(ancho, alto)
+    try:
+        pagina.set_content(html_post(datos, slides, formato, tema), wait_until="load")
         pagina.evaluate("document.fonts.ready")
         for sec, s in zip(pagina.query_selector_all("section.slide"), slides):
             jpg = destino / f"{len(generados) + 1:02d}_{s['clave']}.jpg"
             sec.screenshot(path=str(jpg), type="jpeg", quality=92)
             generados.append(jpg)
-        nav.close()
+    finally:
+        pagina.close()
     return generados
 
 

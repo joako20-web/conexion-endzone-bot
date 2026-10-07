@@ -10,7 +10,7 @@ from rugbyig.core import estadisticas as E
 from rugbyig.pipeline import cargar_config
 from rugbyig.render import nombres
 from rugbyig.render.render import MESES, fila_anotador, renderizar_slides
-from rugbyig.scraper.isquad import ISquad
+from rugbyig.scraper.isquad import ISquad, compartido
 
 ESPERA_ACTA_MIN = 40  # si el acta no cuadra, se espera esto antes de mandar solo el marcador
 MAX_RECORDADOS = 600
@@ -28,7 +28,7 @@ def historia_final(comp: str, grupo: str, id_partido: int, destino: Path,
                    cliente: ISquad | None = None, forzar: bool = True) -> Path | None:
     """Genera la historia del partido. Con forzar=False devuelve None si el acta
     aún no cuadra con el marcador (para esperar a que se complete)."""
-    cliente = cliente or ISquad()
+    cliente = cliente or compartido()
     cfg = cargar_config()
     id_grupo = cfg["competiciones"][comp]["grupos"][grupo]
     clasificacion = cliente.clasificacion(id_grupo)
@@ -70,7 +70,7 @@ def comprobar(tg, b: dict, cliente: ISquad | None = None) -> int:
     La primera vez solo memoriza los partidos ya jugados (no manda el pasado).
     Devuelve cuántos se han mandado.
     """
-    cliente = cliente or ISquad()
+    cliente = cliente or compartido()
     primera_vez = "finales" not in b
     enviados = set(b.get("finales", []))
     vistos: dict = b.get("finales_vistos", {})

@@ -7,12 +7,17 @@ temporada: "2026/27"
 # carnet). Desactivado: la portada es gráfica salvo que se añada una foto a mano.
 foto_portada_auto: false
 
+# categoria: nacional | copa | regional (organiza el menú de Telegram).
+# semanal: false -> no entra en el envío de los lunes (solo bajo pedido).
+# Para buscar ligas regionales nuevas en iSquad: python -m rugbyig descubrir
+
 # Zonas de la clasificación (franja de color + leyenda). Posiciones negativas
 # cuentan desde el final (-1 = último). Colores: titulo, ascenso, promocion, descenso, fase.
 # Formato 2026/27 según la FER (revisar cada temporada).
 
 competiciones:
   dh_masc:
+    categoria: nacional
     nombre: "División de Honor"
     corto: "DH"
     grupos: {unico: 1296}
@@ -23,6 +28,7 @@ competiciones:
       - {desde: 1, hasta: 4, color: titulo, texto: "Semifinales por el título"}
       - {desde: -1, hasta: -1, color: descenso, texto: "Desciende a DH Élite"}
   dh_fem:
+    categoria: nacional
     nombre: "Liga Iberdrola"
     corto: "DH Fem"
     grupos: {unico: 1298}
@@ -34,6 +40,7 @@ competiciones:
       - {desde: -2, hasta: -2, color: promocion, texto: "Promoción ante el 2º de DHB"}
       - {desde: -1, hasta: -1, color: descenso, texto: "Desciende a DHB Femenina"}
   dh_elite:
+    categoria: nacional
     nombre: "División de Honor Élite"
     corto: "DH Élite"
     grupos: {unico: 1297}
@@ -44,6 +51,7 @@ competiciones:
       - {desde: 1, hasta: 4, color: titulo, texto: "Play-off por el ascenso a DH"}
       - {desde: -1, hasta: -1, color: descenso, texto: "Desciende a DH B"}
   dhb_masc:
+    categoria: nacional
     nombre: "División de Honor B"
     corto: "DH B"
     grupos: {A: 1300, B: 1301, C: 1302, D: 1303}
@@ -56,6 +64,7 @@ competiciones:
       D:
         - {desde: 1, hasta: 1, color: ascenso, texto: "Grupo de ascenso a DH Élite"}
   dhb_fem:
+    categoria: nacional
     nombre: "División de Honor B Femenina"
     corto: "DH B Fem"
     grupos: {unico: 1299}
@@ -65,6 +74,7 @@ competiciones:
       - {desde: 1, hasta: 4, color: titulo, texto: "Grupo A de la 2ª fase (título)"}
       - {desde: 5, hasta: 8, color: fase, texto: "Grupo B de la 2ª fase"}
   copa:
+    categoria: copa
     nombre: "Copa del Rey"
     corto: "Copa"
     grupos: {A: 1322, B: 1323, C: 1324, D: 1325, E: 1326, F: 1327}
@@ -74,3 +84,31 @@ competiciones:
     exentos: ["SILICIUS ALCOBENDAS RUGBY", "VRAC QUESOS ENTREPINARES"]  # directos a cuartos
     zonas:
       - {desde: 1, hasta: 1, color: titulo, texto: "Pasa a cuartos de final"}
+
+  # ---- Regionales (solo Castilla y León y Galicia publican en iSquad) ----
+  cyl_masc:
+    categoria: regional
+    region: "Castilla y León"
+    nombre: "Senior Masculino Castilla y León"
+    corto: "CyL"
+    grupos: {unico: 1306}
+    xv_ideal: true
+    directo: false
+    semanal: false
+  cyl_fem:
+    categoria: regional
+    region: "Castilla y León"
+    nombre: "Femenina Castilla y León"
+    corto: "CyL Fem"
+    grupos: {unico: 1308}
+    xv_ideal: true
+    directo: false
+    semanal: false
+  m23:
+    categoria: nacional
+    nombre: "Competición Nacional M23"
+    corto: "M23"
+    grupos: {A: 1304, B: 1305}
+    xv_ideal: true
+    directo: false
+    semanal: false

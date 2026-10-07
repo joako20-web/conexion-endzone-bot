@@ -1,12 +1,12 @@
 # Bot de Telegram de Conexión Endzone.
-# Cada ejecución escucha Telegram 14 minutos y al acabar lanza la siguiente
-# (relevo); el cron de cada cuarto de hora es el respaldo. Así responde en segundos. Los lunes a las 10:00 (Madrid) manda los
+# Cada ejecución escucha Telegram 55 minutos y al acabar lanza la siguiente
+# (relevo); el cron es el respaldo. Así responde en segundos. Los lunes a las 10:00 (Madrid) manda los
 # carruseles de la semana; los martes reintenta los que tenían actas incompletas.
 name: bot
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -20,7 +20,7 @@ permissions:
 jobs:
   bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 70
     steps:
       - name: ¿Está el token de Telegram?
         id: token
@@ -41,24 +41,28 @@ jobs:
       - run: uv sync --frozen
         if: steps.token.outputs.ok == 'true'
 
-      - name: Caché del navegador y de iSquad
+      - name: Caché de iSquad (actas y escudos)
         if: steps.token.outputs.ok == 'true'
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.cache/ms-playwright
-            .cache/isquad
-          key: navegador-${{ hashFiles('uv.lock') }}-${{ github.run_id }}
-          restore-keys: navegador-${{ hashFiles('uv.lock') }}-
+          path: .cache/isquad
+          key: isquad-${{ github.run_id }}
+          restore-keys: isquad-
 
-      - run: uv run playwright install --with-deps chromium
+      - name: Navegador (usa el Chrome del runner; si no hay, instala Chromium)
         if: steps.token.outputs.ok == 'true'
+        run: |
+          if command -v google-chrome >/dev/null; then
+            echo "PLAYWRIGHT_CHANNEL=chrome" >> "$GITHUB_ENV"
+          else
+            uv run playwright install --with-deps chromium
+          fi
 
       - name: Escuchar Telegram
         if: steps.token.outputs.ok == 'true'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        run: uv run python -m rugbyig bot --minutos 14
+        run: uv run python -m rugbyig bot --minutos 55
 
       - name: Guardar estado
         if: always() && steps.token.outputs.ok == 'true'
