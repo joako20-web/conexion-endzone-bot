@@ -31,7 +31,8 @@ from rugbyig.scraper.texto import decodificar, limpiar
 
 COMPS = ("dh_masc", "dh_fem")
 TEMPORADAS = (2627, 2526, 2425, 2324)  # la primera es la actual
-CACHE = RAIZ / ".cache" / "isquad" / "arbitros"
+# En data/ (se sube al repo): las temporadas pasadas no cambian y así no hay que bajarlas
+CACHE = RAIZ / "data" / "arbitros"
 
 MIN_PARTIDOS_ARBITRO = 5  # para entrar en rankings de árbitros
 MIN_CRUCE = 3  # partidos de un equipo con un árbitro para sacar conclusiones

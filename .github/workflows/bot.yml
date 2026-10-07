@@ -45,7 +45,7 @@ jobs:
 
       - name: Caché de iSquad (actas y escudos)
         if: steps.token.outputs.ok == 'true'
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: .cache/isquad
           key: isquad-${{ github.run_id }}
@@ -66,6 +66,13 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         run: uv run python -m rugbyig bot --minutos 55
+
+      - name: Guardar caché (también si se cancela, para no repetir descargas)
+        if: always() && steps.token.outputs.ok == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/isquad
+          key: isquad-${{ github.run_id }}
 
       - name: Guardar estado
         if: always() && steps.token.outputs.ok == 'true'
