@@ -1,5 +1,5 @@
 {
-  "offset": 736686348,
+  "offset": 736686349,
   "chat_id": 8634024483,
   "esperando": null,
   "teclado": 3,
@@ -34,5 +34,6 @@
     "8634024483": null,
     "7110376476": null,
     "1146846131": null
-  }
+  },
+  "agenda_jueves": "2026-W41"
 }
