@@ -1,0 +1,1493 @@
+{
+  "competicion": "dh_fem",
+  "nombre": "Liga Iberdrola",
+  "grupo": "unico",
+  "temporada": "2026/27",
+  "jornada": 1,
+  "partidos": [
+    {
+      "id": 17826,
+      "jornada": 1,
+      "fecha": "2026-10-10T16:00:00",
+      "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "visitante": "SILICIUS RUGBY MAJADAHONDA",
+      "puntos_local": 34,
+      "puntos_visitante": 22,
+      "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17823,
+      "jornada": 1,
+      "fecha": "2026-10-11T11:00:00",
+      "local": "RIALTA CRAT CORUÑA.",
+      "visitante": "TURIA",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
+      "estado": "pendiente",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17825,
+      "jornada": 1,
+      "fecha": "2026-10-11T11:00:00",
+      "local": "GETXO RUGBY",
+      "visitante": "CLUB DE RUGBY SANT CUGAT",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "Fadura",
+      "estado": "pendiente",
+      "grupo": null,
+      "ronda": ""
+    }
+  ],
+  "partidos_temporada": [
+    {
+      "id": 17826,
+      "jornada": 1,
+      "fecha": "2026-10-10T16:00:00",
+      "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "visitante": "SILICIUS RUGBY MAJADAHONDA",
+      "puntos_local": 34,
+      "puntos_visitante": 22,
+      "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    }
+  ],
+  "actas_pendientes": [],
+  "anotadores": [
+    {
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 8,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": 22.8,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6f6b636236776b6c6d70.jpg"
+    },
+    {
+      "nombre": "MARIA MIGUEL GIL",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 2,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 29.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
+    },
+    {
+      "nombre": "CARLA MENDEZ VAZQUEZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6232717161783564.jpg"
+    },
+    {
+      "nombre": "CLAUDIA PEREZ PEREZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 22,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": 6.8,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a766f34376534747433.jpg"
+    },
+    {
+      "nombre": "IRATI CLAVERO PERIANES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 9,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
+    },
+    {
+      "nombre": "LEIRE MARKIEGI GORTAZAR",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 11,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a64336866623071316f.jpg"
+    },
+    {
+      "nombre": "CARLA VILLEGAS MINTEGUI",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 10,
+      "puntos": 4,
+      "ensayos": 0,
+      "conversiones": 2,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 9.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a34636a636a6a303872.jpg"
+    },
+    {
+      "nombre": "MARTINA MARQUEZ ALPAÑEZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 12,
+      "puntos": 2,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -3.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_35637467657234376668.jpg"
+    }
+  ],
+  "ensayadores": [
+    {
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 8,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": 22.8,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6f6b636236776b6c6d70.jpg"
+    },
+    {
+      "nombre": "MARIA MIGUEL GIL",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 2,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 29.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
+    },
+    {
+      "nombre": "CARLA MENDEZ VAZQUEZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6232717161783564.jpg"
+    },
+    {
+      "nombre": "CLAUDIA PEREZ PEREZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 22,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": 6.8,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a766f34376534747433.jpg"
+    },
+    {
+      "nombre": "IRATI CLAVERO PERIANES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 9,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
+    }
+  ],
+  "xv_ideal": {
+    "1": {
+      "nombre": "CARLA MENDEZ VAZQUEZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6232717161783564.jpg"
+    },
+    "2": {
+      "nombre": "MARIA MIGUEL GIL",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 2,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 29.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
+    },
+    "4": {
+      "nombre": "CAYETANA ALVAREZ SERRANO",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6966776d6b3969336f6c.jpg"
+    },
+    "6": {
+      "nombre": "CELIA PALUMBO RIBOT",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_747179746b75766a6b73.jpg"
+    },
+    "8": {
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 8,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": 22.8,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6f6b636236776b6c6d70.jpg"
+    },
+    "9": {
+      "nombre": "IRATI CLAVERO PERIANES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 9,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
+    },
+    "11": {
+      "nombre": "LEIRE MARKIEGI GORTAZAR",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 11,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a64336866623071316f.jpg"
+    },
+    "14": {
+      "nombre": "CAMINO SOTOMAYOR MENCHACA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6f6c347176796d6d6869.jpg"
+    }
+  },
+  "foto_portada": null,
+  "candidatos_xv": [
+    {
+      "nombre": "CARLA MENDEZ VAZQUEZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6232717161783564.jpg"
+    },
+    {
+      "nombre": "GAÏA MELISANDE PALOMA ELISE TARTINVILLE USAGE TARTINVILLE-BRUANT",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_67653934366778373669.jpg"
+    },
+    {
+      "nombre": "MARIA MIGUEL GIL",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 2,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 29.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
+    },
+    {
+      "nombre": "VALENTINA MALDONADO JAIMES",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_343865356a6367666f39.jpg"
+    },
+    {
+      "nombre": "IDOIA GOYA DEL MORAL",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_666b6867316d6b6c6f77.jpg"
+    },
+    {
+      "nombre": "MARIA DEL MAR LAORGA DE VILLA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6b6d65626c3362646878.jpg"
+    },
+    {
+      "nombre": "NILE GERRIKABEITIA ALVES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3833336b79663234776d.jpg"
+    },
+    {
+      "nombre": "CAYETANA ALVAREZ SERRANO",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6966776d6b3969336f6c.jpg"
+    },
+    {
+      "nombre": "BELSAY ESCUDERO LOPEZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_36727236776867796565.jpg"
+    },
+    {
+      "nombre": "LUCIA CALVO CORREDERA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_63653463757563616967.jpg"
+    },
+    {
+      "nombre": "ALBA MARIA ALONSO PEREZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_39317971356170616871.jpg"
+    },
+    {
+      "nombre": "LUCIA DEL CAMPO ANDRES",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_71336d3074786c623936.jpg"
+    },
+    {
+      "nombre": "KIARA MARIEL ESPOSITO LENCINAS",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_346179367338336d6337.jpg"
+    },
+    {
+      "nombre": "CELIA PALUMBO RIBOT",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_747179746b75766a6b73.jpg"
+    },
+    {
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 8,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": 22.8,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6f6b636236776b6c6d70.jpg"
+    },
+    {
+      "nombre": "OIHANE LOPEZ DE ULLIBARRI TORRADO",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6c783634736575313736.jpg"
+    },
+    {
+      "nombre": "IRATI CLAVERO PERIANES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 9,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
+    },
+    {
+      "nombre": "LUCIA DIAZ MARTIN",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_74653961376363796f39.jpg"
+    },
+    {
+      "nombre": "CARLA VILLEGAS MINTEGUI",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 10,
+      "puntos": 4,
+      "ensayos": 0,
+      "conversiones": 2,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 9.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a34636a636a6a303872.jpg"
+    },
+    {
+      "nombre": "MARTA PRO GARCIA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_70733472343436306e70.jpg"
+    },
+    {
+      "nombre": "LEIRE MARKIEGI GORTAZAR",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 11,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 13.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a64336866623071316f.jpg"
+    },
+    {
+      "nombre": "PALOMA GARCIA DE PRADO DIAZ-JARES",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6504262462639.jpeg"
+    },
+    {
+      "nombre": "PAULA GARRIDO TORVISO",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_746c336e68356d667861.jpg"
+    },
+    {
+      "nombre": "MARTINA MARQUEZ ALPAÑEZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 12,
+      "puntos": 2,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -3.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_35637467657234376668.jpg"
+    },
+    {
+      "nombre": "CLAUDIA DE LA LOMA DEHESA",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_776f69733577336f3876.jpg"
+    },
+    {
+      "nombre": "MARTA FRESNO JIMENEZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_346c706e72356a673278.jpg"
+    },
+    {
+      "nombre": "MARTINA CAMPOS ALONSO",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_66396664623836373030343637396332.jpg"
+    },
+    {
+      "nombre": "CAMINO SOTOMAYOR MENCHACA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6f6c347176796d6d6869.jpg"
+    },
+    {
+      "nombre": "DANIELA GARCIA TORRES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6638666230686771.jpg"
+    },
+    {
+      "nombre": "VELA BARAVIAN",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -12,
+      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nota": -1.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_32333265656c766c6779.jpg"
+    }
+  ],
+  "clasificacion": [
+    {
+      "posicion": 1,
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "racha": [
+        "G"
+      ],
+      "pt": 4,
+      "pj": 1,
+      "pg": 1,
+      "pe": 0,
+      "pp": 0,
+      "tf": 34,
+      "tc": 22,
+      "dt": 12,
+      "ef": 6,
+      "ec": 4,
+      "de": 2,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg"
+    },
+    {
+      "posicion": 2,
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "racha": [
+        "P"
+      ],
+      "pt": 0,
+      "pj": 1,
+      "pg": 0,
+      "pe": 0,
+      "pp": 1,
+      "tf": 22,
+      "tc": 34,
+      "dt": -12,
+      "ef": 4,
+      "ec": 6,
+      "de": -2,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/44/square_6b6d69766e726e396168.jpg"
+    },
+    {
+      "posicion": 3,
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "racha": [],
+      "pt": 0,
+      "pj": 0,
+      "pg": 0,
+      "pe": 0,
+      "pp": 0,
+      "tf": 0,
+      "tc": 0,
+      "dt": 0,
+      "ef": 0,
+      "ec": 0,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg"
+    },
+    {
+      "posicion": 4,
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "racha": [],
+      "pt": 0,
+      "pj": 0,
+      "pg": 0,
+      "pe": 0,
+      "pp": 0,
+      "tf": 0,
+      "tc": 0,
+      "dt": 0,
+      "ef": 0,
+      "ec": 0,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/48/square_666e3068736979736476.jpg"
+    },
+    {
+      "posicion": 5,
+      "equipo": "CAJASOL SEVILLA COCOS",
+      "racha": [],
+      "pt": 0,
+      "pj": 0,
+      "pg": 0,
+      "pe": 0,
+      "pp": 0,
+      "tf": 0,
+      "tc": 0,
+      "dt": 0,
+      "ef": 0,
+      "ec": 0,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg"
+    },
+    {
+      "posicion": 6,
+      "equipo": "GETXO RUGBY",
+      "racha": [],
+      "pt": 0,
+      "pj": 0,
+      "pg": 0,
+      "pe": 0,
+      "pp": 0,
+      "tf": 0,
+      "tc": 0,
+      "dt": 0,
+      "ef": 0,
+      "ec": 0,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/63/square_396e3565726975667168.jpg"
+    },
+    {
+      "posicion": 7,
+      "equipo": "TURIA",
+      "racha": [],
+      "pt": 0,
+      "pj": 0,
+      "pg": 0,
+      "pe": 0,
+      "pp": 0,
+      "tf": 0,
+      "tc": 0,
+      "dt": 0,
+      "ef": 0,
+      "ec": 0,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg"
+    }
+  ],
+  "escudos": {
+    "VULCANIZADOS ALVAREZ EL SALVADOR": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg",
+    "SILICIUS RUGBY MAJADAHONDA": "https://rugby.isquad.es/images/afiliacion_clubs/44/square_6b6d69766e726e396168.jpg",
+    "RIALTA CRAT CORUÑA.": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg",
+    "CLUB DE RUGBY SANT CUGAT": "https://rugby.isquad.es/images/afiliacion_clubs/48/square_666e3068736979736476.jpg",
+    "CAJASOL SEVILLA COCOS": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg",
+    "GETXO RUGBY": "https://rugby.isquad.es/images/afiliacion_clubs/63/square_396e3565726975667168.jpg",
+    "TURIA": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg"
+  },
+  "temporada_anotadores": [
+    {
+      "id": 1053276,
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "pj": 1,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1023764,
+      "nombre": "MARIA MIGUEL GIL",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1035058,
+      "nombre": "LEIRE MARKIEGI GORTAZAR",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025322,
+      "nombre": "CLAUDIA PEREZ PEREZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "pj": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1035079,
+      "nombre": "IRATI CLAVERO PERIANES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1023761,
+      "nombre": "CARLA MENDEZ VAZQUEZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1024560,
+      "nombre": "CARLA VILLEGAS MINTEGUI",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 4,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1029036,
+      "nombre": "MARTINA MARQUEZ ALPAÑEZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "pj": 1,
+      "puntos": 2,
+      "ensayos": 0,
+      "amarillas": 1,
+      "rojas": 0
+    },
+    {
+      "id": 1030219,
+      "nombre": "ALBA MARIA ALONSO PEREZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1029397,
+      "nombre": "ELSA PORTO VIEIROS",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "pj": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    }
+  ],
+  "temporada_ensayadores": [
+    {
+      "id": 1053276,
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "pj": 1,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1023764,
+      "nombre": "MARIA MIGUEL GIL",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1035058,
+      "nombre": "LEIRE MARKIEGI GORTAZAR",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025322,
+      "nombre": "CLAUDIA PEREZ PEREZ",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "pj": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1035079,
+      "nombre": "IRATI CLAVERO PERIANES",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    }
+  ],
+  "proxima_jornada": {
+    "numero": 2,
+    "partidos": [
+      {
+        "id": 17828,
+        "jornada": 2,
+        "fecha": "2026-10-17T14:15:00",
+        "local": "RIALTA CRAT CORUÑA.",
+        "visitante": "CAJASOL SEVILLA COCOS",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 17827,
+        "jornada": 2,
+        "fecha": "2026-10-18T12:00:00",
+        "local": "TURIA",
+        "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "Polideportivo Quatre Carreres",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 17830,
+        "jornada": 2,
+        "fecha": "2026-10-18T13:00:00",
+        "local": "GETXO RUGBY",
+        "visitante": "SILICIUS RUGBY MAJADAHONDA",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "Fadura",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      }
+    ]
+  },
+  "rankings": {
+    "ensayadores": [
+      {
+        "nombre": "ADELINA DA COSTA",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": "VULCANIZADOS ALVAREZ EL SALVADOR"
+      },
+      {
+        "nombre": "MARIA MIGUEL GIL",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": "SILICIUS RUGBY MAJADAHONDA"
+      },
+      {
+        "nombre": "CARLA MENDEZ VAZQUEZ",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "SILICIUS RUGBY MAJADAHONDA"
+      },
+      {
+        "nombre": "CLAUDIA PEREZ PEREZ",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "VULCANIZADOS ALVAREZ EL SALVADOR"
+      },
+      {
+        "nombre": "IRATI CLAVERO PERIANES",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "SILICIUS RUGBY MAJADAHONDA"
+      },
+      {
+        "nombre": "LEIRE MARKIEGI GORTAZAR",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "SILICIUS RUGBY MAJADAHONDA"
+      }
+    ],
+    "pateadores": [
+      {
+        "nombre": "CARLA VILLEGAS MINTEGUI",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 4,
+        "detalle": "2 transf.",
+        "rival": "SILICIUS RUGBY MAJADAHONDA"
+      },
+      {
+        "nombre": "MARTINA MARQUEZ ALPAÑEZ",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 2,
+        "detalle": "1 transf.",
+        "rival": "VULCANIZADOS ALVAREZ EL SALVADOR"
+      }
+    ],
+    "ensayadores_t": [
+      {
+        "nombre": "ADELINA DA COSTA",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "MARIA MIGUEL GIL",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "CARLA MENDEZ VAZQUEZ",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "CLAUDIA PEREZ PEREZ",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "IRATI CLAVERO PERIANES",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "LEIRE MARKIEGI GORTAZAR",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": ""
+      }
+    ],
+    "pateadores_t": [
+      {
+        "nombre": "CARLA VILLEGAS MINTEGUI",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 4,
+        "detalle": "2 transf.",
+        "rival": ""
+      },
+      {
+        "nombre": "MARTINA MARQUEZ ALPAÑEZ",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 2,
+        "detalle": "1 transf.",
+        "rival": ""
+      }
+    ],
+    "disciplina": [
+      {
+        "nombre": "GAÏA MELISANDE PALOMA ELISE TARTINVILLE USAGE TARTINVILLE-BRUANT",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
+        "nombre": "LUCIA CALVO CORREDERA",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
+        "nombre": "MARTINA MARQUEZ ALPAÑEZ",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
+        "nombre": "NATALIA PEREZ HERRERO",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
+        "nombre": "VALENTINA MALDONADO JAIMES",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      }
+    ],
+    "banquillo": [
+      {
+        "nombre": "CLAUDIA PEREZ PEREZ",
+        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      }
+    ],
+    "equipos": [
+      {
+        "titulo": "Mejor ataque",
+        "unidad": "pts a favor",
+        "filas": [
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 34
+          },
+          {
+            "equipo": "SILICIUS RUGBY MAJADAHONDA",
+            "valor": 22
+          }
+        ]
+      },
+      {
+        "titulo": "Mejor defensa",
+        "unidad": "pts en contra",
+        "filas": [
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 22
+          },
+          {
+            "equipo": "SILICIUS RUGBY MAJADAHONDA",
+            "valor": 34
+          }
+        ]
+      },
+      {
+        "titulo": "Más ensayos",
+        "unidad": "ensayos",
+        "filas": [
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 6
+          },
+          {
+            "equipo": "SILICIUS RUGBY MAJADAHONDA",
+            "valor": 4
+          }
+        ]
+      },
+      {
+        "titulo": "Más tarjetas",
+        "unidad": "tarjetas",
+        "filas": [
+          {
+            "equipo": "SILICIUS RUGBY MAJADAHONDA",
+            "valor": 4
+          },
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 1
+          }
+        ]
+      }
+    ]
+  },
+  "datos_jornada": [
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 79,
+      "numero": "3",
+      "unidad": "ensayos en un partido",
+      "titular": "Hat-trick de Maria Miguel Gil",
+      "contexto": "Firmó 3 ensayos ante Silicius Majadahonda.",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 79,
+      "numero": "3",
+      "unidad": "ensayos en un partido",
+      "titular": "Hat-trick de Adelina Da Costa",
+      "contexto": "Firmó 3 ensayos ante El Salvador.",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA"
+    }
+  ]
+}
