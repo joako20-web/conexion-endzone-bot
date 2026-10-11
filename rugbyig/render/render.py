@@ -476,6 +476,17 @@ _JS_AJUSTA = """() => {
     }
     n++;
   }
+  // Nombres de equipo que admiten 2 líneas: si ocupan 3 o más, se reducen hasta caber en 2
+  for (const e of document.querySelectorAll('section.slide .equipo .nom, section.slide .final-eq .nom, section.slide .pj-nom')) {
+    const s = getComputedStyle(e);
+    let fs = parseFloat(s.fontSize);
+    const min = Math.max(22, fs * 0.6);
+    const lineas = () => Math.round(e.getBoundingClientRect().height / (parseFloat(getComputedStyle(e).lineHeight) || fs));
+    while (lineas() > 2 && fs > min) {
+      fs = Math.max(min, fs - 1);
+      e.style.fontSize = fs + 'px';
+    }
+  }
   return n;
 }"""
 

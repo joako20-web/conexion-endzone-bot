@@ -228,7 +228,8 @@ tr[class^="z-"] td.p { color: var(--texto); }
 .previa + .previa { border-top: 1px solid var(--linea); }
 .previa .dia { font-weight: 600; font-size: 26px; color: var(--gris); }
 .previa .hora { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-weight: 700; font-size: 70px; line-height: .9; margin-top: 4px; }
-.previa .cruce { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-weight: 500; font-size: 46px; line-height: 1.02; white-space: nowrap; }
+.previa .cruce { font-family: var(--f-num); font-size-adjust: cap-height var(--aj-num); font-weight: 500; font-size: 46px; line-height: 1.02; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.previa > div { min-width: 0; }
 .previa .cruce + .cruce { margin-top: 6px; }
 .previa .lugar { font-size: 26px; color: var(--gris); margin-top: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 {% include "temas.css" %}
