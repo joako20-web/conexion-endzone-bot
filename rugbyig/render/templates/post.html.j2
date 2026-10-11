@@ -60,7 +60,7 @@ h1 { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font
 .t-portada .mvp .crest.m { grid-row: span 5; width: 150px; height: 150px; padding: 16px; margin: 0; }
 .t-portada .mvp-motivo { font-weight: 600; font-size: 28px; color: var(--acento-txt); }
 .t-portada .mvp-pila { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 400; font-size: 64px; line-height: .95; margin-top: 18px; color: var(--gris); }
-.t-portada .mvp-apellido { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 700; font-size: 168px; line-height: .82; text-transform: uppercase; letter-spacing: -0.01em; }
+.t-portada .mvp-apellido { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font-weight: 700; font-size: 168px; line-height: .82; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; min-width: 0; padding-bottom: .06em; }
 .t-portada .mvp-datos { margin-top: 22px; font-size: 30px; font-weight: 600; color: var(--texto); }
 .t-portada .mvp-pos { color: var(--gris); font-weight: 500; }
 .t-portada .mvp-linea { margin-top: 6px; font-size: 30px; color: var(--gris); }
@@ -147,6 +147,8 @@ h1 { font-family: var(--f-tit); font-size-adjust: cap-height var(--aj-tit); font
 
 /* ---------- Escudos de los clubes: círculo blanco (vienen con fondo blanco) ---------- */
 .crest { border-radius: 50%; background: #fff; object-fit: contain; flex: none; }
+/* El margen de seguridad va dentro de la imagen (render._seguro_en_circulo): sin relleno */
+.crest { padding: 0 !important; }
 .crest.r { width: 72px; height: 72px; padding: 7px; }
 .crest.c { width: 50px; height: 50px; padding: 5px; vertical-align: middle; margin-right: 16px; position: relative; top: -3px; }
 .crest.a { width: 60px; height: 60px; padding: 6px; }

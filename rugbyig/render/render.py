@@ -286,11 +286,33 @@ def _jpeg_uri(img) -> str:
     return _data_uri(buf.getvalue(), "image/jpeg")
 
 
+def _seguro_en_circulo(img, margen: float = 1.08):
+    """Recorta el blanco sobrante y centra el escudo en un lienzo cuadrado cuyo
+    círculo inscrito lo contiene entero (diagonal del escudo <= diámetro).
+
+    Las plantillas pintan los escudos en círculos (border-radius: 50%): así ningún
+    escudo se corta por las esquinas, sea alargado, ancho o cuadrado.
+    """
+    import math
+
+    from PIL import Image
+
+    tinta = img.convert("L").point(lambda v: 255 if v < 238 else 0)
+    caja = tinta.getbbox()
+    if caja:
+        img = img.crop(caja)
+    w, h = img.size
+    lado = max(1, math.ceil(math.hypot(w, h) * margen))
+    lienzo = Image.new("RGB", (lado, lado), (255, 255, 255))
+    lienzo.paste(img, ((lado - w) // 2, (lado - h) // 2))
+    return lienzo
+
+
 @lru_cache(maxsize=512)
 def _escudo_uri(url: str) -> str:
-    """Escudo reducido (se pinta a doble resolución: hasta 230 px CSS -> 460 px reales)."""
+    """Escudo listo para un círculo (se pinta a doble resolución: hasta ~460 px reales)."""
     try:
-        img = _imagen_escudo(url)
+        img = _seguro_en_circulo(_imagen_escudo(url))
     except Exception:
         return ""
     img.thumbnail((480, 480))
@@ -304,11 +326,13 @@ def _escudo_conjunto(urls: tuple[str, ...]) -> str:
 
     lienzo = Image.new("RGB", (480, 480), (255, 255, 255))
     # Huecos dentro del círculo inscrito (radio 240) para 2 o 3 escudos
-    huecos = {2: [(30, 135, 205), (245, 135, 205)],
-              3: [(165, 45, 150), (68, 245, 150), (262, 245, 150)]}[min(len(urls), 3)]
+    # (x, y, lado) de cada hueco: su círculo inscrito queda dentro del círculo grande
+    # (radio 240, con margen) y los huecos no se tocan entre sí
+    huecos = {2: [(10, 128, 224), (246, 128, 224)],
+              3: [(134, 9, 212), (24, 197, 212), (244, 197, 212)]}[min(len(urls), 3)]
     for url, (x, y, lado) in zip(urls, huecos):
         try:
-            img = _imagen_escudo(url)
+            img = _seguro_en_circulo(_imagen_escudo(url), margen=1.02)
         except Exception:
             continue
         img.thumbnail((lado, lado))
@@ -433,6 +457,49 @@ _NAV = _Navegador()
 atexit.register(_NAV.cerrar)
 
 
+# Ajuste automático: los textos de una línea que no caben (nombres de equipos y
+# jugadores largos) reducen su tamaño poco a poco en vez de cortarse con "…".
+# Mínimo: el 62 % del tamaño original y nunca menos de 22 px. Solo si aun así no
+# caben, se queda la elipsis como último recurso.
+_JS_AJUSTA = """() => {
+  let n = 0;
+  for (const e of document.querySelectorAll('section.slide *')) {
+    if (!(e.textContent || '').trim()) continue;
+    const s = getComputedStyle(e);
+    if (s.overflowX === 'visible' && s.textOverflow !== 'ellipsis') continue;
+    if (e.scrollWidth <= e.clientWidth + 1) continue;
+    let fs = parseFloat(s.fontSize);
+    const min = Math.max(22, fs * 0.62);
+    while (e.scrollWidth > e.clientWidth + 1 && fs > min) {
+      fs = Math.max(min, fs - 1);
+      e.style.fontSize = fs + 'px';
+    }
+    n++;
+  }
+  return n;
+}"""
+
+# Detecta textos recortados (elipsis) o que se salen del slide. Con la variable de
+# entorno RUGBYIG_AUDITA=<fichero.jsonl> se registran (para revisar plantillas).
+_JS_AUDITA = """(clave) => {
+  const out = [];
+  for (const sec of document.querySelectorAll('section.slide')) {
+    const caja = sec.getBoundingClientRect();
+    for (const e of sec.querySelectorAll('*')) {
+      if (!e.childElementCount && !(e.textContent || '').trim()) continue;
+      const s = getComputedStyle(e);
+      const corta = e.scrollWidth > e.clientWidth + 1 && s.overflowX !== 'visible';
+      const r = e.getBoundingClientRect();
+      const fuera = r.width > 0 && (r.right > caja.right + 1 || r.left < caja.left - 1 || r.bottom > caja.bottom + 1);
+      if ((corta || fuera) && (e.textContent || '').trim() && !e.querySelector('*:not(br)'))
+        out.push({tipo: corta ? 'corta' : 'fuera', clase: e.className, texto: e.textContent.trim().slice(0, 60),
+                  fs: s.fontSize});
+    }
+  }
+  return out;
+}"""
+
+
 def renderizar_slides(
     datos: dict, slides: list[dict], destino: Path, formato: str = "post", tema: str | None = None
 ) -> list[Path]:
@@ -448,6 +515,13 @@ def renderizar_slides(
     try:
         pagina.set_content(html_post(datos, slides, formato, tema), wait_until="load")
         pagina.evaluate("document.fonts.ready")
+        pagina.evaluate(_JS_AJUSTA)
+        if os.environ.get("RUGBYIG_AUDITA"):
+            problemas = pagina.evaluate(_JS_AUDITA, "")
+            with open(os.environ["RUGBYIG_AUDITA"], "a", encoding="utf-8") as f:
+                f.write(json.dumps({"tema": tema or tema_actual(), "formato": formato,
+                                    "comp": datos.get("competicion"), "claves": [s["clave"] for s in slides],
+                                    "destino": str(destino), "problemas": problemas}, ensure_ascii=False) + "\n")
         for sec, s in zip(pagina.query_selector_all("section.slide"), slides):
             jpg = destino / f"{len(generados) + 1:02d}_{s['clave']}.jpg"
             sec.screenshot(path=str(jpg), type="jpeg", quality=95)
