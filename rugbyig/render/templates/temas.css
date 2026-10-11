@@ -166,3 +166,6 @@
 .tema-prensa .t-portada h1 span { font-size: 4.6em; line-height: .82; }
 .tema-tele .t-portada h1 span { font-size: 4.8em; }
 .tema-retro .t-portada h1 span { font-size: 4.6em; line-height: .8; }
+.tema-retro .previa { padding: 12px 0; }
+.tema-retro .previa .cruce + .cruce { margin-top: 2px; }
+.tema-retro .previa .lugar { margin-top: 6px; }
