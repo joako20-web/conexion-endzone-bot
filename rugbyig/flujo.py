@@ -16,7 +16,7 @@ import time
 import traceback
 from pathlib import Path
 
-from rugbyig import agenda, arbitros, caption, destacado, directo, especiales, estado, evolucion, fichas, historico, torneo
+from rugbyig import agenda, arbitros, caption, preferencias, destacado, directo, especiales, estado, evolucion, fichas, historico, torneo
 from rugbyig.core.editar import cambiar_xv
 from rugbyig.pedidos import interpretar
 from rugbyig.pipeline import RAIZ, cargar_config, jornadas_jugadas, preparar_jornada
@@ -55,10 +55,9 @@ AYUDA = (
 
 NOVEDADES = (
     "🆕 <b>Novedades</b>\n"
-    "· 🗺 Regionales senior: Madrid, Cataluña, Andalucía, Euskadi y Castilla y León.\n"
-    "· 📈 Más estadísticas: ensayadores, puntos al pie, tarjetas, banquillo y la liga en números.\n"
-    "· 🎨 Estilos nuevos de verdad: Noche, Brutal, Prensa, Tele y Retro (botón 🎨 Estilo).\n"
-    "· Menú por niveles y todo más rápido."
+    "· ⚙️ <b>Avisos</b>: elige qué te llega (carruseles, resultados al momento, agenda, árbitros) y de qué ligas.\n"
+    "· ⭐ <b>Favoritas</b>: tus ligas a un toque, arriba del menú.\n"
+    "· Menús más ordenados, con 🏠 Inicio en cada pantalla."
 )
 
 
@@ -166,11 +165,15 @@ def _semana_competicion(tg: Telegram, chat_id, comp: str, claves: list[str], not
     return None
 
 
-def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
+def semana(tg: Telegram, chat_id, reintento: bool = False, ligas: set[str] | list[str] | None = None) -> list[str]:
+    """Carruseles de la última jornada. `ligas`: cuáles (por defecto las de envío semanal)."""
     hechos = []
+    ligas = set(ligas) if ligas is not None else set(preferencias.ligas_defecto())
+    general = tg
     for comp, cfg in cargar_config()["competiciones"].items():
-        if cfg.get("semanal", True) is False:
+        if comp not in ligas:
             continue
+        tg = general.para("semana", comp) if hasattr(general, "para") else general
         if cfg.get("torneo"):
             if not reintento and (h := _semana_competicion(
                     tg, chat_id, comp, ["resultados", "grupos", "cuadro"], "Resumen de la semana")):
@@ -215,9 +218,11 @@ def semana(tg: Telegram, chat_id, reintento: bool = False) -> list[str]:
 
 # ---------- Menús con botones: liga -> qué -> jornada ----------
 
-TECLADO_FIJO = [["📋 Pedir", "🎨 Estilo", "❓ Ayuda"]]
-VERSION_TECLADO = 3  # súbelo al cambiar el teclado fijo para que se reenvíe
+TECLADO_FIJO = [["📋 Pedir", "⭐ Favoritas"], ["🎨 Estilo", "⚙️ Avisos", "❓ Ayuda"]]
+VERSION_TECLADO = 4  # súbelo al cambiar el teclado fijo para que se reenvíe
 COMANDOS = [("pedir", "Pedir resultados, XV, clasificación…"),
+            ("avisos", "Qué te llega automáticamente y de qué ligas"),
+            ("favoritas", "Tus ligas favoritas"),
             ("agenda", "Agenda del finde (nacionales)"),
             ("equipo", "Ficha de un equipo: /equipo vrac"),
             ("jugador", "Ficha de un jugador: /jugador mansilla"),
@@ -238,7 +243,7 @@ QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("📅 Próxim
        ("⭐ XV de la temporada", "X"), ("🏅 MVP de la temporada", "M"),
        ("⚔️ Partido de la jornada", "z"), ("🏆 Palmarés", "P"), ("⏪ Hace un año", "H")]
 # Submenú "Más estadísticas"
-FILAS_STATS = [["X", "M"], ["e"], ["t"], ["y", "Y"], ["f", "F"], ["j", "b"], ["q"], ["d"], ["P", "H"]]
+FILAS_STATS = [["X", "M"], ["e", "q"], ["t", "d"], ["y", "Y"], ["f", "F"], ["j", "b"], ["P", "H"], ["p"]]
 # Imágenes de temporada: no se elige jornada
 DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k", "w", "e", "X", "M", "z", "P", "H"}
 # Imágenes especiales (módulo especiales/evolucion): clave -> (función, admite formato post/historia)
@@ -249,7 +254,7 @@ ARBITROS = {"dh_masc", "dh_fem"}
 # Histórico: solo competiciones de iSquad con temporadas anteriores
 HISTORICO = {"dh_masc", "dh_fem", "dh_elite", "copa"}
 # Filas del menú "¿qué quieres?" (agrupadas por tema)
-FILAS_QUE = [["*"], ["r", "v"], ["z"], ["c", "g", "k"], ["x", "a"], ["u", "w"], ["+"], ["p"]]
+FILAS_QUE = [["*"], ["r", "c"], ["v", "z"], ["x", "a"], ["u", "w"], ["g", "k"], ["+"]]
 CATEGORIAS = {"nacional": "🇪🇸 Nacionales", "copa": "🏆 Copa del Rey", "regional": "🗺 Regionales"}
 
 
@@ -288,7 +293,14 @@ def _atras_de(comp: str) -> str:
     return f"mc|{cfg.get('categoria', 'nacional')}"
 
 
-def _menu_inicio() -> tuple[str, list]:
+def _favoritas(chat_id) -> list[tuple[str, str]]:
+    comps = cargar_config()["competiciones"]
+    favs = preferencias.de(estado.bot(), chat_id)["favoritas"] if chat_id else preferencias.FAVORITAS_DEFECTO
+    return [(f"⭐ {comps[c]['corto']}", _boton_liga(c, comps[c])[1]) for c in favs if c in comps]
+
+
+def _menu_inicio(chat_id=None) -> tuple[str, list]:
+    filas = _filas(_favoritas(chat_id), 3)
     botones = []
     for cat, etiqueta in CATEGORIAS.items():
         comps = _comps(cat)
@@ -298,9 +310,8 @@ def _menu_inicio() -> tuple[str, list]:
             botones.append((etiqueta, _boton_liga(*next(iter(comps.items())))[1]))
         else:
             botones.append((etiqueta, f"mc|{cat}"))
-    filas = _filas(botones, 2)
-    filas.append([("📅 Agenda del finde", "ma")])
-    filas.append([("🔎 Buscar equipo o jugador", "mb")])
+    filas += _filas(botones, 3)
+    filas.append([("📅 Agenda del finde", "ma"), ("🔎 Buscar", "mb")])
     return "📋 <b>¿Qué quieres?</b>", filas
 
 
@@ -329,7 +340,7 @@ def _menu_region(i: int) -> tuple[str, list]:
 def _menu_grupos(comp: str) -> tuple[str, list]:
     cfg = cargar_config()["competiciones"][comp]
     botones = [(f"Grupo {g}", f"m2|{comp}/{g}") for g in cfg["grupos"]]
-    filas = _filas(botones, 4) + [[("Todos los grupos", f"m2|{comp}/*")], [("⬅️ Volver", _atras_de(comp))]]
+    filas = _filas(botones, 4) + [[("Todos los grupos", f"m2|{comp}/*")], [("⬅️ Volver", _atras_de(comp)), ("🏠 Inicio", "m1")]]
     return f"<b>{cfg['nombre']}</b>\n¿Qué grupo?", filas
 
 
@@ -357,7 +368,7 @@ def _menu_que(liga: str) -> tuple[str, list]:
     atras = f"mg|{comp}" if len(cfg["grupos"]) > 1 and not cfg.get("torneo") else _atras_de(comp)
     if cfg.get("torneo") and grupo != "*":
         atras = f"m2|{comp}/*"
-    filas.append([("⬅️ Volver", atras)])
+    filas.append([("⬅️ Volver", atras), ("🏠 Inicio", "m1")])
     return f"<b>{_nombre_liga(liga)}</b>\n¿Qué quieres?", filas
 
 
@@ -368,7 +379,7 @@ def _menu_stats(liga: str) -> tuple[str, list]:
     filas = [f for f in filas if f]
     if liga.split("/")[0] in ARBITROS:
         filas.insert(0, [("🟥 Árbitros ▸", f"mar|{liga.split('/')[0]}")])
-    return f"<b>{_nombre_liga(liga)}</b>\n📈 Más estadísticas", filas + [[("⬅️ Volver", f"m2|{liga}")]]
+    return f"<b>{_nombre_liga(liga)}</b> › 📈 Más estadísticas", filas + [[("⬅️ Volver", f"m2|{liga}"), ("🏠 Inicio", "m1")]]
 
 
 def _menu_arbitros(comp: str) -> tuple[str, list]:
@@ -411,13 +422,13 @@ def _menu_jornada(liga: str, cod: str) -> tuple[str, list] | None:
     ultimas = jugadas[-8:]
     botones = [(f"Última (J{ultimas[-1]})", f"m4|{liga}|{cod}|0")]
     botones += [(f"J{j}", f"m4|{liga}|{cod}|{j}") for j in reversed(ultimas[:-1])]
-    return f"<b>{_nombre_liga(liga)}</b>\n¿Qué jornada?", _filas(botones, 4) + [[("⬅️ Volver", f"m2|{liga}")]]
+    return f"<b>{_nombre_liga(liga)}</b>\n¿Qué jornada?", _filas(botones, 4) + [[("⬅️ Volver", f"m2|{liga}"), ("🏠 Inicio", "m1")]]
 
 
 def _menu(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
     paso, mid = partes[0], cq["message"]["message_id"]
     if paso == "m1":
-        tg.editar(chat_id, mid, *_menu_inicio())
+        tg.editar(chat_id, mid, *_menu_inicio(chat_id))
     elif paso == "ma":
         tg.editar(chat_id, mid, *_menu_agenda())
     elif paso == "mb":
@@ -547,6 +558,66 @@ def _servir(tg: Telegram, chat_id, ligas: list[tuple[str, str]], claves: list[st
             tg.mensaje(chat_id, f"<b>{_titulo(post)}</b>: esa jornada aún no se ha jugado.")
             continue
         enviar(tg, chat_id, pid, post, claves)
+
+
+# ---------- Avisos y favoritas (preferencias de cada usuario) ----------
+
+def _marca(si: bool) -> str:
+    return "✅" if si else "⬜"
+
+
+def _menu_avisos(chat_id) -> tuple[str, list]:
+    p = preferencias.de(estado.bot(), chat_id)
+    filas = [[(f"{_marca(p['avisos'][k])} {v}", f"pf|t|{k}")] for k, v in preferencias.TIPOS.items()]
+    filas.append([(f"🏆 Ligas que te llegan ({len(p['ligas'])}) ▸", "pf|L|N")])
+    filas.append([(f"⭐ Favoritas del menú ({len(p['favoritas'])}) ▸", "pf|F|N")])
+    filas.append([("✔️ Hecho", "pf|x")])
+    return ("⚙️ <b>Tus avisos automáticos</b>\nToca para activar o desactivar. "
+            "Los resultados al momento y los carruseles solo llegan de las ligas que marques."), filas
+
+
+def _menu_pref_ligas(chat_id, lista: str, vista: str) -> tuple[str, list]:
+    """lista: "L" ligas que llegan o "F" favoritas. vista: "N" nacionales, "R" regiones o "r<i>" una región."""
+    p = preferencias.de(estado.bot(), chat_id)
+    elegidas = p["ligas"] if lista == "L" else p["favoritas"]
+    comps = cargar_config()["competiciones"]
+    titulo = "🏆 <b>Ligas que te llegan</b>" if lista == "L" else "⭐ <b>Tus favoritas</b>"
+    if vista == "R":
+        filas = _filas([(r, f"pf|{lista}|r{i}") for i, r in enumerate(_regiones())], 2)
+        return f"{titulo} › Regionales", filas + [[("⬅️ Volver", f"pf|{lista}|N")]]
+    if vista.startswith("r"):
+        region = _regiones()[int(vista[1:])]
+        sel = {k: v for k, v in comps.items() if v.get("region") == region}
+        atras = f"pf|{lista}|R"
+    else:
+        sel = {k: v for k, v in comps.items() if v.get("categoria", "nacional") in ("nacional", "copa")}
+        atras = "pf|0"
+    botones = [(f"{_marca(c in elegidas)} {v['corto']}", f"pf|{lista.lower()}|{c}|{vista}") for c, v in sel.items()]
+    filas = _filas(botones, 2)
+    if vista == "N":
+        filas.append([("🗺 Regionales ▸", f"pf|{lista}|R")])
+    filas.append([("⬅️ Volver", atras)])
+    return titulo + (f" › {region}" if vista.startswith("r") else ""), filas
+
+
+def _boton_pref(tg: Telegram, chat_id, cq: dict, partes: list[str]) -> None:
+    mid = cq["message"]["message_id"]
+    b = estado.bot()
+    accion = partes[1]
+    if accion == "t":
+        preferencias.alternar_aviso(b, chat_id, partes[2])
+        estado.guardar_bot(b)
+        tg.editar(chat_id, mid, *_menu_avisos(chat_id))
+    elif accion in ("L", "F"):
+        tg.editar(chat_id, mid, *_menu_pref_ligas(chat_id, accion, partes[2]))
+    elif accion in ("l", "f"):
+        preferencias.alternar(b, chat_id, "ligas" if accion == "l" else "favoritas", partes[2])
+        estado.guardar_bot(b)
+        tg.editar(chat_id, mid, *_menu_pref_ligas(chat_id, accion.upper(), partes[3]))
+    elif accion == "0":
+        tg.editar(chat_id, mid, *_menu_avisos(chat_id))
+    elif accion == "x":
+        tg.editar(chat_id, mid, "✅ Avisos guardados. Cámbialos cuando quieras con ⚙️ Avisos.")
 
 
 # ---------- Agenda, fichas y cara a cara ----------
@@ -687,14 +758,19 @@ def _atender_pedido(tg: Telegram, chat_id, texto: str) -> bool:
 
 
 class Difusion:
-    """Envuelve el cliente de Telegram: lo que se manda al dueño se manda también
-    a los usuarios invitados (para los envíos automáticos)."""
+    """Envuelve el cliente de Telegram: lo que se manda al dueño se reparte entre
+    los usuarios que quieren ese aviso (tipo) de esa liga (comp), según sus preferencias."""
 
-    def __init__(self, tg: Telegram, b: dict):
-        self.tg, self.dueno, self.invitados = tg, b.get("chat_id"), list(b.get("invitados", {}))
+    def __init__(self, tg: Telegram, b: dict, tipo: str | None = None, comp: str | None = None):
+        self.tg, self.b, self.dueno, self.tipo, self.comp = tg, b, b.get("chat_id"), tipo, comp
+
+    def para(self, tipo: str | None, comp: str | None = None) -> "Difusion":
+        return Difusion(self.tg, self.b, tipo, comp)
 
     def _todos(self, chat_id):
-        return [chat_id] + ([int(i) for i in self.invitados] if chat_id == self.dueno else [])
+        if chat_id != self.dueno:
+            return [chat_id]
+        return [u for u in preferencias.usuarios(self.b) if preferencias.quiere(self.b, u, self.tipo, self.comp)]
 
     def mensaje(self, chat_id, *a, **k):
         r = None
@@ -808,8 +884,11 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
     chat_id = b["chat_id"]
     partes = cq.get("data", "").split("|")
     tg.responder_boton(cq["id"])
+    if partes[0] == "pf":
+        _boton_pref(tg, chat_id, cq, partes)
+        return
     if partes[0] == "m0":
-        tg.mensaje(chat_id, *(_menu_que(partes[1]) if len(partes) > 1 else _menu_inicio()))
+        tg.mensaje(chat_id, *(_menu_que(partes[1]) if len(partes) > 1 else _menu_inicio(chat_id)))
         return
     if partes[0].startswith("m"):
         b["esperando"] = None
@@ -911,14 +990,20 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
             enviar_arbitros(tg, chat_id, comp, "e", equipo=equipo)
     elif texto.startswith("/agenda"):
         enviar_agenda(tg, chat_id, "n")
+    elif texto.startswith("/avisos") or texto == "⚙️ Avisos":
+        tg.mensaje(chat_id, *_menu_avisos(chat_id))
+    elif texto.startswith("/favoritas") or texto == "⭐ Favoritas":
+        favs = _favoritas(chat_id)
+        filas = _filas(favs, 2) + [[("✏️ Editar favoritas", "pf|F|N")]]
+        tg.mensaje(chat_id, "⭐ <b>Tus favoritas</b>" if favs else "No tienes favoritas todavía.", filas)
     elif texto.startswith("/estilo") or texto == "🎨 Estilo":
         _menu_estilo(tg, chat_id)
     elif texto.startswith("/pedir") or texto == "📋 Pedir":
         b["esperando"] = None
-        tg.mensaje(chat_id, *_menu_inicio())
+        tg.mensaje(chat_id, *_menu_inicio(chat_id))
     elif texto.startswith("/semana"):
         tg.mensaje(chat_id, "⏳ Preparando los carruseles de esta semana…")
-        if not semana(tg, chat_id):
+        if not semana(tg, chat_id, ligas=preferencias.de(estado.bot(), chat_id)["ligas"]):
             tg.mensaje(chat_id, "No hay jornadas nuevas desde el último envío. Pídeme la que quieras, p. ej. <code>todo dh</code>.")
     elif m.get("photo") and post and esperando.get("accion") == "foto":
         estado.FOTOS.mkdir(parents=True, exist_ok=True)
@@ -960,7 +1045,7 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
         pass
     else:
         tg.mensaje(chat_id, "No te he entendido 🤔 Usa el menú:")
-        tg.mensaje(chat_id, *_menu_inicio())
+        tg.mensaje(chat_id, *_menu_inicio(chat_id))
 
 
 def _toca(b: dict, clave: str, dia: int, hora: int) -> bool:
@@ -991,7 +1076,11 @@ def bucle(tg: Telegram, minutos: float) -> None:
         pass
     b = estado.bot()
     if b.get("chat_id") and b.get("teclado") != VERSION_TECLADO:
-        tg.mensaje(b["chat_id"], NOVEDADES, teclado_fijo=TECLADO_FIJO)
+        for u in preferencias.usuarios(b):
+            try:
+                tg.mensaje(u, NOVEDADES, teclado_fijo=TECLADO_FIJO)
+            except Exception:
+                traceback.print_exc()
         b["teclado"] = VERSION_TECLADO
         estado.guardar_bot(b)
     while (restante := fin - time.monotonic()) > 5:
@@ -1000,14 +1089,14 @@ def bucle(tg: Telegram, minutos: float) -> None:
         tg_todos = Difusion(tg, b)  # lo automático llega al dueño y a los invitados
         if chat_id:
             if _toca(b, "semana_lunes", 0, 10):
-                semana(tg_todos, chat_id)
+                semana(tg_todos, chat_id, ligas=preferencias.ligas_de_todos(b, "semana"))
             elif _toca(b, "semana_martes", 1, 10):
-                semana(tg_todos, chat_id, reintento=True)
+                semana(tg_todos, chat_id, reintento=True, ligas=preferencias.ligas_de_todos(b, "semana"))
             elif _toca(b, "agenda_jueves", 3, 10):
                 try:
-                    enviar_agenda(tg_todos, chat_id, "n")
+                    enviar_agenda(tg_todos.para("agenda"), chat_id, "n")
                     for comp in ARBITROS:
-                        enviar_arbitros(tg_todos, chat_id, comp, "d")
+                        enviar_arbitros(tg_todos.para("arbitros", comp), chat_id, comp, "d")
                 except Exception:
                     traceback.print_exc()
             if time.monotonic() - ultimo_directo > _cada_cuanto_directo():

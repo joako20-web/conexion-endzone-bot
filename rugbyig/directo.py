@@ -92,12 +92,13 @@ def comprobar(tg, b: dict, cliente: ISquad | None = None) -> int:
                 continue
             visto = vistos.setdefault(str(p.id), ahora)
             forzar = ahora - visto > ESPERA_ACTA_MIN * 60
+            envio = tg.para("directo", comp) if hasattr(tg, "para") else tg  # solo a quien lo quiere
             with tempfile.TemporaryDirectory() as tmp:
                 img = historia_final(comp, grupo, p.id, Path(tmp), cli, forzar)
                 if img is None:
                     continue  # acta aún incompleta: se reintenta en la siguiente vuelta
-                tg.foto(b["chat_id"], img)
-            tg.mensaje(b["chat_id"], f"🏁 <b>Final</b> · {nombres.equipo_corto(p.local)} {p.puntos_local}-{p.puntos_visitante} {nombres.equipo_corto(p.visitante)}",
+                envio.foto(b["chat_id"], img)
+            envio.mensaje(b["chat_id"], f"🏁 <b>Final</b> · {nombres.equipo_corto(p.local)} {p.puntos_local}-{p.puntos_visitante} {nombres.equipo_corto(p.visitante)}",
                        [[("📦 Original", f"fo|{comp}/{grupo}|{p.id}")]])
             enviados.add(clave)
             vistos.pop(str(p.id), None)
