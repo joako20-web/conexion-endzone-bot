@@ -1,5 +1,5 @@
 {
-  "offset": 736686383,
+  "offset": 736686405,
   "chat_id": 8634024483,
   "esperando": null,
   "teclado": 4,
@@ -48,5 +48,21 @@
     "7110376476": null,
     "1146846131": null
   },
-  "agenda_jueves": "2026-W41"
+  "agenda_jueves": "2026-W41",
+  "prefs": {
+    "8634024483": {
+      "avisos": {
+        "semana": false,
+        "directo": false,
+        "agenda": false,
+        "arbitros": false
+      },
+      "ligas": [],
+      "favoritas": [
+        "dh_masc",
+        "dh_fem",
+        "dh_elite"
+      ]
+    }
+  }
 }
