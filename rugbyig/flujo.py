@@ -1074,15 +1074,6 @@ def bucle(tg: Telegram, minutos: float) -> None:
         tg.comandos(COMANDOS)  # por si se han añadido comandos nuevos
     except Exception:
         pass
-    b = estado.bot()
-    if b.get("chat_id") and b.get("teclado") != VERSION_TECLADO:
-        for u in preferencias.usuarios(b):
-            try:
-                tg.mensaje(u, NOVEDADES, teclado_fijo=TECLADO_FIJO)
-            except Exception:
-                traceback.print_exc()
-        b["teclado"] = VERSION_TECLADO
-        estado.guardar_bot(b)
     while (restante := fin - time.monotonic()) > 5:
         b = estado.bot()
         chat_id = b.get("chat_id")
