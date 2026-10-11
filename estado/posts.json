@@ -101,5 +101,13 @@
     "json": "data/2026-27/mad_3r/A/j01.json",
     "actas_pendientes": [],
     "jugados": 4
+  },
+  "2026-27_dh_masc_unico_j03": {
+    "competicion": "dh_masc",
+    "grupo": "unico",
+    "jornada": 3,
+    "json": "data/2026-27/dh_masc/unico/j03.json",
+    "actas_pendientes": [],
+    "jugados": 5
   }
 }
