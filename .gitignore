@@ -4,3 +4,8 @@ __pycache__/
 out/
 .pytest_cache/
 .claude/
+video/node_modules/
+video/out/
+video/public/props.json
+video/public/sfx/
+video/public/fuentes/

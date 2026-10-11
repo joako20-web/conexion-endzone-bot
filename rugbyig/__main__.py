@@ -2,6 +2,7 @@
   python -m rugbyig generar dh_masc [--grupo A] [--jornada 2]   # imágenes en out/
   python -m rugbyig semana [--reintento]                        # carruseles -> Telegram
   python -m rugbyig bot [--minutos 14]                          # escucha Telegram
+  python -m rugbyig video dh_masc [--jornada 2]                 # reel con motion graphics (out/*.mp4)
   python -m rugbyig descubrir [--temporada 2627]                # ligas disponibles en iSquad
 """
 import argparse
@@ -24,6 +25,10 @@ def main() -> None:
     s.add_argument("--reintento", action="store_true", help="solo reenvía los que tenían actas incompletas")
     d = sub.add_parser("descubrir", help="lista las ligas publicadas en iSquad (para añadirlas a config)")
     d.add_argument("--temporada", type=int, default=2627, help="p. ej. 2627 = 2026/27")
+    v = sub.add_parser("video", help="reel de resultados de una jornada (necesita Node y video/)")
+    v.add_argument("competicion")
+    v.add_argument("--grupo", default="unico")
+    v.add_argument("--jornada", type=int, help="por defecto, la última jugada")
     b = sub.add_parser("bot", help="escucha Telegram durante unos minutos")
     b.add_argument("--minutos", type=float, default=14)
     args = ap.parse_args()
@@ -36,6 +41,11 @@ def main() -> None:
                 print(f"  {img}")
         return
 
+    if args.cmd == "video":
+        from rugbyig.video import reel
+
+        print(reel(args.competicion, args.grupo, args.jornada))
+        return
     if args.cmd == "descubrir":
         from rugbyig.scraper.isquad import compartido
 
