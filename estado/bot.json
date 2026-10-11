@@ -1,5 +1,5 @@
 {
-  "offset": 736686377,
+  "offset": 736686382,
   "chat_id": 8634024483,
   "esperando": null,
   "teclado": 3,
@@ -16,6 +16,8 @@
     "dh_elite:17742",
     "dh_elite:17743",
     "dh_elite:17744",
+    "dh_elite:17745",
+    "dh_elite:17746",
     "dh_elite:17747",
     "dh_fem:17823",
     "dh_fem:17825",
@@ -32,6 +34,8 @@
     "dh_masc:17652",
     "dh_masc:17653",
     "dh_masc:17654",
+    "dh_masc:17655",
+    "dh_masc:17656",
     "dh_masc:17657"
   ],
   "finales_vistos": {},
