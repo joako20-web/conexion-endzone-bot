@@ -5,6 +5,8 @@ import { ReelJornada, duracionReel } from "./plantillas/jornada/ReelJornada";
 import type { PropsJornada } from "./plantillas/jornada/tipos";
 import { ReelFinal, duracionFinal } from "./plantillas/final/ReelFinal";
 import { PROPS_FINAL_VACIAS, type PropsFinal } from "./plantillas/final/tipos";
+import { ReelPrevia, duracionReel as duracionPrevia } from "./plantillas/previa/ReelPrevia";
+import type { PropsPrevia } from "./plantillas/previa/tipos";
 
 // Una composición por plantilla. Las props reales las genera Python (rugbyig/videos/)
 // y se pasan con --props; aquí solo hay valores vacíos para que el Studio abra.
@@ -14,6 +16,10 @@ const metaJornada: CalculateMetadataFunction<PropsJornada> = ({ props }) => ({
 
 const metaFinal: CalculateMetadataFunction<PropsFinal> = ({ props }) => ({
   durationInFrames: duracionFinal(props),
+});
+
+const metaPrevia: CalculateMetadataFunction<PropsPrevia> = ({ props }) => ({
+  durationInFrames: duracionPrevia(props.partidos.length || 5),
 });
 
 export const RemotionRoot: React.FC = () => {
@@ -38,6 +44,16 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         calculateMetadata={metaFinal}
         defaultProps={{ ...PROPS_BASE, ...PROPS_FINAL_VACIAS }}
+      />
+      <Composition
+        id="ReelPrevia"
+        component={ReelPrevia}
+        durationInFrames={600}
+        fps={30}
+        width={1080}
+        height={1920}
+        calculateMetadata={metaPrevia}
+        defaultProps={{ ...PROPS_BASE, destacado: null, partidos: [], total: 0, equiposTabla: 0 }}
       />
     </>
   );

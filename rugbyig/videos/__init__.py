@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Callable
 
 from rugbyig.rutas import RAIZ
-from rugbyig.videos import base, final, jornada
+from rugbyig.videos import base, final, jornada, previa
 
 
 @dataclass(frozen=True)
@@ -36,10 +36,16 @@ def _jornada(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
     return props
 
 
+def _previa(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
+    """Previa de la jornada SIGUIENTE a `jornada_` (la última disputada si es None)."""
+    return previa.props(base.datos_jornada(comp, grupo, jornada_))
+
+
 PLANTILLAS: dict[str, Plantilla] = {p.clave: p for p in [
     Plantilla("jornada", "📊 Resultados de la jornada", jornada.COMPOSICION, _jornada),
     # por partido: reel(comp, grupo, jornada, tipo="final", id_partido=17648)
     Plantilla("final", "🏉 Así fue el partido", final.COMPOSICION, final.construir, por_liga=False),
+    Plantilla("previa", "🗓️ Previa de la jornada", previa.COMPOSICION, _previa),
 ]}
 
 
