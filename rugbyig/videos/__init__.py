@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Callable
 
 from rugbyig.rutas import RAIZ
-from rugbyig.videos import base, jornada
+from rugbyig.videos import base, clasificacion, dato, jornada, rankings
 
 
 @dataclass(frozen=True)
@@ -32,8 +32,24 @@ def _jornada(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
     return props
 
 
+def _clasificacion(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
+    datos = base.datos_jornada(comp, grupo, jornada_)
+    return clasificacion.props(datos, clasificacion.anterior(datos))
+
+
+def _rankings(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
+    return rankings.props(base.datos_jornada(comp, grupo, jornada_))
+
+
+def _dato(comp: str, grupo: str, jornada_: int | None, indice: int | str = 0, **_) -> dict:
+    return dato.props(base.datos_jornada(comp, grupo, jornada_), int(indice or 0))
+
+
 PLANTILLAS: dict[str, Plantilla] = {p.clave: p for p in [
     Plantilla("jornada", "📊 Resultados de la jornada", jornada.COMPOSICION, _jornada),
+    Plantilla("clasificacion", "🏆 Clasificación", clasificacion.COMPOSICION, _clasificacion),
+    Plantilla("rankings", "🎯 Rankings de temporada", rankings.COMPOSICION, _rankings),
+    Plantilla("dato", "💡 El dato de la jornada", dato.COMPOSICION, _dato),
 ]}
 
 
