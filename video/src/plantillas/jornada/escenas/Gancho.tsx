@@ -1,14 +1,15 @@
 import React from "react";
+import type { PropsJornada } from "../tipos";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { Chip, Escudo, Mascara, SEGURA, Sfx, useColores, useReel } from "../comun";
-import { EASE_OUT, STAGGER, blurEntrada, cuenta, entra, golpe } from "../movimiento";
+import { Chip, Escudo, Mascara, SEGURA, Sfx, useColores, useReel } from "../../../base/comun";
+import { EASE_OUT, STAGGER, blurEntrada, cuenta, entra, golpe } from "../../../base/movimiento";
 
 // Gancho (primer segundo): el dato más fuerte de la jornada, antes que el contexto.
 export const Gancho: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const c = useColores();
-  const { gancho, corto, jornada, fuenteTitulo, fuenteTexto } = useReel();
+  const { gancho, corto, jornada, fuenteTitulo, fuenteTexto } = useReel<PropsJornada>();
   if (!gancho) return null;
 
   const numerico = /^\d+$/.test(gancho.numero);

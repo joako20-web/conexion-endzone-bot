@@ -29,6 +29,7 @@ def main() -> None:
     v.add_argument("competicion")
     v.add_argument("--grupo", default="unico")
     v.add_argument("--jornada", type=int, help="por defecto, la última jugada")
+    v.add_argument("--tipo", default="jornada", help="plantilla (ver rugbyig/videos/__init__.py)")
     b = sub.add_parser("bot", help="escucha Telegram durante unos minutos")
     b.add_argument("--minutos", type=float, default=14)
     args = ap.parse_args()
@@ -42,9 +43,9 @@ def main() -> None:
         return
 
     if args.cmd == "video":
-        from rugbyig.video import reel
+        from rugbyig.videos import reel
 
-        print(reel(args.competicion, args.grupo, args.jornada))
+        print(reel(args.competicion, args.grupo, args.jornada, tipo=args.tipo))
         return
     if args.cmd == "descubrir":
         from rugbyig.scraper.isquad import compartido

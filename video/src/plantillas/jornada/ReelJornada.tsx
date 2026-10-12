@@ -2,14 +2,14 @@ import React from "react";
 import { TransitionSeries, springTiming } from "@remotion/transitions";
 import { slide } from "@remotion/transitions/slide";
 import { wipe } from "@remotion/transitions/wipe";
-import { AbsoluteFill, useVideoConfig } from "remotion";
-import { Fondo, ReelCtx, useFuentes } from "./comun";
-import { Cierre } from "./escenas/Cierre";
+import { useVideoConfig } from "remotion";
+import { Cierre } from "../../base/Cierre";
+import { Marco } from "../../base/comun";
 import { Clasificacion } from "./escenas/Clasificacion";
 import { Gancho } from "./escenas/Gancho";
 import { Mvp } from "./escenas/Mvp";
 import { POR_PARTIDO, Resultados } from "./escenas/Resultados";
-import type { PropsReel } from "./tipos";
+import type { PropsJornada } from "./tipos";
 
 // Guion (30 fps, ~20 s): gancho -> 5 resultados -> jugador de la jornada -> top 4 -> cierre en bucle.
 export const DURACIONES = { gancho: 66, mvp: 96, top: 102, cierre: 76, transicion: 10 };
@@ -19,13 +19,10 @@ export const duracionReel = (partidos: number) =>
 
 const empuje = () => springTiming({ config: { damping: 200 }, durationInFrames: DURACIONES.transicion });
 
-export const ReelJornada: React.FC<PropsReel> = (props) => {
+export const ReelJornada: React.FC<PropsJornada> = (props) => {
   const { fps } = useVideoConfig();
-  useFuentes(props.fuentes);
   return (
-    <ReelCtx.Provider value={props}>
-      <AbsoluteFill style={{ fontFamily: props.fuenteTexto }}>
-        <Fondo />
+    <Marco props={props}>
         <TransitionSeries name="Reel">
           <TransitionSeries.Sequence name="Gancho" durationInFrames={DURACIONES.gancho} premountFor={fps}>
             <Gancho />
@@ -47,7 +44,6 @@ export const ReelJornada: React.FC<PropsReel> = (props) => {
             <Cierre />
           </TransitionSeries.Sequence>
         </TransitionSeries>
-      </AbsoluteFill>
-    </ReelCtx.Provider>
+    </Marco>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Img, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { Chip, Mascara, SEGURA, Sfx, useColores, useReel } from "../comun";
-import { EASE_IN, entra, golpe } from "../movimiento";
+import { Chip, Mascara, SEGURA, Sfx, useColores, useReel } from "./comun";
+import { EASE_IN, entra, golpe } from "./movimiento";
 
 // Cierre: logo + llamada a seguir. Los últimos frames se funden en el destello de acento
 // con el que empieza el vídeo, para que el bucle de Reels no tenga salto.

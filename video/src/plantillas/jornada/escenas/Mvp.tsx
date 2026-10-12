@@ -1,14 +1,15 @@
 import React from "react";
+import type { PropsJornada } from "../tipos";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { Chip, Escudo, Mascara, SEGURA, Sfx, useColores, useReel } from "../comun";
-import { STAGGER, cuenta, entra, golpe } from "../movimiento";
+import { Chip, Escudo, Mascara, SEGURA, Sfx, useColores, useReel } from "../../../base/comun";
+import { STAGGER, cuenta, entra, golpe } from "../../../base/movimiento";
 
 // Jugador de la jornada: apellido letra a letra, escudo de fondo y estadísticas en contador.
 export const Mvp: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
   const c = useColores();
-  const { mvp, fuenteTitulo, fuenteTexto } = useReel();
+  const { mvp, fuenteTitulo, fuenteTexto } = useReel<PropsJornada>();
   if (!mvp) return null;
 
   const apellidos = mvp.apellidos.toUpperCase();

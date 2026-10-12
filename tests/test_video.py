@@ -1,13 +1,14 @@
 import json
 
-from rugbyig import sonido, video
+from rugbyig import sonido
+from rugbyig.videos import base, jornada
 from rugbyig.pipeline import ruta_jornada
 
 
 def test_props_jornada(monkeypatch):
-    monkeypatch.setattr(video.R, "escudo_equipo", lambda equipo, escudos: "data:x")
+    monkeypatch.setattr(base.R, "escudo_equipo", lambda equipo, escudos: "data:x")
     datos = json.loads(ruta_jornada("dh_masc", "unico", 2).read_text(encoding="utf-8"))
-    p = video.props_jornada(datos)
+    p = jornada.props(datos)
     assert p["jornada"] == 2 and len(p["partidos"]) == 5
     assert p["partidos"][0]["local"]["gana"] != p["partidos"][0]["visitante"]["gana"]
     assert p["mvp"]["apellidos"] and p["mvp"]["puntos"] > 0

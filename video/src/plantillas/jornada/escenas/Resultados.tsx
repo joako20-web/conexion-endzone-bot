@@ -1,8 +1,9 @@
 import React from "react";
+import type { PropsJornada } from "../tipos";
 import { AbsoluteFill, Sequence, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { Chip, Escudo, SEGURA, Sfx, tamParaAncho, useColores, useReel } from "../comun";
-import { STAGGER, blurEntrada, cuenta, entra, golpe, muelle, sale } from "../movimiento";
-import type { Equipo, Partido } from "../tipos";
+import { Chip, Escudo, SEGURA, Sfx, tamParaAncho, useColores, useReel } from "../../../base/comun";
+import { STAGGER, blurEntrada, cuenta, entra, golpe, muelle, sale } from "../../../base/movimiento";
+import type { Equipo, Partido } from "../../../base/tipos";
 
 export const POR_PARTIDO = 60;
 const ANCHO = 1080 - 2 * SEGURA.x;
@@ -18,7 +19,7 @@ const Fila: React.FC<{ eq: Equipo; desde: number; lado: 1 | -1; marcadorEn: numb
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const c = useColores();
-  const { fuenteTitulo } = useReel();
+  const { fuenteTitulo } = useReel<PropsJornada>();
   const m = muelle(frame, fps, desde, 13, 160);
   const decidido = entra(frame, final, 12); // ganador se enciende, perdedor se apaga
   const salida = sale(frame, POR_PARTIDO - 11, 10);
@@ -145,7 +146,7 @@ export const Resultados: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const c = useColores();
-  const { partidos, jornada, fuenteTexto } = useReel();
+  const { partidos, jornada, fuenteTexto } = useReel<PropsJornada>();
   const rotulo = entra(frame, 0, 16);
   return (
     <AbsoluteFill>

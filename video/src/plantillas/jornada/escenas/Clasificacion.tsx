@@ -1,7 +1,8 @@
 import React from "react";
+import type { PropsJornada } from "../tipos";
 import { AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { Chip, Escudo, SEGURA, Sfx, tamParaAncho, useColores, useReel } from "../comun";
-import { cuenta, entra, golpe, muelle } from "../movimiento";
+import { Chip, Escudo, SEGURA, Sfx, tamParaAncho, useColores, useReel } from "../../../base/comun";
+import { cuenta, entra, golpe, muelle } from "../../../base/movimiento";
 
 const PASO = 5; // escalonado entre filas
 
@@ -10,7 +11,7 @@ export const Clasificacion: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const c = useColores();
-  const { top, zonaTop, trasJornada, fuenteTitulo, fuenteTexto } = useReel();
+  const { top, zonaTop, trasJornada, fuenteTitulo, fuenteTexto } = useReel<PropsJornada>();
   const maxPt = Math.max(1, ...top.map((f) => f.pt));
   const inicio = 10;
 

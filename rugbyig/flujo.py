@@ -573,7 +573,7 @@ def pedir_video(tg: Telegram, chat_id, liga: str) -> None:
                "Tarda unos 3-4 minutos; mientras puedes seguir pidiendo cosas.")
 
     def trabajo():
-        from rugbyig.video import reel
+        from rugbyig.videos import reel
 
         comp, grupo = liga.split("/")
         try:

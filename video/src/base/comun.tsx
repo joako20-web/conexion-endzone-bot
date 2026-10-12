@@ -11,13 +11,14 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import type { Fuente, PropsReel } from "./tipos";
+import type { Fuente, PropsBase } from "./tipos";
 
 // Zona segura de Reels: la interfaz de Instagram tapa arriba y abajo.
 export const SEGURA = { x: 80, arriba: 230, abajo: 400 };
 
-export const ReelCtx = createContext<PropsReel | null>(null);
-export const useReel = () => useContext(ReelCtx)!;
+export const ReelCtx = createContext<PropsBase | null>(null);
+/** Props de la plantilla actual (cada plantilla pasa su tipo: useReel<PropsJornada>()). */
+export const useReel = <T extends PropsBase = PropsBase>() => useContext(ReelCtx) as T;
 
 export const useColores = () => {
   const t = useReel().tema;
@@ -190,4 +191,17 @@ export const tamParaAncho = (texto: string, ancho: number, max: number, lineas =
 export const Logo: React.FC<{ lado: number; style?: React.CSSProperties }> = ({ lado, style }) => {
   const { logo } = useReel();
   return <Img src={logo} style={{ width: lado, height: lado, objectFit: "contain", ...style }} />;
+};
+
+/** Marco común de cada plantilla: contexto con las props, fuentes y fondo animado. */
+export const Marco = <T extends PropsBase>({ props, children }: { props: T; children: React.ReactNode }) => {
+  useFuentes(props.fuentes);
+  return (
+    <ReelCtx.Provider value={props}>
+      <AbsoluteFill style={{ fontFamily: props.fuenteTexto }}>
+        <Fondo />
+        {children}
+      </AbsoluteFill>
+    </ReelCtx.Provider>
+  );
 };
