@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Callable
 
 from rugbyig.rutas import RAIZ
-from rugbyig.videos import base, jornada
+from rugbyig.videos import base, final, jornada
 
 
 @dataclass(frozen=True)
@@ -38,6 +38,8 @@ def _jornada(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
 
 PLANTILLAS: dict[str, Plantilla] = {p.clave: p for p in [
     Plantilla("jornada", "📊 Resultados de la jornada", jornada.COMPOSICION, _jornada),
+    # por partido: reel(comp, grupo, jornada, tipo="final", id_partido=17648)
+    Plantilla("final", "🏉 Así fue el partido", final.COMPOSICION, final.construir, por_liga=False),
 ]}
 
 
@@ -46,5 +48,6 @@ def reel(comp: str, grupo: str = "unico", jornada: int | None = None, tipo: str 
     """Genera el vídeo `tipo` y devuelve la ruta del MP4."""
     p = PLANTILLAS[tipo]
     props = p.construir(comp, grupo, jornada, **extra)
-    salida = salida or RAIZ / "out" / f"reel_{tipo}_{comp}_{grupo}_j{props.get('jornada', 0):02d}.mp4"
+    sufijo = f"_p{extra['id_partido']}" if extra.get("id_partido") else ""
+    salida = salida or RAIZ / "out" / f"reel_{tipo}_{comp}_{grupo}_j{props.get('jornada', 0):02d}{sufijo}.mp4"
     return base.renderizar(p.composicion, props, salida)
