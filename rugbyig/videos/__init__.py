@@ -23,6 +23,10 @@ class Plantilla:
     # (comp, grupo, jornada, extra) -> props
     construir: Callable[..., dict]
     por_liga: bool = True  # aparece en el menú 🎬 de cada liga
+    requiere: str | None = None  # clave de config/competiciones.yaml que debe estar activa (p. ej. "xv_ideal")
+
+    def disponible(self, cfg: dict) -> bool:
+        return self.por_liga and not cfg.get("torneo") and (self.requiere is None or bool(cfg.get(self.requiere)))
 
 
 def _jornada(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
