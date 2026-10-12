@@ -3,6 +3,7 @@
   python -m rugbyig semana [--reintento]                        # carruseles -> Telegram
   python -m rugbyig bot [--minutos 14]                          # escucha Telegram
   python -m rugbyig video dh_masc [--jornada 2]                 # reel con motion graphics (out/*.mp4)
+  python -m rugbyig video dh_masc --tipo final --jornada 2 --partido 17648   # "así fue" de un partido
   python -m rugbyig descubrir [--temporada 2627]                # ligas disponibles en iSquad
 """
 import argparse
@@ -30,6 +31,7 @@ def main() -> None:
     v.add_argument("--grupo", default="unico")
     v.add_argument("--jornada", type=int, help="por defecto, la última jugada")
     v.add_argument("--tipo", default="jornada", help="plantilla (ver rugbyig/videos/__init__.py)")
+    v.add_argument("--partido", type=int, help="id del partido (plantillas por partido, p. ej. --tipo final)")
     b = sub.add_parser("bot", help="escucha Telegram durante unos minutos")
     b.add_argument("--minutos", type=float, default=14)
     args = ap.parse_args()
@@ -45,7 +47,8 @@ def main() -> None:
     if args.cmd == "video":
         from rugbyig.videos import reel
 
-        print(reel(args.competicion, args.grupo, args.jornada, tipo=args.tipo))
+        extra = {"id_partido": args.partido} if args.partido else {}
+        print(reel(args.competicion, args.grupo, args.jornada, tipo=args.tipo, **extra))
         return
     if args.cmd == "descubrir":
         from rugbyig.scraper.isquad import compartido
