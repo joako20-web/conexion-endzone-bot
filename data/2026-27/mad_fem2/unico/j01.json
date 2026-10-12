@@ -6,15 +6,15 @@
   "jornada": 1,
   "partidos": [
     {
-      "id": 1743113316,
+      "id": 16570,
       "jornada": 1,
       "fecha": "2026-10-10T13:30:00",
       "local": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
       "visitante": "CRC - FILO FARMA - GEO",
-      "puntos_local": null,
-      "puntos_visitante": null,
+      "puntos_local": 10,
+      "puntos_visitante": 33,
       "campo": "Campo de Toledo (Escuela de Gimnasia)",
-      "estado": "pendiente",
+      "estado": "jugado",
       "grupo": null,
       "ronda": ""
     },
@@ -60,6 +60,19 @@
   ],
   "partidos_temporada": [
     {
+      "id": 16570,
+      "jornada": 1,
+      "fecha": "2026-10-10T13:30:00",
+      "local": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "visitante": "CRC - FILO FARMA - GEO",
+      "puntos_local": 10,
+      "puntos_visitante": 33,
+      "campo": "Campo de Toledo (Escuela de Gimnasia)",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
       "id": 16546,
       "jornada": 1,
       "fecha": "2026-10-03T12:30:00",
@@ -104,7 +117,7 @@
     {
       "nombre": "RAQUEL ALONSO VERA",
       "equipo": "GETAFE CLUB DE RUGBY",
-      "dorsal": 8,
+      "dorsal": 10,
       "puntos": 17,
       "ensayos": 3,
       "conversiones": 1,
@@ -150,9 +163,25 @@
       "foto": ""
     },
     {
+      "nombre": "PHILIPPA ROSE ANNA HURÉ",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 19,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 30.3,
+      "foto": ""
+    },
+    {
       "nombre": "ALDARA GONZALEZ MADRIGAL",
       "equipo": "SAN ISIDRO - CISNEROS",
-      "dorsal": 67,
+      "dorsal": 10,
       "puntos": 13,
       "ensayos": 1,
       "conversiones": 4,
@@ -182,9 +211,25 @@
       "foto": ""
     },
     {
+      "nombre": "PAULA DÍAZ MORENO",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 13,
+      "puntos": 8,
+      "ensayos": 0,
+      "conversiones": 4,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 14.3,
+      "foto": ""
+    },
+    {
       "nombre": "EUGENIA DORADO RODRÍGUEZ",
       "equipo": "SAN ISIDRO - CISNEROS",
-      "dorsal": 105,
+      "dorsal": 8,
       "puntos": 7,
       "ensayos": 1,
       "conversiones": 1,
@@ -200,7 +245,7 @@
     {
       "nombre": "AINHOA SOTO FENOY",
       "equipo": "GETAFE CLUB DE RUGBY",
-      "dorsal": 11,
+      "dorsal": 9,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -214,9 +259,9 @@
       "foto": ""
     },
     {
-      "nombre": "ANDREA MORENO GARCIA",
-      "equipo": "GETAFE CLUB DE RUGBY",
-      "dorsal": 6,
+      "nombre": "ALICIA RODRIGUEZ CERVERA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 18,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -224,41 +269,9 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 18,
-      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 13.8,
-      "foto": ""
-    },
-    {
-      "nombre": "INES LOPEZ PEREZ",
-      "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "dorsal": 12,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -18,
-      "rival": "GETAFE CLUB DE RUGBY",
-      "nota": 6.2,
-      "foto": ""
-    },
-    {
-      "nombre": "IRENE GOMEZ MATIAS",
-      "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "dorsal": 10,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -18,
-      "rival": "GETAFE CLUB DE RUGBY",
-      "nota": 6.2,
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 14.3,
       "foto": ""
     }
   ],
@@ -266,7 +279,7 @@
     {
       "nombre": "RAQUEL ALONSO VERA",
       "equipo": "GETAFE CLUB DE RUGBY",
-      "dorsal": 8,
+      "dorsal": 10,
       "puntos": 17,
       "ensayos": 3,
       "conversiones": 1,
@@ -312,6 +325,22 @@
       "foto": ""
     },
     {
+      "nombre": "PHILIPPA ROSE ANNA HURÉ",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 19,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 30.3,
+      "foto": ""
+    },
+    {
       "nombre": "CRISTINA HERRERO MOTOS",
       "equipo": "CAR RIVAS",
       "dorsal": 9,
@@ -326,28 +355,12 @@
       "rival": "ARQUITECTURA",
       "nota": 21.9,
       "foto": ""
-    },
-    {
-      "nombre": "ALDARA GONZALEZ MADRIGAL",
-      "equipo": "SAN ISIDRO - CISNEROS",
-      "dorsal": 67,
-      "puntos": 13,
-      "ensayos": 1,
-      "conversiones": 4,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 70,
-      "rival": "JABATOS MÓSTOLES B",
-      "nota": 23.0,
-      "foto": ""
     }
   ],
   "xv_ideal": {
     "1": {
-      "nombre": "DANNY LORENA PEÑA SÁNCHEZ",
-      "equipo": "ARQUITECTURA",
+      "nombre": "ASHLYE ESTEFANI FLORES BALDERAMOS",
+      "equipo": "CRC - FILO FARMA - GEO",
       "dorsal": 1,
       "puntos": 0,
       "ensayos": 0,
@@ -355,64 +368,16 @@
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -19,
-      "rival": "CAR RIVAS",
-      "nota": -1.9,
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     "2": {
-      "nombre": "ROCIO CHICO MARTIN",
-      "equipo": "SAN ISIDRO - CISNEROS",
-      "dorsal": 2,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 70,
-      "rival": "JABATOS MÓSTOLES B",
-      "nota": 15.0,
-      "foto": ""
-    },
-    "3": {
-      "nombre": "MAIALEN NARVAEZ FAGOAGA",
-      "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "dorsal": 3,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -18,
-      "rival": "GETAFE CLUB DE RUGBY",
-      "nota": -1.8,
-      "foto": ""
-    },
-    "4": {
-      "nombre": "AURORA GARCIA GUERRA",
-      "equipo": "SAN ISIDRO - CISNEROS",
-      "dorsal": 5,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 70,
-      "rival": "JABATOS MÓSTOLES B",
-      "nota": 7.0,
-      "foto": ""
-    },
-    "5": {
-      "nombre": "ALMUDENA MARTIN BODEGA",
+      "nombre": "MARIA ALEJANDRA LUNA FIGUEIRA",
       "equipo": "CAR RIVAS",
-      "dorsal": 5,
+      "dorsal": 2,
       "puntos": 0,
       "ensayos": 0,
       "conversiones": 0,
@@ -425,10 +390,26 @@
       "nota": 5.9,
       "foto": ""
     },
-    "6": {
+    "3": {
+      "nombre": "OTILIA CAMACHO MENDOZA",
+      "equipo": "CAR RIVAS",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 19,
+      "rival": "ARQUITECTURA",
+      "nota": 5.9,
+      "foto": ""
+    },
+    "4": {
       "nombre": "LAURA CHAVES CANDELAS",
       "equipo": "SAN ISIDRO - CISNEROS",
-      "dorsal": 6,
+      "dorsal": 4,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -441,7 +422,23 @@
       "nota": 15.0,
       "foto": ""
     },
-    "7": {
+    "5": {
+      "nombre": "GLORIA VALERIEVA KOUNTCHEVA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
+      "foto": ""
+    },
+    "6": {
       "nombre": "ANDREA MORENO GARCIA",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 6,
@@ -457,20 +454,36 @@
       "nota": 13.8,
       "foto": ""
     },
-    "8": {
-      "nombre": "RAQUEL ALONSO VERA",
+    "7": {
+      "nombre": "SARA GARCÍA GARCÍA",
       "equipo": "GETAFE CLUB DE RUGBY",
-      "dorsal": 8,
-      "puntos": 17,
-      "ensayos": 3,
-      "conversiones": 1,
+      "dorsal": 7,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
       "margen": 18,
       "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 31.8,
+      "nota": 13.8,
+      "foto": ""
+    },
+    "8": {
+      "nombre": "EUGENIA DORADO RODRÍGUEZ",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 8,
+      "puntos": 7,
+      "ensayos": 1,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 17.0,
       "foto": ""
     },
     "9": {
@@ -490,24 +503,24 @@
       "foto": ""
     },
     "10": {
-      "nombre": "SARA GARCÍA GARCÍA",
+      "nombre": "RAQUEL ALONSO VERA",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 10,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
+      "puntos": 17,
+      "ensayos": 3,
+      "conversiones": 1,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
       "margen": 18,
       "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 13.8,
+      "nota": 31.8,
       "foto": ""
     },
     "11": {
-      "nombre": "AINHOA SOTO FENOY",
-      "equipo": "GETAFE CLUB DE RUGBY",
+      "nombre": "MARIA MATEOS CASTELLANO",
+      "equipo": "SAN ISIDRO - CISNEROS",
       "dorsal": 11,
       "puntos": 5,
       "ensayos": 1,
@@ -516,31 +529,31 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 18,
-      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 13.8,
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 15.0,
       "foto": ""
     },
     "12": {
-      "nombre": "INES LOPEZ PEREZ",
-      "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "dorsal": 12,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
+      "nombre": "PAULA DÍAZ MORENO",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 13,
+      "puntos": 8,
+      "ensayos": 0,
+      "conversiones": 4,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -18,
-      "rival": "GETAFE CLUB DE RUGBY",
-      "nota": 6.2,
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 14.3,
       "foto": ""
     },
     "13": {
-      "nombre": "ANA YAGO DÍAZ",
-      "equipo": "CAR RIVAS",
-      "dorsal": 13,
+      "nombre": "ANA RIBES TOLOSA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 12,
       "puntos": 0,
       "ensayos": 0,
       "conversiones": 0,
@@ -548,9 +561,9 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 19,
-      "rival": "ARQUITECTURA",
-      "nota": 5.9,
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     "14": {
@@ -605,6 +618,22 @@
       "foto": ""
     },
     {
+      "nombre": "ASHLYE ESTEFANI FLORES BALDERAMOS",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
+      "foto": ""
+    },
+    {
       "nombre": "TAREIXA UXIA RASCADO LEIRA",
       "equipo": "CAR RIVAS",
       "dorsal": 1,
@@ -621,7 +650,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALMA MARIA LAGO NUÑEZ",
+      "nombre": "SARA TUDOSE GALLEGO",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 1,
       "puntos": 0,
@@ -637,7 +666,23 @@
       "foto": ""
     },
     {
-      "nombre": "DANNY LORENA PEÑA SÁNCHEZ",
+      "nombre": "LAURA ALONSO CONEJO",
+      "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -18,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": -1.8,
+      "foto": ""
+    },
+    {
+      "nombre": "AWA SOW CARRASCO ALTIERI",
       "equipo": "ARQUITECTURA",
       "dorsal": 1,
       "puntos": 0,
@@ -653,7 +698,23 @@
       "foto": ""
     },
     {
-      "nombre": "JIMENA LUJAN CANO",
+      "nombre": "ALEJANDRA FERNÁNDEZ SÁNCHEZ",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "ALICE LAPEYRE",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 1,
       "puntos": 0,
@@ -685,6 +746,22 @@
       "foto": ""
     },
     {
+      "nombre": "KARLA ESTEFANÍA OLMEDO GAONA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
+      "foto": ""
+    },
+    {
       "nombre": "MARIA ALEJANDRA LUNA FIGUEIRA",
       "equipo": "CAR RIVAS",
       "dorsal": 2,
@@ -701,7 +778,23 @@
       "foto": ""
     },
     {
-      "nombre": "MARTA VENTURA COBAS",
+      "nombre": "INÉS LÓPEZ IGLESIAS",
+      "equipo": "GETAFE CLUB DE RUGBY",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 18,
+      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "nota": 5.8,
+      "foto": ""
+    },
+    {
+      "nombre": "NATALIA ESTEBARANZ ALMANZA",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 2,
       "puntos": 0,
@@ -717,7 +810,7 @@
       "foto": ""
     },
     {
-      "nombre": "SARA WANYI ROYO VELILLA",
+      "nombre": "MARÍA HUIQIN LAORDEN FITER",
       "equipo": "ARQUITECTURA",
       "dorsal": 2,
       "puntos": 0,
@@ -733,7 +826,23 @@
       "foto": ""
     },
     {
-      "nombre": "MARÍA CORTÉS ÚBEDA",
+      "nombre": "ALBA DONATE VILLA",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "MINERVA MARTÍNEZ EXPÓSITO",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 2,
       "puntos": 0,
@@ -746,6 +855,38 @@
       "margen": -70,
       "rival": "SAN ISIDRO - CISNEROS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MICHELLE AZCONA LEBLANC",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "LAURA PIÑEIRO GÓMEZ",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -797,7 +938,39 @@
       "foto": ""
     },
     {
-      "nombre": "CLAUDIA YAGÜES RODRIGUEZ",
+      "nombre": "MARÍA GIL BORONAT",
+      "equipo": "ARQUITECTURA",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -19,
+      "rival": "CAR RIVAS",
+      "nota": -1.9,
+      "foto": ""
+    },
+    {
+      "nombre": "PAULA LÓPEZ ARCA",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "KAREN JHOJANNA LOPEZ LEON",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 3,
       "puntos": 0,
@@ -810,6 +983,38 @@
       "margen": -70,
       "rival": "SAN ISIDRO - CISNEROS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "LAURA CHAVES CANDELAS",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 4,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 15.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MARIA MORALES GARCIA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -845,7 +1050,7 @@
       "foto": ""
     },
     {
-      "nombre": "ANDREA CUADRADO LAVADO",
+      "nombre": "MARTA VIVO TORRES",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 4,
       "puntos": 0,
@@ -861,7 +1066,7 @@
       "foto": ""
     },
     {
-      "nombre": "DOMENICA SOTTILARO",
+      "nombre": "ANA ROJO LLORENS",
       "equipo": "ARQUITECTURA",
       "dorsal": 4,
       "puntos": 0,
@@ -877,7 +1082,23 @@
       "foto": ""
     },
     {
-      "nombre": "MARTINA POCINO CRISTÒFOL",
+      "nombre": "LUNA REVENGA DELGADO",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "JIMENA LUJAN CANO",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 4,
       "puntos": 0,
@@ -893,7 +1114,7 @@
       "foto": ""
     },
     {
-      "nombre": "AURORA GARCIA GUERRA",
+      "nombre": "NAIARA JIMENEZ FUENTE",
       "equipo": "SAN ISIDRO - CISNEROS",
       "dorsal": 5,
       "puntos": 0,
@@ -906,6 +1127,22 @@
       "margen": 70,
       "rival": "JABATOS MÓSTOLES B",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "GLORIA VALERIEVA KOUNTCHEVA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -925,7 +1162,23 @@
       "foto": ""
     },
     {
-      "nombre": "MARTA VIVO TORRES",
+      "nombre": "MARTA CARRASCO VEGA",
+      "equipo": "GETAFE CLUB DE RUGBY",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 18,
+      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "nota": 5.8,
+      "foto": ""
+    },
+    {
+      "nombre": "ANDREA CUADRADO LAVADO",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 5,
       "puntos": 0,
@@ -941,7 +1194,39 @@
       "foto": ""
     },
     {
-      "nombre": "MARÍA LAURA ALMANZA SALAZAR",
+      "nombre": "SARAH CECILIA MARSHALL BRUNING",
+      "equipo": "ARQUITECTURA",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -19,
+      "rival": "CAR RIVAS",
+      "nota": -1.9,
+      "foto": ""
+    },
+    {
+      "nombre": "INÉS RODRÍGUEZ MASTAR",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "SOFIA CONTE BARGOS",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 5,
       "puntos": 0,
@@ -954,22 +1239,6 @@
       "margen": -70,
       "rival": "SAN ISIDRO - CISNEROS",
       "nota": -3.0,
-      "foto": ""
-    },
-    {
-      "nombre": "LAURA CHAVES CANDELAS",
-      "equipo": "SAN ISIDRO - CISNEROS",
-      "dorsal": 6,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 70,
-      "rival": "JABATOS MÓSTOLES B",
-      "nota": 15.0,
       "foto": ""
     },
     {
@@ -986,6 +1255,38 @@
       "margen": 18,
       "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "nota": 13.8,
+      "foto": ""
+    },
+    {
+      "nombre": "DANIELLE ANGE SIAKA KOM",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "LUCIA ZAMORA QUINTANA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -1021,7 +1322,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARÍA GIL BORONAT",
+      "nombre": "SOFÍA PORTAS AGUADO",
       "equipo": "ARQUITECTURA",
       "dorsal": 6,
       "puntos": 0,
@@ -1037,7 +1338,23 @@
       "foto": ""
     },
     {
-      "nombre": "ALBA CABEZAS RODRÍGUEZ",
+      "nombre": "ALICIA SANCHEZ CARRASCO",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "SONIA GONZÁLEZ GARCÍA",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 6,
       "puntos": 0,
@@ -1050,6 +1367,54 @@
       "margen": -70,
       "rival": "SAN ISIDRO - CISNEROS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "SARA GARCÍA GARCÍA",
+      "equipo": "GETAFE CLUB DE RUGBY",
+      "dorsal": 7,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 18,
+      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "nota": 13.8,
+      "foto": ""
+    },
+    {
+      "nombre": "INES GÓMEZ RODADO",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "LUCÍA ROMERO CARMONA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -1069,23 +1434,23 @@
       "foto": ""
     },
     {
-      "nombre": "ARANZAZU MARTINEZ ALONSO",
-      "equipo": "GETAFE CLUB DE RUGBY",
+      "nombre": "GEMA LARA TORRES",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
       "dorsal": 7,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "G",
-      "margen": 18,
-      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 5.8,
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": 5.7,
       "foto": ""
     },
     {
-      "nombre": "LAURA ALONSO CONEJO",
+      "nombre": "REBECA MOLINERA PLAZA",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 7,
       "puntos": 0,
@@ -1101,7 +1466,7 @@
       "foto": ""
     },
     {
-      "nombre": "GABRIELA BORBOLLA RUANO",
+      "nombre": "CARMEN ENCINAS LORENZO",
       "equipo": "ARQUITECTURA",
       "dorsal": 7,
       "puntos": 0,
@@ -1117,7 +1482,7 @@
       "foto": ""
     },
     {
-      "nombre": "CARLA NIETO GARCÍA DE BLANES",
+      "nombre": "ALBA CABEZAS RODRÍGUEZ",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 7,
       "puntos": 0,
@@ -1133,19 +1498,19 @@
       "foto": ""
     },
     {
-      "nombre": "RAQUEL ALONSO VERA",
-      "equipo": "GETAFE CLUB DE RUGBY",
+      "nombre": "EUGENIA DORADO RODRÍGUEZ",
+      "equipo": "SAN ISIDRO - CISNEROS",
       "dorsal": 8,
-      "puntos": 17,
-      "ensayos": 3,
+      "puntos": 7,
+      "ensayos": 1,
       "conversiones": 1,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 18,
-      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 31.8,
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 17.0,
       "foto": ""
     },
     {
@@ -1165,8 +1530,8 @@
       "foto": ""
     },
     {
-      "nombre": "MAIALEN DENJEAN--LESBATS",
-      "equipo": "SAN ISIDRO - CISNEROS",
+      "nombre": "ANA ARIAS PERIS",
+      "equipo": "CRC - FILO FARMA - GEO",
       "dorsal": 8,
       "puntos": 0,
       "ensayos": 0,
@@ -1175,13 +1540,29 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 70,
-      "rival": "JABATOS MÓSTOLES B",
-      "nota": 7.0,
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
-      "nombre": "NATALIA ESTEBARANZ ALMANZA",
+      "nombre": "MAGALI MONTERO MICHELIN",
+      "equipo": "GETAFE CLUB DE RUGBY",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 18,
+      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "nota": 5.8,
+      "foto": ""
+    },
+    {
+      "nombre": "MARTA VENTURA COBAS",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 8,
       "puntos": 0,
@@ -1197,7 +1578,39 @@
       "foto": ""
     },
     {
-      "nombre": "VICTORIA DEL CARMEN MORENO CEVALLOS",
+      "nombre": "ANDREA PAOLA MAKOLY JIMÉNEZ",
+      "equipo": "ARQUITECTURA",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -19,
+      "rival": "CAR RIVAS",
+      "nota": -1.9,
+      "foto": ""
+    },
+    {
+      "nombre": "CARMEN PEREZ ALONSO",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "ELVIRA MARTÍN PEDROSA",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 8,
       "puntos": 0,
@@ -1245,25 +1658,9 @@
       "foto": ""
     },
     {
-      "nombre": "PATRICIA SERNA LÓPEZ",
+      "nombre": "AINHOA SOTO FENOY",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 9,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 18,
-      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 5.8,
-      "foto": ""
-    },
-    {
-      "nombre": "SARA GARCÍA GARCÍA",
-      "equipo": "GETAFE CLUB DE RUGBY",
-      "dorsal": 10,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -1274,6 +1671,134 @@
       "margen": 18,
       "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "nota": 13.8,
+      "foto": ""
+    },
+    {
+      "nombre": "MAITANE LONCOMILLA GOMEZ",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
+      "foto": ""
+    },
+    {
+      "nombre": "ALIX MARTINE NICOLE FLAVIGNY",
+      "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "dorsal": 9,
+      "puntos": 4,
+      "ensayos": 0,
+      "conversiones": 2,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -18,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 2.2,
+      "foto": ""
+    },
+    {
+      "nombre": "MARTA PILAR ANTÓN MORENO",
+      "equipo": "ARQUITECTURA",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -19,
+      "rival": "CAR RIVAS",
+      "nota": -1.9,
+      "foto": ""
+    },
+    {
+      "nombre": "JIMENA JIMÉNEZ DÍAZ",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "VICTORIA DEL CARMEN MORENO CEVALLOS",
+      "equipo": "JABATOS MÓSTOLES B",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -70,
+      "rival": "SAN ISIDRO - CISNEROS",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "RAQUEL ALONSO VERA",
+      "equipo": "GETAFE CLUB DE RUGBY",
+      "dorsal": 10,
+      "puntos": 17,
+      "ensayos": 3,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 18,
+      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "nota": 31.8,
+      "foto": ""
+    },
+    {
+      "nombre": "ALDARA GONZALEZ MADRIGAL",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 10,
+      "puntos": 13,
+      "ensayos": 1,
+      "conversiones": 4,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 23.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MARTA ROJO PARDILLO",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 10,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 14.3,
       "foto": ""
     },
     {
@@ -1309,7 +1834,7 @@
       "foto": ""
     },
     {
-      "nombre": "PAULA HERRANZ GALLEGO",
+      "nombre": "ALBA LUCÍA JIMENEZ MUÑOZ",
       "equipo": "ARQUITECTURA",
       "dorsal": 10,
       "puntos": 0,
@@ -1325,7 +1850,23 @@
       "foto": ""
     },
     {
-      "nombre": "LAILA ALEXANDRA QUISPE HUARACA",
+      "nombre": "ANA AGUILERA SANZ",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "LUCÍA VIDAL PÉREZ",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 10,
       "puntos": 0,
@@ -1341,8 +1882,8 @@
       "foto": ""
     },
     {
-      "nombre": "AINHOA SOTO FENOY",
-      "equipo": "GETAFE CLUB DE RUGBY",
+      "nombre": "MARIA MATEOS CASTELLANO",
+      "equipo": "SAN ISIDRO - CISNEROS",
       "dorsal": 11,
       "puntos": 5,
       "ensayos": 1,
@@ -1351,9 +1892,25 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 18,
-      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
-      "nota": 13.8,
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 15.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MARIA RENATA CANO DE ZULUETA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -1373,7 +1930,23 @@
       "foto": ""
     },
     {
-      "nombre": "REBECA MOLINERA PLAZA",
+      "nombre": "ESTHER PASCUAL ESPARTOSA",
+      "equipo": "GETAFE CLUB DE RUGBY",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 18,
+      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "nota": 5.8,
+      "foto": ""
+    },
+    {
+      "nombre": "MARIA GARCIA FRAILE",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 11,
       "puntos": 0,
@@ -1389,7 +1962,39 @@
       "foto": ""
     },
     {
-      "nombre": "MARÍA CURTO SANTANA",
+      "nombre": "LARA CHAYA DE LOS RÍOS",
+      "equipo": "ARQUITECTURA",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -19,
+      "rival": "CAR RIVAS",
+      "nota": -1.9,
+      "foto": ""
+    },
+    {
+      "nombre": "PAULA PEDRAZA GARCÍA",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "MARÍA LAURA ALMANZA SALAZAR",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 11,
       "puntos": 0,
@@ -1405,7 +2010,7 @@
       "foto": ""
     },
     {
-      "nombre": "BRENDA MARÍA DOS RAMOS FERRERAS",
+      "nombre": "AURORA GARCIA GUERRA",
       "equipo": "SAN ISIDRO - CISNEROS",
       "dorsal": 12,
       "puntos": 0,
@@ -1418,6 +2023,22 @@
       "margen": 70,
       "rival": "JABATOS MÓSTOLES B",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ANA RIBES TOLOSA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -1453,7 +2074,7 @@
       "foto": ""
     },
     {
-      "nombre": "MAYRA ALEXANDRA CULCAS GOÑAS",
+      "nombre": "CLARA GONZALEZ ARIAS",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 12,
       "puntos": 0,
@@ -1469,7 +2090,7 @@
       "foto": ""
     },
     {
-      "nombre": "LAURA SAGREDO SIMÓN",
+      "nombre": "PAULA HERRANZ GALLEGO",
       "equipo": "ARQUITECTURA",
       "dorsal": 12,
       "puntos": 0,
@@ -1485,7 +2106,23 @@
       "foto": ""
     },
     {
-      "nombre": "LUCÍA VIDAL PÉREZ",
+      "nombre": "CARMEN SALUD CANTOS MARTIN",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "MARÍA CORTÉS ÚBEDA",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 12,
       "puntos": 0,
@@ -1498,6 +2135,38 @@
       "margen": -70,
       "rival": "SAN ISIDRO - CISNEROS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "PAULA DÍAZ MORENO",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 13,
+      "puntos": 8,
+      "ensayos": 0,
+      "conversiones": 4,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 14.3,
+      "foto": ""
+    },
+    {
+      "nombre": "SARA MONZON EGIDO",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -1517,23 +2186,71 @@
       "foto": ""
     },
     {
-      "nombre": "ALIX MARTINE NICOLE FLAVIGNY",
+      "nombre": "SOFÍA SÁNCHEZ BEATO MARTÍN",
+      "equipo": "GETAFE CLUB DE RUGBY",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 18,
+      "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
+      "nota": 5.8,
+      "foto": ""
+    },
+    {
+      "nombre": "JULIA DESANTES NIETO",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 13,
-      "puntos": 4,
+      "puntos": 0,
       "ensayos": 0,
-      "conversiones": 2,
+      "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "P",
       "margen": -18,
       "rival": "GETAFE CLUB DE RUGBY",
-      "nota": 2.2,
+      "nota": -1.8,
       "foto": ""
     },
     {
-      "nombre": "BLANCA GUTIÉRREZ CAMPILLEJO",
+      "nombre": "ISABEL BALERIOLA ANICETO",
+      "equipo": "ARQUITECTURA",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -19,
+      "rival": "CAR RIVAS",
+      "nota": -1.9,
+      "foto": ""
+    },
+    {
+      "nombre": "MARINA MARTIN GONZALEZ",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "CLAUDIA YAGÜES RODRIGUEZ",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 13,
       "puntos": 0,
@@ -1546,6 +2263,38 @@
       "margen": -70,
       "rival": "SAN ISIDRO - CISNEROS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MANON MELANIE SYLVESTRE",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "SARA SANCHEZ PIÑEIRA",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -1565,7 +2314,7 @@
       "foto": ""
     },
     {
-      "nombre": "MAGALI MONTERO MICHELIN",
+      "nombre": "MAYRA ALEXANDRA CULCAS GOÑAS",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 14,
       "puntos": 0,
@@ -1581,7 +2330,7 @@
       "foto": ""
     },
     {
-      "nombre": "JULIA DESANTES NIETO",
+      "nombre": "ANA CARRERO-BLANCO ESPINOSA",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 14,
       "puntos": 0,
@@ -1597,7 +2346,7 @@
       "foto": ""
     },
     {
-      "nombre": "LARA CHAYA DE LOS RÍOS",
+      "nombre": "GABRIELA BORBOLLA RUANO",
       "equipo": "ARQUITECTURA",
       "dorsal": 14,
       "puntos": 0,
@@ -1613,7 +2362,23 @@
       "foto": ""
     },
     {
-      "nombre": "MARTA BARAHONA ORTA",
+      "nombre": "PAULA ALONSO GARCÍA",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "CARLA NIETO GARCÍA DE BLANES",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 14,
       "puntos": 0,
@@ -1626,6 +2391,38 @@
       "margen": -70,
       "rival": "SAN ISIDRO - CISNEROS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ANA PENELA FAILDE",
+      "equipo": "SAN ISIDRO - CISNEROS",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 70,
+      "rival": "JABATOS MÓSTOLES B",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "OLGA VALERIA PRIETO GONZÁLEZ",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 23,
+      "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "nota": 6.3,
       "foto": ""
     },
     {
@@ -1661,7 +2458,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARIA GARCIA FRAILE",
+      "nombre": "TAMARA VILLALBA MORENTE",
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "dorsal": 15,
       "puntos": 0,
@@ -1677,7 +2474,39 @@
       "foto": ""
     },
     {
-      "nombre": "KAREN JHOJANNA LOPEZ LEON",
+      "nombre": "LAURA SAGREDO SIMÓN",
+      "equipo": "ARQUITECTURA",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -19,
+      "rival": "CAR RIVAS",
+      "nota": -1.9,
+      "foto": ""
+    },
+    {
+      "nombre": "SARA DEL RIO CASTRO",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -23,
+      "rival": "CRC - FILO FARMA - GEO",
+      "nota": -2.3,
+      "foto": ""
+    },
+    {
+      "nombre": "BLANCA GUTIÉRREZ CAMPILLEJO",
       "equipo": "JABATOS MÓSTOLES B",
       "dorsal": 15,
       "puntos": 0,
@@ -1715,6 +2544,25 @@
     },
     {
       "posicion": 2,
+      "equipo": "CRC - FILO FARMA - GEO",
+      "racha": [],
+      "pt": 5,
+      "pj": 1,
+      "pg": 1,
+      "pe": 0,
+      "pp": 0,
+      "tf": 33,
+      "tc": 10,
+      "dt": 23,
+      "ef": 5,
+      "ec": 2,
+      "de": 3,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugbymadrid.matchready.es/uploads/team/images/upload-66feac047f94e-team_image.jpg"
+    },
+    {
+      "posicion": 3,
       "equipo": "GETAFE CLUB DE RUGBY",
       "racha": [],
       "pt": 5,
@@ -1733,7 +2581,7 @@
       "escudo": "https://rugbymadrid.matchready.es/uploads/club/images/upload-634e8210a069d-club_image.jpg"
     },
     {
-      "posicion": 3,
+      "posicion": 4,
       "equipo": "CAR RIVAS",
       "racha": [],
       "pt": 4,
@@ -1752,45 +2600,7 @@
       "escudo": "https://rugbymadrid.matchready.es/uploads/club/images/upload-6210aa45e86dd-club_image.png"
     },
     {
-      "posicion": 4,
-      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
-      "racha": [],
-      "pt": 0,
-      "pj": 0,
-      "pg": 0,
-      "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b33a81-club_image.jpg"
-    },
-    {
       "posicion": 5,
-      "equipo": "CRC - FILO FARMA - GEO",
-      "racha": [],
-      "pt": 0,
-      "pj": 0,
-      "pg": 0,
-      "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugbymadrid.matchready.es/uploads/team/images/upload-66feac047f94e-team_image.jpg"
-    },
-    {
-      "posicion": 6,
       "equipo": "XV HORTALEZA - GORILAS - LICEO FRANCÉS",
       "racha": [],
       "pt": 0,
@@ -1809,7 +2619,7 @@
       "escudo": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b33f11-club_image.jpg"
     },
     {
-      "posicion": 7,
+      "posicion": 6,
       "equipo": "ARQUITECTURA",
       "racha": [],
       "pt": 0,
@@ -1826,6 +2636,25 @@
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b339a4-club_image.png"
+    },
+    {
+      "posicion": 7,
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
+      "racha": [],
+      "pt": 0,
+      "pj": 1,
+      "pg": 0,
+      "pe": 0,
+      "pp": 1,
+      "tf": 10,
+      "tc": 33,
+      "dt": -23,
+      "ef": 2,
+      "ec": 5,
+      "de": -3,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b33a81-club_image.jpg"
     },
     {
       "posicion": 8,
@@ -1849,12 +2678,12 @@
   ],
   "escudos": {
     "SAN ISIDRO - CISNEROS": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b33ff9-club_image.png",
+    "CRC - FILO FARMA - GEO": "https://rugbymadrid.matchready.es/uploads/team/images/upload-66feac047f94e-team_image.jpg",
     "GETAFE CLUB DE RUGBY": "https://rugbymadrid.matchready.es/uploads/club/images/upload-634e8210a069d-club_image.jpg",
     "CAR RIVAS": "https://rugbymadrid.matchready.es/uploads/club/images/upload-6210aa45e86dd-club_image.png",
-    "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b33a81-club_image.jpg",
-    "CRC - FILO FARMA - GEO": "https://rugbymadrid.matchready.es/uploads/team/images/upload-66feac047f94e-team_image.jpg",
     "XV HORTALEZA - GORILAS - LICEO FRANCÉS": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b33f11-club_image.jpg",
     "ARQUITECTURA": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b339a4-club_image.png",
+    "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b33a81-club_image.jpg",
     "JABATOS MÓSTOLES B": "https://rugbymadrid.matchready.es/uploads/club/images/upload-5ead8b6b341bb-club_image.png"
   },
   "temporada_anotadores": [
@@ -1864,6 +2693,16 @@
       "equipo": "GETAFE CLUB DE RUGBY",
       "pj": 1,
       "puntos": 17,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": null,
+      "nombre": "PHILIPPA ROSE ANNA HURÉ",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "pj": 1,
+      "puntos": 15,
       "ensayos": 3,
       "amarillas": 0,
       "rojas": 0
@@ -1910,6 +2749,16 @@
     },
     {
       "id": null,
+      "nombre": "PAULA DÍAZ MORENO",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "pj": 1,
+      "puntos": 8,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": null,
       "nombre": "EUGENIA DORADO RODRÍGUEZ",
       "equipo": "SAN ISIDRO - CISNEROS",
       "pj": 1,
@@ -1920,8 +2769,8 @@
     },
     {
       "id": null,
-      "nombre": "RAQUEL SANTIAGO ALVAREZ",
-      "equipo": "CAR RIVAS",
+      "nombre": "GEMA LARA TORRES",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
       "pj": 1,
       "puntos": 5,
       "ensayos": 1,
@@ -1930,28 +2779,8 @@
     },
     {
       "id": null,
-      "nombre": "ANDREA MORENO GARCIA",
-      "equipo": "GETAFE CLUB DE RUGBY",
-      "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": null,
-      "nombre": "SARA GARCÍA GARCÍA",
-      "equipo": "GETAFE CLUB DE RUGBY",
-      "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": null,
-      "nombre": "AINHOA SOTO FENOY",
-      "equipo": "GETAFE CLUB DE RUGBY",
+      "nombre": "CARMEN PASTOR CALDERÓN",
+      "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
       "pj": 1,
       "puntos": 5,
       "ensayos": 1,
@@ -1972,6 +2801,16 @@
     },
     {
       "id": null,
+      "nombre": "PHILIPPA ROSE ANNA HURÉ",
+      "equipo": "CRC - FILO FARMA - GEO",
+      "pj": 1,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": null,
       "nombre": "CELIA CARMEN JOVER CANO",
       "equipo": "SAN ISIDRO - CISNEROS",
       "pj": 1,
@@ -1997,16 +2836,6 @@
       "pj": 1,
       "puntos": 10,
       "ensayos": 2,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": null,
-      "nombre": "ALDARA GONZALEZ MADRIGAL",
-      "equipo": "SAN ISIDRO - CISNEROS",
-      "pj": 1,
-      "puntos": 13,
-      "ensayos": 1,
       "amarillas": 0,
       "rojas": 0
     }
@@ -2092,6 +2921,13 @@
         "rival": "JABATOS MÓSTOLES B"
       },
       {
+        "nombre": "PHILIPPA ROSE ANNA HURÉ",
+        "equipo": "CRC - FILO FARMA - GEO",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN"
+      },
+      {
         "nombre": "CRISTINA HERRERO MOTOS",
         "equipo": "CAR RIVAS",
         "valor": 2,
@@ -2111,13 +2947,6 @@
         "valor": 1,
         "detalle": "7 puntos",
         "rival": "JABATOS MÓSTOLES B"
-      },
-      {
-        "nombre": "AINHOA SOTO FENOY",
-        "equipo": "GETAFE CLUB DE RUGBY",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": "XV HORTALEZA - GORILAS - LICEO FRANCÉS"
       }
     ],
     "pateadores": [
@@ -2127,6 +2956,13 @@
         "valor": 8,
         "detalle": "4 transf.",
         "rival": "JABATOS MÓSTOLES B"
+      },
+      {
+        "nombre": "PAULA DÍAZ MORENO",
+        "equipo": "CRC - FILO FARMA - GEO",
+        "valor": 8,
+        "detalle": "4 transf.",
+        "rival": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN"
       },
       {
         "nombre": "ALIX MARTINE NICOLE FLAVIGNY",
@@ -2180,6 +3016,13 @@
         "rival": ""
       },
       {
+        "nombre": "PHILIPPA ROSE ANNA HURÉ",
+        "equipo": "CRC - FILO FARMA - GEO",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
         "nombre": "CRISTINA HERRERO MOTOS",
         "equipo": "CAR RIVAS",
         "valor": 2,
@@ -2199,19 +3042,19 @@
         "valor": 1,
         "detalle": "7 puntos",
         "rival": ""
-      },
-      {
-        "nombre": "AINHOA SOTO FENOY",
-        "equipo": "GETAFE CLUB DE RUGBY",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": ""
       }
     ],
     "pateadores_t": [
       {
         "nombre": "ALDARA GONZALEZ MADRIGAL",
         "equipo": "SAN ISIDRO - CISNEROS",
+        "valor": 8,
+        "detalle": "4 transf.",
+        "rival": ""
+      },
+      {
+        "nombre": "PAULA DÍAZ MORENO",
+        "equipo": "CRC - FILO FARMA - GEO",
         "valor": 8,
         "detalle": "4 transf.",
         "rival": ""
@@ -2255,22 +3098,22 @@
         "rival": ""
       },
       {
-        "nombre": "ALDARA GONZALEZ MADRIGAL",
-        "equipo": "SAN ISIDRO - CISNEROS",
-        "valor": 13,
+        "nombre": "PHILIPPA ROSE ANNA HURÉ",
+        "equipo": "CRC - FILO FARMA - GEO",
+        "valor": 15,
+        "detalle": "3 ensayos",
+        "rival": ""
+      },
+      {
+        "nombre": "ALICIA RODRIGUEZ CERVERA",
+        "equipo": "CRC - FILO FARMA - GEO",
+        "valor": 5,
         "detalle": "1 ensayo",
         "rival": ""
       },
       {
-        "nombre": "EUGENIA DORADO RODRÍGUEZ",
-        "equipo": "SAN ISIDRO - CISNEROS",
-        "valor": 7,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "MARIA MATEOS CASTELLANO",
-        "equipo": "SAN ISIDRO - CISNEROS",
+        "nombre": "CARMEN PASTOR CALDERÓN",
+        "equipo": "SOLISS ÁGUILAS DE TOLEDO - ALCORCÓN",
         "valor": 5,
         "detalle": "1 ensayo",
         "rival": ""
@@ -2293,12 +3136,12 @@
             "valor": 70
           },
           {
-            "equipo": "GETAFE CLUB DE RUGBY",
-            "valor": 32
+            "equipo": "CRC - FILO FARMA - GEO",
+            "valor": 33
           },
           {
-            "equipo": "CAR RIVAS",
-            "valor": 19
+            "equipo": "GETAFE CLUB DE RUGBY",
+            "valor": 32
           }
         ]
       },
@@ -2315,8 +3158,8 @@
             "valor": 0
           },
           {
-            "equipo": "GETAFE CLUB DE RUGBY",
-            "valor": 14
+            "equipo": "CRC - FILO FARMA - GEO",
+            "valor": 10
           }
         ]
       },
@@ -2333,8 +3176,8 @@
             "valor": 6
           },
           {
-            "equipo": "CAR RIVAS",
-            "valor": 3
+            "equipo": "CRC - FILO FARMA - GEO",
+            "valor": 5
           }
         ]
       },
@@ -2347,18 +3190,28 @@
             "valor": 1
           },
           {
-            "equipo": "GETAFE CLUB DE RUGBY",
+            "equipo": "CRC - FILO FARMA - GEO",
             "valor": 1
           },
           {
-            "equipo": "CAR RIVAS",
-            "valor": 0
+            "equipo": "GETAFE CLUB DE RUGBY",
+            "valor": 1
           }
         ]
       }
     ]
   },
   "datos_jornada": [
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 79,
+      "numero": "3",
+      "unidad": "ensayos en un partido",
+      "titular": "Hat-trick de Celia Carmen Jover Cano",
+      "contexto": "Firmó 3 ensayos ante Jabatos Móstoles B.",
+      "equipo": "SAN ISIDRO - CISNEROS"
+    },
     {
       "clave": "datos",
       "tipo": "dato",
@@ -2375,9 +3228,9 @@
       "peso": 79,
       "numero": "3",
       "unidad": "ensayos en un partido",
-      "titular": "Hat-trick de Celia Carmen Jover Cano",
-      "contexto": "Firmó 3 ensayos ante Jabatos Móstoles B.",
-      "equipo": "SAN ISIDRO - CISNEROS"
+      "titular": "Hat-trick de Philippa Rose Anna Huré",
+      "contexto": "Firmó 3 ensayos ante Toledo / Alcorcón.",
+      "equipo": "CRC - FILO FARMA - GEO"
     }
   ]
 }

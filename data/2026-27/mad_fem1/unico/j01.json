@@ -191,7 +191,7 @@
     {
       "nombre": "ANA LUCÍA BONILLA CALDERÓN",
       "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 13,
+      "dorsal": 11,
       "puntos": 15,
       "ensayos": 3,
       "conversiones": 0,
@@ -223,7 +223,7 @@
     {
       "nombre": "CECILIA HUARTE SEBASTIAN",
       "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 14,
+      "dorsal": 13,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -239,7 +239,7 @@
     {
       "nombre": "PAULA FERNANDEZ MUÑOZ",
       "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 11,
+      "dorsal": 14,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -255,7 +255,7 @@
     {
       "nombre": "ANE GARATE MARÍN",
       "equipo": "JABATOS MÓSTOLES R.C.",
-      "dorsal": 16,
+      "dorsal": 4,
       "puntos": 8,
       "ensayos": 0,
       "conversiones": 1,
@@ -337,7 +337,7 @@
     {
       "nombre": "ANA LUCÍA BONILLA CALDERÓN",
       "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 13,
+      "dorsal": 11,
       "puntos": 15,
       "ensayos": 3,
       "conversiones": 0,
@@ -545,25 +545,9 @@
       "foto": ""
     },
     "11": {
-      "nombre": "CECILIA HUARTE SEBASTIAN",
-      "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 14,
-      "puntos": 10,
-      "ensayos": 2,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 39,
-      "rival": "CRC - FILO- GEO",
-      "nota": 23.0,
-      "foto": ""
-    },
-    "12": {
       "nombre": "ANA LUCÍA BONILLA CALDERÓN",
       "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 13,
+      "dorsal": 11,
       "puntos": 15,
       "ensayos": 3,
       "conversiones": 0,
@@ -576,7 +560,7 @@
       "nota": 31.0,
       "foto": ""
     },
-    "13": {
+    "12": {
       "nombre": "ALBA GARCÍA GARCÍA",
       "equipo": "AHORRAMAS VALLECAS RUGBY UNIÓN",
       "dorsal": 12,
@@ -592,10 +576,26 @@
       "nota": 30.2,
       "foto": ""
     },
+    "13": {
+      "nombre": "CECILIA HUARTE SEBASTIAN",
+      "equipo": "TORRELODONES - VILLALBA",
+      "dorsal": 13,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRC - FILO- GEO",
+      "nota": 23.0,
+      "foto": ""
+    },
     "14": {
       "nombre": "PAULA FERNANDEZ MUÑOZ",
       "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 11,
+      "dorsal": 14,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -627,6 +627,22 @@
   },
   "foto_portada": null,
   "candidatos_xv": [
+    {
+      "nombre": "VIOLETA CRESPO MARTÍNEZ",
+      "equipo": "TORRELODONES - VILLALBA",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRC - FILO- GEO",
+      "nota": 7.0,
+      "foto": ""
+    },
     {
       "nombre": "ARIADNA PEREZ PEREZ",
       "equipo": "CR VETERINARIA",
@@ -740,7 +756,7 @@
       "foto": ""
     },
     {
-      "nombre": "ADRIANA KARINA RUIZ QUINTERO",
+      "nombre": "ASHLYE ESTEFANI FLORES BALDERAMOS",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 1,
       "puntos": 0,
@@ -769,6 +785,22 @@
       "margen": -36,
       "rival": "CR VETERINARIA",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MARIA CASAS ARROJO",
+      "equipo": "TORRELODONES - VILLALBA",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRC - FILO- GEO",
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -884,7 +916,7 @@
       "foto": ""
     },
     {
-      "nombre": "JULIA HIDALGO ÁLVAREZ",
+      "nombre": "AITANA BRAMBATI MERELLES",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 2,
       "puntos": 0,
@@ -980,7 +1012,7 @@
       "foto": ""
     },
     {
-      "nombre": "OLAYA JUANES GARCIA",
+      "nombre": "NIEVES GONZÁLEZ SANDE",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 3,
       "puntos": 0,
@@ -1044,7 +1076,7 @@
       "foto": ""
     },
     {
-      "nombre": "ASHLYE ESTEFANI FLORES BALDERAMOS",
+      "nombre": "ADRIANA KARINA RUIZ QUINTERO",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 3,
       "puntos": 0,
@@ -1108,6 +1140,22 @@
       "foto": ""
     },
     {
+      "nombre": "ANE GARATE MARÍN",
+      "equipo": "JABATOS MÓSTOLES R.C.",
+      "dorsal": 4,
+      "puntos": 8,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 2,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 6,
+      "rival": "SANSE SOTO",
+      "nota": 12.6,
+      "foto": ""
+    },
+    {
       "nombre": "NIEVES DEL VALLE TEJADA",
       "equipo": "TORRELODONES - VILLALBA",
       "dorsal": 4,
@@ -1137,24 +1185,6 @@
       "margen": 22,
       "rival": "OLÍMPICO - OSAS",
       "nota": 6.2,
-      "foto": ""
-    },
-    {
-      "nombre": "SILVIA MONTERO BRAVO",
-      "equipo": "JABATOS MÓSTOLES R.C.",
-      "dorsal": 4,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
-      "resultado": "G",
-      "margen": 6,
-      "rival": "SANSE SOTO",
-      "nota": 0.6,
       "foto": ""
     },
     {
@@ -1190,6 +1220,22 @@
       "foto": ""
     },
     {
+      "nombre": "LUCIA MARTIN ALBERDI",
+      "equipo": "LICEO FRANCÉS",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -22,
+      "rival": "C.R. MAJADAHONDA",
+      "nota": -2.2,
+      "foto": ""
+    },
+    {
       "nombre": "MARIA MORALES GARCIA",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 4,
@@ -1219,6 +1265,22 @@
       "margen": -36,
       "rival": "CR VETERINARIA",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "PAULA DEL BARRIO ROMÁN",
+      "equipo": "TORRELODONES - VILLALBA",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRC - FILO- GEO",
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -1286,7 +1348,7 @@
       "foto": ""
     },
     {
-      "nombre": "RAQUEL MORENO CHAVEZ",
+      "nombre": "INES ARAUZO ANDRES",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 5,
       "puntos": 0,
@@ -1299,24 +1361,6 @@
       "margen": 6,
       "rival": "SANSE SOTO",
       "nota": 4.6,
-      "foto": ""
-    },
-    {
-      "nombre": "BEATRIZ TREJO LUZÓN",
-      "equipo": "TORRELODONES - VILLALBA",
-      "dorsal": 5,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
-      "resultado": "G",
-      "margen": 39,
-      "rival": "CRC - FILO- GEO",
-      "nota": 3.0,
       "foto": ""
     },
     {
@@ -1384,19 +1428,19 @@
       "foto": ""
     },
     {
-      "nombre": "CAROLINA ORTEGA HERNANDEZ",
+      "nombre": "JULIA ESTÉVEZ RODRÍGUEZ-NORIEGA",
       "equipo": "TORRELODONES - VILLALBA",
       "dorsal": 6,
-      "puntos": 2,
-      "ensayos": 0,
-      "conversiones": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
       "margen": 39,
       "rival": "CRC - FILO- GEO",
-      "nota": 9.0,
+      "nota": 15.0,
       "foto": ""
     },
     {
@@ -1432,7 +1476,7 @@
       "foto": ""
     },
     {
-      "nombre": "CORO REPULLES DE L´HOTELLERIE-FALLOIS",
+      "nombre": "SOFIA VICENTE TORRERO",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 6,
       "puntos": 0,
@@ -1530,6 +1574,24 @@
       "foto": ""
     },
     {
+      "nombre": "EVA BOTIJA AGUILERA",
+      "equipo": "LICEO FRANCÉS",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -22,
+      "rival": "C.R. MAJADAHONDA",
+      "nota": -6.2,
+      "foto": ""
+    },
+    {
       "nombre": "ALBA CUEVAS SAN JOSÉ",
       "equipo": "TORRELODONES - VILLALBA",
       "dorsal": 7,
@@ -1610,7 +1672,7 @@
       "foto": ""
     },
     {
-      "nombre": "INES ARAUZO ANDRES",
+      "nombre": "LIDIA PINTOR PÉREZ",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 7,
       "puntos": 0,
@@ -1706,6 +1768,22 @@
       "foto": ""
     },
     {
+      "nombre": "MARÍA AGUADO MARTÍNEZ",
+      "equipo": "TORRELODONES - VILLALBA",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRC - FILO- GEO",
+      "nota": 15.0,
+      "foto": ""
+    },
+    {
       "nombre": "ALBA BOYANO ESCALERA",
       "equipo": "AHORRAMAS VALLECAS RUGBY UNIÓN",
       "dorsal": 8,
@@ -1738,7 +1816,7 @@
       "foto": ""
     },
     {
-      "nombre": "SOFIA VICENTE TORRERO",
+      "nombre": "MARIAM NOVA CANCELARIO",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 8,
       "puntos": 0,
@@ -1786,6 +1864,22 @@
       "foto": ""
     },
     {
+      "nombre": "BEATRIZ RUIZ MARTIN",
+      "equipo": "LICEO FRANCÉS",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -22,
+      "rival": "C.R. MAJADAHONDA",
+      "nota": -2.2,
+      "foto": ""
+    },
+    {
       "nombre": "ANA ARIAS PERIS",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 8,
@@ -1815,24 +1909,6 @@
       "margen": -36,
       "rival": "CR VETERINARIA",
       "nota": -3.0,
-      "foto": ""
-    },
-    {
-      "nombre": "EVA BOTIJA AGUILERA",
-      "equipo": "LICEO FRANCÉS",
-      "dorsal": 8,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
-      "resultado": "P",
-      "margen": -22,
-      "rival": "C.R. MAJADAHONDA",
-      "nota": -6.2,
       "foto": ""
     },
     {
@@ -1900,7 +1976,7 @@
       "foto": ""
     },
     {
-      "nombre": "ARIADNA BARRETO SUESCUN",
+      "nombre": "MARTA TEJEDO CERRATO",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 9,
       "puntos": 0,
@@ -1964,7 +2040,7 @@
       "foto": ""
     },
     {
-      "nombre": "PALOMA DE LAS HERAS PINTO",
+      "nombre": "MAITANE LONCOMILLA GOMEZ",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 9,
       "puntos": 0,
@@ -2060,7 +2136,25 @@
       "foto": ""
     },
     {
-      "nombre": "LIDIA PINTOR PÉREZ",
+      "nombre": "BEATRIZ TREJO LUZÓN",
+      "equipo": "TORRELODONES - VILLALBA",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRC - FILO- GEO",
+      "nota": 3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "SILVIA MONTERO BRAVO",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 10,
       "puntos": 0,
@@ -2068,11 +2162,13 @@
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [],
+      "tarjetas": [
+        "amarilla"
+      ],
       "resultado": "G",
       "margen": 6,
       "rival": "SANSE SOTO",
-      "nota": 4.6,
+      "nota": 0.6,
       "foto": ""
     },
     {
@@ -2108,7 +2204,23 @@
       "foto": ""
     },
     {
-      "nombre": "KARLA ESTEFANÍA OLMEDO GAONA",
+      "nombre": "LUCIA ECHEVERRIA CANO",
+      "equipo": "LICEO FRANCÉS",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -22,
+      "rival": "C.R. MAJADAHONDA",
+      "nota": -2.2,
+      "foto": ""
+    },
+    {
+      "nombre": "PALOMA DE LAS HERAS PINTO",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 10,
       "puntos": 0,
@@ -2124,11 +2236,11 @@
       "foto": ""
     },
     {
-      "nombre": "PAULA FERNANDEZ MUÑOZ",
+      "nombre": "ANA LUCÍA BONILLA CALDERÓN",
       "equipo": "TORRELODONES - VILLALBA",
       "dorsal": 11,
-      "puntos": 10,
-      "ensayos": 2,
+      "puntos": 15,
+      "ensayos": 3,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
@@ -2136,7 +2248,7 @@
       "resultado": "G",
       "margen": 39,
       "rival": "CRC - FILO- GEO",
-      "nota": 23.0,
+      "nota": 31.0,
       "foto": ""
     },
     {
@@ -2204,7 +2316,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARTA TEJEDO CERRATO",
+      "nombre": "ARIADNA BARRETO SUESCUN",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 11,
       "puntos": 0,
@@ -2350,7 +2462,7 @@
       "foto": ""
     },
     {
-      "nombre": "ELISA GARCIA HERRERO",
+      "nombre": "OLAYA JUANES GARCIA",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 12,
       "puntos": 0,
@@ -2446,11 +2558,11 @@
       "foto": ""
     },
     {
-      "nombre": "ANA LUCÍA BONILLA CALDERÓN",
+      "nombre": "CECILIA HUARTE SEBASTIAN",
       "equipo": "TORRELODONES - VILLALBA",
       "dorsal": 13,
-      "puntos": 15,
-      "ensayos": 3,
+      "puntos": 10,
+      "ensayos": 2,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
@@ -2458,7 +2570,23 @@
       "resultado": "G",
       "margen": 39,
       "rival": "CRC - FILO- GEO",
-      "nota": 31.0,
+      "nota": 23.0,
+      "foto": ""
+    },
+    {
+      "nombre": "VALERIA CASCON JIMENEZ",
+      "equipo": "CR VETERINARIA",
+      "dorsal": 13,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 36,
+      "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
+      "nota": 15.0,
       "foto": ""
     },
     {
@@ -2510,7 +2638,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARTA CARDIEL FERNANDEZ",
+      "nombre": "ELISA GARCIA HERRERO",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 13,
       "puntos": 0,
@@ -2590,7 +2718,7 @@
       "foto": ""
     },
     {
-      "nombre": "CECILIA HUARTE SEBASTIAN",
+      "nombre": "PAULA FERNANDEZ MUÑOZ",
       "equipo": "TORRELODONES - VILLALBA",
       "dorsal": 14,
       "puntos": 10,
@@ -2619,6 +2747,22 @@
       "margen": 22,
       "rival": "OLÍMPICO - OSAS",
       "nota": 14.2,
+      "foto": ""
+    },
+    {
+      "nombre": "CELIA HEREDIA MUÑOZ",
+      "equipo": "JABATOS MÓSTOLES R.C.",
+      "dorsal": 14,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 6,
+      "rival": "SANSE SOTO",
+      "nota": 12.6,
       "foto": ""
     },
     {
@@ -2667,22 +2811,6 @@
       "margen": -39,
       "rival": "TORRELODONES - VILLALBA",
       "nota": 5.0,
-      "foto": ""
-    },
-    {
-      "nombre": "VANESSA GUEVARA ALVAREZ",
-      "equipo": "JABATOS MÓSTOLES R.C.",
-      "dorsal": 14,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 6,
-      "rival": "SANSE SOTO",
-      "nota": 4.6,
       "foto": ""
     },
     {
@@ -2816,7 +2944,7 @@
       "foto": ""
     },
     {
-      "nombre": "NIEVES GONZÁLEZ SANDE",
+      "nombre": "MARTA CARDIEL FERNANDEZ",
       "equipo": "JABATOS MÓSTOLES R.C.",
       "dorsal": 15,
       "puntos": 0,
@@ -2880,7 +3008,7 @@
       "foto": ""
     },
     {
-      "nombre": "MAITANE LONCOMILLA GOMEZ",
+      "nombre": "JENIMAR KAROLINA BRICEÑO CORDERO",
       "equipo": "CRC - FILO- GEO",
       "dorsal": 15,
       "puntos": 0,
@@ -3598,29 +3726,8 @@
         "rival": ""
       },
       {
-        "nombre": "ANE GARATE MARÍN",
-        "equipo": "JABATOS MÓSTOLES R.C.",
-        "valor": 8,
-        "detalle": "",
-        "rival": ""
-      },
-      {
-        "nombre": "CELIA HEREDIA MUÑOZ",
-        "equipo": "JABATOS MÓSTOLES R.C.",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
         "nombre": "CRISTINA CUETO GARCIA",
         "equipo": "C.R. MAJADAHONDA",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "JULIA ESTÉVEZ RODRÍGUEZ-NORIEGA",
-        "equipo": "TORRELODONES - VILLALBA",
         "valor": 5,
         "detalle": "1 ensayo",
         "rival": ""
@@ -3633,10 +3740,24 @@
         "rival": ""
       },
       {
-        "nombre": "MARÍA AGUADO MARTÍNEZ",
-        "equipo": "TORRELODONES - VILLALBA",
+        "nombre": "PATRICIA CALVO PÉREZ",
+        "equipo": "AHORRAMAS VALLECAS RUGBY UNIÓN",
         "valor": 5,
         "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "PATRICIA DIAZ-FLORES QUINTANAR",
+        "equipo": "C.R. MAJADAHONDA",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "CAROLINA ORTEGA HERNANDEZ",
+        "equipo": "TORRELODONES - VILLALBA",
+        "valor": 2,
+        "detalle": "",
         "rival": ""
       }
     ],

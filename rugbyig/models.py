@@ -49,9 +49,10 @@ class Evento:
 @dataclass
 class Jugador:
     nombre: str
-    dorsal: int
+    dorsal: int  # posición en el partido: 1-15 titulares, 16+ banquillo (ver matchready.posiciones)
     tantos: int = 0
     foto: str = ""
+    camiseta: int | None = None  # número de la camiseta, si no coincide con la posición
 
 
 @dataclass

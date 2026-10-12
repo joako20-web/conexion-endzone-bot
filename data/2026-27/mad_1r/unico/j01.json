@@ -162,7 +162,7 @@
     {
       "nombre": "SAUL CHICO MARTIN",
       "equipo": "SAN ISIDRO FUENCARRAL",
-      "dorsal": 12,
+      "dorsal": 9,
       "puntos": 15,
       "ensayos": 1,
       "conversiones": 2,
@@ -210,7 +210,7 @@
     {
       "nombre": "DANIEL CHRISTOPHER JAMES",
       "equipo": "LICEO FRANCÉS",
-      "dorsal": 12,
+      "dorsal": 13,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -242,7 +242,7 @@
     {
       "nombre": "MAXIMILIANO BOMBARA",
       "equipo": "LICEO FRANCÉS",
-      "dorsal": 16,
+      "dorsal": 10,
       "puntos": 8,
       "ensayos": 0,
       "conversiones": 1,
@@ -324,7 +324,7 @@
     {
       "nombre": "DANIEL CHRISTOPHER JAMES",
       "equipo": "LICEO FRANCÉS",
-      "dorsal": 12,
+      "dorsal": 13,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -356,7 +356,7 @@
     {
       "nombre": "SAUL CHICO MARTIN",
       "equipo": "SAN ISIDRO FUENCARRAL",
-      "dorsal": 12,
+      "dorsal": 9,
       "puntos": 15,
       "ensayos": 1,
       "conversiones": 2,
@@ -372,19 +372,19 @@
   ],
   "xv_ideal": {
     "1": {
-      "nombre": "DANIEL ANDRÉS LOPEZ YVIRMA",
-      "equipo": "SAN ISIDRO FUENCARRAL",
+      "nombre": "ALEJANDRO MARTINEZ RODRIGUEZ",
+      "equipo": "LICEO FRANCÉS",
       "dorsal": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 0,
+      "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 20,
-      "rival": "SANSE SCRUM",
-      "nota": 14.0,
+      "margen": 38,
+      "rival": "XV HORTALEZA NEGRO",
+      "nota": 7.0,
       "foto": ""
     },
     "2": {
@@ -404,19 +404,19 @@
       "foto": ""
     },
     "3": {
-      "nombre": "ALEJANDRO LOPEZ ZANDUETA",
-      "equipo": "MADRID BARBARIANS RFC",
+      "nombre": "DANIEL ANDRÉS LOPEZ YVIRMA",
+      "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 3,
-      "puntos": 6,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
-      "golpes": 2,
+      "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 2,
-      "rival": "TORRELODONES RC",
-      "nota": 10.2,
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 14.0,
       "foto": ""
     },
     "4": {
@@ -468,7 +468,7 @@
       "foto": ""
     },
     "7": {
-      "nombre": "MANUEL DE PABLOS ALONSO",
+      "nombre": "ISIDRO CORBELLA",
       "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 7,
       "puntos": 0,
@@ -500,29 +500,29 @@
       "foto": ""
     },
     "9": {
-      "nombre": "PABLO CANEDA DOMÍNGUEZ",
-      "equipo": "ARQUITECTURA",
+      "nombre": "SAUL CHICO MARTIN",
+      "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 9,
-      "puntos": 11,
+      "puntos": 15,
       "ensayos": 1,
-      "conversiones": 3,
-      "golpes": 0,
+      "conversiones": 2,
+      "golpes": 2,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -7,
-      "rival": "OLÍMPICO DE POZUELO RUGBY",
-      "nota": 13.3,
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 24.0,
       "foto": ""
     },
     "10": {
-      "nombre": "MATHIEU SA",
+      "nombre": "MAXIMILIANO BOMBARA",
       "equipo": "LICEO FRANCÉS",
       "dorsal": 10,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
+      "puntos": 8,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 2,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
@@ -548,25 +548,9 @@
       "foto": ""
     },
     "12": {
-      "nombre": "SAUL CHICO MARTIN",
-      "equipo": "SAN ISIDRO FUENCARRAL",
-      "dorsal": 12,
-      "puntos": 15,
-      "ensayos": 1,
-      "conversiones": 2,
-      "golpes": 2,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 20,
-      "rival": "SANSE SCRUM",
-      "nota": 24.0,
-      "foto": ""
-    },
-    "13": {
       "nombre": "DANIEL CHRISTOPHER JAMES",
       "equipo": "LICEO FRANCÉS",
-      "dorsal": 12,
+      "dorsal": 13,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -577,6 +561,22 @@
       "margen": 38,
       "rival": "XV HORTALEZA NEGRO",
       "nota": 23.0,
+      "foto": ""
+    },
+    "13": {
+      "nombre": "JAVIER RAMOS GAMA",
+      "equipo": "OLÍMPICO DE POZUELO RUGBY",
+      "dorsal": 12,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 7,
+      "rival": "ARQUITECTURA",
+      "nota": 20.7,
       "foto": ""
     },
     "14": {
@@ -596,8 +596,8 @@
       "foto": ""
     },
     "15": {
-      "nombre": "ALVARO SARRAIS RODRIGUEZ",
-      "equipo": "LICEO FRANCÉS",
+      "nombre": "DAVID CAMINERO ADRIO",
+      "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 15,
       "puntos": 0,
       "ensayos": 0,
@@ -606,30 +606,14 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 38,
-      "rival": "XV HORTALEZA NEGRO",
-      "nota": 7.0,
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
       "foto": ""
     }
   },
   "foto_portada": null,
   "candidatos_xv": [
-    {
-      "nombre": "DANIEL ANDRÉS LOPEZ YVIRMA",
-      "equipo": "SAN ISIDRO FUENCARRAL",
-      "dorsal": 1,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 20,
-      "rival": "SANSE SCRUM",
-      "nota": 14.0,
-      "foto": ""
-    },
     {
       "nombre": "ALEJANDRO MARTINEZ RODRIGUEZ",
       "equipo": "LICEO FRANCÉS",
@@ -644,6 +628,22 @@
       "margen": 38,
       "rival": "XV HORTALEZA NEGRO",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "HUGO JOSE CALAMO PELLA",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
       "foto": ""
     },
     {
@@ -679,6 +679,22 @@
       "foto": ""
     },
     {
+      "nombre": "MARCO ANTONIO JIMENEZ DEL RIEGO",
+      "equipo": "TORRELODONES RC",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -2,
+      "rival": "MADRID BARBARIANS RFC",
+      "nota": -0.2,
+      "foto": ""
+    },
+    {
       "nombre": "MARCELO FERNÁNDEZ ÁLVAREZ",
       "equipo": "ARQUITECTURA",
       "dorsal": 1,
@@ -708,6 +724,22 @@
       "margen": -20,
       "rival": "SAN ISIDRO FUENCARRAL",
       "nota": -2.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ALVARO PASCUAL RODRIGUEZ",
+      "equipo": "XV HORTALEZA NEGRO",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -38,
+      "rival": "LICEO FRANCÉS",
+      "nota": -3.0,
       "foto": ""
     },
     {
@@ -743,7 +775,7 @@
       "foto": ""
     },
     {
-      "nombre": "GONZALO GARCIA CUARTERO",
+      "nombre": "JAVIER SANZ GARCIA",
       "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 2,
       "puntos": 0,
@@ -756,6 +788,38 @@
       "margen": 20,
       "rival": "SANSE SCRUM",
       "nota": 6.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ANTONIO RUIZ ÁLVAREZ DE TOLEDO",
+      "equipo": "MADRID BARBARIANS RFC",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 2,
+      "rival": "TORRELODONES RC",
+      "nota": 4.2,
+      "foto": ""
+    },
+    {
+      "nombre": "MIGUEL JULIANA SOLA",
+      "equipo": "TORRELODONES RC",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -2,
+      "rival": "MADRID BARBARIANS RFC",
+      "nota": -0.2,
       "foto": ""
     },
     {
@@ -775,7 +839,7 @@
       "foto": ""
     },
     {
-      "nombre": "JOSE LUIS ROLDAN DEL MOLINO",
+      "nombre": "MARCOS DIAZ GARCIA",
       "equipo": "SANSE SCRUM",
       "dorsal": 2,
       "puntos": 0,
@@ -804,6 +868,22 @@
       "margen": -38,
       "rival": "LICEO FRANCÉS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "DANIEL ANDRÉS LOPEZ YVIRMA",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 3,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 14.0,
       "foto": ""
     },
     {
@@ -839,22 +919,6 @@
       "foto": ""
     },
     {
-      "nombre": "ISIDRO CORBELLA",
-      "equipo": "SAN ISIDRO FUENCARRAL",
-      "dorsal": 3,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 20,
-      "rival": "SANSE SCRUM",
-      "nota": 6.0,
-      "foto": ""
-    },
-    {
       "nombre": "ALEJANDRO BAEZA PIRIZ",
       "equipo": "OLÍMPICO DE POZUELO RUGBY",
       "dorsal": 3,
@@ -868,6 +932,22 @@
       "margen": 7,
       "rival": "ARQUITECTURA",
       "nota": 4.7,
+      "foto": ""
+    },
+    {
+      "nombre": "MARIO MORENO MELERO",
+      "equipo": "TORRELODONES RC",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -2,
+      "rival": "MADRID BARBARIANS RFC",
+      "nota": -0.2,
       "foto": ""
     },
     {
@@ -887,7 +967,7 @@
       "foto": ""
     },
     {
-      "nombre": "JOSE JAVIER NICOLAS TEJEDOR",
+      "nombre": "OMAR ENRIQUE DIAMOND MARTINEZ",
       "equipo": "SANSE SCRUM",
       "dorsal": 3,
       "puntos": 0,
@@ -903,7 +983,7 @@
       "foto": ""
     },
     {
-      "nombre": "ARITZ SAINERO ANDRES",
+      "nombre": "PEDRO ALEGRE GAZAPO",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 3,
       "puntos": 0,
@@ -932,6 +1012,22 @@
       "margen": 38,
       "rival": "XV HORTALEZA NEGRO",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "RODRIGO PERAL HUERTAS",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
       "foto": ""
     },
     {
@@ -967,6 +1063,22 @@
       "foto": ""
     },
     {
+      "nombre": "ISAAC TORRES PARRA",
+      "equipo": "TORRELODONES RC",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -2,
+      "rival": "MADRID BARBARIANS RFC",
+      "nota": -0.2,
+      "foto": ""
+    },
+    {
       "nombre": "ENRIQUE MONTI",
       "equipo": "ARQUITECTURA",
       "dorsal": 4,
@@ -983,7 +1095,7 @@
       "foto": ""
     },
     {
-      "nombre": "HUGO TORRES PARRA",
+      "nombre": "JAEL MORA CALO",
       "equipo": "SANSE SCRUM",
       "dorsal": 4,
       "puntos": 0,
@@ -1063,7 +1175,7 @@
       "foto": ""
     },
     {
-      "nombre": "RODRIGO PERAL HUERTAS",
+      "nombre": "JESUS TALAVERA CAMPOS",
       "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 5,
       "puntos": 0,
@@ -1111,7 +1223,7 @@
       "foto": ""
     },
     {
-      "nombre": "JAEL MORA CALO",
+      "nombre": "PABLO CAMACHO CARRASCO",
       "equipo": "SANSE SCRUM",
       "dorsal": 5,
       "puntos": 0,
@@ -1127,7 +1239,7 @@
       "foto": ""
     },
     {
-      "nombre": "PABLO DELSO RUBIO",
+      "nombre": "GUILHERMO RIBEIRO MADUREIRA",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 5,
       "puntos": 0,
@@ -1156,6 +1268,22 @@
       "margen": 38,
       "rival": "XV HORTALEZA NEGRO",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "LUCAS SANZ PUENTE",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
       "foto": ""
     },
     {
@@ -1191,7 +1319,7 @@
       "foto": ""
     },
     {
-      "nombre": "HERNANDO ESPINOSA DE LOS MONTEROS RUIZ",
+      "nombre": "DANIEL ARJONA VIÑAS",
       "equipo": "TORRELODONES RC",
       "dorsal": 6,
       "puntos": 0,
@@ -1223,7 +1351,7 @@
       "foto": ""
     },
     {
-      "nombre": "GUILLERMO MENDEZ ALVAREZ",
+      "nombre": "DIEGO SANCHEZ UGUINA",
       "equipo": "SANSE SCRUM",
       "dorsal": 6,
       "puntos": 0,
@@ -1239,7 +1367,7 @@
       "foto": ""
     },
     {
-      "nombre": "FRANCISCO MARTINEZ MENA",
+      "nombre": "DARÍO MARÍN GARCÍA",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 6,
       "puntos": 0,
@@ -1287,7 +1415,7 @@
       "foto": ""
     },
     {
-      "nombre": "MANUEL DE PABLOS ALONSO",
+      "nombre": "ISIDRO CORBELLA",
       "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 7,
       "puntos": 0,
@@ -1319,7 +1447,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARCO ANTONIO JIMENEZ DEL RIEGO",
+      "nombre": "LUIS SOTILLO SANCHEZ",
       "equipo": "TORRELODONES RC",
       "dorsal": 7,
       "puntos": 0,
@@ -1351,7 +1479,23 @@
       "foto": ""
     },
     {
-      "nombre": "DARÍO MARÍN GARCÍA",
+      "nombre": "GUILLERMO MENDEZ ALVAREZ",
+      "equipo": "SANSE SCRUM",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -20,
+      "rival": "SAN ISIDRO FUENCARRAL",
+      "nota": -2.0,
+      "foto": ""
+    },
+    {
+      "nombre": "HUGO JIMENEZ CUENCA",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 7,
       "puntos": 0,
@@ -1364,24 +1508,6 @@
       "margen": -38,
       "rival": "LICEO FRANCÉS",
       "nota": -3.0,
-      "foto": ""
-    },
-    {
-      "nombre": "JOSE LUIS DE LA FUENTE MARTIN",
-      "equipo": "SANSE SCRUM",
-      "dorsal": 7,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
-      "resultado": "P",
-      "margen": -20,
-      "rival": "SAN ISIDRO FUENCARRAL",
-      "nota": -6.0,
       "foto": ""
     },
     {
@@ -1414,6 +1540,38 @@
       "margen": 38,
       "rival": "XV HORTALEZA NEGRO",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MANUEL DE PABLOS ALONSO",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ALVARO MARTÍN RUÍZ",
+      "equipo": "XV HORTALEZA NEGRO",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -38,
+      "rival": "LICEO FRANCÉS",
+      "nota": 5.0,
       "foto": ""
     },
     {
@@ -1465,7 +1623,7 @@
       "foto": ""
     },
     {
-      "nombre": "DIEGO SANCHEZ UGUINA",
+      "nombre": "JOSE LUIS DE LA FUENTE MARTIN",
       "equipo": "SANSE SCRUM",
       "dorsal": 8,
       "puntos": 0,
@@ -1473,27 +1631,29 @@
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [],
+      "tarjetas": [
+        "amarilla"
+      ],
       "resultado": "P",
       "margen": -20,
       "rival": "SAN ISIDRO FUENCARRAL",
-      "nota": -2.0,
+      "nota": -6.0,
       "foto": ""
     },
     {
-      "nombre": "JAIME DE MIGUEL LOPEZ",
-      "equipo": "XV HORTALEZA NEGRO",
-      "dorsal": 8,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
+      "nombre": "SAUL CHICO MARTIN",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 9,
+      "puntos": 15,
+      "ensayos": 1,
+      "conversiones": 2,
+      "golpes": 2,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -38,
-      "rival": "LICEO FRANCÉS",
-      "nota": -3.0,
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 24.0,
       "foto": ""
     },
     {
@@ -1561,7 +1721,7 @@
       "foto": ""
     },
     {
-      "nombre": "IGNACIO DUO BLASCO",
+      "nombre": "HERNANDO ESPINOSA DE LOS MONTEROS RUIZ",
       "equipo": "TORRELODONES RC",
       "dorsal": 9,
       "puntos": 0,
@@ -1593,7 +1753,7 @@
       "foto": ""
     },
     {
-      "nombre": "NICOLAS REDONDO DRUILLE",
+      "nombre": "ALFREDO AGUSTIN FERRO ALBAREZ",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 9,
       "puntos": 0,
@@ -1601,23 +1761,21 @@
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
+      "tarjetas": [],
       "resultado": "P",
       "margen": -38,
       "rival": "LICEO FRANCÉS",
-      "nota": -7.0,
+      "nota": -3.0,
       "foto": ""
     },
     {
-      "nombre": "MATHIEU SA",
+      "nombre": "MAXIMILIANO BOMBARA",
       "equipo": "LICEO FRANCÉS",
       "dorsal": 10,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
+      "puntos": 8,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 2,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
@@ -1627,7 +1785,7 @@
       "foto": ""
     },
     {
-      "nombre": "DAVID CAMINERO ADRIO",
+      "nombre": "PABLO MONTERO BAUTISTA",
       "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 10,
       "puntos": 0,
@@ -1691,6 +1849,22 @@
       "foto": ""
     },
     {
+      "nombre": "ALEJANDRO MARÍN GARCÍA",
+      "equipo": "XV HORTALEZA NEGRO",
+      "dorsal": 10,
+      "puntos": 3,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -38,
+      "rival": "LICEO FRANCÉS",
+      "nota": 0.0,
+      "foto": ""
+    },
+    {
       "nombre": "ALFONSO FERNANDEZ RODRÍGUEZ",
       "equipo": "ARQUITECTURA",
       "dorsal": 10,
@@ -1707,7 +1881,7 @@
       "foto": ""
     },
     {
-      "nombre": "JAVIER LUCAS DEL POZO",
+      "nombre": "ALEXIS CARBALLO BERTHELOT",
       "equipo": "SANSE SCRUM",
       "dorsal": 10,
       "puntos": 0,
@@ -1739,6 +1913,22 @@
       "foto": ""
     },
     {
+      "nombre": "MARTIN AGONAYAN",
+      "equipo": "LICEO FRANCÉS",
+      "dorsal": 11,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 38,
+      "rival": "XV HORTALEZA NEGRO",
+      "nota": 15.0,
+      "foto": ""
+    },
+    {
       "nombre": "ÁLVARO GARCÍA SANZ",
       "equipo": "ARQUITECTURA",
       "dorsal": 11,
@@ -1755,8 +1945,8 @@
       "foto": ""
     },
     {
-      "nombre": "IGNACIO DÍVAR GONZÁLEZ",
-      "equipo": "LICEO FRANCÉS",
+      "nombre": "OSCAR DEL AMA GARCIA",
+      "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 11,
       "puntos": 0,
       "ensayos": 0,
@@ -1765,9 +1955,9 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 38,
-      "rival": "XV HORTALEZA NEGRO",
-      "nota": 7.0,
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
       "foto": ""
     },
     {
@@ -1803,7 +1993,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALEJANDRO FERNÁNDEZ ÁLVAREZ",
+      "nombre": "DIEGO ESPIGA SCHOLTENS",
       "equipo": "SANSE SCRUM",
       "dorsal": 11,
       "puntos": 0,
@@ -1819,35 +2009,21 @@
       "foto": ""
     },
     {
-      "nombre": "SAUL CHICO MARTIN",
-      "equipo": "SAN ISIDRO FUENCARRAL",
-      "dorsal": 12,
-      "puntos": 15,
-      "ensayos": 1,
-      "conversiones": 2,
-      "golpes": 2,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 20,
-      "rival": "SANSE SCRUM",
-      "nota": 24.0,
-      "foto": ""
-    },
-    {
-      "nombre": "DANIEL CHRISTOPHER JAMES",
-      "equipo": "LICEO FRANCÉS",
-      "dorsal": 12,
-      "puntos": 10,
-      "ensayos": 2,
+      "nombre": "NICOLAS REDONDO DRUILLE",
+      "equipo": "XV HORTALEZA NEGRO",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 38,
-      "rival": "XV HORTALEZA NEGRO",
-      "nota": 23.0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -38,
+      "rival": "LICEO FRANCÉS",
+      "nota": -7.0,
       "foto": ""
     },
     {
@@ -1867,6 +2043,38 @@
       "foto": ""
     },
     {
+      "nombre": "CARLOS DESTRE FERNANDEZ-GOLFIN",
+      "equipo": "LICEO FRANCÉS",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 38,
+      "rival": "XV HORTALEZA NEGRO",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "JORGE CALZADA DE LA PISA",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
+      "foto": ""
+    },
+    {
       "nombre": "DANIEL PADROSA GISPERT",
       "equipo": "MADRID BARBARIANS RFC",
       "dorsal": 12,
@@ -1883,7 +2091,23 @@
       "foto": ""
     },
     {
-      "nombre": "DIEGO ESPIGA SCHOLTENS",
+      "nombre": "JOSE RAMON TIEMBLO MARTIN-CALDERIN",
+      "equipo": "TORRELODONES RC",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -2,
+      "rival": "MADRID BARBARIANS RFC",
+      "nota": -0.2,
+      "foto": ""
+    },
+    {
+      "nombre": "ADRIAN LOPEZ MARTIN",
       "equipo": "SANSE SCRUM",
       "dorsal": 12,
       "puntos": 0,
@@ -1899,7 +2123,7 @@
       "foto": ""
     },
     {
-      "nombre": "JOSE PEDRO PASCOAL DE ALMEIDA",
+      "nombre": "GERMAN ROJAS RODRIGUEZ",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 12,
       "puntos": 0,
@@ -1933,11 +2157,11 @@
       "foto": ""
     },
     {
-      "nombre": "CARLOS DESTRE FERNANDEZ-GOLFIN",
+      "nombre": "DANIEL CHRISTOPHER JAMES",
       "equipo": "LICEO FRANCÉS",
       "dorsal": 13,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 10,
+      "ensayos": 2,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
@@ -1945,11 +2169,11 @@
       "resultado": "G",
       "margen": 38,
       "rival": "XV HORTALEZA NEGRO",
-      "nota": 7.0,
+      "nota": 23.0,
       "foto": ""
     },
     {
-      "nombre": "JORGE CALZADA DE LA PISA",
+      "nombre": "JAIME NAVARRO MARTIN",
       "equipo": "SAN ISIDRO FUENCARRAL",
       "dorsal": 13,
       "puntos": 0,
@@ -1997,7 +2221,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARIO MORENO MELERO",
+      "nombre": "NICOLAS GOMEZ CLIMENT",
       "equipo": "TORRELODONES RC",
       "dorsal": 13,
       "puntos": 0,
@@ -2029,23 +2253,7 @@
       "foto": ""
     },
     {
-      "nombre": "ADRIAN LOPEZ MARTIN",
-      "equipo": "SANSE SCRUM",
-      "dorsal": 13,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -20,
-      "rival": "SAN ISIDRO FUENCARRAL",
-      "nota": -2.0,
-      "foto": ""
-    },
-    {
-      "nombre": "GONZALO LAGUNA HUERTAS",
+      "nombre": "JAIME DE MIGUEL LOPEZ",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 13,
       "puntos": 0,
@@ -2058,6 +2266,24 @@
       "margen": -38,
       "rival": "LICEO FRANCÉS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "PABLO PEREZ-HERVADA GUTIERREZ",
+      "equipo": "SANSE SCRUM",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -20,
+      "rival": "SAN ISIDRO FUENCARRAL",
+      "nota": -6.0,
       "foto": ""
     },
     {
@@ -2077,6 +2303,22 @@
       "foto": ""
     },
     {
+      "nombre": "ALEJANDRO RODRIGUEZ SERNA",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
+      "foto": ""
+    },
+    {
       "nombre": "CARLOS VELASCO PARRAS",
       "equipo": "OLÍMPICO DE POZUELO RUGBY",
       "dorsal": 14,
@@ -2093,7 +2335,7 @@
       "foto": ""
     },
     {
-      "nombre": "FERNANDO CASTRO DAVILA",
+      "nombre": "RICHARD CLIVE RUDD FATHERS",
       "equipo": "MADRID BARBARIANS RFC",
       "dorsal": 14,
       "puntos": 0,
@@ -2109,7 +2351,7 @@
       "foto": ""
     },
     {
-      "nombre": "ENRIQUE JOSÉ ALONSO BASCONES",
+      "nombre": "IGNACIO DUO BLASCO",
       "equipo": "TORRELODONES RC",
       "dorsal": 14,
       "puntos": 0,
@@ -2141,7 +2383,7 @@
       "foto": ""
     },
     {
-      "nombre": "PABLO PEREZ-HERVADA GUTIERREZ",
+      "nombre": "HUGO TORRES PARRA",
       "equipo": "SANSE SCRUM",
       "dorsal": 14,
       "puntos": 0,
@@ -2149,13 +2391,27 @@
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
+      "tarjetas": [],
       "resultado": "P",
       "margen": -20,
       "rival": "SAN ISIDRO FUENCARRAL",
-      "nota": -6.0,
+      "nota": -2.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ULISES MOLERO DE ÁVILA LÓPEZ HAZAS",
+      "equipo": "XV HORTALEZA NEGRO",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -38,
+      "rival": "LICEO FRANCÉS",
+      "nota": -3.0,
       "foto": ""
     },
     {
@@ -2175,6 +2431,22 @@
       "foto": ""
     },
     {
+      "nombre": "DAVID CAMINERO ADRIO",
+      "equipo": "SAN ISIDRO FUENCARRAL",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 20,
+      "rival": "SANSE SCRUM",
+      "nota": 6.0,
+      "foto": ""
+    },
+    {
       "nombre": "IGNACIO ALVAREZ DOMINGUEZ",
       "equipo": "OLÍMPICO DE POZUELO RUGBY",
       "dorsal": 15,
@@ -2191,7 +2463,7 @@
       "foto": ""
     },
     {
-      "nombre": "RICHARD CLIVE RUDD FATHERS",
+      "nombre": "FERNANDO CASTRO DAVILA",
       "equipo": "MADRID BARBARIANS RFC",
       "dorsal": 15,
       "puntos": 0,
@@ -2207,7 +2479,7 @@
       "foto": ""
     },
     {
-      "nombre": "ISAAC TORRES PARRA",
+      "nombre": "MARCOS RODRÍGUEZ PRIETO",
       "equipo": "TORRELODONES RC",
       "dorsal": 15,
       "puntos": 0,
@@ -2239,7 +2511,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALEXIS CARBALLO BERTHELOT",
+      "nombre": "JAVIER LUCAS DEL POZO",
       "equipo": "SANSE SCRUM",
       "dorsal": 15,
       "puntos": 0,
@@ -2255,7 +2527,7 @@
       "foto": ""
     },
     {
-      "nombre": "GUILHERMO RIBEIRO MADUREIRA",
+      "nombre": "GONZALO LAGUNA HUERTAS",
       "equipo": "XV HORTALEZA NEGRO",
       "dorsal": 15,
       "puntos": 0,
@@ -2937,30 +3209,9 @@
     ],
     "banquillo": [
       {
-        "nombre": "MAXIMILIANO BOMBARA",
-        "equipo": "LICEO FRANCÉS",
-        "valor": 8,
-        "detalle": "",
-        "rival": ""
-      },
-      {
         "nombre": "GONZALO RUBIO ZABALLOS",
         "equipo": "LICEO FRANCÉS",
         "valor": 7,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "ALVARO MARTÍN RUÍZ",
-        "equipo": "XV HORTALEZA NEGRO",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "MARTIN AGONAYAN",
-        "equipo": "LICEO FRANCÉS",
-        "valor": 5,
         "detalle": "1 ensayo",
         "rival": ""
       },
@@ -2972,10 +3223,10 @@
         "rival": ""
       },
       {
-        "nombre": "ALEJANDRO MARÍN GARCÍA",
-        "equipo": "XV HORTALEZA NEGRO",
-        "valor": 3,
-        "detalle": "",
+        "nombre": "MATHIEU SA",
+        "equipo": "LICEO FRANCÉS",
+        "valor": 5,
+        "detalle": "1 ensayo",
         "rival": ""
       }
     ],

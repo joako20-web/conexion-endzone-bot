@@ -146,7 +146,7 @@
     {
       "nombre": "DAVID RODRIGUEZ RODRIGUEZ",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
-      "dorsal": 10,
+      "dorsal": 8,
       "puntos": 15,
       "ensayos": 1,
       "conversiones": 5,
@@ -210,7 +210,7 @@
     {
       "nombre": "HUGO DE LA HOZ PEREZ",
       "equipo": "CAU MADRID",
-      "dorsal": 18,
+      "dorsal": 2,
       "puntos": 6,
       "ensayos": 0,
       "conversiones": 3,
@@ -274,7 +274,7 @@
     {
       "nombre": "ANDREI TRAIAN TATU PANA",
       "equipo": "CAU MADRID",
-      "dorsal": 9,
+      "dorsal": 3,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -340,7 +340,7 @@
     {
       "nombre": "DAVID RODRIGUEZ RODRIGUEZ",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
-      "dorsal": 10,
+      "dorsal": 8,
       "puntos": 15,
       "ensayos": 1,
       "conversiones": 5,
@@ -388,8 +388,8 @@
       "foto": ""
     },
     "2": {
-      "nombre": "JUAN ALAMOS LOPEZ",
-      "equipo": "CAU MADRID",
+      "nombre": "ALVARO CORCHO CASTAÑO",
+      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 2,
       "puntos": 0,
       "ensayos": 0,
@@ -398,14 +398,14 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 16,
-      "rival": "COMPLUTENSE CISNEROS SIXTO",
-      "nota": 5.6,
+      "margen": 30,
+      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
+      "nota": 7.0,
       "foto": ""
     },
     "3": {
-      "nombre": "ELINSON HERNANDEZ ARAUJO",
-      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nombre": "ANDREI TRAIAN TATU PANA",
+      "equipo": "CAU MADRID",
       "dorsal": 3,
       "puntos": 5,
       "ensayos": 1,
@@ -414,25 +414,25 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 30,
-      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
-      "nota": 15.0,
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 13.6,
       "foto": ""
     },
     "4": {
-      "nombre": "URIEL MAXIMO TONIETTI",
-      "equipo": "QUIJOTE - GORILAS",
-      "dorsal": 5,
-      "puntos": 5,
-      "ensayos": 1,
+      "nombre": "CESAR USERO BLAZQUEZ",
+      "equipo": "RUGBY ALCALÁ ROJO",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 16,
-      "rival": "SILICIUS ALCOBENDAS C",
-      "nota": 13.6,
+      "margen": 31,
+      "rival": "REAL CANOE N.C.",
+      "nota": 7.0,
       "foto": ""
     },
     "5": {
@@ -468,25 +468,9 @@
       "foto": ""
     },
     "7": {
-      "nombre": "PABLO SERRANO CABEZAS",
-      "equipo": "COMPLUTENSE CISNEROS SIXTO",
-      "dorsal": 7,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -16,
-      "rival": "CAU MADRID",
-      "nota": 6.4,
-      "foto": ""
-    },
-    "8": {
-      "nombre": "JONATAN ESCARPA GARRALON",
-      "equipo": "RUGBY ALCALÁ ROJO",
-      "dorsal": 8,
+      "nombre": "FRANCISCO GOMEZ COSTA",
+      "equipo": "QUIJOTE - GORILAS",
+      "dorsal": 6,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -494,9 +478,25 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 31,
-      "rival": "REAL CANOE N.C.",
-      "nota": 15.0,
+      "margen": 16,
+      "rival": "SILICIUS ALCOBENDAS C",
+      "nota": 13.6,
+      "foto": ""
+    },
+    "8": {
+      "nombre": "DAVID RODRIGUEZ RODRIGUEZ",
+      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "dorsal": 8,
+      "puntos": 15,
+      "ensayos": 1,
+      "conversiones": 5,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 30,
+      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
+      "nota": 25.0,
       "foto": ""
     },
     "9": {
@@ -516,24 +516,24 @@
       "foto": ""
     },
     "10": {
-      "nombre": "DAVID RODRIGUEZ RODRIGUEZ",
-      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nombre": "LORENZO RAGNACCI",
+      "equipo": "CAU MADRID",
       "dorsal": 10,
-      "puntos": 15,
+      "puntos": 5,
       "ensayos": 1,
-      "conversiones": 5,
+      "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 30,
-      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
-      "nota": 25.0,
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 13.6,
       "foto": ""
     },
     "11": {
-      "nombre": "JOSE CARLOS GUTIERREZ VALMORISCO",
-      "equipo": "QUIJOTE - GORILAS",
+      "nombre": "DANIEL SERRANO SANCHEZ",
+      "equipo": "CAU MADRID",
       "dorsal": 11,
       "puntos": 5,
       "ensayos": 1,
@@ -543,7 +543,7 @@
       "tarjetas": [],
       "resultado": "G",
       "margen": 16,
-      "rival": "SILICIUS ALCOBENDAS C",
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
       "nota": 13.6,
       "foto": ""
     },
@@ -580,19 +580,19 @@
       "foto": ""
     },
     "14": {
-      "nombre": "MATHIS QUINTAL MARCOS",
-      "equipo": "SILICIUS ALCOBENDAS C",
-      "dorsal": 11,
+      "nombre": "JORGE LIRES URBANO",
+      "equipo": "CAU MADRID",
+      "dorsal": 14,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -16,
-      "rival": "QUIJOTE - GORILAS",
-      "nota": 6.4,
+      "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 13.6,
       "foto": ""
     },
     "15": {
@@ -631,11 +631,11 @@
       "foto": ""
     },
     {
-      "nombre": "JORGE LLAMOSAS RODRIGUEZ",
+      "nombre": "ELINSON HERNANDEZ ARAUJO",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 1,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
@@ -643,11 +643,11 @@
       "resultado": "G",
       "margen": 30,
       "rival": "AHORRAMAS VALLECAS R.U. ROJO",
-      "nota": 7.0,
+      "nota": 15.0,
       "foto": ""
     },
     {
-      "nombre": "CESAR NAVARRO MOYA",
+      "nombre": "JUAN ESTEBAN GALLEGO PARRA",
       "equipo": "CAU MADRID",
       "dorsal": 1,
       "puntos": 0,
@@ -663,7 +663,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALEJANDRO MORENO CASTRO",
+      "nombre": "ISMAEL PINTOR LOPEZ DE LA MOTA",
       "equipo": "QUIJOTE - GORILAS",
       "dorsal": 1,
       "puntos": 0,
@@ -711,6 +711,22 @@
       "foto": ""
     },
     {
+      "nombre": "CARLOS GÓMEZ SANTANA",
+      "equipo": "AHORRAMAS VALLECAS R.U. ROJO",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -30,
+      "rival": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
       "nombre": "MOHAMMED EL ARNOUKI LAHRAKH",
       "equipo": "REAL CANOE N.C.",
       "dorsal": 1,
@@ -726,6 +742,38 @@
       "margen": -31,
       "rival": "RUGBY ALCALÁ ROJO",
       "nota": -13.0,
+      "foto": ""
+    },
+    {
+      "nombre": "HUGO DE LA HOZ PEREZ",
+      "equipo": "CAU MADRID",
+      "dorsal": 2,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 11.6,
+      "foto": ""
+    },
+    {
+      "nombre": "ALVARO CORCHO CASTAÑO",
+      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 30,
+      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -745,8 +793,8 @@
       "foto": ""
     },
     {
-      "nombre": "JUAN ALAMOS LOPEZ",
-      "equipo": "CAU MADRID",
+      "nombre": "FRANCISCO ALCOCER ZAPLANA",
+      "equipo": "QUIJOTE - GORILAS",
       "dorsal": 2,
       "puntos": 0,
       "ensayos": 0,
@@ -756,7 +804,7 @@
       "tarjetas": [],
       "resultado": "G",
       "margen": 16,
-      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "rival": "SILICIUS ALCOBENDAS C",
       "nota": 5.6,
       "foto": ""
     },
@@ -793,8 +841,40 @@
       "foto": ""
     },
     {
-      "nombre": "ELINSON HERNANDEZ ARAUJO",
-      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nombre": "ALVARO CAPARRÓS TORRES",
+      "equipo": "AHORRAMAS VALLECAS R.U. ROJO",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -30,
+      "rival": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "RAFAEL SERRANO HINOJOSA",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ANDREI TRAIAN TATU PANA",
+      "equipo": "CAU MADRID",
       "dorsal": 3,
       "puntos": 5,
       "ensayos": 1,
@@ -803,9 +883,25 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 13.6,
+      "foto": ""
+    },
+    {
+      "nombre": "JUAN JOSE FERNANDEZ-PACHECO Y GONZÁLEZ DE ECHAVARRI",
+      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
       "margen": 30,
       "rival": "AHORRAMAS VALLECAS R.U. ROJO",
-      "nota": 15.0,
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -825,7 +921,7 @@
       "foto": ""
     },
     {
-      "nombre": "ISMAEL PINTOR LOPEZ DE LA MOTA",
+      "nombre": "RUBEN GONZALEZ BRAVO",
       "equipo": "QUIJOTE - GORILAS",
       "dorsal": 3,
       "puntos": 0,
@@ -838,24 +934,6 @@
       "margen": 16,
       "rival": "SILICIUS ALCOBENDAS C",
       "nota": 5.6,
-      "foto": ""
-    },
-    {
-      "nombre": "ALEXIS JOSÉ ALVAREZ ESPINAL",
-      "equipo": "CAU MADRID",
-      "dorsal": 3,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
-      "resultado": "G",
-      "margen": 16,
-      "rival": "COMPLUTENSE CISNEROS SIXTO",
-      "nota": 1.6,
       "foto": ""
     },
     {
@@ -891,7 +969,39 @@
       "foto": ""
     },
     {
-      "nombre": "NUÑO FERNÁNDEZ DEL RIEGO",
+      "nombre": "DANIEL ROMERO PÉREZ",
+      "equipo": "AHORRAMAS VALLECAS R.U. ROJO",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -30,
+      "rival": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "DIEGO SANCHEZ DE LA CALLE",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "LUIS ACEDO ISAC",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 4,
       "puntos": 0,
@@ -923,7 +1033,7 @@
       "foto": ""
     },
     {
-      "nombre": "MANUEL SOUTO PIÑEIRO",
+      "nombre": "HÉCTOR NARROS FERNÁNDEZ",
       "equipo": "CAU MADRID",
       "dorsal": 4,
       "puntos": 0,
@@ -1003,23 +1113,23 @@
       "foto": ""
     },
     {
-      "nombre": "URIEL MAXIMO TONIETTI",
-      "equipo": "QUIJOTE - GORILAS",
-      "dorsal": 5,
-      "puntos": 5,
-      "ensayos": 1,
+      "nombre": "FRANCISCO MARIA IGLESIAS REINA",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "G",
-      "margen": 16,
-      "rival": "SILICIUS ALCOBENDAS C",
-      "nota": 13.6,
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
       "foto": ""
     },
     {
-      "nombre": "ROBERTO TESTA GALÁN",
+      "nombre": "FEDERICO NAHUEL REY SICELES",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 5,
       "puntos": 0,
@@ -1051,19 +1161,35 @@
       "foto": ""
     },
     {
-      "nombre": "JOSÉ MARÍA VALLADARES RODRÍGUEZ",
-      "equipo": "REAL CANOE N.C.",
+      "nombre": "ELIAN MARTE REYES",
+      "equipo": "CAU MADRID",
       "dorsal": 5,
-      "puntos": 2,
+      "puntos": 0,
       "ensayos": 0,
-      "conversiones": 1,
+      "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -31,
-      "rival": "RUGBY ALCALÁ ROJO",
-      "nota": -1.0,
+      "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 5.6,
+      "foto": ""
+    },
+    {
+      "nombre": "IGNACIO CORTIGUERA SANCHEZ",
+      "equipo": "QUIJOTE - GORILAS",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "SILICIUS ALCOBENDAS C",
+      "nota": 5.6,
       "foto": ""
     },
     {
@@ -1099,6 +1225,38 @@
       "foto": ""
     },
     {
+      "nombre": "ERIK MEDINA",
+      "equipo": "AHORRAMAS VALLECAS R.U. ROJO",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -30,
+      "rival": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "GUILLERMO TIJERA MARTINEZ",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
       "nombre": "ALBERTO ECHARRI BRINDLE",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 6,
@@ -1112,6 +1270,22 @@
       "margen": 30,
       "rival": "AHORRAMAS VALLECAS R.U. ROJO",
       "nota": 15.0,
+      "foto": ""
+    },
+    {
+      "nombre": "FRANCISCO GOMEZ COSTA",
+      "equipo": "QUIJOTE - GORILAS",
+      "dorsal": 6,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "SILICIUS ALCOBENDAS C",
+      "nota": 13.6,
       "foto": ""
     },
     {
@@ -1131,8 +1305,8 @@
       "foto": ""
     },
     {
-      "nombre": "IGNACIO CORTIGUERA SANCHEZ",
-      "equipo": "QUIJOTE - GORILAS",
+      "nombre": "PABLO CASADO RAMIREZ",
+      "equipo": "CAU MADRID",
       "dorsal": 6,
       "puntos": 0,
       "ensayos": 0,
@@ -1142,7 +1316,7 @@
       "tarjetas": [],
       "resultado": "G",
       "margen": 16,
-      "rival": "SILICIUS ALCOBENDAS C",
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
       "nota": 5.6,
       "foto": ""
     },
@@ -1195,7 +1369,41 @@
       "foto": ""
     },
     {
-      "nombre": "LUIS ACEDO ISAC",
+      "nombre": "JAVIER PEREZ-VALENZUELA GUTIERREZ",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "URIEL MAXIMO TONIETTI",
+      "equipo": "QUIJOTE - GORILAS",
+      "dorsal": 7,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "SILICIUS ALCOBENDAS C",
+      "nota": 13.6,
+      "foto": ""
+    },
+    {
+      "nombre": "FRANCISCO DE BORJA SÁNCHEZ LIMÓN",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 7,
       "puntos": 0,
@@ -1243,8 +1451,8 @@
       "foto": ""
     },
     {
-      "nombre": "GONZALO HERNÁNDEZ RODRÍGUEZ",
-      "equipo": "QUIJOTE - GORILAS",
+      "nombre": "GONZALO SAN ROMAN MORANT",
+      "equipo": "CAU MADRID",
       "dorsal": 7,
       "puntos": 0,
       "ensayos": 0,
@@ -1254,7 +1462,7 @@
       "tarjetas": [],
       "resultado": "G",
       "margen": 16,
-      "rival": "SILICIUS ALCOBENDAS C",
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
       "nota": 5.6,
       "foto": ""
     },
@@ -1275,22 +1483,6 @@
       "foto": ""
     },
     {
-      "nombre": "ROBERTO RAMOS JIMENEZ",
-      "equipo": "REAL CANOE N.C.",
-      "dorsal": 7,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -31,
-      "rival": "RUGBY ALCALÁ ROJO",
-      "nota": 5.0,
-      "foto": ""
-    },
-    {
       "nombre": "LUIS GONZAGA MENENDEZ LOPEZ",
       "equipo": "SILICIUS ALCOBENDAS C",
       "dorsal": 7,
@@ -1304,6 +1496,38 @@
       "margen": -16,
       "rival": "QUIJOTE - GORILAS",
       "nota": -1.6,
+      "foto": ""
+    },
+    {
+      "nombre": "BORJA PEREZ ORTEGA",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "DAVID RODRIGUEZ RODRIGUEZ",
+      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "dorsal": 8,
+      "puntos": 15,
+      "ensayos": 1,
+      "conversiones": 5,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 30,
+      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
+      "nota": 25.0,
       "foto": ""
     },
     {
@@ -1339,19 +1563,21 @@
       "foto": ""
     },
     {
-      "nombre": "FRANCISCO DE BORJA SÁNCHEZ LIMÓN",
-      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nombre": "ACHRAF BRINI DAHBI",
+      "equipo": "CAU MADRID",
       "dorsal": 8,
       "puntos": 0,
       "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [],
+      "tarjetas": [
+        "amarilla"
+      ],
       "resultado": "G",
-      "margen": 30,
-      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
-      "nota": 7.0,
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 1.6,
       "foto": ""
     },
     {
@@ -1403,6 +1629,22 @@
       "foto": ""
     },
     {
+      "nombre": "DAVID RENAUX",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
       "nombre": "ALVARO FERNANDEZ CARMONA",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 9,
@@ -1419,7 +1661,7 @@
       "foto": ""
     },
     {
-      "nombre": "ANDREI TRAIAN TATU PANA",
+      "nombre": "VICENTE ORDOÑEZ SERRATO",
       "equipo": "CAU MADRID",
       "dorsal": 9,
       "puntos": 5,
@@ -1448,6 +1690,38 @@
       "margen": 31,
       "rival": "REAL CANOE N.C.",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "RODRIGO LAZARO DE MIGUEL",
+      "equipo": "QUIJOTE - GORILAS",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "SILICIUS ALCOBENDAS C",
+      "nota": 5.6,
+      "foto": ""
+    },
+    {
+      "nombre": "JOSÉ MARÍA VALLADARES RODRÍGUEZ",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 9,
+      "puntos": 2,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -1.0,
       "foto": ""
     },
     {
@@ -1499,38 +1773,6 @@
       "foto": ""
     },
     {
-      "nombre": "DIEGO VOZMEDIANO FONTECHA",
-      "equipo": "REAL CANOE N.C.",
-      "dorsal": 9,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -31,
-      "rival": "RUGBY ALCALÁ ROJO",
-      "nota": -3.0,
-      "foto": ""
-    },
-    {
-      "nombre": "DAVID RODRIGUEZ RODRIGUEZ",
-      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
-      "dorsal": 10,
-      "puntos": 15,
-      "ensayos": 1,
-      "conversiones": 5,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 30,
-      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
-      "nota": 25.0,
-      "foto": ""
-    },
-    {
       "nombre": "LORENZO RAGNACCI",
       "equipo": "CAU MADRID",
       "dorsal": 10,
@@ -1563,6 +1805,22 @@
       "foto": ""
     },
     {
+      "nombre": "PEDRO FERNADEZ ACERETE",
+      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 30,
+      "rival": "AHORRAMAS VALLECAS R.U. ROJO",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
       "nombre": "OIER ASTORKIA AZKUNA",
       "equipo": "QUIJOTE - GORILAS",
       "dorsal": 10,
@@ -1576,6 +1834,22 @@
       "margen": 16,
       "rival": "SILICIUS ALCOBENDAS C",
       "nota": 5.6,
+      "foto": ""
+    },
+    {
+      "nombre": "MARCOS ANDRE OLIVEIRA MARTINS DO NASCIMIENTO COELHO",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 10,
+      "puntos": 2,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -1.0,
       "foto": ""
     },
     {
@@ -1627,6 +1901,22 @@
       "foto": ""
     },
     {
+      "nombre": "DANIEL SERRANO SANCHEZ",
+      "equipo": "CAU MADRID",
+      "dorsal": 11,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 13.6,
+      "foto": ""
+    },
+    {
       "nombre": "JOSE CARLOS GUTIERREZ VALMORISCO",
       "equipo": "QUIJOTE - GORILAS",
       "dorsal": 11,
@@ -1643,7 +1933,7 @@
       "foto": ""
     },
     {
-      "nombre": "PEDRO FERNADEZ ACERETE",
+      "nombre": "ALEJANDRO ARDILA MORENO",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 11,
       "puntos": 0,
@@ -1707,6 +1997,22 @@
       "foto": ""
     },
     {
+      "nombre": "GABRIEL VALLADARES RODRIGUEZ",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
       "nombre": "IÑIGO GARCIA-CRUCES HERNANDEZ",
       "equipo": "COMPLUTENSE CISNEROS SIXTO",
       "dorsal": 11,
@@ -1741,7 +2047,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALEJANDRO ARDILA MORENO",
+      "nombre": "JHOAN MANUEL FERNANDEZ SUAREZ",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 12,
       "puntos": 0,
@@ -1754,6 +2060,22 @@
       "margen": 30,
       "rival": "AHORRAMAS VALLECAS R.U. ROJO",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "JUAN ALAMOS LOPEZ",
+      "equipo": "CAU MADRID",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 5.6,
       "foto": ""
     },
     {
@@ -1855,7 +2177,7 @@
       "foto": ""
     },
     {
-      "nombre": "JHOAN MANUEL FERNANDEZ SUAREZ",
+      "nombre": "HECTOR DIEGO SEVILLA SANCHEZ",
       "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
       "dorsal": 13,
       "puntos": 0,
@@ -1871,7 +2193,7 @@
       "foto": ""
     },
     {
-      "nombre": "JOSE ANDRES RUIZ DE LA OLIVA",
+      "nombre": "ROBERTO ALONSO RUIZ",
       "equipo": "QUIJOTE - GORILAS",
       "dorsal": 13,
       "puntos": 0,
@@ -1884,6 +2206,24 @@
       "margen": 16,
       "rival": "SILICIUS ALCOBENDAS C",
       "nota": 5.6,
+      "foto": ""
+    },
+    {
+      "nombre": "ALEXIS JOSÉ ALVAREZ ESPINAL",
+      "equipo": "CAU MADRID",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 1.6,
       "foto": ""
     },
     {
@@ -1935,8 +2275,24 @@
       "foto": ""
     },
     {
-      "nombre": "RODRIGO OSORIO CERRADA",
-      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "nombre": "JAIME RODRÍGUEZ MORALES",
+      "equipo": "REAL CANOE N.C.",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "JORGE LIRES URBANO",
+      "equipo": "CAU MADRID",
       "dorsal": 14,
       "puntos": 5,
       "ensayos": 1,
@@ -1945,9 +2301,25 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 13.6,
+      "foto": ""
+    },
+    {
+      "nombre": "NUÑO FERNÁNDEZ DEL RIEGO",
+      "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
       "margen": 30,
       "rival": "AHORRAMAS VALLECAS R.U. ROJO",
-      "nota": 15.0,
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -1983,7 +2355,7 @@
       "foto": ""
     },
     {
-      "nombre": "ROBERTO ALONSO RUIZ",
+      "nombre": "JOSE ANDRES RUIZ DE LA OLIVA",
       "equipo": "QUIJOTE - GORILAS",
       "dorsal": 14,
       "puntos": 0,
@@ -2031,7 +2403,7 @@
       "foto": ""
     },
     {
-      "nombre": "JAIME RODRÍGUEZ MORALES",
+      "nombre": "RUI FERNANDO MUM DE SOUSA CASTRO MARTINS",
       "equipo": "REAL CANOE N.C.",
       "dorsal": 14,
       "puntos": 0,
@@ -2039,11 +2411,13 @@
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [],
+      "tarjetas": [
+        "roja"
+      ],
       "resultado": "P",
       "margen": -31,
       "rival": "RUGBY ALCALÁ ROJO",
-      "nota": -3.0,
+      "nota": -13.0,
       "foto": ""
     },
     {
@@ -2095,6 +2469,38 @@
       "foto": ""
     },
     {
+      "nombre": "DIEGO BERNAL LAORDEN",
+      "equipo": "CAU MADRID",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "COMPLUTENSE CISNEROS SIXTO",
+      "nota": 5.6,
+      "foto": ""
+    },
+    {
+      "nombre": "MARCO DIAZ MACEDA",
+      "equipo": "QUIJOTE - GORILAS",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 16,
+      "rival": "SILICIUS ALCOBENDAS C",
+      "nota": 5.6,
+      "foto": ""
+    },
+    {
       "nombre": "LEONARDO ESTEBAN SIMONE IBAÑEZ",
       "equipo": "SILICIUS ALCOBENDAS C",
       "dorsal": 15,
@@ -2111,21 +2517,19 @@
       "foto": ""
     },
     {
-      "nombre": "ACHRAF BRINI DAHBI",
-      "equipo": "CAU MADRID",
+      "nombre": "DIEGO VOZMEDIANO FONTECHA",
+      "equipo": "REAL CANOE N.C.",
       "dorsal": 15,
       "puntos": 0,
       "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
-      "resultado": "G",
-      "margen": 16,
-      "rival": "COMPLUTENSE CISNEROS SIXTO",
-      "nota": 1.6,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -31,
+      "rival": "RUGBY ALCALÁ ROJO",
+      "nota": -3.0,
       "foto": ""
     }
   ],
@@ -2795,45 +3199,17 @@
     ],
     "banquillo": [
       {
-        "nombre": "HUGO DE LA HOZ PEREZ",
-        "equipo": "CAU MADRID",
-        "valor": 6,
-        "detalle": "",
-        "rival": ""
-      },
-      {
-        "nombre": "DANIEL SERRANO SANCHEZ",
-        "equipo": "CAU MADRID",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "FRANCISCO GOMEZ COSTA",
-        "equipo": "QUIJOTE - GORILAS",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "JORGE LIRES URBANO",
-        "equipo": "CAU MADRID",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "VICENTE ORDOÑEZ SERRATO",
-        "equipo": "CAU MADRID",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "MARCOS ANDRE OLIVEIRA MARTINS DO NASCIMIENTO COELHO",
+        "nombre": "ROBERTO RAMOS JIMENEZ",
         "equipo": "REAL CANOE N.C.",
-        "valor": 2,
-        "detalle": "",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "RODRIGO OSORIO CERRADA",
+        "equipo": "MAD BOADILLA - RUGBY ALCORCÓN",
+        "valor": 5,
+        "detalle": "1 ensayo",
         "rival": ""
       }
     ],

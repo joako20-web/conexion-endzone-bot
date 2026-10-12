@@ -111,6 +111,26 @@ def clasificacion(raw: bytes, base: str) -> list[FilaClasificacion]:
     return filas
 
 
+def posiciones(titulares: list[Jugador], suplentes: list[Jugador]) -> list[Jugador]:
+    """Pone en `dorsal` la posición real de cada jugador.
+
+    En las federaciones de MatchReady (Madrid, Cataluña, Euskadi, Andalucía) el número
+    de la camiseta es libre (90, 111...), pero el acta lista a los titulares en orden de
+    posición: el 9.º de la lista es el medio melé aunque lleve el 12. Si el equipo usa
+    justo los dorsales 1-15 se respeta el dorsal (a veces la lista viene algo desordenada).
+    Los suplentes van del 16 en adelante aunque su camiseta sea más baja.
+    """
+    numerados = sorted(j.dorsal for j in titulares) == list(range(1, 16))
+    for i, j in enumerate(titulares):
+        posicion = j.dorsal if numerados else i + 1
+        if posicion != j.dorsal:
+            j.camiseta, j.dorsal = j.dorsal, posicion
+    for i, j in enumerate(suplentes):
+        if j.dorsal <= 15:
+            j.camiseta, j.dorsal = j.dorsal, 16 + i
+    return titulares + suplentes
+
+
 def acta(raw: bytes, id_partido: int, local: str, visitante: str) -> Acta:
     """Acta a partir de la página de estadísticas del partido.
 
@@ -129,8 +149,15 @@ def acta(raw: bytes, id_partido: int, local: str, visitante: str) -> Acta:
                 jugadores.append(Jugador(_jugador(_t(td[2])), _int(_t(td[0]))))
         alineaciones.append(jugadores)
     # Orden en la página: titulares local, suplentes local, titulares visitante, suplentes visitante
-    al_local = alineaciones[0] + (alineaciones[1] if len(alineaciones) > 3 else [])
-    al_vis = (alineaciones[2] + alineaciones[3]) if len(alineaciones) > 3 else (alineaciones[1] if len(alineaciones) > 1 else [])
+    # (algunas actas no traen alineaciones o no traen banquillo)
+    if len(alineaciones) >= 4:
+        tit_l, sup_l, tit_v, sup_v = alineaciones[:4]
+    elif len(alineaciones) >= 2:
+        (tit_l, tit_v), sup_l, sup_v = alineaciones[:2], [], []
+    else:
+        tit_l, sup_l, tit_v, sup_v = (alineaciones or [[]])[0], [], [], []
+    al_local = posiciones(tit_l, sup_l)
+    al_vis = posiciones(tit_v, sup_v)
 
     eventos: list[Evento] = []
     for equipo, portlet in zip((local, visitante), _seccion(s, "Anotadores")):

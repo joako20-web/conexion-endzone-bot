@@ -185,7 +185,7 @@
     {
       "nombre": "DANIEL GOMEZ GARCIA",
       "equipo": "SAN ISIDRO TRES OLIVOS",
-      "dorsal": 48,
+      "dorsal": 13,
       "puntos": 15,
       "ensayos": 3,
       "conversiones": 0,
@@ -217,7 +217,7 @@
     {
       "nombre": "RICARDO CALLEJA ALLUE",
       "equipo": "SAN ISIDRO TRES OLIVOS",
-      "dorsal": 22,
+      "dorsal": 15,
       "puntos": 13,
       "ensayos": 1,
       "conversiones": 4,
@@ -249,7 +249,7 @@
     {
       "nombre": "ADRIAN SERRANO ALEGRE",
       "equipo": "TASMAN RUGBY BOADILLA",
-      "dorsal": 20,
+      "dorsal": 10,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -313,7 +313,7 @@
     {
       "nombre": "VICTOR FERNANDEZ DE LA ROSA",
       "equipo": "TASMAN RUGBY BOADILLA",
-      "dorsal": 10,
+      "dorsal": 15,
       "puntos": 10,
       "ensayos": 0,
       "conversiones": 5,
@@ -333,7 +333,7 @@
     {
       "nombre": "DANIEL GOMEZ GARCIA",
       "equipo": "SAN ISIDRO TRES OLIVOS",
-      "dorsal": 48,
+      "dorsal": 13,
       "puntos": 15,
       "ensayos": 3,
       "conversiones": 0,
@@ -349,7 +349,7 @@
     {
       "nombre": "ADRIAN SERRANO ALEGRE",
       "equipo": "TASMAN RUGBY BOADILLA",
-      "dorsal": 20,
+      "dorsal": 10,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -413,11 +413,11 @@
   ],
   "xv_ideal": {
     "1": {
-      "nombre": "FRANCISCO JESÚS LATORRE DOMINGUEZ",
+      "nombre": "FEDERICO PODZUN PARDO",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 1,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
@@ -425,7 +425,7 @@
       "resultado": "G",
       "margen": 35,
       "rival": "XV HORTALEZA ROJO",
-      "nota": 7.0,
+      "nota": 15.0,
       "foto": ""
     },
     "2": {
@@ -445,7 +445,7 @@
       "foto": ""
     },
     "3": {
-      "nombre": "HUGO JUSTHIN JUSTINIANO MONTAÑO",
+      "nombre": "ÍÑIGO ÁLVARO SABATÉ",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 3,
       "puntos": 0,
@@ -461,9 +461,9 @@
       "foto": ""
     },
     "4": {
-      "nombre": "FRANCO MAURO MARTINEZ SANCHEZ",
-      "equipo": "CLUB RUGBY ALCALÁ",
-      "dorsal": 4,
+      "nombre": "CARLOS GARCIA FERRUA",
+      "equipo": "TASMAN RUGBY BOADILLA",
+      "dorsal": 5,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -471,25 +471,25 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 15,
-      "rival": "OLÍMPICO DE POZUELO B",
-      "nota": 13.5,
+      "margen": 35,
+      "rival": "XV HORTALEZA ROJO",
+      "nota": 15.0,
       "foto": ""
     },
     "5": {
-      "nombre": "ALVARO VICO SANCHEZ",
-      "equipo": "TASMAN RUGBY BOADILLA",
+      "nombre": "PABLO FERNÁNDEZ IRIBAS",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
       "dorsal": 5,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 35,
-      "rival": "XV HORTALEZA ROJO",
-      "nota": 7.0,
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 15.0,
       "foto": ""
     },
     "6": {
@@ -589,6 +589,22 @@
       "foto": ""
     },
     "12": {
+      "nombre": "DANIEL GOMEZ GARCIA",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 13,
+      "puntos": 15,
+      "ensayos": 3,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 31.0,
+      "foto": ""
+    },
+    "13": {
       "nombre": "TOMAS FERNANDEZ VELILLA",
       "equipo": "COMPLUTENSE CISNEROS CINCO",
       "dorsal": 13,
@@ -601,22 +617,6 @@
       "resultado": "G",
       "margen": 60,
       "rival": "OSOS DEL PARDO",
-      "nota": 15.0,
-      "foto": ""
-    },
-    "13": {
-      "nombre": "CARLOS GARCIA FERRUA",
-      "equipo": "TASMAN RUGBY BOADILLA",
-      "dorsal": 13,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 35,
-      "rival": "XV HORTALEZA ROJO",
       "nota": 15.0,
       "foto": ""
     },
@@ -656,8 +656,24 @@
   "foto_portada": null,
   "candidatos_xv": [
     {
-      "nombre": "FRANCISCO JESÚS LATORRE DOMINGUEZ",
+      "nombre": "FEDERICO PODZUN PARDO",
       "equipo": "TASMAN RUGBY BOADILLA",
+      "dorsal": 1,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 35,
+      "rival": "XV HORTALEZA ROJO",
+      "nota": 15.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MARIO SANCHEZ GARCIA",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
       "dorsal": 1,
       "puntos": 0,
       "ensayos": 0,
@@ -666,8 +682,8 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 35,
-      "rival": "XV HORTALEZA ROJO",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
       "nota": 7.0,
       "foto": ""
     },
@@ -784,7 +800,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALEJANDRO VILLA MADRUGA",
+      "nombre": "LUCAS SANZ ALONSO",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 1,
       "puntos": 0,
@@ -796,6 +812,22 @@
       "resultado": "P",
       "margen": -35,
       "rival": "TASMAN RUGBY BOADILLA",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "KEVIN JOSÉ APONTE GONZALEZ",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
       "nota": -3.0,
       "foto": ""
     },
@@ -832,7 +864,23 @@
       "foto": ""
     },
     {
-      "nombre": "ASIER ROMERO PLAZA",
+      "nombre": "KEVIN CASTILLO JARAMILLO",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "FRANCISCO JESÚS LATORRE DOMINGUEZ",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 2,
       "puntos": 0,
@@ -928,7 +976,7 @@
       "foto": ""
     },
     {
-      "nombre": "GUILLERMO RODERO LARRAZ",
+      "nombre": "MATEO GUTIERREZ SERRALLER",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 2,
       "puntos": 0,
@@ -944,7 +992,7 @@
       "foto": ""
     },
     {
-      "nombre": "TEODORO LOPEZ IGLESIAS",
+      "nombre": "AARON APOSTOLES DOMINGUEZ",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 2,
       "puntos": 0,
@@ -960,7 +1008,7 @@
       "foto": ""
     },
     {
-      "nombre": "KEVIN JOSÉ APONTE GONZALEZ",
+      "nombre": "VALENTIN JEAN BAPTISTE HEYER",
       "equipo": "OSOS DEL PARDO",
       "dorsal": 2,
       "puntos": 0,
@@ -992,7 +1040,23 @@
       "foto": ""
     },
     {
-      "nombre": "HUGO JUSTHIN JUSTINIANO MONTAÑO",
+      "nombre": "GUILLERMO SANZ SORIA",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ÍÑIGO ÁLVARO SABATÉ",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 3,
       "puntos": 0,
@@ -1040,6 +1104,22 @@
       "foto": ""
     },
     {
+      "nombre": "JAVIER PERERA ANCHUSTEGUI",
+      "equipo": "OLÍMPICO DE POZUELO B",
+      "dorsal": 3,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -15,
+      "rival": "CLUB RUGBY ALCALÁ",
+      "nota": 6.5,
+      "foto": ""
+    },
+    {
       "nombre": "HUGO ANDRES LOPEZ",
       "equipo": "CLUB RUGBY ALCALÁ",
       "dorsal": 3,
@@ -1056,7 +1136,7 @@
       "foto": ""
     },
     {
-      "nombre": "RODRIGO LUEJE RIPOLL",
+      "nombre": "JACOBO AMEIJIDE CALLEJA",
       "equipo": "AERONÁUTICOS BARRIO DEL PILAR",
       "dorsal": 3,
       "puntos": 0,
@@ -1088,23 +1168,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALVARO CASTILLO LEIRANA",
-      "equipo": "OLÍMPICO DE POZUELO B",
-      "dorsal": 3,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -15,
-      "rival": "CLUB RUGBY ALCALÁ",
-      "nota": -1.5,
-      "foto": ""
-    },
-    {
-      "nombre": "ANTONIO MARTINEZ SANTOS",
+      "nombre": "GUILLERMO RODERO LARRAZ",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 3,
       "puntos": 0,
@@ -1116,6 +1180,54 @@
       "resultado": "P",
       "margen": -33,
       "rival": "SAN ISIDRO TRES OLIVOS",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "TEODORO LOPEZ IGLESIAS",
+      "equipo": "XV HORTALEZA ROJO",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -35,
+      "rival": "TASMAN RUGBY BOADILLA",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "DAVID MARTIN MATA SANCHEZ",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "PABLO DIAZ ORTIZ",
+      "equipo": "PDM RUGBY TOLEDO",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -52,
+      "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
       "nota": -3.0,
       "foto": ""
     },
@@ -1152,7 +1264,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARIO SANCHEZ GARCIA",
+      "nombre": "ALEJANDRO LAFUENTE LÓPEZ DEL HIERRO",
       "equipo": "SAN ISIDRO TRES OLIVOS",
       "dorsal": 4,
       "puntos": 0,
@@ -1168,7 +1280,7 @@
       "foto": ""
     },
     {
-      "nombre": "DIEGO ETCHEVERRY FERNANDEZ",
+      "nombre": "ALVARO DELICADO ALONSO",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 4,
       "puntos": 0,
@@ -1248,7 +1360,7 @@
       "foto": ""
     },
     {
-      "nombre": "MARIO GONZALEZ MARTIN",
+      "nombre": "ANTONIO MARTINEZ SANTOS",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 4,
       "puntos": 0,
@@ -1264,7 +1376,7 @@
       "foto": ""
     },
     {
-      "nombre": "EDUARDO DELGADO BEJARANO",
+      "nombre": "DAVID ACASUSO GARCIA",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 4,
       "puntos": 0,
@@ -1280,7 +1392,7 @@
       "foto": ""
     },
     {
-      "nombre": "GONZALO CRUZ SADA",
+      "nombre": "CARLOS DE ROS BRUTAU",
       "equipo": "OSOS DEL PARDO",
       "dorsal": 4,
       "puntos": 0,
@@ -1296,7 +1408,7 @@
       "foto": ""
     },
     {
-      "nombre": "CARLOS LOPEZ GAYOLO",
+      "nombre": "ADRIAN BUENO MENDEZ",
       "equipo": "PDM RUGBY TOLEDO",
       "dorsal": 4,
       "puntos": 0,
@@ -1312,11 +1424,11 @@
       "foto": ""
     },
     {
-      "nombre": "FRANCISCO NOVELLA NUÑEZ",
+      "nombre": "PABLO FERNÁNDEZ IRIBAS",
       "equipo": "SAN ISIDRO TRES OLIVOS",
       "dorsal": 5,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
@@ -1324,15 +1436,15 @@
       "resultado": "G",
       "margen": 33,
       "rival": "GETAFE CLUB DE RUGBY",
-      "nota": 7.0,
+      "nota": 15.0,
       "foto": ""
     },
     {
-      "nombre": "ALVARO VICO SANCHEZ",
+      "nombre": "CARLOS GARCIA FERRUA",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 5,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
@@ -1340,7 +1452,7 @@
       "resultado": "G",
       "margen": 35,
       "rival": "XV HORTALEZA ROJO",
-      "nota": 7.0,
+      "nota": 15.0,
       "foto": ""
     },
     {
@@ -1392,6 +1504,22 @@
       "foto": ""
     },
     {
+      "nombre": "MARCOS MUÑIZ DEL SASTRE",
+      "equipo": "AERONÁUTICOS BARRIO DEL PILAR",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "RUGBY UNIÓN NORTE",
+      "nota": 4.5,
+      "foto": ""
+    },
+    {
       "nombre": "DIEGO AGUSTÍN PÉREZ BAEZ",
       "equipo": "RUGBY UNIÓN NORTE",
       "dorsal": 5,
@@ -1424,7 +1552,7 @@
       "foto": ""
     },
     {
-      "nombre": "PABLO ALONSO MARTÍNEZ",
+      "nombre": "MARIO GONZALEZ MARTIN",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 5,
       "puntos": 0,
@@ -1440,7 +1568,7 @@
       "foto": ""
     },
     {
-      "nombre": "DANIEL VÁZQUEZ DÍAZ",
+      "nombre": "FAYVER MAURICIO ZAPATA DUARTE",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 5,
       "puntos": 0,
@@ -1456,7 +1584,7 @@
       "foto": ""
     },
     {
-      "nombre": "CARLOS MARTIN GOMEZ DE SANTIAGO",
+      "nombre": "SERGIO SOLANAS MOZUN",
       "equipo": "OSOS DEL PARDO",
       "dorsal": 5,
       "puntos": 0,
@@ -1472,7 +1600,7 @@
       "foto": ""
     },
     {
-      "nombre": "ADRIAN BUENO MENDEZ",
+      "nombre": "CARLOS LOPEZ GAYOLO",
       "equipo": "PDM RUGBY TOLEDO",
       "dorsal": 5,
       "puntos": 0,
@@ -1520,7 +1648,23 @@
       "foto": ""
     },
     {
-      "nombre": "ÍÑIGO ÁLVARO SABATÉ",
+      "nombre": "YAGO MATEOS GATA",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "MARCOS FERNANDEZ DE LA ROSA",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 6,
       "puntos": 0,
@@ -1549,22 +1693,6 @@
       "margen": 15,
       "rival": "OLÍMPICO DE POZUELO B",
       "nota": 5.5,
-      "foto": ""
-    },
-    {
-      "nombre": "JAVIER SEGUÍ CORBATÓN",
-      "equipo": "OSOS DEL PARDO",
-      "dorsal": 6,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -60,
-      "rival": "COMPLUTENSE CISNEROS CINCO",
-      "nota": 5.0,
       "foto": ""
     },
     {
@@ -1632,7 +1760,7 @@
       "foto": ""
     },
     {
-      "nombre": "DAVID ACASUSO GARCIA",
+      "nombre": "JULIO ASENSIO FERNANDEZ",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 6,
       "puntos": 0,
@@ -1645,6 +1773,54 @@
       "margen": -35,
       "rival": "TASMAN RUGBY BOADILLA",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "VICTOR MANUEL JAQUEZ RODRÍGUEZ",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "PASQUALE INTINGHERO",
+      "equipo": "PDM RUGBY TOLEDO",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -52,
+      "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "GONZALO PEREZ DE LA VEGA",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -1776,7 +1952,7 @@
       "foto": ""
     },
     {
-      "nombre": "GREGOIRE RONDEAU",
+      "nombre": "FERMIN AROCA ESTEVE",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 7,
       "puntos": 0,
@@ -1792,19 +1968,35 @@
       "foto": ""
     },
     {
-      "nombre": "FEDERICO PODZUN PARDO",
-      "equipo": "TASMAN RUGBY BOADILLA",
-      "dorsal": 8,
-      "puntos": 5,
-      "ensayos": 1,
+      "nombre": "MARCOS ADÁN RODRÍGUEZ",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "G",
-      "margen": 35,
-      "rival": "XV HORTALEZA ROJO",
-      "nota": 15.0,
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "JOSE MANUEL OLIVARES PEREZ BUSTOS",
+      "equipo": "PDM RUGBY TOLEDO",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -52,
+      "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
+      "nota": -3.0,
       "foto": ""
     },
     {
@@ -1840,6 +2032,38 @@
       "foto": ""
     },
     {
+      "nombre": "JOSE LUIS AVILES MOLINA",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ALVARO VICO SANCHEZ",
+      "equipo": "TASMAN RUGBY BOADILLA",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 35,
+      "rival": "XV HORTALEZA ROJO",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
       "nombre": "JOSE MIGUEL PERNAS SELGAS",
       "equipo": "INGENIEROS INDUSTRIALES LAS ROZAS",
       "dorsal": 8,
@@ -1872,7 +2096,7 @@
       "foto": ""
     },
     {
-      "nombre": "JACOBO AMEIJIDE CALLEJA",
+      "nombre": "IGOR MARINE IVANOVA",
       "equipo": "AERONÁUTICOS BARRIO DEL PILAR",
       "dorsal": 8,
       "puntos": 0,
@@ -1922,7 +2146,7 @@
       "foto": ""
     },
     {
-      "nombre": "JULIO ASENSIO FERNANDEZ",
+      "nombre": "ALEJANDRO VILLA MADRUGA",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 8,
       "puntos": 0,
@@ -1938,7 +2162,7 @@
       "foto": ""
     },
     {
-      "nombre": "PIERRE BERTREUX",
+      "nombre": "CARLOS MARTIN GOMEZ DE SANTIAGO",
       "equipo": "OSOS DEL PARDO",
       "dorsal": 8,
       "puntos": 0,
@@ -1954,7 +2178,7 @@
       "foto": ""
     },
     {
-      "nombre": "ALVARO LILLO ROMAN",
+      "nombre": "LUIS VIÑUALES TOLEDANO",
       "equipo": "PDM RUGBY TOLEDO",
       "dorsal": 8,
       "puntos": 0,
@@ -2002,7 +2226,7 @@
       "foto": ""
     },
     {
-      "nombre": "PABLO MARTIN BERMEJO",
+      "nombre": "PABLO VIDAL MUÑOZ",
       "equipo": "SAN ISIDRO TRES OLIVOS",
       "dorsal": 9,
       "puntos": 0,
@@ -2114,7 +2338,7 @@
       "foto": ""
     },
     {
-      "nombre": "JESUS OSCAR SANZ MONGE",
+      "nombre": "JUAN ALONSO DE CELADA FERNÁNDEZ DEL PINO",
       "equipo": "XV HORTALEZA ROJO",
       "dorsal": 9,
       "puntos": 0,
@@ -2130,7 +2354,7 @@
       "foto": ""
     },
     {
-      "nombre": "BRUNO MARÍN SÁNCHEZ-CUENCA",
+      "nombre": "ALVARO CRUZ SADA",
       "equipo": "OSOS DEL PARDO",
       "dorsal": 9,
       "puntos": 0,
@@ -2178,6 +2402,22 @@
       "foto": ""
     },
     {
+      "nombre": "ADRIAN SERRANO ALEGRE",
+      "equipo": "TASMAN RUGBY BOADILLA",
+      "dorsal": 10,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 35,
+      "rival": "XV HORTALEZA ROJO",
+      "nota": 23.0,
+      "foto": ""
+    },
+    {
       "nombre": "ILAN SANCHEZ QUINTANA",
       "equipo": "COMPLUTENSE CISNEROS CINCO",
       "dorsal": 10,
@@ -2210,21 +2450,19 @@
       "foto": ""
     },
     {
-      "nombre": "VICTOR FERNANDEZ DE LA ROSA",
-      "equipo": "TASMAN RUGBY BOADILLA",
+      "nombre": "JAVIER DE TORRES LOPEZ",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
       "dorsal": 10,
-      "puntos": 10,
-      "ensayos": 0,
-      "conversiones": 5,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [
-        "amarilla"
-      ],
+      "tarjetas": [],
       "resultado": "G",
-      "margen": 35,
-      "rival": "XV HORTALEZA ROJO",
-      "nota": 13.0,
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 15.0,
       "foto": ""
     },
     {
@@ -2241,22 +2479,6 @@
       "margen": 5,
       "rival": "RUGBY UNIÓN NORTE",
       "nota": 12.5,
-      "foto": ""
-    },
-    {
-      "nombre": "DAVID PLAZA MIER",
-      "equipo": "SAN ISIDRO TRES OLIVOS",
-      "dorsal": 10,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 33,
-      "rival": "GETAFE CLUB DE RUGBY",
-      "nota": 7.0,
       "foto": ""
     },
     {
@@ -2324,6 +2546,38 @@
       "foto": ""
     },
     {
+      "nombre": "HUGO OTURA FERNANDEZ",
+      "equipo": "XV HORTALEZA ROJO",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -35,
+      "rival": "TASMAN RUGBY BOADILLA",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "GONZALO CRUZ SADA",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
       "nombre": "JAVIER MÉNDEZ OCHOA",
       "equipo": "INGENIEROS INDUSTRIALES LAS ROZAS",
       "dorsal": 11,
@@ -2356,7 +2610,23 @@
       "foto": ""
     },
     {
-      "nombre": "MARCOS FERNANDEZ DE LA ROSA",
+      "nombre": "NIKOLAY RODRIGUEZ PETROV",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ASIER ROMERO PLAZA",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 11,
       "puntos": 0,
@@ -2385,6 +2655,22 @@
       "margen": 60,
       "rival": "OSOS DEL PARDO",
       "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "LUIS PALOMO DE ONÍS HERNÁNDEZ",
+      "equipo": "XV HORTALEZA ROJO",
+      "dorsal": 11,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -35,
+      "rival": "TASMAN RUGBY BOADILLA",
+      "nota": 5.0,
       "foto": ""
     },
     {
@@ -2436,8 +2722,8 @@
       "foto": ""
     },
     {
-      "nombre": "JESÚS ALFONSO VERGARA CONTRERAS",
-      "equipo": "XV HORTALEZA ROJO",
+      "nombre": "CARLOS GRANDE PINTOR",
+      "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 11,
       "puntos": 0,
       "ensayos": 0,
@@ -2446,8 +2732,24 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "P",
-      "margen": -35,
-      "rival": "TASMAN RUGBY BOADILLA",
+      "margen": -33,
+      "rival": "SAN ISIDRO TRES OLIVOS",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "BRUNO MARÍN SÁNCHEZ-CUENCA",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
       "nota": -3.0,
       "foto": ""
     },
@@ -2465,6 +2767,38 @@
       "margen": -52,
       "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "GREGORIO PEDRO ATARES",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "DIEGO ETCHEVERRY FERNANDEZ",
+      "equipo": "TASMAN RUGBY BOADILLA",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 35,
+      "rival": "XV HORTALEZA ROJO",
+      "nota": 7.0,
       "foto": ""
     },
     {
@@ -2580,19 +2914,67 @@
       "foto": ""
     },
     {
-      "nombre": "CARLOS GARCIA FERRUA",
-      "equipo": "TASMAN RUGBY BOADILLA",
+      "nombre": "MIGUEL ABELLO MURUBE",
+      "equipo": "XV HORTALEZA ROJO",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -35,
+      "rival": "TASMAN RUGBY BOADILLA",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "PIERRE BERTREUX",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "JOSE ALBERTO MORA LUNA",
+      "equipo": "PDM RUGBY TOLEDO",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -52,
+      "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "DANIEL GOMEZ GARCIA",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
       "dorsal": 13,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 15,
+      "ensayos": 3,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 35,
-      "rival": "XV HORTALEZA ROJO",
-      "nota": 15.0,
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 31.0,
       "foto": ""
     },
     {
@@ -2612,6 +2994,22 @@
       "foto": ""
     },
     {
+      "nombre": "HUGO JUSTHIN JUSTINIANO MONTAÑO",
+      "equipo": "TASMAN RUGBY BOADILLA",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 35,
+      "rival": "XV HORTALEZA ROJO",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
       "nombre": "ALEJANDRO MARTÍN ÁLVAREZ",
       "equipo": "INGENIEROS INDUSTRIALES LAS ROZAS",
       "dorsal": 13,
@@ -2628,6 +3026,22 @@
       "foto": ""
     },
     {
+      "nombre": "JOSE DEL OLMO FRAILE",
+      "equipo": "OLÍMPICO DE POZUELO B",
+      "dorsal": 13,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -15,
+      "rival": "CLUB RUGBY ALCALÁ",
+      "nota": 6.5,
+      "foto": ""
+    },
+    {
       "nombre": "ARES GONZALO MARTINEZ",
       "equipo": "CLUB RUGBY ALCALÁ",
       "dorsal": 13,
@@ -2641,6 +3055,22 @@
       "margen": 15,
       "rival": "OLÍMPICO DE POZUELO B",
       "nota": 5.5,
+      "foto": ""
+    },
+    {
+      "nombre": "JAVIER SEGUÍ CORBATÓN",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 13,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": 5.0,
       "foto": ""
     },
     {
@@ -2676,22 +3106,6 @@
       "foto": ""
     },
     {
-      "nombre": "PEDRO DÍAZ PAYNO",
-      "equipo": "OLÍMPICO DE POZUELO B",
-      "dorsal": 13,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -15,
-      "rival": "CLUB RUGBY ALCALÁ",
-      "nota": -1.5,
-      "foto": ""
-    },
-    {
       "nombre": "RAUL REBOLLO GUERRERO",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 13,
@@ -2708,7 +3122,23 @@
       "foto": ""
     },
     {
-      "nombre": "JOSE ALBERTO MORA LUNA",
+      "nombre": "DANIEL VÁZQUEZ DÍAZ",
+      "equipo": "XV HORTALEZA ROJO",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -35,
+      "rival": "TASMAN RUGBY BOADILLA",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "DANIEL LÓPEZ CARRASCO AVILA",
       "equipo": "PDM RUGBY TOLEDO",
       "dorsal": 13,
       "puntos": 0,
@@ -2772,7 +3202,23 @@
       "foto": ""
     },
     {
-      "nombre": "ALVARO FERRER FERNANDEZ",
+      "nombre": "PABLO MARTIN BERMEJO",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "SERGIO FERNANDEZ TAPIA",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 14,
       "puntos": 0,
@@ -2785,22 +3231,6 @@
       "margen": 35,
       "rival": "XV HORTALEZA ROJO",
       "nota": 7.0,
-      "foto": ""
-    },
-    {
-      "nombre": "LUIS PALOMO DE ONÍS HERNÁNDEZ",
-      "equipo": "XV HORTALEZA ROJO",
-      "dorsal": 14,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -35,
-      "rival": "TASMAN RUGBY BOADILLA",
-      "nota": 5.0,
       "foto": ""
     },
     {
@@ -2852,7 +3282,7 @@
       "foto": ""
     },
     {
-      "nombre": "CARLOS GRANDE PINTOR",
+      "nombre": "ALONSO HERNÁNDEZ ARIZA",
       "equipo": "GETAFE CLUB DE RUGBY",
       "dorsal": 14,
       "puntos": 0,
@@ -2865,6 +3295,72 @@
       "margen": -33,
       "rival": "SAN ISIDRO TRES OLIVOS",
       "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ANTONIO CANO RODRIGUEZ",
+      "equipo": "XV HORTALEZA ROJO",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -35,
+      "rival": "TASMAN RUGBY BOADILLA",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ALVARO LILLO ROMAN",
+      "equipo": "PDM RUGBY TOLEDO",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -52,
+      "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "VIRGILE MICHEL",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": -7.0,
+      "foto": ""
+    },
+    {
+      "nombre": "RICARDO CALLEJA ALLUE",
+      "equipo": "SAN ISIDRO TRES OLIVOS",
+      "dorsal": 15,
+      "puntos": 13,
+      "ensayos": 1,
+      "conversiones": 4,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 33,
+      "rival": "GETAFE CLUB DE RUGBY",
+      "nota": 23.0,
       "foto": ""
     },
     {
@@ -2916,19 +3412,21 @@
       "foto": ""
     },
     {
-      "nombre": "ALVARO DELICADO ALONSO",
+      "nombre": "VICTOR FERNANDEZ DE LA ROSA",
       "equipo": "TASMAN RUGBY BOADILLA",
       "dorsal": 15,
-      "puntos": 0,
+      "puntos": 10,
       "ensayos": 0,
-      "conversiones": 0,
+      "conversiones": 5,
       "golpes": 0,
       "drops": 0,
-      "tarjetas": [],
+      "tarjetas": [
+        "amarilla"
+      ],
       "resultado": "G",
       "margen": 35,
       "rival": "XV HORTALEZA ROJO",
-      "nota": 7.0,
+      "nota": 13.0,
       "foto": ""
     },
     {
@@ -2992,6 +3490,54 @@
       "resultado": "P",
       "margen": -33,
       "rival": "SAN ISIDRO TRES OLIVOS",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "RAUL PERALES LOSADA",
+      "equipo": "XV HORTALEZA ROJO",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -35,
+      "rival": "TASMAN RUGBY BOADILLA",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "JHON ANDRYKC MOLINA ZAMBRANO",
+      "equipo": "OSOS DEL PARDO",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -60,
+      "rival": "COMPLUTENSE CISNEROS CINCO",
+      "nota": -3.0,
+      "foto": ""
+    },
+    {
+      "nombre": "ANGEL LUIS MARMOL VALIÑA",
+      "equipo": "PDM RUGBY TOLEDO",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -52,
+      "rival": "INGENIEROS INDUSTRIALES LAS ROZAS",
       "nota": -3.0,
       "foto": ""
     }
@@ -3735,27 +4281,6 @@
     ],
     "banquillo": [
       {
-        "nombre": "DANIEL GOMEZ GARCIA",
-        "equipo": "SAN ISIDRO TRES OLIVOS",
-        "valor": 15,
-        "detalle": "3 ensayos",
-        "rival": ""
-      },
-      {
-        "nombre": "RICARDO CALLEJA ALLUE",
-        "equipo": "SAN ISIDRO TRES OLIVOS",
-        "valor": 13,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "ADRIAN SERRANO ALEGRE",
-        "equipo": "TASMAN RUGBY BOADILLA",
-        "valor": 10,
-        "detalle": "2 ensayos",
-        "rival": ""
-      },
-      {
         "nombre": "AARON EL KHARRAZ MUÑOZ",
         "equipo": "CLUB RUGBY ALCALÁ",
         "valor": 5,
@@ -3781,6 +4306,27 @@
         "equipo": "COMPLUTENSE CISNEROS CINCO",
         "valor": 5,
         "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "JOSÉ LUIS ARAMBURU MUGUIRO",
+        "equipo": "COMPLUTENSE CISNEROS CINCO",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "OSCAR JACK PRICE",
+        "equipo": "COMPLUTENSE CISNEROS CINCO",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "THOMAS HERAULT SICILIA",
+        "equipo": "COMPLUTENSE CISNEROS CINCO",
+        "valor": 2,
+        "detalle": "",
         "rival": ""
       }
     ],
