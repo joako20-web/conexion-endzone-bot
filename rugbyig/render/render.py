@@ -16,19 +16,21 @@ from __future__ import annotations
 
 import atexit
 import base64
+import hashlib
 import io
 import os
 import json
+import re
 from functools import lru_cache
 from datetime import datetime
 from pathlib import Path
 
-import yaml
 from jinja2 import Environment, FileSystemLoader
 from playwright.sync_api import sync_playwright
 
 from rugbyig.core.estadisticas import POSICIONES
 from rugbyig.pipeline import CONFIG, RAIZ, cargar_config
+from rugbyig.rutas import leer_yaml
 from rugbyig.render import nombres
 from rugbyig.scraper.isquad import compartido
 
@@ -392,19 +394,29 @@ def css_fuentes(tema: str) -> str:
     return "\n".join(reglas)
 
 
+@lru_cache(maxsize=4)
+def _logo_uri_cache(ruta: Path, mtime: float) -> str:
+    return _data_uri(ruta.read_bytes(), "image/png")
+
+
+def _logo_uri(ruta: Path) -> str:
+    """Logo en base64, calculado una vez (cada imagen lo incrusta)."""
+    return _logo_uri_cache(ruta, ruta.stat().st_mtime)
+
+
 def tema_actual() -> str:
     """Tema elegido en Telegram (/estilo) o el de config/marca.yaml."""
     from rugbyig import estado
 
-    marca = yaml.safe_load((CONFIG / "marca.yaml").read_text(encoding="utf-8"))
+    marca = leer_yaml(CONFIG / "marca.yaml")
     tema = estado.bot().get("tema") or marca.get("tema", "noche")
     return tema if tema in TEMAS else "noche"
 
 
 def html_post(datos: dict, slides: list[dict], formato: str = "post", tema: str | None = None) -> str:
     cfg = cargar_config()["competiciones"][datos["competicion"]]
-    marca = yaml.safe_load((CONFIG / "marca.yaml").read_text(encoding="utf-8"))
-    logo = _data_uri((RAIZ / marca["logo"]).read_bytes(), "image/png")
+    marca = leer_yaml(CONFIG / "marca.yaml")
+    logo = _logo_uri(RAIZ / marca["logo"])
     escudos = datos.get("escudos", {})
     env = _env()
     env.filters["escudo"] = lambda equipo: escudo_equipo(equipo, escudos)
@@ -455,6 +467,28 @@ class _Navegador:
 
 _NAV = _Navegador()
 atexit.register(_NAV.cerrar)
+
+# Recursos incrustados (escudos, logo, fuentes) servidos desde una dirección interna:
+# el HTML iba con cada data URI repetido en cada slide (~7 MB por carrusel) y solo
+# cargarlo costaba ~2 s. Los bytes son los mismos, así que la imagen no cambia.
+_ORIGEN = "http://rugbyig.local/r/"
+_DATA_URI = re.compile(r"data:([\w/+.-]+);base64,([A-Za-z0-9+/=]+)")
+_RECURSOS: dict[str, tuple[str, bytes]] = {}
+
+
+def _externalizar(html: str) -> str:
+    def sustituir(m: re.Match) -> str:
+        clave = hashlib.sha1(m.group(2).encode()).hexdigest()
+        if clave not in _RECURSOS:
+            _RECURSOS[clave] = (m.group(1), base64.b64decode(m.group(2)))
+        return _ORIGEN + clave
+    return _DATA_URI.sub(sustituir, html)
+
+
+def _servir_recurso(route) -> None:
+    mime, cuerpo = _RECURSOS.get(route.request.url.removeprefix(_ORIGEN), ("text/plain", b""))
+    route.fulfill(status=200, body=cuerpo, content_type=mime,
+                  headers={"Access-Control-Allow-Origin": "*", "Cache-Control": "max-age=86400"})
 
 
 # Ajuste automático: los textos de una línea que no caben (nombres de equipos y
@@ -524,7 +558,8 @@ def renderizar_slides(
     generados: list[Path] = []
     pagina = _NAV.pagina(ancho, alto)
     try:
-        pagina.set_content(html_post(datos, slides, formato, tema), wait_until="load")
+        pagina.route(_ORIGEN + "*", _servir_recurso)
+        pagina.set_content(_externalizar(html_post(datos, slides, formato, tema)), wait_until="load")
         pagina.evaluate("document.fonts.ready")
         pagina.evaluate(_JS_AJUSTA)
         if os.environ.get("RUGBYIG_AUDITA"):

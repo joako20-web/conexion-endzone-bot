@@ -1,14 +1,14 @@
 """Texto del post de Instagram a partir del JSON de la jornada."""
 from __future__ import annotations
 
-import yaml
+from rugbyig.rutas import leer_yaml
 
 from rugbyig.pipeline import CONFIG
 from rugbyig.render import nombres
 
 
 def texto_post(datos: dict) -> str:
-    cfg = yaml.safe_load((CONFIG / "publicacion.yaml").read_text(encoding="utf-8"))
+    cfg = leer_yaml(CONFIG / "publicacion.yaml")
     grupo = "" if datos["grupo"] == "unico" else f" · Grupo {datos['grupo']}"
     lineas = [f"🏉 {datos['nombre']}{grupo} · Jornada {datos['jornada']}", ""]
 

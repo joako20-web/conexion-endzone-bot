@@ -122,6 +122,15 @@ export const Chip: React.FC<{ children: React.ReactNode; style?: React.CSSProper
   );
 };
 
+const TESELA_GRANO = 256;
+const GRANO = Array.from({ length: 8 }, (_, semilla) => {
+  const svg =
+    `<svg xmlns='http://www.w3.org/2000/svg' width='${TESELA_GRANO}' height='${TESELA_GRANO}'>` +
+    `<filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='${semilla}' stitchTiles='stitch'/>` +
+    `<feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(#g)'/></svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+});
+
 /** Fondo común: degradado, franjas diagonales en paralaje, brillo de acento y grano. */
 export const Fondo: React.FC = () => {
   const frame = useCurrentFrame();
@@ -154,13 +163,19 @@ export const Fondo: React.FC = () => {
           background: `linear-gradient(90deg, transparent, ${c.acento}18, transparent)`,
         }}
       />
-      <svg width="100%" height="100%" style={{ position: "absolute", inset: 0, opacity: 0.09, mixBlendMode: "overlay" }}>
-        <filter id={`grano${grano}`}>
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={grano} stitchTiles="stitch" />
-          <feColorMatrix type="saturate" values="0" />
-        </filter>
-        <rect width="100%" height="100%" filter={`url(#grano${grano})`} />
-      </svg>
+      {/* Grano: el mismo ruido (feTurbulence) en una tesela de 256 px que encaja sin costuras
+          (stitchTiles) y se repite. A la vista es idéntico y el filtro calcula 32 veces menos
+          píxeles por frame (antes era ~20 % del tiempo de render). */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          opacity: 0.09,
+          mixBlendMode: "overlay",
+          backgroundImage: GRANO[grano],
+          backgroundSize: `${TESELA_GRANO}px ${TESELA_GRANO}px`,
+        }}
+      />
       <AbsoluteFill
         style={{ background: "radial-gradient(130% 90% at 50% 45%, transparent 55%, rgba(0,0,0,.45) 100%)" }}
       />

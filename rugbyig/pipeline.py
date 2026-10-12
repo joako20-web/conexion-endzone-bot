@@ -6,7 +6,6 @@ import json
 from dataclasses import asdict
 from pathlib import Path
 
-import yaml
 
 from rugbyig.core import datos as D
 from rugbyig.models import JugadorTemporada
@@ -37,11 +36,11 @@ def elegir_foto_portada(candidatos: list[E.LineaJugador], cliente: ISquad) -> di
             return {"url": ln.foto, "jugador": ln.nombre, "equipo": ln.equipo, "motivo": ""}
     return None
 
-from rugbyig.rutas import CONFIG, DATA, RAIZ  # noqa: F401  (se reexportan)
+from rugbyig.rutas import CONFIG, DATA, RAIZ, leer_yaml  # noqa: F401  (se reexportan)
 
 
 def cargar_config() -> dict:
-    return yaml.safe_load((CONFIG / "competiciones.yaml").read_text(encoding="utf-8"))
+    return leer_yaml(CONFIG / "competiciones.yaml")
 
 
 def ruta_jornada(comp: str, grupo: str, jornada: int) -> Path:

@@ -1,22 +1,16 @@
 """Nombres cortos de equipos y jugadores para las imágenes."""
 from __future__ import annotations
 
-from functools import lru_cache
 
-import yaml
 
-from rugbyig.rutas import CONFIG
+from rugbyig.rutas import CONFIG, leer_yaml
 
 _RELLENO = {"RUGBY", "CLUB", "RC", "CR", "C.R.", "R.C.", "RT", "DE", "DEL", "LA", "EL", "DH", "DHB", "XV"}
 _MINUSCULAS = {"de", "del", "la", "el", "y", "i"}
 
 
-@lru_cache
 def _yaml(nombre: str) -> dict:
-    ruta = CONFIG / nombre
-    if not ruta.exists():
-        return {}
-    return yaml.safe_load(ruta.read_text(encoding="utf-8")) or {}
+    return leer_yaml(CONFIG / nombre, {}, copia=False)  # solo se consulta
 
 
 def _equipos() -> dict:

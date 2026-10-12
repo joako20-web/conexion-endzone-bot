@@ -50,11 +50,13 @@ jobs:
       - run: uv sync --frozen
         if: steps.token.outputs.ok == 'true'
 
-      - name: Caché de iSquad (actas y escudos)
+      - name: Caché de iSquad (actas y escudos) y vídeos ya hechos
         if: steps.token.outputs.ok == 'true'
         uses: actions/cache/restore@v4
         with:
-          path: .cache/isquad
+          path: |
+            .cache/isquad
+            .cache/videos
           key: isquad-${{ github.run_id }}
           restore-keys: isquad-
 
@@ -67,6 +69,12 @@ jobs:
             uv run playwright install --with-deps chromium
           fi
 
+      - name: Motor de vídeo en segundo plano (el bot arranca ya; los vídeos esperan a que acabe)
+        if: steps.token.outputs.ok == 'true'
+        run: |
+          touch video/.instalando
+          nohup bash -c 'cd video && npm ci --no-audit --no-fund && npx remotion browser ensure && touch node_modules/.listo; rm -f .instalando' > /tmp/motor_video.log 2>&1 &
+
       - name: Escuchar Telegram
         id: escuchar
         if: steps.token.outputs.ok == 'true'
@@ -78,7 +86,9 @@ jobs:
         if: always() && steps.token.outputs.ok == 'true'
         uses: actions/cache/save@v4
         with:
-          path: .cache/isquad
+          path: |
+            .cache/isquad
+            .cache/videos
           key: isquad-${{ github.run_id }}
 
       - name: Guardar estado
