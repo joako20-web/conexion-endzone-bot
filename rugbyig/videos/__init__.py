@@ -13,7 +13,7 @@ from typing import Callable
 
 from rugbyig.pipeline import cargar_config
 from rugbyig.rutas import RAIZ
-from rugbyig.videos import base, final, jornada, mvp, previa, xv
+from rugbyig.videos import base, clasificacion, dato, final, jornada, mvp, previa, rankings, xv
 
 
 @dataclass(frozen=True)
@@ -53,6 +53,19 @@ def _mvp(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
     return mvp.props(base.datos_jornada(comp, grupo, jornada_))
 
 
+def _clasificacion(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
+    datos = base.datos_jornada(comp, grupo, jornada_)
+    return clasificacion.props(datos, clasificacion.anterior(datos))
+
+
+def _rankings(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
+    return rankings.props(base.datos_jornada(comp, grupo, jornada_))
+
+
+def _dato(comp: str, grupo: str, jornada_: int | None, indice: int | str = 0, **_) -> dict:
+    return dato.props(base.datos_jornada(comp, grupo, jornada_), int(indice or 0))
+
+
 PLANTILLAS: dict[str, Plantilla] = {p.clave: p for p in [
     Plantilla("jornada", "📊 Resultados de la jornada", jornada.COMPOSICION, _jornada),
     # por partido: reel(comp, grupo, jornada, tipo="final", id_partido=17648)
@@ -60,6 +73,9 @@ PLANTILLAS: dict[str, Plantilla] = {p.clave: p for p in [
     Plantilla("previa", "🗓️ Previa de la jornada", previa.COMPOSICION, _previa),
     Plantilla("xv", "⭐ XV ideal", xv.COMPOSICION, _xv, requiere="xv_ideal"),
     Plantilla("mvp", "🏅 Jugador de la jornada", mvp.COMPOSICION, _mvp),
+    Plantilla("clasificacion", "🏆 Clasificación", clasificacion.COMPOSICION, _clasificacion),
+    Plantilla("rankings", "🎯 Rankings de temporada", rankings.COMPOSICION, _rankings),
+    Plantilla("dato", "💡 El dato de la jornada", dato.COMPOSICION, _dato),
 ]}
 
 
