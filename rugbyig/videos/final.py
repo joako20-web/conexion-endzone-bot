@@ -15,6 +15,8 @@ solo con el marcador (sin evolución, ensayos ni anotadores) en lugar de fallar.
 """
 from __future__ import annotations
 
+import json
+
 from datetime import datetime
 
 from rugbyig.models import PUNTOS, Acta
@@ -51,6 +53,11 @@ def construir(comp: str, grupo: str = "unico", jornada: int | None = None, id_pa
     id_partido = int(id_partido)
     datos = datos_jornada(comp, grupo, jornada)
     p = next((x for x in datos["partidos"] + datos.get("partidos_temporada", []) if x["id"] == id_partido), None)
+    if p is not None and p.get("puntos_local") is None:  # guardado antes de acabar el partido: datos frescos
+        from rugbyig.pipeline import preparar_jornada
+
+        datos = json.loads(preparar_jornada(comp, grupo, jornada).read_text(encoding="utf-8"))
+        p = next((x for x in datos["partidos"] + datos.get("partidos_temporada", []) if x["id"] == id_partido), None)
     if p is None:
         raise RuntimeError(f"el partido {id_partido} no está en la jornada {datos['jornada']}")
     if p.get("puntos_local") is None:

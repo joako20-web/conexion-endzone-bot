@@ -99,7 +99,7 @@ def comprobar(tg, b: dict, cliente: ISquad | None = None) -> int:
                     continue  # acta aún incompleta: se reintenta en la siguiente vuelta
                 envio.foto(b["chat_id"], img)
             envio.mensaje(b["chat_id"], f"🏁 <b>Final</b> · {nombres.equipo_corto(p.local)} {p.puntos_local}-{p.puntos_visitante} {nombres.equipo_corto(p.visitante)}",
-                       [[("📦 Original", f"fo|{comp}/{grupo}|{p.id}")]])
+                       [[("📦 Original", f"fo|{comp}/{grupo}|{p.id}"), ("🎬 Vídeo «así fue»", f"vf|{comp}/{grupo}|{p.id}")]])
             enviados.add(clave)
             vistos.pop(str(p.id), None)
             n += 1

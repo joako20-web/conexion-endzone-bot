@@ -33,7 +33,8 @@ ABREV = {"portada": "p", "resultados": "r", "anotadores": "a", "xv": "x",
          "disciplina": "j", "banquillo": "b", "equipos": "q",
          "encuesta_mvp": "u", "encuesta_partido": "w", "evolucion": "e",
          "xv_temporada": "X", "mvp_temporada": "M",
-         "partido_jornada": "z", "palmares": "P", "hace_un_ano": "H"}
+         "partido_jornada": "z", "palmares": "P", "hace_un_ano": "H",
+         "mvp_jornada": "m", "matchday": "n"}
 # Imágenes de nivel competición (no dependen de un grupo ni de una jornada).
 DE_COMPETICION = {"grupos", "cuadro"}
 DESABREV = {v: k for k, v in ABREV.items()}
@@ -243,20 +244,21 @@ QUE = [("🧾 Carrusel completo", "*"), ("📊 Resultados", "r"), ("📅 Próxim
        ("🟨 Tarjetas", "j"), ("🔄 Desde el banquillo", "b"), ("📊 La liga en números", "q"),
        ("🗳 Vota el MVP", "u"), ("❓ ¿Quién gana?", "w"), ("📉 Así va la liga", "e"),
        ("⭐ XV de la temporada", "X"), ("🏅 MVP de la temporada", "M"),
-       ("⚔️ Partido de la jornada", "z"), ("🏆 Palmarés", "P"), ("⏪ Hace un año", "H")]
+       ("⚔️ Partido de la jornada", "z"), ("🏆 Palmarés", "P"), ("⏪ Hace un año", "H"),
+       ("🏅 Tarjeta MVP", "m"), ("🎟 Carteles de partido", "n")]
 # Submenú "Más estadísticas"
 FILAS_STATS = [["X", "M"], ["e", "q"], ["t", "d"], ["y", "Y"], ["f", "F"], ["j", "b"], ["P", "H"], ["p"]]
 # Imágenes de temporada: no se elige jornada
-DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k", "w", "e", "X", "M", "z", "P", "H"}
+DE_TEMPORADA = {"t", "Y", "F", "j", "b", "q", "v", "g", "k", "w", "e", "X", "M", "z", "P", "H", "n"}
 # Imágenes especiales (módulo especiales/evolucion): clave -> (función, admite formato post/historia)
 ESPECIALES = {"encuesta_mvp", "encuesta_partido", "evolucion", "xv_temporada", "mvp_temporada",
-              "partido_jornada", "palmares", "hace_un_ano"}
+              "partido_jornada", "palmares", "hace_un_ano", "mvp_jornada", "matchday"}
 # Estadísticas de árbitros (designación y actas de iSquad desde 2023/24)
 ARBITROS = {"dh_masc", "dh_fem"}
 # Histórico: solo competiciones de iSquad con temporadas anteriores
 HISTORICO = {"dh_masc", "dh_fem", "dh_elite", "copa"}
 # Filas del menú "¿qué quieres?" (agrupadas por tema)
-FILAS_QUE = [["*"], ["r", "c"], ["v", "z"], ["x", "a"], ["u", "w"], ["g", "k"], ["+"]]
+FILAS_QUE = [["*"], ["r", "c"], ["v", "z"], ["x", "a"], ["m", "n"], ["u", "w"], ["g", "k"], ["+"]]
 CATEGORIAS = {"nacional": "🇪🇸 Nacionales", "copa": "🏆 Copa del Rey", "regional": "🗺 Regionales"}
 
 
@@ -498,6 +500,16 @@ def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: 
         return destacado.partido_jornada(comp, grupo, formato=formato, destino=destino)[1]
     if clave == "palmares":
         return historico.palmares(comp, formato, destino)
+    if clave == "mvp_jornada":
+        from rugbyig.carteles_mvp import renderizar_mvp
+
+        return renderizar_mvp(comp, grupo, destino, jornada=jornada, formato=formato)
+    if clave == "matchday":  # un cartel por partido de la próxima jornada
+        from rugbyig.carteles import _datos, renderizar_matchday
+
+        siguiente = _datos(comp, grupo, None).get("proxima_jornada") or {}
+        ids = [p["id"] for p in siguiente.get("partidos", []) if p.get("puntos_local") is None]
+        return [renderizar_matchday(comp, grupo, i, destino / str(i), formato=formato) for i in ids]
     if clave == "hace_un_ano":
         jugadas = jornadas_jugadas(comp, grupo)
         return historico.hace_un_ano(comp, jugadas[-1], formato, destino) if jugadas else []
@@ -571,9 +583,21 @@ def _menu_videos(liga: str) -> tuple[str, list]:
 
     cfg = cargar_config()["competiciones"][liga.split("/")[0]]
     botones = [(p.nombre, f"vv|{liga}|{p.clave}") for p in PLANTILLAS.values() if p.disponible(cfg)]
-    filas = _filas(botones, 1) + [[("⬅️ Volver", f"m2|{liga}"), ("🏠 Inicio", "m1")]]
+    if not cfg.get("torneo"):
+        botones.append((PLANTILLAS["final"].nombre + " ▸", f"vp|{liga}"))
+    filas = _filas(botones, 2) + [[("⬅️ Volver", f"m2|{liga}"), ("🏠 Inicio", "m1")]]
     return (f"🎬 <b>{_nombre_liga(liga)}</b>\n¿Qué vídeo? Tardan unos 3 minutos y te llegan solos; "
             "mientras puedes seguir pidiendo cosas."), filas
+
+
+def _menu_partidos_video(liga: str) -> tuple[str, list]:
+    from rugbyig.videos.final import id_partidos_jornada
+
+    comp, grupo = liga.split("/")
+    partidos = id_partidos_jornada(comp, grupo)
+    botones = [[(texto, f"vf|{liga}|{id_}")] for id_, texto in partidos]
+    return (f"🏉 <b>{_nombre_liga(liga)}</b>\n¿De qué partido hago el «así fue»?",
+            botones + [[("⬅️ Volver", f"vd|{liga}"), ("🏠 Inicio", "m1")]])
 
 
 def pedir_video(tg: Telegram, chat_id, liga: str, tipo: str = "jornada", **extra) -> None:
@@ -941,6 +965,12 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
         return
     if partes[0] == "vv":
         pedir_video(tg, chat_id, partes[1], partes[2])
+        return
+    if partes[0] == "vp":  # lista de partidos para el «así fue»
+        tg.editar(chat_id, cq["message"]["message_id"], *_menu_partidos_video(partes[1]))
+        return
+    if partes[0] == "vf":
+        pedir_video(tg, chat_id, partes[1], "final", id_partido=int(partes[2]))
         return
     if partes[0] in ("th", "to"):  # historias / original de imágenes de competición
         cod = partes[2]
