@@ -28,7 +28,8 @@ export const Mvp: React.FC = () => {
           position: "absolute",
           right: -260,
           top: 300,
-          opacity: interpolate(entra(frame, 12, 20), [0, 1], [0, 0.55]), // tras la transición: el blend no funciona dentro de ella
+          // solo fuera de las transiciones: dentro de ellas el blend no funciona y sale un disco blanco
+          opacity: interpolate(entra(frame, 12, 20) - entra(frame, durationInFrames - 24, 12), [0, 1], [0, 0.55]),
           mixBlendMode: "multiply",
           rotate: `${interpolate(frame, [0, durationInFrames], [-8, 4])}deg`,
           scale: String(interpolate(entra(frame, 12, 30), [0, 1], [1.25, 1])),
@@ -89,7 +90,7 @@ export const Mvp: React.FC = () => {
               {mvp.equipo}
               <div style={{ color: c.gris, fontSize: 44 }}>
                 {mvp.posicion}
-                {mvp.dorsal ? ` · Nº ${mvp.dorsal}` : ""}
+                {mvp.dorsal && !mvp.posicion.includes(String(mvp.dorsal)) ? ` · Nº ${mvp.dorsal}` : ""}
               </div>
             </div>
           </Mascara>

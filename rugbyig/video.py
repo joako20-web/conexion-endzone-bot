@@ -9,6 +9,8 @@ import json
 import re
 import shutil
 import subprocess
+import tempfile
+import threading
 from pathlib import Path
 
 import yaml
@@ -25,6 +27,8 @@ PUBLICO = VIDEO / "public"
 TEMAS_CSS = Path(R.__file__).parent / "templates" / "temas.css"
 # Familias de cada tema para el vídeo (titulares/números y texto)
 FUENTES = {"tele": ("Oswald", "Roboto Condensed")}
+MAX_PARTIDOS = 8  # 2 s por partido: con más, el reel se hace largo
+_UNO_A_LA_VEZ = threading.Lock()  # el bot puede pedir varios a la vez: se renderizan en fila
 
 
 def colores_tema(tema: str) -> dict:
@@ -55,6 +59,12 @@ def props_jornada(datos: dict, tema: str = "tele") -> dict:
     dato = next(iter(datos.get("datos_jornada") or []), None)
     gancho = {"numero": dato["numero"], "unidad": dato["unidad"], "titular": dato["titular"],
               "escudo": R.escudo_equipo(dato["equipo"], escudos) if dato.get("equipo") else ""} if dato else None
+    if not gancho and partidos:  # sin "dato de la jornada": la victoria más amplia
+        p = max(partidos, key=lambda p: abs(p["local"]["puntos"] - p["visitante"]["puntos"]))
+        ganador = p["local"] if p["local"]["gana"] else p["visitante"]
+        gancho = {"numero": str(abs(p["local"]["puntos"] - p["visitante"]["puntos"])), "unidad": "puntos de diferencia",
+                  "titular": f"Exhibición de {ganador['nombre']}" if ganador["gana"] else "Reparto de puntos",
+                  "escudo": ganador["escudo"] if ganador["gana"] else ""}
 
     mvp = None
     candidatos = list((datos.get("xv_ideal") or {}).values()) or datos.get("anotadores") or []
@@ -82,7 +92,7 @@ def props_jornada(datos: dict, tema: str = "tele") -> dict:
         "temporada": datos["temporada"], "handle": marca["handle"],
         "logo": R._data_uri(logo.read_bytes(), "image/png"),
         "tema": colores_tema(tema), "fuenteTitulo": tit, "fuenteTexto": txt,
-        "gancho": gancho, "partidos": partidos[:5], "mvp": mvp,
+        "gancho": gancho, "partidos": partidos[:MAX_PARTIDOS], "mvp": mvp,
         "top": top, "trasJornada": tras, "zonaTop": leyenda[0]["texto"] if leyenda else "",
     }
 
@@ -111,12 +121,25 @@ def reel(comp: str, grupo: str = "unico", jornada: int | None = None, tema: str 
         ruta = preparar_jornada(comp, grupo, jornada)
     datos = json.loads(ruta.read_text(encoding="utf-8"))
     props = props_jornada(datos, tema)
-    props["fuentes"] = copiar_fuentes((props["fuenteTitulo"], props["fuenteTexto"]))
-    sonido.generar(PUBLICO / "sfx")
-    ruta_props = PUBLICO / "props.json"
-    ruta_props.write_text(json.dumps(props, ensure_ascii=False), encoding="utf-8")
+    if not props["partidos"]:
+        raise RuntimeError(f"{comp}/{grupo}: la jornada {datos['jornada']} no tiene resultados")
     salida = salida or RAIZ / "out" / f"reel_{comp}_j{datos['jornada']:02d}.mp4"
     salida.parent.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["npx", "remotion", "render", "ReelJornada", str(salida), f"--props={ruta_props}",
-                    "--codec=h264", "--crf=16", "--audio-bitrate=320k"], cwd=VIDEO, check=True)
+    with _UNO_A_LA_VEZ:
+        preparar_node()
+        props["fuentes"] = copiar_fuentes((props["fuenteTitulo"], props["fuenteTexto"]))
+        sonido.generar(PUBLICO / "sfx")
+        with tempfile.NamedTemporaryFile("w", suffix=".json", encoding="utf-8", delete=False) as f:
+            json.dump(props, f, ensure_ascii=False)
+        try:
+            subprocess.run(["npx", "remotion", "render", "ReelJornada", str(salida), f"--props={f.name}",
+                            "--codec=h264", "--crf=16", "--audio-bitrate=320k", "--log=warn"], cwd=VIDEO, check=True)
+        finally:
+            Path(f.name).unlink(missing_ok=True)
     return salida
+
+
+def preparar_node() -> None:
+    """Instala las dependencias de video/ la primera vez (en GitHub Actions, en cada ejecución nueva)."""
+    if not (VIDEO / "node_modules" / ".bin" / "remotion").exists():
+        subprocess.run(["npm", "ci", "--no-audit", "--no-fund"], cwd=VIDEO, check=True)

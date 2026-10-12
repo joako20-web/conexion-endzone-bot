@@ -77,6 +77,12 @@ class Telegram:
         with open(imagen, "rb") as f:
             self._post("sendPhoto", files={"photo": f}, chat_id=chat_id, caption=texto)
 
+    def video(self, chat_id, ruta: Path, texto: str = "", botones=None) -> None:
+        with open(ruta, "rb") as f:
+            self._post("sendVideo", files={"video": f}, chat_id=chat_id, caption=texto, parse_mode="HTML",
+                       width=1080, height=1920, supports_streaming=True,
+                       reply_markup=self._teclado(botones) if botones else None)
+
     def responder_boton(self, callback_id: str, texto: str = "") -> None:
         try:
             self._post("answerCallbackQuery", callback_query_id=callback_id, text=texto)

@@ -40,6 +40,13 @@ jobs:
         with:
           enable-cache: true
 
+      - uses: actions/setup-node@v4  # vídeos para Reels (Remotion); se instala al pedir el primero
+        if: steps.token.outputs.ok == 'true'
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: video/package-lock.json
+
       - run: uv sync --frozen
         if: steps.token.outputs.ok == 'true'
 

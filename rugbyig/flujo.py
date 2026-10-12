@@ -12,6 +12,7 @@ import html
 import json
 import re
 import tempfile
+import threading
 import time
 import traceback
 from pathlib import Path
@@ -48,6 +49,7 @@ AYUDA = (
     "✏️ <b>Cambiar XV</b>: después escribe el dorsal y el nombre, p. ej. <code>9 Araña</code>.\n"
     "📷 <b>Foto portada</b>: después mándame la foto.\n\n"
     "📋 <b>Pedir</b> (botón de abajo o /pedir): eliges liga, qué quieres y jornada.\n"
+    "🎬 <b>Vídeo para Reels</b> (dentro de cada liga): resultados animados de la última jornada.\n"
     "/semana manda ya los carruseles de la semana.\n"
     "/estilo cambia el estilo visual (5 opciones, con muestras)."
 )
@@ -363,6 +365,8 @@ def _menu_que(liga: str) -> tuple[str, list]:
         botones = [(etiqueta[c], f"m3|{liga}|{c}") for c in fila if c not in ocultar]
         if botones:
             filas.append(botones)
+    if grupo != "*" and not cfg.get("torneo"):
+        filas.append([("🎬 Vídeo para Reels", f"vd|{liga}")])
     if cfg.get("torneo"):  # Copa: acceso a cada grupo
         filas.append([(f"Grupo {g}", f"m2|{comp}/{g}") for g in cfg["grupos"]][:6])
     atras = f"mg|{comp}" if len(cfg["grupos"]) > 1 and not cfg.get("torneo") else _atras_de(comp)
@@ -561,6 +565,29 @@ def _servir(tg: Telegram, chat_id, ligas: list[tuple[str, str]], claves: list[st
 
 
 # ---------- Avisos y favoritas (preferencias de cada usuario) ----------
+
+def pedir_video(tg: Telegram, chat_id, liga: str) -> None:
+    """Reel de la última jornada. Tarda unos minutos: se hace en segundo plano para que
+    el bot siga respondiendo (el hilo no es daemon, así que el proceso espera a que acabe)."""
+    tg.mensaje(chat_id, f"🎬 Preparando el vídeo de <b>{_nombre_liga(liga)}</b>…\n"
+               "Tarda unos 3-4 minutos; mientras puedes seguir pidiendo cosas.")
+
+    def trabajo():
+        from rugbyig.video import reel
+
+        comp, grupo = liga.split("/")
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                ruta = reel(comp, grupo, salida=Path(tmp) / f"reel_{comp}_{grupo}.mp4")
+                tg.video(chat_id, ruta, f"🎬 <b>{_nombre_liga(liga)}</b> · listo para Reels\n"
+                         "Ponle música desde Instagram: los efectos van flojitos para que se oiga.",
+                         [[("🔁 Otra cosa de esta liga", f"m0|{liga}"), ("📋 Otra competición", "m0")]])
+        except Exception as e:
+            traceback.print_exc()
+            tg.mensaje(chat_id, f"⚠️ No he podido hacer el vídeo: {html.escape(str(e))[:300]}")
+
+    threading.Thread(target=trabajo, name=f"video {liga}").start()
+
 
 def _marca(si: bool) -> str:
     return "✅" if si else "⬜"
@@ -896,6 +923,9 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
         return
     if partes[0] == "es":
         _estilo(tg, chat_id, b, partes[1])
+        return
+    if partes[0] == "vd":
+        pedir_video(tg, chat_id, partes[1])
         return
     if partes[0] in ("th", "to"):  # historias / original de imágenes de competición
         cod = partes[2]
