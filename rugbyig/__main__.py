@@ -2,7 +2,7 @@
   python -m rugbyig generar dh_masc [--grupo A] [--jornada 2]   # imágenes en out/
   python -m rugbyig semana [--reintento]                        # carruseles -> Telegram
   python -m rugbyig bot [--minutos 14]                          # escucha Telegram
-  python -m rugbyig video dh_masc [--jornada 2]                 # reel con motion graphics (out/*.mp4)
+  python -m rugbyig video dh_masc [--jornada 2] [--tipo xv|mvp] # reel con motion graphics (out/*.mp4)
   python -m rugbyig descubrir [--temporada 2627]                # ligas disponibles en iSquad
 """
 import argparse

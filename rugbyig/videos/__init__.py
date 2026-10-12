@@ -11,8 +11,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
 
+from rugbyig.pipeline import cargar_config
 from rugbyig.rutas import RAIZ
-from rugbyig.videos import base, jornada
+from rugbyig.videos import base, jornada, mvp, xv
 
 
 @dataclass(frozen=True)
@@ -32,8 +33,21 @@ def _jornada(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
     return props
 
 
+def _xv(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
+    cfg = cargar_config()["competiciones"][comp]
+    if not cfg.get("xv_ideal"):
+        raise RuntimeError(f"{cfg['nombre']} no tiene XV ideal")
+    return xv.props(base.datos_jornada(comp, grupo, jornada_))
+
+
+def _mvp(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
+    return mvp.props(base.datos_jornada(comp, grupo, jornada_))
+
+
 PLANTILLAS: dict[str, Plantilla] = {p.clave: p for p in [
     Plantilla("jornada", "📊 Resultados de la jornada", jornada.COMPOSICION, _jornada),
+    Plantilla("xv", "🏉 XV ideal", xv.COMPOSICION, _xv),
+    Plantilla("mvp", "⭐ Jugador de la jornada", mvp.COMPOSICION, _mvp),
 ]}
 
 
