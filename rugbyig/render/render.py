@@ -477,7 +477,7 @@ _JS_AJUSTA = """() => {
     n++;
   }
   // Nombres de equipo que admiten 2 líneas: si ocupan 3 o más, se reducen hasta caber en 2
-  for (const e of document.querySelectorAll('section.slide .equipo .nom, section.slide .final-eq .nom, section.slide .pj-nom')) {
+  for (const e of document.querySelectorAll('section.slide .equipo .nom, section.slide .final-eq .nom, section.slide .pj-nom, section.slide .md-nom')) {
     const s = getComputedStyle(e);
     let fs = parseFloat(s.fontSize);
     const min = Math.max(22, fs * 0.6);
