@@ -4,6 +4,7 @@
   python -m rugbyig bot [--minutos 14]                          # escucha Telegram
   python -m rugbyig video dh_masc [--jornada 2]                 # reel con motion graphics (out/*.mp4)
   python -m rugbyig video dh_masc --tipo final --jornada 2 --partido 17648   # "así fue" de un partido
+  python -m rugbyig video dh_masc --jornada 2 [--tipo xv|mvp] # otras plantillas
   python -m rugbyig descubrir [--temporada 2627]                # ligas disponibles en iSquad
 """
 import argparse

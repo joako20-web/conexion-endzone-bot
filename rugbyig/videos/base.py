@@ -101,3 +101,36 @@ def preparar_node() -> None:
     """Instala las dependencias de video/ la primera vez (en GitHub Actions, en cada ejecución nueva)."""
     if not (VIDEO / "node_modules" / ".bin" / "remotion").exists():
         subprocess.run(["npm", "ci", "--no-audit", "--no-fund"], cwd=VIDEO, check=True)
+
+
+def foto_jugador(url: str, ancho: int = 720, alto: int = 900) -> str:
+    """Foto de iSquad recortada a 4:5 (cara arriba) como data URI, o "" si no hay o es
+    pequeña (las de carnet de ~150-500 px se ven pixeladas a ese tamaño)."""
+    if not url:
+        return ""
+    import io
+
+    from PIL import Image
+
+    from rugbyig.pipeline import FOTO_MIN_PX
+    from rugbyig.scraper.isquad import compartido
+
+    try:
+        img = Image.open(io.BytesIO(compartido().imagen(url))).convert("RGB")
+    except Exception:
+        return ""
+    w, h = img.size
+    if min(w, h) < FOTO_MIN_PX:
+        return ""
+    proporcion = ancho / alto
+    if w / h > proporcion:  # más ancha: se recorta por los lados, centrada
+        nuevo = round(h * proporcion)
+        img = img.crop(((w - nuevo) // 2, 0, (w - nuevo) // 2 + nuevo, h))
+    else:  # más alta: se recorta abajo (la cara suele estar en el tercio superior)
+        nuevo = round(w / proporcion)
+        arriba = round((h - nuevo) * 0.2)
+        img = img.crop((0, arriba, w, arriba + nuevo))
+    img = img.resize((ancho, alto), Image.LANCZOS)
+    buf = io.BytesIO()
+    img.save(buf, "JPEG", quality=90)
+    return R._data_uri(buf.getvalue(), "image/jpeg")
