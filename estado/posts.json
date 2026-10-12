@@ -92,7 +92,9 @@
     "jornada": 1,
     "json": "data/2026-27/dh_fem/unico/j01.json",
     "actas_pendientes": [],
-    "jugados": 1
+    "jugados": 3,
+    "enviado": "2026-10-12T10:00:32.221772+02:00",
+    "pendientes_al_enviar": false
   },
   "2026-27_mad_3r_A_j01": {
     "competicion": "mad_3r",
@@ -108,6 +110,68 @@
     "jornada": 3,
     "json": "data/2026-27/dh_masc/unico/j03.json",
     "actas_pendientes": [],
-    "jugados": 5
+    "jugados": 5,
+    "enviado": "2026-10-12T10:00:20.034967+02:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dh_elite_unico_j03": {
+    "competicion": "dh_elite",
+    "grupo": "unico",
+    "jornada": 3,
+    "json": "data/2026-27/dh_elite/unico/j03.json",
+    "actas_pendientes": [],
+    "jugados": 5,
+    "enviado": "2026-10-12T10:00:49.792837+02:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_A_j03": {
+    "competicion": "dhb_masc",
+    "grupo": "A",
+    "jornada": 3,
+    "json": "data/2026-27/dhb_masc/A/j03.json",
+    "actas_pendientes": [],
+    "jugados": 4,
+    "enviado": "2026-10-12T10:01:07.511814+02:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_B_j03": {
+    "competicion": "dhb_masc",
+    "grupo": "B",
+    "jornada": 3,
+    "json": "data/2026-27/dhb_masc/B/j03.json",
+    "actas_pendientes": [],
+    "jugados": 4,
+    "enviado": "2026-10-12T10:01:24.936974+02:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_C_j03": {
+    "competicion": "dhb_masc",
+    "grupo": "C",
+    "jornada": 3,
+    "json": "data/2026-27/dhb_masc/C/j03.json",
+    "actas_pendientes": [],
+    "jugados": 4,
+    "enviado": "2026-10-12T10:01:38.152703+02:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_D_j03": {
+    "competicion": "dhb_masc",
+    "grupo": "D",
+    "jornada": 3,
+    "json": "data/2026-27/dhb_masc/D/j03.json",
+    "actas_pendientes": [],
+    "jugados": 2,
+    "enviado": "2026-10-12T10:01:53.270763+02:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_fem_unico_j01": {
+    "competicion": "dhb_fem",
+    "grupo": "unico",
+    "jornada": 1,
+    "json": "data/2026-27/dhb_fem/unico/j01.json",
+    "actas_pendientes": [],
+    "jugados": 2,
+    "enviado": "2026-10-12T10:02:09.724529+02:00",
+    "pendientes_al_enviar": false
   }
 }

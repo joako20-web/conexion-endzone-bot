@@ -24,10 +24,10 @@
       "fecha": "2026-10-11T11:00:00",
       "local": "RIALTA CRAT CORUÑA.",
       "visitante": "TURIA",
-      "puntos_local": null,
-      "puntos_visitante": null,
+      "puntos_local": 41,
+      "puntos_visitante": 24,
       "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
-      "estado": "pendiente",
+      "estado": "jugado",
       "grupo": null,
       "ronda": ""
     },
@@ -37,10 +37,10 @@
       "fecha": "2026-10-11T11:00:00",
       "local": "GETXO RUGBY",
       "visitante": "CLUB DE RUGBY SANT CUGAT",
-      "puntos_local": null,
-      "puntos_visitante": null,
+      "puntos_local": 52,
+      "puntos_visitante": 5,
       "campo": "Fadura",
-      "estado": "pendiente",
+      "estado": "jugado",
       "grupo": null,
       "ronda": ""
     }
@@ -58,10 +58,52 @@
       "estado": "jugado",
       "grupo": null,
       "ronda": ""
+    },
+    {
+      "id": 17823,
+      "jornada": 1,
+      "fecha": "2026-10-11T11:00:00",
+      "local": "RIALTA CRAT CORUÑA.",
+      "visitante": "TURIA",
+      "puntos_local": 41,
+      "puntos_visitante": 24,
+      "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17825,
+      "jornada": 1,
+      "fecha": "2026-10-11T11:00:00",
+      "local": "GETXO RUGBY",
+      "visitante": "CLUB DE RUGBY SANT CUGAT",
+      "puntos_local": 52,
+      "puntos_visitante": 5,
+      "campo": "Fadura",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
     }
   ],
   "actas_pendientes": [],
   "anotadores": [
+    {
+      "nombre": "NAROA AZPITARTE MAGUREGUI",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 10,
+      "puntos": 16,
+      "ensayos": 1,
+      "conversiones": 4,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 26.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_737335703039796f6532.jpg"
+    },
     {
       "nombre": "ADELINA DA COSTA",
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
@@ -95,102 +137,120 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
     },
     {
-      "nombre": "CARLA MENDEZ VAZQUEZ",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "dorsal": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "nombre": "LUISINA CONTRERAS",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 13,
+      "puntos": 10,
+      "ensayos": 2,
       "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 13.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6232717161783564.jpg"
-    },
-    {
-      "nombre": "CLAUDIA PEREZ PEREZ",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
-      "dorsal": 22,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -12,
-      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "nota": 6.8,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a766f34376534747433.jpg"
-    },
-    {
-      "nombre": "IRATI CLAVERO PERIANES",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "dorsal": 9,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 13.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
-    },
-    {
-      "nombre": "LEIRE MARKIEGI GORTAZAR",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "dorsal": 11,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 13.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a64336866623071316f.jpg"
-    },
-    {
-      "nombre": "CARLA VILLEGAS MINTEGUI",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "dorsal": 10,
-      "puntos": 4,
-      "ensayos": 0,
-      "conversiones": 2,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 9.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a34636a636a6a303872.jpg"
-    },
-    {
-      "nombre": "MARTINA MARQUEZ ALPAÑEZ",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
-      "dorsal": 12,
-      "puntos": 2,
-      "ensayos": 0,
-      "conversiones": 1,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [
         "amarilla"
       ],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 19.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6238376a36786c313874.jpg"
+    },
+    {
+      "nombre": "NOA VARELA FARIÑA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_78656364747736673566.jpg"
+    },
+    {
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 12,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b7265706a6235707932.jpg"
+    },
+    {
+      "nombre": "TECLA MASOKO BUERIBERI",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 23.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_647661376b383730656f.jpg"
+    },
+    {
+      "nombre": "CRISTINA LOPEZ CALDERON",
+      "equipo": "TURIA",
+      "dorsal": 10,
+      "puntos": 9,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
       "resultado": "P",
-      "margen": -12,
-      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "nota": -3.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_35637467657234376668.jpg"
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": 7.3,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_376370346f7476636730.jpg"
+    },
+    {
+      "nombre": "ADRIANA URQUIZU VIDAURRE",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 23,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 13.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b7777676c6163626c64.jpg"
+    },
+    {
+      "nombre": "CAROLINA FERNANDA ALFARO CHIA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 10,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 7.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3063343378376333366a.jpg"
     }
   ],
   "ensayadores": [
@@ -227,52 +287,54 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
     },
     {
-      "nombre": "CARLA MENDEZ VAZQUEZ",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "dorsal": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "nombre": "LUISINA CONTRERAS",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 13,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 19.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6238376a36786c313874.jpg"
+    },
+    {
+      "nombre": "NOA VARELA FARIÑA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 13.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6232717161783564.jpg"
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_78656364747736673566.jpg"
     },
     {
-      "nombre": "CLAUDIA PEREZ PEREZ",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
-      "dorsal": 22,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -12,
-      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "nota": 6.8,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a766f34376534747433.jpg"
-    },
-    {
-      "nombre": "IRATI CLAVERO PERIANES",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "dorsal": 9,
-      "puntos": 5,
-      "ensayos": 1,
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 12,
+      "puntos": 10,
+      "ensayos": 2,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 13.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b7265706a6235707932.jpg"
     }
   ],
   "xv_ideal": {
@@ -308,10 +370,10 @@
       "nota": 29.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
     },
-    "4": {
-      "nombre": "CAYETANA ALVAREZ SERRANO",
+    "3": {
+      "nombre": "MARIA DEL MAR LAORGA DE VILLA",
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
-      "dorsal": 4,
+      "dorsal": 3,
       "puntos": 0,
       "ensayos": 0,
       "conversiones": 0,
@@ -322,9 +384,57 @@
       "margen": -12,
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": -1.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6966776d6b3969336f6c.jpg"
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6b6d65626c3362646878.jpg"
+    },
+    "4": {
+      "nombre": "IRIA ANIDOS CARBONELL",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_636a3177646e656e7272.jpg"
+    },
+    "5": {
+      "nombre": "BELSAY ESCUDERO LOPEZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_36727236776867796565.jpg"
     },
     "6": {
+      "nombre": "ALBA MARIA ALONSO PEREZ",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 12,
+      "rival": "SILICIUS RUGBY MAJADAHONDA",
+      "nota": 5.2,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_39317971356170616871.jpg"
+    },
+    "7": {
       "nombre": "CELIA PALUMBO RIBOT",
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "dorsal": 7,
@@ -357,8 +467,8 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6f6b636236776b6c6d70.jpg"
     },
     "9": {
-      "nombre": "IRATI CLAVERO PERIANES",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nombre": "ISABEL RODRIGUEZ VILA",
+      "equipo": "RIALTA CRAT CORUÑA.",
       "dorsal": 9,
       "puntos": 5,
       "ensayos": 1,
@@ -367,15 +477,97 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 13.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 13.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6d6b6870726438333237.jpg"
+    },
+    "10": {
+      "nombre": "NAROA AZPITARTE MAGUREGUI",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 10,
+      "puntos": 16,
+      "ensayos": 1,
+      "conversiones": 4,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 26.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_737335703039796f6532.jpg"
     },
     "11": {
-      "nombre": "LEIRE MARKIEGI GORTAZAR",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "nombre": "TECLA MASOKO BUERIBERI",
+      "equipo": "GETXO RUGBY",
       "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 23.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_647661376b383730656f.jpg"
+    },
+    "12": {
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 12,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b7265706a6235707932.jpg"
+    },
+    "13": {
+      "nombre": "LUISINA CONTRERAS",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 13,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 19.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6238376a36786c313874.jpg"
+    },
+    "14": {
+      "nombre": "NOA VARELA FARIÑA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_78656364747736673566.jpg"
+    },
+    "15": {
+      "nombre": "VICTORIA PERALES SOROA",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 15,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -383,26 +575,10 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 12,
-      "rival": "SILICIUS RUGBY MAJADAHONDA",
-      "nota": 13.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a64336866623071316f.jpg"
-    },
-    "14": {
-      "nombre": "CAMINO SOTOMAYOR MENCHACA",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
-      "dorsal": 14,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -12,
-      "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "nota": -1.2,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6f6c347176796d6d6869.jpg"
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 15.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6331676b713874646277.jpg"
     }
   },
   "foto_portada": null,
@@ -424,6 +600,56 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_756e6232717161783564.jpg"
     },
     {
+      "nombre": "GEMMA SILVA SERRA",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_306f74366a7330373630.jpg"
+    },
+    {
+      "nombre": "LUCIA GARCIA DIAZ",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6839357435316c6e3170.jpg"
+    },
+    {
+      "nombre": "MARIA VIDAL MARTI",
+      "equipo": "TURIA",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6975697076686b663834.jpg"
+    },
+    {
       "nombre": "GAÏA MELISANDE PALOMA ELISE TARTINVILLE USAGE TARTINVILLE-BRUANT",
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "dorsal": 1,
@@ -442,6 +668,24 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_67653934366778373669.jpg"
     },
     {
+      "nombre": "MARINA GARCIA MOTA",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_666d30726d3932706568.jpg"
+    },
+    {
       "nombre": "MARIA MIGUEL GIL",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 2,
@@ -456,6 +700,70 @@
       "rival": "SILICIUS RUGBY MAJADAHONDA",
       "nota": 29.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_70316269716477716f6f.jpg"
+    },
+    {
+      "nombre": "LUCIA GUERRA GUERRERO",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_633072663768796b6e71.jpg"
+    },
+    {
+      "nombre": "ANNA FIGUERAS FONT",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_33306b37756765797379.jpg"
+    },
+    {
+      "nombre": "MARINA IGUAZ RAMOS",
+      "equipo": "TURIA",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_71377877687568696b6d.jpg"
+    },
+    {
+      "nombre": "MAITANE IBAÑEZ SOLE",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6679373561306b317039.jpg"
     },
     {
       "nombre": "VALENTINA MALDONADO JAIMES",
@@ -474,6 +782,38 @@
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": -5.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_343865356a6367666f39.jpg"
+    },
+    {
+      "nombre": "EIDER GARCIA FUENTES",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a776d3369366b646a79.jpg"
+    },
+    {
+      "nombre": "ISABEL (MAICA) MARTI MONTORO",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_30727033303376703030.jpg"
     },
     {
       "nombre": "IDOIA GOYA DEL MORAL",
@@ -508,6 +848,70 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6b6d65626c3362646878.jpg"
     },
     {
+      "nombre": "SAMANTHA CORREA GARCIA",
+      "equipo": "TURIA",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_69068890a65e3.jpg"
+    },
+    {
+      "nombre": "MIREIA DE ANDRES GARRIDO",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_676573706a3834747537.jpg"
+    },
+    {
+      "nombre": "INDIA BENOIT MILARA",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3264366d743169616a33.jpg"
+    },
+    {
+      "nombre": "SARA ANSEDE GARCIA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_39357231316a73646863.jpg"
+    },
+    {
       "nombre": "NILE GERRIKABEITIA ALVES",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 4,
@@ -540,6 +944,70 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6966776d6b3969336f6c.jpg"
     },
     {
+      "nombre": "ALICIA AHUIR PALAZON",
+      "equipo": "TURIA",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3771366861676870646d.jpg"
+    },
+    {
+      "nombre": "PAULA DOMINGUEZ GOMEZ",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_656d7230687634757633.jpg"
+    },
+    {
+      "nombre": "LUR OJEMBARRENA FIGUEROA",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6a295b0573778.jpeg"
+    },
+    {
+      "nombre": "IRIA ANIDOS CARBONELL",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_636a3177646e656e7272.jpg"
+    },
+    {
       "nombre": "BELSAY ESCUDERO LOPEZ",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 5,
@@ -554,6 +1022,38 @@
       "rival": "SILICIUS RUGBY MAJADAHONDA",
       "nota": 5.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_36727236776867796565.jpg"
+    },
+    {
+      "nombre": "DANIELA VERA PERAMO",
+      "equipo": "TURIA",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a3675646f76756b6f6e.jpg"
+    },
+    {
+      "nombre": "MARIA DEL CARMEN MENACHO MIRALLES",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64ab16c3bee4c.jpg"
     },
     {
       "nombre": "LUCIA CALVO CORREDERA",
@@ -572,6 +1072,38 @@
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": -5.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_63653463757563616967.jpg"
+    },
+    {
+      "nombre": "UXUE RAMIREZ MELLADO",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7870686f397166357936.jpg"
+    },
+    {
+      "nombre": "ROSINA MERNIES LONGO",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_316a63616e6d35376232.jpeg"
     },
     {
       "nombre": "ALBA MARIA ALONSO PEREZ",
@@ -606,6 +1138,54 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_71336d3074786c623936.jpg"
     },
     {
+      "nombre": "AURA CSONGRADI GARCIA",
+      "equipo": "TURIA",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_63616b6d787537737136.jpg"
+    },
+    {
+      "nombre": "GINA NAVARRO BREA",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_69ae168431058.jpeg"
+    },
+    {
+      "nombre": "JUNE LARRAÑAGA ECHEVARRIA",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_32746d39346d66673264.jpg"
+    },
+    {
       "nombre": "KIARA MARIEL ESPOSITO LENCINAS",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 7,
@@ -620,6 +1200,24 @@
       "rival": "SILICIUS RUGBY MAJADAHONDA",
       "nota": 5.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_346179367338336d6337.jpg"
+    },
+    {
+      "nombre": "SHARA BENEDICTE DIMI NGAYO",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_690d0daf0fa22.jpeg"
     },
     {
       "nombre": "CELIA PALUMBO RIBOT",
@@ -638,6 +1236,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_747179746b75766a6b73.jpg"
     },
     {
+      "nombre": "NEREA SILVA LORENZO",
+      "equipo": "TURIA",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_326b397365686b646578.jpg"
+    },
+    {
+      "nombre": "UXUE MERINO DUÑABEITIA",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64ab066c72224.jpeg"
+    },
+    {
       "nombre": "ADELINA DA COSTA",
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "dorsal": 8,
@@ -652,6 +1282,38 @@
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": 22.8,
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6f6b636236776b6c6d70.jpg"
+    },
+    {
+      "nombre": "LUNA ARROYO DEL MASSO",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_696e7965726f6d743772.jpg"
+    },
+    {
+      "nombre": "ELSA PORTO VIEIROS",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3037693172776b686e35.jpg"
     },
     {
       "nombre": "OIHANE LOPEZ DE ULLIBARRI TORRADO",
@@ -670,6 +1332,54 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6c783634736575313736.jpg"
     },
     {
+      "nombre": "IRUNE BORRALLO GARDOQUI",
+      "equipo": "TURIA",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6c76346e746832666939.jpg"
+    },
+    {
+      "nombre": "SARA MARIN I PUYUELO",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64b52dc001118.jpeg"
+    },
+    {
+      "nombre": "ISABEL RODRIGUEZ VILA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 9,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 13.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6d6b6870726438333237.jpg"
+    },
+    {
       "nombre": "IRATI CLAVERO PERIANES",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 9,
@@ -684,6 +1394,38 @@
       "rival": "SILICIUS RUGBY MAJADAHONDA",
       "nota": 13.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6e647871706f72327065.jpg"
+    },
+    {
+      "nombre": "ARIANE TORRONTEGUI AZKORRA",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_393764633238726c706a.jpg"
+    },
+    {
+      "nombre": "ALBA ALPIN BARDAJI",
+      "equipo": "TURIA",
+      "dorsal": 9,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": 6.3,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6c663238696563757672.jpg"
     },
     {
       "nombre": "LUCIA DIAZ MARTIN",
@@ -702,6 +1444,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_74653961376363796f39.jpg"
     },
     {
+      "nombre": "BERTA GIMENO SANTESMASES",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_666d727233356e643473.jpg"
+    },
+    {
+      "nombre": "NAROA AZPITARTE MAGUREGUI",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 10,
+      "puntos": 16,
+      "ensayos": 1,
+      "conversiones": 4,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 26.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_737335703039796f6532.jpg"
+    },
+    {
       "nombre": "CARLA VILLEGAS MINTEGUI",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 10,
@@ -718,6 +1492,40 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6a34636a636a6a303872.jpg"
     },
     {
+      "nombre": "CAROLINA FERNANDA ALFARO CHIA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 10,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 7.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3063343378376333366a.jpg"
+    },
+    {
+      "nombre": "CRISTINA LOPEZ CALDERON",
+      "equipo": "TURIA",
+      "dorsal": 10,
+      "puntos": 9,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": 7.3,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_376370346f7476636730.jpg"
+    },
+    {
       "nombre": "MARTA PRO GARCIA",
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "dorsal": 10,
@@ -732,6 +1540,54 @@
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": -1.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_70733472343436306e70.jpg"
+    },
+    {
+      "nombre": "INES BUESO-INCHAUSTI GARCIA",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_67696235786f63703374.jpg"
+    },
+    {
+      "nombre": "TECLA MASOKO BUERIBERI",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 23.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_647661376b383730656f.jpg"
+    },
+    {
+      "nombre": "NOA VARELA FARIÑA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_78656364747736673566.jpg"
     },
     {
       "nombre": "LEIRE MARKIEGI GORTAZAR",
@@ -766,6 +1622,86 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6504262462639.jpeg"
     },
     {
+      "nombre": "BELEN GARCES ALVAREZ",
+      "equipo": "TURIA",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3838777066376a367367.jpg"
+    },
+    {
+      "nombre": "ANA HARRIS MARTINEZ",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64a95330a85bd.jpg"
+    },
+    {
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 12,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 21.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b7265706a6235707932.jpg"
+    },
+    {
+      "nombre": "MAIDER ARESTI FELIX",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68140da791426.jpeg"
+    },
+    {
+      "nombre": "CAMILA SOLEDAD RIOS",
+      "equipo": "TURIA",
+      "dorsal": 12,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": 6.3,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_646c6b64627174656131.jpg"
+    },
+    {
       "nombre": "PAULA GARRIDO TORVISO",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 12,
@@ -780,6 +1716,22 @@
       "rival": "SILICIUS RUGBY MAJADAHONDA",
       "nota": 5.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_746c336e68356d667861.jpg"
+    },
+    {
+      "nombre": "ESTHER MORALEDA PEDRERO",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_7434666a366c74363564.jpg"
     },
     {
       "nombre": "MARTINA MARQUEZ ALPAÑEZ",
@@ -798,6 +1750,40 @@
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": -3.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_35637467657234376668.jpg"
+    },
+    {
+      "nombre": "LUISINA CONTRERAS",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 13,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 19.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6238376a36786c313874.jpg"
+    },
+    {
+      "nombre": "IDAIRA GARCIA LOPEZ",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 13,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 13.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e633862386378627933.jpg"
     },
     {
       "nombre": "CLAUDIA DE LA LOMA DEHESA",
@@ -832,6 +1818,86 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_346c706e72356a673278.jpg"
     },
     {
+      "nombre": "LUTGARDA MONTES PUCHOL",
+      "equipo": "TURIA",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_656f686d386974337267.jpg"
+    },
+    {
+      "nombre": "ELISABET SEGARRA CARARACH",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_766a6536686a6a377464.jpg"
+    },
+    {
+      "nombre": "MARIANA CAROLINA ROMERO PEREZ",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 14,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 13.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6f633737787836687272.jpg"
+    },
+    {
+      "nombre": "IRATI ROZAS",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6a36366d6b733875686a.jpg"
+    },
+    {
+      "nombre": "CARLOTA PARDO PEINADOR",
+      "equipo": "TURIA",
+      "dorsal": 14,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": 6.3,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6947fb5286ca6.jpeg"
+    },
+    {
       "nombre": "MARTINA CAMPOS ALONSO",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "dorsal": 14,
@@ -848,6 +1914,24 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_66396664623836373030343637396332.jpg"
     },
     {
+      "nombre": "ALBA MASDEVALL JIMENEZ",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 14,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": 1.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_726c73677277676f6630.jpg"
+    },
+    {
       "nombre": "CAMINO SOTOMAYOR MENCHACA",
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "dorsal": 14,
@@ -862,6 +1946,38 @@
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": -1.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6f6c347176796d6d6869.jpg"
+    },
+    {
+      "nombre": "VICTORIA PERALES SOROA",
+      "equipo": "GETXO RUGBY",
+      "dorsal": 15,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 47,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 15.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6331676b713874646277.jpg"
+    },
+    {
+      "nombre": "LAURA MAESTRO GARCIA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 17,
+      "rival": "TURIA",
+      "nota": 5.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64d74574c5995.jpg"
     },
     {
       "nombre": "DANIELA GARCIA TORRES",
@@ -894,11 +2010,85 @@
       "rival": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "nota": -1.2,
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_32333265656c766c6779.jpg"
+    },
+    {
+      "nombre": "CIENNA MARIE JORDAN",
+      "equipo": "TURIA",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -17,
+      "rival": "RIALTA CRAT CORUÑA.",
+      "nota": -1.7,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_66363830353034653962633262303731.jpg"
+    },
+    {
+      "nombre": "LARA COOK BALLESTER",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -47,
+      "rival": "GETXO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_306638616930776c7668.jpg"
     }
   ],
   "clasificacion": [
     {
       "posicion": 1,
+      "equipo": "GETXO RUGBY",
+      "racha": [
+        "G"
+      ],
+      "pt": 5,
+      "pj": 1,
+      "pg": 1,
+      "pe": 0,
+      "pp": 0,
+      "tf": 52,
+      "tc": 5,
+      "dt": 47,
+      "ef": 7,
+      "ec": 1,
+      "de": 6,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/63/square_396e3565726975667168.jpg"
+    },
+    {
+      "posicion": 2,
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "racha": [
+        "G"
+      ],
+      "pt": 5,
+      "pj": 1,
+      "pg": 1,
+      "pe": 0,
+      "pp": 0,
+      "tf": 41,
+      "tc": 24,
+      "dt": 17,
+      "ef": 7,
+      "ec": 3,
+      "de": 4,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg"
+    },
+    {
+      "posicion": 3,
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "racha": [
         "G"
@@ -919,7 +2109,7 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg"
     },
     {
-      "posicion": 2,
+      "posicion": 4,
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "racha": [
         "P"
@@ -940,45 +2130,49 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/44/square_6b6d69766e726e396168.jpg"
     },
     {
-      "posicion": 3,
-      "equipo": "RIALTA CRAT CORUÑA.",
-      "racha": [],
+      "posicion": 5,
+      "equipo": "TURIA",
+      "racha": [
+        "P"
+      ],
       "pt": 0,
-      "pj": 0,
+      "pj": 1,
       "pg": 0,
       "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
+      "pp": 1,
+      "tf": 24,
+      "tc": 41,
+      "dt": -17,
+      "ef": 3,
+      "ec": 7,
+      "de": -4,
       "bo": 0,
       "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg"
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg"
     },
     {
-      "posicion": 4,
+      "posicion": 6,
       "equipo": "CLUB DE RUGBY SANT CUGAT",
-      "racha": [],
+      "racha": [
+        "P"
+      ],
       "pt": 0,
-      "pj": 0,
+      "pj": 1,
       "pg": 0,
       "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
+      "pp": 1,
+      "tf": 5,
+      "tc": 52,
+      "dt": -47,
+      "ef": 1,
+      "ec": 7,
+      "de": -6,
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/48/square_666e3068736979736476.jpg"
     },
     {
-      "posicion": 5,
+      "posicion": 7,
       "equipo": "CAJASOL SEVILLA COCOS",
       "racha": [],
       "pt": 0,
@@ -995,56 +2189,28 @@
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg"
-    },
-    {
-      "posicion": 6,
-      "equipo": "GETXO RUGBY",
-      "racha": [],
-      "pt": 0,
-      "pj": 0,
-      "pg": 0,
-      "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/63/square_396e3565726975667168.jpg"
-    },
-    {
-      "posicion": 7,
-      "equipo": "TURIA",
-      "racha": [],
-      "pt": 0,
-      "pj": 0,
-      "pg": 0,
-      "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg"
     }
   ],
   "escudos": {
+    "GETXO RUGBY": "https://rugby.isquad.es/images/afiliacion_clubs/63/square_396e3565726975667168.jpg",
+    "RIALTA CRAT CORUÑA.": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg",
     "VULCANIZADOS ALVAREZ EL SALVADOR": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg",
     "SILICIUS RUGBY MAJADAHONDA": "https://rugby.isquad.es/images/afiliacion_clubs/44/square_6b6d69766e726e396168.jpg",
-    "RIALTA CRAT CORUÑA.": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg",
+    "TURIA": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg",
     "CLUB DE RUGBY SANT CUGAT": "https://rugby.isquad.es/images/afiliacion_clubs/48/square_666e3068736979736476.jpg",
-    "CAJASOL SEVILLA COCOS": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg",
-    "GETXO RUGBY": "https://rugby.isquad.es/images/afiliacion_clubs/63/square_396e3565726975667168.jpg",
-    "TURIA": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg"
+    "CAJASOL SEVILLA COCOS": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg"
   },
   "temporada_anotadores": [
+    {
+      "id": 1026141,
+      "nombre": "NAROA AZPITARTE MAGUREGUI",
+      "equipo": "GETXO RUGBY",
+      "pj": 1,
+      "puntos": 16,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
     {
       "id": 1053276,
       "nombre": "ADELINA DA COSTA",
@@ -1066,83 +2232,73 @@
       "rojas": 0
     },
     {
-      "id": 1035058,
-      "nombre": "LEIRE MARKIEGI GORTAZAR",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "id": 1031629,
+      "nombre": "NOA VARELA FARIÑA",
+      "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1025322,
-      "nombre": "CLAUDIA PEREZ PEREZ",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "id": 1024320,
+      "nombre": "TECLA MASOKO BUERIBERI",
+      "equipo": "GETXO RUGBY",
       "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1035079,
-      "nombre": "IRATI CLAVERO PERIANES",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "id": 1029189,
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1023761,
-      "nombre": "CARLA MENDEZ VAZQUEZ",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "id": 1025159,
+      "nombre": "LUISINA CONTRERAS",
+      "equipo": "GETXO RUGBY",
       "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1024560,
-      "nombre": "CARLA VILLEGAS MINTEGUI",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "pj": 1,
-      "puntos": 4,
-      "ensayos": 0,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1029036,
-      "nombre": "MARTINA MARQUEZ ALPAÑEZ",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
-      "pj": 1,
-      "puntos": 2,
-      "ensayos": 0,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 1,
       "rojas": 0
     },
     {
-      "id": 1030219,
-      "nombre": "ALBA MARIA ALONSO PEREZ",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "id": 1025278,
+      "nombre": "CRISTINA LOPEZ CALDERON",
+      "equipo": "TURIA",
       "pj": 1,
-      "puntos": 0,
+      "puntos": 9,
       "ensayos": 0,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1029397,
-      "nombre": "ELSA PORTO VIEIROS",
-      "equipo": "RIALTA CRAT CORUÑA.",
+      "id": 1037999,
+      "nombre": "ADRIANA URQUIZU VIDAURRE",
+      "equipo": "GETXO RUGBY",
       "pj": 1,
-      "puntos": 0,
+      "puntos": 6,
       "ensayos": 0,
       "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025663,
+      "nombre": "CAROLINA FERNANDA ALFARO CHIA",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "pj": 1,
+      "puntos": 6,
+      "ensayos": 0,
+      "amarillas": 1,
       "rojas": 0
     }
   ],
@@ -1168,32 +2324,32 @@
       "rojas": 0
     },
     {
-      "id": 1035058,
-      "nombre": "LEIRE MARKIEGI GORTAZAR",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "id": 1031629,
+      "nombre": "NOA VARELA FARIÑA",
+      "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1025322,
-      "nombre": "CLAUDIA PEREZ PEREZ",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "id": 1024320,
+      "nombre": "TECLA MASOKO BUERIBERI",
+      "equipo": "GETXO RUGBY",
       "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1035079,
-      "nombre": "IRATI CLAVERO PERIANES",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "id": 1029189,
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     }
@@ -1259,35 +2415,70 @@
         "rival": "SILICIUS RUGBY MAJADAHONDA"
       },
       {
-        "nombre": "CARLA MENDEZ VAZQUEZ",
-        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": "SILICIUS RUGBY MAJADAHONDA"
+        "nombre": "LUISINA CONTRERAS",
+        "equipo": "GETXO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "CLUB DE RUGBY SANT CUGAT"
       },
       {
-        "nombre": "CLAUDIA PEREZ PEREZ",
-        "equipo": "SILICIUS RUGBY MAJADAHONDA",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": "VULCANIZADOS ALVAREZ EL SALVADOR"
+        "nombre": "NOA VARELA FARIÑA",
+        "equipo": "RIALTA CRAT CORUÑA.",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "TURIA"
       },
       {
-        "nombre": "IRATI CLAVERO PERIANES",
-        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": "SILICIUS RUGBY MAJADAHONDA"
+        "nombre": "SARA RODRIGUEZ BERDUN",
+        "equipo": "RIALTA CRAT CORUÑA.",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "TURIA"
       },
       {
-        "nombre": "LEIRE MARKIEGI GORTAZAR",
-        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "nombre": "TECLA MASOKO BUERIBERI",
+        "equipo": "GETXO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "CLUB DE RUGBY SANT CUGAT"
+      },
+      {
+        "nombre": "NAROA AZPITARTE MAGUREGUI",
+        "equipo": "GETXO RUGBY",
         "valor": 1,
-        "detalle": "5 puntos",
-        "rival": "SILICIUS RUGBY MAJADAHONDA"
+        "detalle": "16 puntos",
+        "rival": "CLUB DE RUGBY SANT CUGAT"
       }
     ],
     "pateadores": [
+      {
+        "nombre": "NAROA AZPITARTE MAGUREGUI",
+        "equipo": "GETXO RUGBY",
+        "valor": 11,
+        "detalle": "4 transf. · 1 golpe",
+        "rival": "CLUB DE RUGBY SANT CUGAT"
+      },
+      {
+        "nombre": "CRISTINA LOPEZ CALDERON",
+        "equipo": "TURIA",
+        "valor": 9,
+        "detalle": "3 transf. · 1 golpe",
+        "rival": "RIALTA CRAT CORUÑA."
+      },
+      {
+        "nombre": "ADRIANA URQUIZU VIDAURRE",
+        "equipo": "GETXO RUGBY",
+        "valor": 6,
+        "detalle": "3 transf.",
+        "rival": "CLUB DE RUGBY SANT CUGAT"
+      },
+      {
+        "nombre": "CAROLINA FERNANDA ALFARO CHIA",
+        "equipo": "RIALTA CRAT CORUÑA.",
+        "valor": 6,
+        "detalle": "3 transf.",
+        "rival": "TURIA"
+      },
       {
         "nombre": "CARLA VILLEGAS MINTEGUI",
         "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
@@ -1319,35 +2510,70 @@
         "rival": ""
       },
       {
-        "nombre": "CARLA MENDEZ VAZQUEZ",
-        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-        "valor": 1,
-        "detalle": "5 puntos",
+        "nombre": "LUISINA CONTRERAS",
+        "equipo": "GETXO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
         "rival": ""
       },
       {
-        "nombre": "CLAUDIA PEREZ PEREZ",
-        "equipo": "SILICIUS RUGBY MAJADAHONDA",
-        "valor": 1,
-        "detalle": "5 puntos",
+        "nombre": "NOA VARELA FARIÑA",
+        "equipo": "RIALTA CRAT CORUÑA.",
+        "valor": 2,
+        "detalle": "10 puntos",
         "rival": ""
       },
       {
-        "nombre": "IRATI CLAVERO PERIANES",
-        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-        "valor": 1,
-        "detalle": "5 puntos",
+        "nombre": "SARA RODRIGUEZ BERDUN",
+        "equipo": "RIALTA CRAT CORUÑA.",
+        "valor": 2,
+        "detalle": "10 puntos",
         "rival": ""
       },
       {
-        "nombre": "LEIRE MARKIEGI GORTAZAR",
-        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "nombre": "TECLA MASOKO BUERIBERI",
+        "equipo": "GETXO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "NAROA AZPITARTE MAGUREGUI",
+        "equipo": "GETXO RUGBY",
         "valor": 1,
-        "detalle": "5 puntos",
+        "detalle": "16 puntos",
         "rival": ""
       }
     ],
     "pateadores_t": [
+      {
+        "nombre": "NAROA AZPITARTE MAGUREGUI",
+        "equipo": "GETXO RUGBY",
+        "valor": 11,
+        "detalle": "4 transf. · 1 golpe",
+        "rival": ""
+      },
+      {
+        "nombre": "CRISTINA LOPEZ CALDERON",
+        "equipo": "TURIA",
+        "valor": 9,
+        "detalle": "3 transf. · 1 golpe",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIANA URQUIZU VIDAURRE",
+        "equipo": "GETXO RUGBY",
+        "valor": 6,
+        "detalle": "3 transf.",
+        "rival": ""
+      },
+      {
+        "nombre": "CAROLINA FERNANDA ALFARO CHIA",
+        "equipo": "RIALTA CRAT CORUÑA.",
+        "valor": 6,
+        "detalle": "3 transf.",
+        "rival": ""
+      },
       {
         "nombre": "CARLA VILLEGAS MINTEGUI",
         "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
@@ -1365,6 +2591,20 @@
     ],
     "disciplina": [
       {
+        "nombre": "ALBA MASDEVALL JIMENEZ",
+        "equipo": "CLUB DE RUGBY SANT CUGAT",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
+        "nombre": "CAROLINA FERNANDA ALFARO CHIA",
+        "equipo": "RIALTA CRAT CORUÑA.",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
         "nombre": "GAÏA MELISANDE PALOMA ELISE TARTINVILLE USAGE TARTINVILLE-BRUANT",
         "equipo": "SILICIUS RUGBY MAJADAHONDA",
         "valor": 1,
@@ -1379,22 +2619,22 @@
         "rival": ""
       },
       {
-        "nombre": "MARTINA MARQUEZ ALPAÑEZ",
-        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "nombre": "LUCIA GARCIA DIAZ",
+        "equipo": "RIALTA CRAT CORUÑA.",
         "valor": 1,
         "detalle": "1 amarilla",
         "rival": ""
       },
       {
-        "nombre": "NATALIA PEREZ HERRERO",
-        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "nombre": "LUISINA CONTRERAS",
+        "equipo": "GETXO RUGBY",
         "valor": 1,
         "detalle": "1 amarilla",
         "rival": ""
       },
       {
-        "nombre": "VALENTINA MALDONADO JAIMES",
-        "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "nombre": "MARINA GARCIA MOTA",
+        "equipo": "CLUB DE RUGBY SANT CUGAT",
         "valor": 1,
         "detalle": "1 amarilla",
         "rival": ""
@@ -1402,8 +2642,22 @@
     ],
     "banquillo": [
       {
+        "nombre": "ADRIANA URQUIZU VIDAURRE",
+        "equipo": "GETXO RUGBY",
+        "valor": 6,
+        "detalle": "",
+        "rival": ""
+      },
+      {
         "nombre": "CLAUDIA PEREZ PEREZ",
         "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "GORETI BARRUTIETA BARRENETXEA",
+        "equipo": "GETXO RUGBY",
         "valor": 5,
         "detalle": "1 ensayo",
         "rival": ""
@@ -1415,12 +2669,16 @@
         "unidad": "pts a favor",
         "filas": [
           {
-            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-            "valor": 34
+            "equipo": "GETXO RUGBY",
+            "valor": 52
           },
           {
-            "equipo": "SILICIUS RUGBY MAJADAHONDA",
-            "valor": 22
+            "equipo": "RIALTA CRAT CORUÑA.",
+            "valor": 41
+          },
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 34
           }
         ]
       },
@@ -1429,12 +2687,16 @@
         "unidad": "pts en contra",
         "filas": [
           {
+            "equipo": "GETXO RUGBY",
+            "valor": 5
+          },
+          {
             "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
             "valor": 22
           },
           {
-            "equipo": "SILICIUS RUGBY MAJADAHONDA",
-            "valor": 34
+            "equipo": "RIALTA CRAT CORUÑA.",
+            "valor": 24
           }
         ]
       },
@@ -1443,12 +2705,16 @@
         "unidad": "ensayos",
         "filas": [
           {
-            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-            "valor": 6
+            "equipo": "GETXO RUGBY",
+            "valor": 7
           },
           {
-            "equipo": "SILICIUS RUGBY MAJADAHONDA",
-            "valor": 4
+            "equipo": "RIALTA CRAT CORUÑA.",
+            "valor": 7
+          },
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 6
           }
         ]
       },
@@ -1461,8 +2727,12 @@
             "valor": 4
           },
           {
-            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-            "valor": 1
+            "equipo": "RIALTA CRAT CORUÑA.",
+            "valor": 3
+          },
+          {
+            "equipo": "CLUB DE RUGBY SANT CUGAT",
+            "valor": 2
           }
         ]
       }
@@ -1488,6 +2758,16 @@
       "titular": "Hat-trick de Adelina Da Costa",
       "contexto": "Firmó 3 ensayos ante El Salvador.",
       "equipo": "SILICIUS RUGBY MAJADAHONDA"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 60,
+      "numero": "47",
+      "unidad": "puntos de diferencia",
+      "titular": "Exhibición de Getxo Rugby",
+      "contexto": "Getxo Rugby 52-5 Sant Cugat. Paliza ante Sant Cugat.",
+      "equipo": "GETXO RUGBY"
     }
   ]
 }
