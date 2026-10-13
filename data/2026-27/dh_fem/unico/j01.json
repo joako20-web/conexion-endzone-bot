@@ -15,7 +15,7 @@
       "puntos_visitante": 22,
       "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
       "estado": "jugado",
-      "grupo": null,
+      "grupo": 1298,
       "ronda": ""
     },
     {
@@ -28,7 +28,7 @@
       "puntos_visitante": 24,
       "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
       "estado": "jugado",
-      "grupo": null,
+      "grupo": 1298,
       "ronda": ""
     },
     {
@@ -41,7 +41,7 @@
       "puntos_visitante": 5,
       "campo": "Fadura",
       "estado": "jugado",
-      "grupo": null,
+      "grupo": 1298,
       "ronda": ""
     }
   ],
@@ -56,7 +56,7 @@
       "puntos_visitante": 22,
       "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
       "estado": "jugado",
-      "grupo": null,
+      "grupo": 1298,
       "ronda": ""
     },
     {
@@ -69,7 +69,7 @@
       "puntos_visitante": 24,
       "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
       "estado": "jugado",
-      "grupo": null,
+      "grupo": 1298,
       "ronda": ""
     },
     {
@@ -82,7 +82,7 @@
       "puntos_visitante": 5,
       "campo": "Fadura",
       "estado": "jugado",
-      "grupo": null,
+      "grupo": 1298,
       "ronda": ""
     }
   ],
@@ -2367,7 +2367,7 @@
         "puntos_visitante": null,
         "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
         "estado": "pendiente",
-        "grupo": null,
+        "grupo": 1298,
         "ronda": ""
       },
       {
@@ -2380,7 +2380,7 @@
         "puntos_visitante": null,
         "campo": "Polideportivo Quatre Carreres",
         "estado": "pendiente",
-        "grupo": null,
+        "grupo": 1298,
         "ronda": ""
       },
       {
@@ -2393,7 +2393,7 @@
         "puntos_visitante": null,
         "campo": "Fadura",
         "estado": "pendiente",
-        "grupo": null,
+        "grupo": 1298,
         "ronda": ""
       }
     ]
