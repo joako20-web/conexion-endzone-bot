@@ -71,6 +71,7 @@
       "ronda": ""
     }
   ],
+  "descansa": [],
   "partidos_temporada": [
     {
       "id": 17643,
@@ -3563,7 +3564,8 @@
         "grupo": null,
         "ronda": ""
       }
-    ]
+    ],
+    "descansa": []
   },
   "rankings": {
     "ensayadores": [
