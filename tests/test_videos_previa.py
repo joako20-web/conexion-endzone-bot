@@ -73,3 +73,15 @@ def test_html_matchday(monkeypatch):
             html = R.html_post(cab, [s], formato, tema)
             assert "Matchday" in html and "12:00" in html and "Campos de Rugby de Pepe Rojo" in html
             assert f"tema-{tema}" in html and f"f-{formato}" in html
+
+
+def test_cabecera_proxima_jornada(monkeypatch):
+    # El slide "Próxima jornada" va en el carrusel de la última jugada, pero su cabecera
+    # debe decir la jornada que anuncia (antes ponía "jornada 2" arriba y "Jornada 3" abajo).
+    monkeypatch.setattr(R, "escudo_equipo", lambda equipo, escudos: "data:x")
+    datos = _datos()
+    s = next(x for x in R.slides_de_jornada(datos) if x["tipo"] == "previa")
+    for formato in ("post", "historia"):
+        for tema in R.TEMAS:
+            html = R.html_post(datos, [s], formato, tema)
+            assert f"jornada {s['numero']}" in html and f"jornada {datos['jornada']}<" not in html
