@@ -485,11 +485,25 @@ def enviar_competicion(tg: Telegram, chat_id, comp: str, claves: list[str],
     return True
 
 
-def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: str, jornada: int | None) -> list[Path]:
+# Imágenes de un solo partido que el bot elige solo; debajo sale «🔄 Cambiar partido».
+CON_PARTIDO = {"partido_jornada", "encuesta_partido"}
+
+
+def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: str, jornada: int | None,
+                     id_partido: int | None = None, elegido: dict | None = None) -> list[Path]:
+    """`id_partido` fuerza el partido en las imágenes de CON_PARTIDO; en `elegido["id"]`
+    se devuelve el partido que ha salido (el elegido por el bot o el forzado)."""
+    elegido = elegido if elegido is not None else {}
     if clave == "encuesta_mvp":
         return especiales.renderizar_vota_mvp(comp, grupo, destino, jornada=jornada)
     if clave == "encuesta_partido":
-        return especiales.renderizar_quien_gana(comp, grupo, destino)
+        if id_partido is None:
+            from rugbyig.carteles import _datos
+
+            p = especiales.partido_destacado(_datos(comp, grupo, None))
+            id_partido = p["id"] if p else None
+        elegido["id"] = id_partido
+        return especiales.renderizar_quien_gana(comp, grupo, destino, id_partido=id_partido)
     if clave == "evolucion":
         return evolucion.renderizar_evolucion(comp, grupo, destino, formato=formato)
     if clave == "xv_temporada":
@@ -497,7 +511,9 @@ def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: 
     if clave == "mvp_temporada":
         return especiales.renderizar_mvp_temporada(comp, grupo, destino, formato=formato)
     if clave == "partido_jornada":
-        return destacado.partido_jornada(comp, grupo, formato=formato, destino=destino)[1]
+        datos, rutas = destacado.partido_jornada(comp, grupo, id_partido=id_partido, formato=formato, destino=destino)
+        elegido["id"] = datos["partido"]["id"]
+        return rutas
     if clave == "palmares":
         return historico.palmares(comp, formato, destino)
     if clave == "mvp_jornada":
@@ -517,9 +533,10 @@ def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: 
 
 
 def enviar_especial(tg: Telegram, chat_id, clave: str, comp: str, grupo: str, jornada: int | None = None,
-                    formato: str = "post", original: bool = False) -> bool:
+                    formato: str = "post", original: bool = False, id_partido: int | None = None) -> bool:
+    elegido: dict = {}
     with tempfile.TemporaryDirectory() as tmp:
-        imagenes = _render_especial(clave, comp, grupo, Path(tmp), formato, jornada)
+        imagenes = _render_especial(clave, comp, grupo, Path(tmp), formato, jornada, id_partido, elegido)
         if not imagenes:
             return False
         tg.album(chat_id, imagenes, como_archivo=original)
@@ -527,11 +544,16 @@ def enviar_especial(tg: Telegram, chat_id, clave: str, comp: str, grupo: str, jo
         return True
     cod, liga = ABREV[clave], f"{comp}/{grupo}"
     es_historia = clave.startswith("encuesta") or formato == "historia"
-    botones = [("📦 Original", f"eo|{liga}|{cod}|{'h' if formato == 'historia' else 'p'}")]
+    pid = elegido.get("id")
+    extra = f"|{pid}" if pid and clave in CON_PARTIDO else ""  # Historias/Original del mismo partido
+    botones = [("📦 Original", f"eo|{liga}|{cod}|{'h' if formato == 'historia' else 'p'}{extra}")]
     if not es_historia:
-        botones.insert(0, ("📱 Historias", f"eh|{liga}|{cod}"))
+        botones.insert(0, ("📱 Historias", f"eh|{liga}|{cod}|h{extra}"))
+    filas = [botones]
+    if clave in CON_PARTIDO:
+        filas.append([("🔄 Cambiar partido", f"pc|{liga}|{cod}|{pid or ''}")])
     nota = "\nPega encima la encuesta de Instagram en el hueco." if clave.startswith("encuesta") else ""
-    tg.mensaje(chat_id, f"<b>{_nombre_liga(liga)}</b>{nota}", [botones])
+    tg.mensaje(chat_id, f"<b>{_nombre_liga(liga)}</b>{nota}", filas)
     return True
 
 
@@ -588,6 +610,23 @@ def _menu_videos(liga: str) -> tuple[str, list]:
     filas = _filas(botones, 2) + [[("⬅️ Volver", f"m2|{liga}"), ("🏠 Inicio", "m1")]]
     return (f"🎬 <b>{_nombre_liga(liga)}</b>\n¿Qué vídeo? Tardan unos 3 minutos y te llegan solos; "
             "mientras puedes seguir pidiendo cosas."), filas
+
+
+def _menu_cambiar_partido(liga: str, cod: str, actual: str) -> tuple[str, list]:
+    """Partidos pendientes de la próxima jornada; ⭐ el que sale ahora."""
+    from rugbyig.carteles import _datos
+
+    comp, grupo = liga.split("/")
+    prox = _datos(comp, grupo, None).get("proxima_jornada") or {}
+    pendientes = [p for p in prox.get("partidos", []) if p.get("puntos_local") is None
+                  and "DESCANSA" not in f"{p['local']} {p['visitante']}".upper()]
+    if not pendientes:
+        return f"<b>{_nombre_liga(liga)}</b>: no quedan partidos pendientes en la próxima jornada.", [[("🏠 Inicio", "m1")]]
+    filas = [[(("⭐ " if str(p["id"]) == actual else "") +
+               f"{nombres.equipo_corto(p['local'])} – {nombres.equipo_corto(p['visitante'])}",
+               f"pe|{liga}|{cod}|{p['id']}")] for p in pendientes]
+    return (f"🔄 <b>{_nombre_liga(liga)}</b> · jornada {prox.get('numero')}\n"
+            "¿Qué partido quieres? (⭐ = el que he elegido yo)"), filas + [[("🏠 Inicio", "m1")]]
 
 
 def _menu_partidos_video(liga: str) -> tuple[str, list]:
@@ -1006,7 +1045,24 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
         comp, grupo = partes[1].split("/")
         clave = DESABREV[partes[2]]
         formato = "historia" if partes[0] == "eh" or (len(partes) > 3 and partes[3] == "h") else "post"
-        enviar_especial(tg, chat_id, clave, comp, grupo, formato=formato, original=partes[0] == "eo")
+        id_partido = int(partes[4]) if len(partes) > 4 and partes[4].isdigit() else None
+        enviar_especial(tg, chat_id, clave, comp, grupo, formato=formato, original=partes[0] == "eo",
+                        id_partido=id_partido)
+        return
+    if partes[0] == "pc":  # elegir otro partido para el partido de la jornada / ¿quién gana?
+        texto, filas = _menu_cambiar_partido(partes[1], partes[2], partes[3] if len(partes) > 3 else "")
+        tg.mensaje(chat_id, texto, filas)
+        return
+    if partes[0] == "pe":
+        comp, grupo = partes[1].split("/")
+        tg.mensaje(chat_id, "⏳ Preparando el partido que has elegido…")
+        try:
+            hecho = enviar_especial(tg, chat_id, DESABREV[partes[2]], comp, grupo, id_partido=int(partes[3]))
+        except RuntimeError as e:
+            hecho = False
+            tg.mensaje(chat_id, f"No he podido: {e}")
+        if not hecho:
+            tg.mensaje(chat_id, "Ese partido ya no está pendiente.")
         return
     accion, pid, cod = (partes + ["", ""])[:3]
     if accion in ("h", "o") and pid in posts:
