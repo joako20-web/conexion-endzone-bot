@@ -56,20 +56,10 @@
       "estado": "jugado",
       "grupo": null,
       "ronda": ""
-    },
-    {
-      "id": 1678998014,
-      "jornada": 1,
-      "fecha": "2026-10-04T00:00:00",
-      "local": "COMPLUTENSE CISNEROS THETA",
-      "visitante": "DESCANSO",
-      "puntos_local": null,
-      "puntos_visitante": null,
-      "campo": "",
-      "estado": "pendiente",
-      "grupo": null,
-      "ronda": ""
     }
+  ],
+  "descansa": [
+    "COMPLUTENSE CISNEROS THETA"
   ],
   "partidos_temporada": [
     {
@@ -2935,20 +2925,10 @@
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
-      },
-      {
-        "id": 1513594945,
-        "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
-        "local": "TORRELODONES RC",
-        "visitante": "DESCANSO",
-        "puntos_local": null,
-        "puntos_visitante": null,
-        "campo": "",
-        "estado": "pendiente",
-        "grupo": null,
-        "ronda": ""
       }
+    ],
+    "descansa": [
+      "TORRELODONES RC"
     ]
   },
   "rankings": {
