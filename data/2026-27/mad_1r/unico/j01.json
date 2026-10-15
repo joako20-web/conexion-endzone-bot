@@ -2887,12 +2887,12 @@
       {
         "id": 3182951153,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-18T12:30:00",
         "local": "SAN ISIDRO FUENCARRAL",
         "visitante": "MADRID BARBARIANS RFC",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Tres Olivos",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -2900,12 +2900,12 @@
       {
         "id": 1923263510,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-17T16:30:00",
         "local": "XV HORTALEZA NEGRO",
         "visitante": "SANSE SCRUM",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Hortaleza",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -2913,12 +2913,12 @@
       {
         "id": 1618144282,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-17T16:00:00",
         "local": "ARQUITECTURA",
         "visitante": "LICEO FRANCÉS",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de las Leonas Ensanche de Vallecas",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -2926,12 +2926,12 @@
       {
         "id": 3471762145,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-17T13:45:00",
         "local": "COMPLUTENSE CISNEROS THETA",
         "visitante": "OLÍMPICO DE POZUELO RUGBY",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Paraninfo",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
