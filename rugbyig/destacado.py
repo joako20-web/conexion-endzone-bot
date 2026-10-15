@@ -12,7 +12,7 @@ from dataclasses import asdict
 from datetime import date, datetime
 from pathlib import Path
 
-from rugbyig.agenda import es_descanso
+from rugbyig.pipeline import es_descanso
 from rugbyig.core import partido_jornada as PJ
 from rugbyig.pipeline import cargar_config, jugadores_desde_resumen, resumen_temporada
 from rugbyig.render.nombres import titulo

@@ -13,7 +13,7 @@ from pathlib import Path
 
 from rugbyig.core import temporada as T
 from rugbyig.core.estadisticas import POSICIONES
-from rugbyig.pipeline import cargar_config, preparar_jornada
+from rugbyig.pipeline import cargar_config, es_descanso, preparar_jornada
 from rugbyig.render.render import DIAS, FILAS_XV, MESES, fila_anotador, renderizar_slides
 from rugbyig.scraper.isquad import cliente_para
 
@@ -68,7 +68,7 @@ def partido_destacado(datos: dict) -> dict | None:
     prox = (datos.get("proxima_jornada") or {}).get("partidos") or []
     pos = {f["equipo"]: f["posicion"] for f in datos.get("clasificacion", [])}
     n = len(pos) or 99
-    candidatos = [p for p in prox if p["puntos_local"] is None]
+    candidatos = [p for p in prox if p["puntos_local"] is None and not es_descanso(p)]
     if not candidatos:
         return None
     return min(candidatos, key=lambda p: (pos.get(p["local"], n) + pos.get(p["visitante"], n)

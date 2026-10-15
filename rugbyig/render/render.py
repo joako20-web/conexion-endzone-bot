@@ -29,7 +29,7 @@ from jinja2 import Environment, FileSystemLoader
 from playwright.sync_api import sync_playwright
 
 from rugbyig.core.estadisticas import POSICIONES
-from rugbyig.pipeline import CONFIG, RAIZ, cargar_config
+from rugbyig.pipeline import CONFIG, RAIZ, cargar_config, separar_descansos
 from rugbyig.rutas import leer_yaml
 from rugbyig.render import nombres
 from rugbyig.scraper.isquad import compartido
@@ -178,8 +178,11 @@ def slides_de_jornada(datos: dict) -> list[dict]:
             "credito": destacado,
         }
     )
+    # Los datos guardados antes de separar los descansos aún traen el «partido» contra DESCANSO
+    jugados, descansan = separar_descansos(datos["partidos"])
     slides.append(
-        {"tipo": "resultados", "clave": "resultados", "partidos": datos["partidos"], "fechas": _rango_fechas(datos["partidos"])}
+        {"tipo": "resultados", "clave": "resultados", "partidos": jugados, "fechas": _rango_fechas(jugados),
+         "descansa": datos.get("descansa") or descansan}
     )
     if datos["anotadores"]:
         slides.append(
@@ -201,18 +204,21 @@ def slides_de_jornada(datos: dict) -> list[dict]:
     filas, leyenda = con_zonas(datos["clasificacion"], datos["competicion"], datos["grupo"])
     slides.append({"tipo": "clasificacion", "clave": "clasificacion", "filas": filas, "leyenda": leyenda})
     prox = datos.get("proxima_jornada")
-    if prox and prox["partidos"]:
+    reales, descansan_sig = separar_descansos(prox["partidos"]) if prox else ([], [])
+    if reales:
         partidos = []
-        for p in prox["partidos"]:
+        for p in reales:
             f = datetime.fromisoformat(p["fecha"]) if p["fecha"] else None
             partidos.append(
                 {
                     **p,
                     "dia": f"{DIAS[f.weekday()][:3]} {f.day} {MESES[f.month - 1]}" if f else "Por fijar",
-                    "hora": f.strftime("%H:%M") if f else "--:--",
+                    # 00:00 en iSquad/MatchReady = hora sin fijar
+                    "hora": "" if not f or (f.hour, f.minute) == (0, 0) else f.strftime("%H:%M"),
                 }
             )
-        slides.append({"tipo": "previa", "clave": "previa", "numero": prox["numero"], "partidos": partidos})
+        slides.append({"tipo": "previa", "clave": "previa", "numero": prox["numero"], "partidos": partidos,
+                       "descansa": prox.get("descansa") or descansan_sig})
     if datos["temporada_anotadores"]:
         slides.append(
             {

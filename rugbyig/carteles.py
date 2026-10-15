@@ -15,7 +15,7 @@ from datetime import datetime
 from pathlib import Path
 
 from rugbyig.especiales import partido_destacado
-from rugbyig.pipeline import preparar_jornada, ruta_jornada
+from rugbyig.pipeline import es_descanso, preparar_jornada, ruta_jornada
 from rugbyig.render.render import DIAS, renderizar_slides
 
 MESES_LARGOS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
@@ -43,7 +43,7 @@ def slide_matchday(datos: dict, id_partido: int | None = None) -> dict:
         if not p:
             raise RuntimeError(f"el partido {id_partido} no está en la jornada {prox['numero']}")
     else:
-        p = partido_destacado(datos) or prox["partidos"][0]
+        p = partido_destacado(datos) or next(x for x in prox["partidos"] if not es_descanso(x))
 
     tabla = {f["equipo"]: f for f in datos.get("clasificacion", [])}
     f = datetime.fromisoformat(p["fecha"]) if p.get("fecha") else None

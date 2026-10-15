@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from rugbyig.core.partido_jornada import etiqueta_dia, proximo_finde, rango_fechas
-from rugbyig.pipeline import cargar_config
+from rugbyig.pipeline import cargar_config, es_descanso
 from rugbyig.render.nombres import equipo_corto
 from rugbyig.render.render import renderizar_slides
 from rugbyig.scraper.isquad import cliente_para
@@ -45,11 +45,6 @@ def _ligas(categorias: list[str] | None, region: str | None) -> list[tuple[str, 
         for grupo, id_grupo in cfg["grupos"].items():
             out.append((comp, grupo, id_grupo, cfg))
     return out
-
-
-def es_descanso(p: dict) -> bool:
-    """Fila de jornada de descanso (MatchReady: "EQUIPO - DESCANSO")."""
-    return "DESCANSO" in (p["local"] + " " + p["visitante"]).upper()
 
 
 def _datos_grupo(comp: str, grupo: str, id_grupo, cfg: dict) -> dict:

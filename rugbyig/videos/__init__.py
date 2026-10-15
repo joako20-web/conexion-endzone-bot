@@ -37,9 +37,10 @@ def _jornada(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
     return props
 
 
-def _previa(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
-    """Previa de la jornada SIGUIENTE a `jornada_` (la última disputada si es None)."""
-    return previa.props(base.datos_jornada(comp, grupo, jornada_))
+def _previa(comp: str, grupo: str, jornada_: int | None, id_partido: int | None = None, **_) -> dict:
+    """Previa de la jornada SIGUIENTE a `jornada_` (la última disputada si es None);
+    `id_partido` cambia el partido destacado."""
+    return previa.props(base.datos_jornada(comp, grupo, jornada_), id_destacado=id_partido)
 
 
 def _xv(comp: str, grupo: str, jornada_: int | None, **_) -> dict:
@@ -80,10 +81,13 @@ PLANTILLAS: dict[str, Plantilla] = {p.clave: p for p in [
 
 
 def reel(comp: str, grupo: str = "unico", jornada: int | None = None, tipo: str = "jornada",
-         salida: Path | None = None, **extra) -> Path:
-    """Genera el vídeo `tipo` y devuelve la ruta del MP4."""
+         salida: Path | None = None, props_usadas: dict | None = None, **extra) -> Path:
+    """Genera el vídeo `tipo` y devuelve la ruta del MP4 (en `props_usadas`, si se pasa,
+    se copian las props con que se ha hecho)."""
     p = PLANTILLAS[tipo]
     props = p.construir(comp, grupo, jornada, **extra)
+    if props_usadas is not None:
+        props_usadas.update(props)
     sufijo = f"_p{extra['id_partido']}" if extra.get("id_partido") else ""
     salida = salida or RAIZ / "out" / f"reel_{tipo}_{comp}_{grupo}_j{props.get('jornada', 0):02d}{sufijo}.mp4"
     return base.renderizar(p.composicion, props, salida)

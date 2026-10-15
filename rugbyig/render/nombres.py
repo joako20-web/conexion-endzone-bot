@@ -29,6 +29,9 @@ def titulo(s: str) -> str:
     return " ".join(p if i and p in _MINUSCULAS else cap(p) for i, p in enumerate(palabras))
 
 
+_SANTOS = {"SAN", "SANT", "SANTA", "SANTO", "SAINT"}
+
+
 def equipo_corto(oficial: str) -> str:
     if oficial in _equipos():
         return _equipos()[oficial]["corto"]
@@ -36,6 +39,9 @@ def equipo_corto(oficial: str) -> str:
     if len(limpio) <= 18:  # corto de por sí: entero
         return titulo(limpio)
     utiles = [p for p in limpio.split() if p not in _RELLENO and p.strip("-")]
+    if len(utiles) > 2 and utiles[-3].upper() in _SANTOS:
+        # «SAN ISIDRO FUENCARRAL» → «San Isidro», no «Isidro Fuencarral»
+        return titulo(" ".join(utiles[-3:-1]))
     return titulo(" ".join(utiles[-2:] if len(utiles) > 2 else utiles))
 
 

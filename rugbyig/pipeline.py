@@ -48,6 +48,24 @@ def ruta_jornada(comp: str, grupo: str, jornada: int) -> Path:
     return DATA / temporada / comp / grupo / f"j{jornada:02d}.json"
 
 
+def es_descanso(p) -> bool:
+    """Fila de jornada de descanso: MatchReady la publica como un partido contra «DESCANSO»."""
+    local, visitante = (p["local"], p["visitante"]) if isinstance(p, dict) else (p.local, p.visitante)
+    return "DESCANSO" in f"{local} {visitante}".upper()
+
+
+def separar_descansos(partidos: list) -> tuple[list, list[str]]:
+    """(partidos de verdad, equipos que descansan)."""
+    reales, descansan = [], []
+    for p in partidos:
+        if es_descanso(p):
+            local, visitante = (p["local"], p["visitante"]) if isinstance(p, dict) else (p.local, p.visitante)
+            descansan.append(visitante if "DESCANSO" in local.upper() else local)
+        else:
+            reales.append(p)
+    return reales, descansan
+
+
 def _partido(p) -> dict:
     d = asdict(p)
     d["fecha"] = p.fecha.isoformat() if p.fecha else None
@@ -143,7 +161,7 @@ def preparar_jornada(
     if jornada is None:
         raise RuntimeError(f"{comp}/{grupo}: aún no hay jornadas jugadas")
 
-    partidos = competicion.jornada(jornada)
+    partidos, descansan = separar_descansos(competicion.jornada(jornada))
     lineas: list[E.LineaJugador] = []
     pendientes = []
     actas_jornada = []
@@ -171,7 +189,7 @@ def preparar_jornada(
             else "Protagonista de la jornada"
         )
 
-    siguiente = competicion.jornada(jornada + 1)
+    siguiente, descansan_sig = separar_descansos(competicion.jornada(jornada + 1))
     ruta = ruta_jornada(comp, grupo, jornada)
     previo = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
     # iSquad solo da la clasificación actual: al rehacer una jornada ya pasada se conserva
@@ -184,7 +202,9 @@ def preparar_jornada(
         "temporada": cargar_config()["temporada"],
         "jornada": jornada,
         "partidos": [_partido(p) for p in partidos],
-        "partidos_temporada": [_partido(p) for p in competicion.partidos if p.jugado and p.jornada <= jornada],
+        "descansa": descansan,
+        "partidos_temporada": [_partido(p) for p in competicion.partidos
+                               if p.jugado and p.jornada <= jornada and not es_descanso(p)],
         "actas_pendientes": pendientes,
         "anotadores": [asdict(x) for x in E.anotadores(lineas, 10)],
         "ensayadores": [asdict(x) for x in E.maximos_ensayadores(lineas, 5)],
@@ -208,6 +228,7 @@ def preparar_jornada(
         "proxima_jornada": {
             "numero": jornada + 1,
             "partidos": [_partido(p) for p in siguiente],
+            "descansa": descansan_sig,
         }
         if siguiente
         else None,

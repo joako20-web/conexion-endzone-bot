@@ -16,4 +16,5 @@
     </div>
   </div>
 {% endfor %}
+{% if s.descansa %}<div class="descansa">Descansa: {{ s.descansa|map("corto")|join(" · ") }}</div>{% endif %}
 </div>

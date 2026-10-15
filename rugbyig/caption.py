@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from rugbyig.rutas import leer_yaml
 
-from rugbyig.pipeline import CONFIG
+from rugbyig.pipeline import CONFIG, separar_descansos
 from rugbyig.render import nombres
 
 
@@ -12,12 +12,16 @@ def texto_post(datos: dict) -> str:
     grupo = "" if datos["grupo"] == "unico" else f" · Grupo {datos['grupo']}"
     lineas = [f"🏉 {datos['nombre']}{grupo} · Jornada {datos['jornada']}", ""]
 
-    for p in datos["partidos"]:
+    partidos, descansan = separar_descansos(datos["partidos"])
+    for p in partidos:
         loc, vis = nombres.equipo_corto(p["local"]), nombres.equipo_corto(p["visitante"])
         if p["puntos_local"] is None:
             lineas.append(f"{loc} – {vis} (sin resultado)")
         else:
             lineas.append(f"{loc} {p['puntos_local']}-{p['puntos_visitante']} {vis}")
+    descansan = datos.get("descansa") or descansan
+    if descansan:
+        lineas.append("Descansa: " + ", ".join(nombres.equipo_corto(e) for e in descansan))
     lineas.append("")
 
     if datos.get("xv_ideal"):

@@ -20,7 +20,7 @@ from pathlib import Path
 from rugbyig import agenda, arbitros, caption, preferencias, destacado, directo, especiales, estado, evolucion, fichas, historico, torneo
 from rugbyig.core.editar import cambiar_xv
 from rugbyig.pedidos import interpretar
-from rugbyig.pipeline import RAIZ, cargar_config, jornadas_jugadas, preparar_jornada
+from rugbyig.pipeline import RAIZ, cargar_config, es_descanso, jornadas_jugadas, preparar_jornada
 from rugbyig.render import nombres
 from rugbyig.render.render import CLAVES, TEMAS, hoja_muestras, renderizar_jornada, tema_actual
 from rugbyig.telegram import Telegram
@@ -524,7 +524,7 @@ def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: 
         from rugbyig.carteles import _datos, renderizar_matchday
 
         siguiente = _datos(comp, grupo, None).get("proxima_jornada") or {}
-        ids = [p["id"] for p in siguiente.get("partidos", []) if p.get("puntos_local") is None]
+        ids = [p["id"] for p in siguiente.get("partidos", []) if p.get("puntos_local") is None and not es_descanso(p)]
         return [renderizar_matchday(comp, grupo, i, destino / str(i), formato=formato) for i in ids]
     if clave == "hace_un_ano":
         jugadas = jornadas_jugadas(comp, grupo)
@@ -618,8 +618,7 @@ def _menu_cambiar_partido(liga: str, cod: str, actual: str) -> tuple[str, list]:
 
     comp, grupo = liga.split("/")
     prox = _datos(comp, grupo, None).get("proxima_jornada") or {}
-    pendientes = [p for p in prox.get("partidos", []) if p.get("puntos_local") is None
-                  and "DESCANSA" not in f"{p['local']} {p['visitante']}".upper()]
+    pendientes = [p for p in prox.get("partidos", []) if p.get("puntos_local") is None and not es_descanso(p)]
     if not pendientes:
         return f"<b>{_nombre_liga(liga)}</b>: no quedan partidos pendientes en la próxima jornada.", [[("🏠 Inicio", "m1")]]
     filas = [[(("⭐ " if str(p["id"]) == actual else "") +
@@ -653,10 +652,15 @@ def pedir_video(tg: Telegram, chat_id, liga: str, tipo: str = "jornada", **extra
         comp, grupo = liga.split("/")
         try:
             with tempfile.TemporaryDirectory() as tmp:
-                ruta = reel(comp, grupo, tipo=tipo, salida=Path(tmp) / f"reel_{tipo}_{comp}_{grupo}.mp4", **extra)
+                props: dict = {}
+                ruta = reel(comp, grupo, tipo=tipo, salida=Path(tmp) / f"reel_{tipo}_{comp}_{grupo}.mp4",
+                            props_usadas=props, **extra)
+                filas = [[("🎬 Otro vídeo", f"vd|{liga}"), ("🔁 Otra cosa", f"m0|{liga}")]]
+                if props.get("idDestacado"):  # el cara a cara de la previa lo elige el bot: se puede cambiar
+                    filas.insert(0, [("🔄 Cambiar partido destacado", f"pc|{liga}|VP|{props['idDestacado']}")])
                 tg.video(chat_id, ruta, f"🎬 <b>{plantilla.nombre}</b> · {_nombre_liga(liga)}\n"
                          "Listo para Reels. Ponle música desde Instagram: los efectos van flojitos para que se oiga.",
-                         [[("🎬 Otro vídeo", f"vd|{liga}"), ("🔁 Otra cosa", f"m0|{liga}")]])
+                         filas)
         except Exception as e:
             traceback.print_exc()
             tg.mensaje(chat_id, f"⚠️ No he podido hacer el vídeo: {html.escape(str(e))[:300]}")
@@ -1052,6 +1056,9 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
     if partes[0] == "pc":  # elegir otro partido para el partido de la jornada / ¿quién gana?
         texto, filas = _menu_cambiar_partido(partes[1], partes[2], partes[3] if len(partes) > 3 else "")
         tg.mensaje(chat_id, texto, filas)
+        return
+    if partes[0] == "pe" and partes[2] == "VP":  # vídeo de previa con otro destacado
+        pedir_video(tg, chat_id, partes[1], "previa", id_partido=int(partes[3]))
         return
     if partes[0] == "pe":
         comp, grupo = partes[1].split("/")

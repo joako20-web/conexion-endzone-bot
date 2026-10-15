@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import datetime
 
 from rugbyig.especiales import partido_destacado
+from rugbyig.pipeline import es_descanso
 from rugbyig.render import nombres
 from rugbyig.videos.base import equipo, props_base
 
@@ -36,15 +37,18 @@ def _orden(p: dict) -> tuple:
     return (p["fecha"] is None, p["fecha"] or "", p["id"])
 
 
-def props(datos: dict, tema: str = "tele") -> dict:
+def props(datos: dict, tema: str = "tele", id_destacado: int | None = None) -> dict:
+    """`id_destacado` fuerza el partido del cara a cara (si no, lo elige `partido_destacado`)."""
     prox = datos.get("proxima_jornada") or {}
-    pendientes = sorted((p for p in prox.get("partidos") or [] if p.get("puntos_local") is None), key=_orden)
+    pendientes = sorted((p for p in prox.get("partidos") or []
+                         if p.get("puntos_local") is None and not es_descanso(p)), key=_orden)
     if not pendientes:
         raise RuntimeError(f"no hay próxima jornada con partidos pendientes tras la jornada {datos['jornada']}")
     escudos = datos["escudos"]
     tabla = {f["equipo"]: f for f in datos.get("clasificacion", [])}
 
-    destacado = partido_destacado(datos) or pendientes[0]
+    forzado = next((p for p in pendientes if p["id"] == id_destacado), None) if id_destacado else None
+    destacado = forzado or partido_destacado(datos) or pendientes[0]
     lados = []
     for eq in (destacado["local"], destacado["visitante"]):
         fila = tabla.get(eq, {})
@@ -65,4 +69,5 @@ def props(datos: dict, tema: str = "tele") -> dict:
         "partidos": partidos,
         "total": len(pendientes),
         "equiposTabla": len(tabla),
+        "idDestacado": destacado["id"],  # para el botón «Cambiar destacado» (Remotion lo ignora)
     }

@@ -16,4 +16,5 @@
     <div class="equipo vis {{ 'pierde' if gl }}"><div class="nom">{{ p.visitante|corto }}</div>{% if p.visitante|escudo %}<img class="crest r" src="{{ p.visitante|escudo }}">{% endif %}</div>
   </div>
 {% endfor %}
+{% if s.descansa %}<div class="descansa">Descansa: {{ s.descansa|map("corto")|join(" · ") }}</div>{% endif %}
 </div>
