@@ -31,7 +31,7 @@ competiciones:
     categoria: nacional
     nombre: "Liga Iberdrola"
     corto: "DH Fem"
-    grupos: {unico: 1298}
+    grupos: {unico: 1329}
     xv_ideal: true
     directo: true   # resultado final al momento el fin de semana
     playoff: [[1, 4], [2, 3]]
@@ -67,7 +67,7 @@ competiciones:
     categoria: nacional
     nombre: "División de Honor B Femenina"
     corto: "DH B Fem"
-    grupos: {unico: 1299}
+    grupos: {unico: 1330}
     xv_ideal: true
     directo: false
     zonas:

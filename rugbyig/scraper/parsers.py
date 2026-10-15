@@ -161,7 +161,11 @@ def acta(raw: bytes, id_partido: int) -> Acta:
 def clasificacion(raw: bytes) -> list[FilaClasificacion]:
     s = _soup(raw)
     filas = []
-    for i, tr in enumerate(s.find("table", class_="clasificacion").find_all("tr")[1:], 1):
+    tabla = s.find("table", class_="clasificacion")
+    if tabla is None:
+        # La federación a veces rehace los grupos (cambio de fase): el viejo queda sin tabla.
+        return filas
+    for i, tr in enumerate(tabla.find_all("tr")[1:], 1):
         td = tr.find_all("td")
         if len(td) < 16:
             continue

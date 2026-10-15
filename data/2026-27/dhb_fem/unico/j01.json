@@ -1620,25 +1620,6 @@
     },
     {
       "posicion": 5,
-      "equipo": "BARCELONA UNIVERSITARI CLUB",
-      "racha": [],
-      "pt": 0,
-      "pj": 0,
-      "pg": 0,
-      "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/15/square_63613932323033633064643364653661.jpg"
-    },
-    {
-      "posicion": 6,
       "equipo": "PRB",
       "racha": [],
       "pt": 0,
@@ -1657,7 +1638,7 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/91/square_716c6a35333834363362.jpg"
     },
     {
-      "posicion": 7,
+      "posicion": 6,
       "equipo": "UNIO ESPORTIVA SANTBOIANA",
       "racha": [],
       "pt": 0,
@@ -1676,7 +1657,7 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/39/square_62397833623562636372.jpg"
     },
     {
-      "posicion": 8,
+      "posicion": 7,
       "equipo": "COMPLUTENSE CISNEROS",
       "racha": [],
       "pt": 0,
@@ -1693,25 +1674,6 @@
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg"
-    },
-    {
-      "posicion": 9,
-      "equipo": "OLIMPICO DE POZUELO CR",
-      "racha": [],
-      "pt": 0,
-      "pj": 0,
-      "pg": 0,
-      "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/70/square_6f3974716c7130626f39.jpg"
     }
   ],
   "escudos": {
@@ -1719,11 +1681,9 @@
     "GAZTEDI RT": "https://rugby.isquad.es/images/afiliacion_clubs/61/square_683574657438696c6a6a.jpg",
     "UNIVERSITARIO BILBAO RUGBY": "https://rugby.isquad.es/images/afiliacion_clubs/69/square_79743232646b33317839.jpg",
     "CLUB DE RUGBY ATLETICO PORTUENSE": "https://rugby.isquad.es/images/afiliacion_clubs/66/square_6f696b3262316c6a7938.jpg",
-    "BARCELONA UNIVERSITARI CLUB": "https://rugby.isquad.es/images/afiliacion_clubs/15/square_63613932323033633064643364653661.jpg",
     "PRB": "https://rugby.isquad.es/images/afiliacion_clubs/91/square_716c6a35333834363362.jpg",
     "UNIO ESPORTIVA SANTBOIANA": "https://rugby.isquad.es/images/afiliacion_clubs/39/square_62397833623562636372.jpg",
-    "COMPLUTENSE CISNEROS": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg",
-    "OLIMPICO DE POZUELO CR": "https://rugby.isquad.es/images/afiliacion_clubs/70/square_6f3974716c7130626f39.jpg"
+    "COMPLUTENSE CISNEROS": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg"
   },
   "temporada_anotadores": [
     {
@@ -1883,7 +1843,7 @@
     "numero": 2,
     "partidos": [
       {
-        "id": 17886,
+        "id": 19017,
         "jornada": 2,
         "fecha": "2026-10-17T16:30:00",
         "local": "COMPLUTENSE CISNEROS",
@@ -1896,7 +1856,7 @@
         "ronda": ""
       },
       {
-        "id": 17885,
+        "id": 19016,
         "jornada": 2,
         "fecha": "2026-10-18T10:00:00",
         "local": "CLUB DE RUGBY ATLETICO PORTUENSE",
@@ -1909,7 +1869,7 @@
         "ronda": ""
       },
       {
-        "id": 17884,
+        "id": 19015,
         "jornada": 2,
         "fecha": "2026-10-18T12:00:00",
         "local": "GAZTEDI RT",

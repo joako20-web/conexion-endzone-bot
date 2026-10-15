@@ -15,7 +15,20 @@
       "puntos_visitante": 22,
       "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
       "estado": "jugado",
-      "grupo": 1298,
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 18942,
+      "jornada": 1,
+      "fecha": null,
+      "local": "OLIMPICO DE POZUELO CR",
+      "visitante": "BARCELONA UNIVERSITARI CLUB",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "Ciudad deportiva Valle de las Cañas",
+      "estado": "pendiente",
+      "grupo": null,
       "ronda": ""
     },
     {
@@ -28,7 +41,7 @@
       "puntos_visitante": 24,
       "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
       "estado": "jugado",
-      "grupo": 1298,
+      "grupo": null,
       "ronda": ""
     },
     {
@@ -41,7 +54,7 @@
       "puntos_visitante": 5,
       "campo": "Fadura",
       "estado": "jugado",
-      "grupo": 1298,
+      "grupo": null,
       "ronda": ""
     }
   ],
@@ -56,7 +69,7 @@
       "puntos_visitante": 22,
       "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
       "estado": "jugado",
-      "grupo": 1298,
+      "grupo": null,
       "ronda": ""
     },
     {
@@ -69,7 +82,7 @@
       "puntos_visitante": 24,
       "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
       "estado": "jugado",
-      "grupo": 1298,
+      "grupo": null,
       "ronda": ""
     },
     {
@@ -82,7 +95,7 @@
       "puntos_visitante": 5,
       "campo": "Fadura",
       "estado": "jugado",
-      "grupo": 1298,
+      "grupo": null,
       "ronda": ""
     }
   ],
@@ -2173,6 +2186,25 @@
     },
     {
       "posicion": 7,
+      "equipo": "OLIMPICO DE POZUELO CR",
+      "racha": [],
+      "pt": 0,
+      "pj": 0,
+      "pg": 0,
+      "pe": 0,
+      "pp": 0,
+      "tf": 0,
+      "tc": 0,
+      "dt": 0,
+      "ef": 0,
+      "ec": 0,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/70/square_6f3974716c7130626f39.jpg"
+    },
+    {
+      "posicion": 8,
       "equipo": "CAJASOL SEVILLA COCOS",
       "racha": [],
       "pt": 0,
@@ -2189,6 +2221,25 @@
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg"
+    },
+    {
+      "posicion": 9,
+      "equipo": "BARCELONA UNIVERSITARI CLUB",
+      "racha": [],
+      "pt": 0,
+      "pj": 0,
+      "pg": 0,
+      "pe": 0,
+      "pp": 0,
+      "tf": 0,
+      "tc": 0,
+      "dt": 0,
+      "ef": 0,
+      "ec": 0,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/15/square_63613932323033633064643364653661.jpg"
     }
   ],
   "escudos": {
@@ -2198,7 +2249,9 @@
     "SILICIUS RUGBY MAJADAHONDA": "https://rugby.isquad.es/images/afiliacion_clubs/44/square_6b6d69766e726e396168.jpg",
     "TURIA": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg",
     "CLUB DE RUGBY SANT CUGAT": "https://rugby.isquad.es/images/afiliacion_clubs/48/square_666e3068736979736476.jpg",
-    "CAJASOL SEVILLA COCOS": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg"
+    "OLIMPICO DE POZUELO CR": "https://rugby.isquad.es/images/afiliacion_clubs/70/square_6f3974716c7130626f39.jpg",
+    "CAJASOL SEVILLA COCOS": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg",
+    "BARCELONA UNIVERSITARI CLUB": "https://rugby.isquad.es/images/afiliacion_clubs/15/square_63613932323033633064643364653661.jpg"
   },
   "temporada_anotadores": [
     {
@@ -2225,9 +2278,19 @@
       "id": 1023764,
       "nombre": "MARIA MIGUEL GIL",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "pj": 1,
+      "pj": 2,
       "puntos": 15,
       "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1029189,
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "pj": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     },
@@ -2245,16 +2308,6 @@
       "id": 1024320,
       "nombre": "TECLA MASOKO BUERIBERI",
       "equipo": "GETXO RUGBY",
-      "pj": 1,
-      "puntos": 10,
-      "ensayos": 2,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1029189,
-      "nombre": "SARA RODRIGUEZ BERDUN",
-      "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 1,
       "puntos": 10,
       "ensayos": 2,
@@ -2317,9 +2370,19 @@
       "id": 1023764,
       "nombre": "MARIA MIGUEL GIL",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "pj": 1,
+      "pj": 2,
       "puntos": 15,
       "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1029189,
+      "nombre": "SARA RODRIGUEZ BERDUN",
+      "equipo": "RIALTA CRAT CORUÑA.",
+      "pj": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     },
@@ -2342,23 +2405,13 @@
       "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
-    },
-    {
-      "id": 1029189,
-      "nombre": "SARA RODRIGUEZ BERDUN",
-      "equipo": "RIALTA CRAT CORUÑA.",
-      "pj": 1,
-      "puntos": 10,
-      "ensayos": 2,
-      "amarillas": 0,
-      "rojas": 0
     }
   ],
   "proxima_jornada": {
     "numero": 2,
     "partidos": [
       {
-        "id": 17828,
+        "id": 18947,
         "jornada": 2,
         "fecha": "2026-10-17T14:15:00",
         "local": "RIALTA CRAT CORUÑA.",
@@ -2367,11 +2420,11 @@
         "puntos_visitante": null,
         "campo": "ESTADIO UNIVERSITARIO UNIVERSIDAD DE CORUÑA - CAMPUS ELVIÑA",
         "estado": "pendiente",
-        "grupo": 1298,
+        "grupo": null,
         "ronda": ""
       },
       {
-        "id": 17827,
+        "id": 18945,
         "jornada": 2,
         "fecha": "2026-10-18T12:00:00",
         "local": "TURIA",
@@ -2380,11 +2433,24 @@
         "puntos_visitante": null,
         "campo": "Polideportivo Quatre Carreres",
         "estado": "pendiente",
-        "grupo": 1298,
+        "grupo": null,
         "ronda": ""
       },
       {
-        "id": 17830,
+        "id": 18946,
+        "jornada": 2,
+        "fecha": "2026-10-18T12:00:00",
+        "local": "CLUB DE RUGBY SANT CUGAT",
+        "visitante": "BARCELONA UNIVERSITARI CLUB",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "ZEM LA GUINARDERA",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 18944,
         "jornada": 2,
         "fecha": "2026-10-18T13:00:00",
         "local": "GETXO RUGBY",
@@ -2393,7 +2459,7 @@
         "puntos_visitante": null,
         "campo": "Fadura",
         "estado": "pendiente",
-        "grupo": 1298,
+        "grupo": null,
         "ronda": ""
       }
     ]

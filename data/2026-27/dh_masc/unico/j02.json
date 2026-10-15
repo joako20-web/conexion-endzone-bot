@@ -201,71 +201,6 @@
       "estado": "jugado",
       "grupo": null,
       "ronda": ""
-    },
-    {
-      "id": 17657,
-      "jornada": 3,
-      "fecha": "2026-10-10T16:00:00",
-      "local": "UNIO ESPORTIVA SANTBOIANA",
-      "visitante": "INVERSUS LICEO FRANCES",
-      "puntos_local": 25,
-      "puntos_visitante": 25,
-      "campo": "ESTADI BALDIRI ALEU",
-      "estado": "jugado",
-      "grupo": null,
-      "ronda": ""
-    },
-    {
-      "id": 17653,
-      "jornada": 3,
-      "fecha": "2026-10-10T17:00:00",
-      "local": "HUESITOS LA VILA RUGBY CLUB",
-      "visitante": "COMPLUTENSE CISNEROS",
-      "puntos_local": 30,
-      "puntos_visitante": 36,
-      "campo": "Estadio de Rugby de Villajoyosa",
-      "estado": "jugado",
-      "grupo": null,
-      "ronda": ""
-    },
-    {
-      "id": 17654,
-      "jornada": 3,
-      "fecha": "2026-10-11T12:00:00",
-      "local": "VRAC QUESOS ENTREPINARES",
-      "visitante": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
-      "puntos_local": 24,
-      "puntos_visitante": 19,
-      "campo": "CAMPOS DE RUGBY DE PEPE ROJO (INSTALACIONES DEPORTIVAS CIUDAD DE VALLADOLID)",
-      "estado": "jugado",
-      "grupo": null,
-      "ronda": ""
-    },
-    {
-      "id": 17655,
-      "jornada": 3,
-      "fecha": "2026-10-11T12:30:00",
-      "local": "SILICIUS ALCOBENDAS RUGBY",
-      "visitante": "AMPO ORDIZIA",
-      "puntos_local": 16,
-      "puntos_visitante": 17,
-      "campo": "Las Terrazas",
-      "estado": "jugado",
-      "grupo": null,
-      "ronda": ""
-    },
-    {
-      "id": 17656,
-      "jornada": 3,
-      "fecha": "2026-10-11T12:30:00",
-      "local": "CRC POZUELO RUGBY",
-      "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "puntos_local": 19,
-      "puntos_visitante": 31,
-      "campo": "ECOPILAS VALLE DE LAS CAÑAS",
-      "estado": "jugado",
-      "grupo": null,
-      "ronda": ""
     }
   ],
   "actas_pendientes": [],
@@ -3178,19 +3113,18 @@
       "equipo": "VRAC QUESOS ENTREPINARES",
       "racha": [
         "G",
-        "G",
         "G"
       ],
-      "pt": 13,
-      "pj": 3,
-      "pg": 3,
+      "pt": 9,
+      "pj": 2,
+      "pg": 2,
       "pe": 0,
       "pp": 0,
-      "tf": 86,
-      "tc": 55,
-      "dt": 31,
-      "ef": 12,
-      "ec": 8,
+      "tf": 62,
+      "tc": 36,
+      "dt": 26,
+      "ef": 9,
+      "ec": 5,
       "de": 4,
       "bo": 1,
       "bd": 0,
@@ -3198,184 +3132,176 @@
     },
     {
       "posicion": 2,
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "racha": [
-        "P",
-        "G",
-        "G"
-      ],
-      "pt": 9,
-      "pj": 3,
-      "pg": 2,
-      "pe": 0,
-      "pp": 1,
-      "tf": 98,
-      "tc": 69,
-      "dt": 29,
-      "ef": 14,
-      "ec": 9,
-      "de": 5,
-      "bo": 1,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg"
-    },
-    {
-      "posicion": 3,
       "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
       "racha": [
         "G",
-        "G",
-        "P"
+        "G"
       ],
-      "pt": 9,
-      "pj": 3,
+      "pt": 8,
+      "pj": 2,
       "pg": 2,
       "pe": 0,
-      "pp": 1,
-      "tf": 76,
-      "tc": 59,
-      "dt": 17,
-      "ef": 6,
-      "ec": 7,
+      "pp": 0,
+      "tf": 57,
+      "tc": 35,
+      "dt": 22,
+      "ef": 3,
+      "ec": 4,
       "de": -1,
       "bo": 0,
-      "bd": 1,
+      "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/14/square_75386c65796e356c756b.jpg"
+    },
+    {
+      "posicion": 3,
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "racha": [
+        "P",
+        "G"
+      ],
+      "pt": 5,
+      "pj": 2,
+      "pg": 1,
+      "pe": 0,
+      "pp": 1,
+      "tf": 67,
+      "tc": 50,
+      "dt": 17,
+      "ef": 9,
+      "ec": 6,
+      "de": 3,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg"
     },
     {
       "posicion": 4,
       "equipo": "AMPO ORDIZIA",
       "racha": [
         "P",
-        "G",
         "G"
       ],
-      "pt": 9,
-      "pj": 3,
-      "pg": 2,
+      "pt": 5,
+      "pj": 2,
+      "pg": 1,
       "pe": 0,
       "pp": 1,
-      "tf": 77,
-      "tc": 65,
-      "dt": 12,
-      "ef": 11,
-      "ec": 8,
-      "de": 3,
+      "tf": 60,
+      "tc": 49,
+      "dt": 11,
+      "ef": 9,
+      "ec": 7,
+      "de": 2,
       "bo": 1,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/96/square_796431373766786b3674.jpg"
     },
     {
       "posicion": 5,
+      "equipo": "SILICIUS ALCOBENDAS RUGBY",
+      "racha": [
+        "G",
+        "P"
+      ],
+      "pt": 5,
+      "pj": 2,
+      "pg": 1,
+      "pe": 0,
+      "pp": 1,
+      "tf": 44,
+      "tc": 37,
+      "dt": 7,
+      "ef": 6,
+      "ec": 3,
+      "de": 3,
+      "bo": 0,
+      "bd": 1,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/27/square_643638336c63366d3766.jpg"
+    },
+    {
+      "posicion": 6,
       "equipo": "UNIO ESPORTIVA SANTBOIANA",
       "racha": [
         "G",
-        "P",
-        "E"
+        "P"
       ],
-      "pt": 7,
-      "pj": 3,
+      "pt": 5,
+      "pj": 2,
       "pg": 1,
-      "pe": 1,
+      "pe": 0,
       "pp": 1,
-      "tf": 88,
-      "tc": 83,
+      "tf": 63,
+      "tc": 58,
       "dt": 5,
-      "ef": 12,
-      "ec": 10,
+      "ef": 9,
+      "ec": 7,
       "de": 2,
       "bo": 0,
       "bd": 1,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/39/square_62397833623562636372.jpg"
     },
     {
-      "posicion": 6,
-      "equipo": "SILICIUS ALCOBENDAS RUGBY",
+      "posicion": 7,
+      "equipo": "HUESITOS LA VILA RUGBY CLUB",
       "racha": [
-        "G",
         "P",
-        "P"
+        "G"
       ],
-      "pt": 6,
-      "pj": 3,
+      "pt": 4,
+      "pj": 2,
       "pg": 1,
       "pe": 0,
-      "pp": 2,
+      "pp": 1,
       "tf": 60,
-      "tc": 54,
-      "dt": 6,
-      "ef": 7,
-      "ec": 5,
-      "de": 2,
+      "tc": 73,
+      "dt": -13,
+      "ef": 8,
+      "ec": 11,
+      "de": -3,
       "bo": 0,
-      "bd": 2,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/27/square_643638336c63366d3766.jpg"
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/80/square_366b6c7131766c643763.jpg"
     },
     {
-      "posicion": 7,
+      "posicion": 8,
       "equipo": "INVERSUS LICEO FRANCES",
       "racha": [
         "G",
-        "P",
-        "E"
+        "P"
       ],
-      "pt": 6,
-      "pj": 3,
+      "pt": 4,
+      "pj": 2,
       "pg": 1,
-      "pe": 1,
+      "pe": 0,
       "pp": 1,
-      "tf": 70,
-      "tc": 85,
+      "tf": 45,
+      "tc": 60,
       "dt": -15,
-      "ef": 8,
-      "ec": 12,
+      "ef": 5,
+      "ec": 9,
       "de": -4,
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/28/square_7972786233646a373068.jpg"
     },
     {
-      "posicion": 8,
-      "equipo": "HUESITOS LA VILA RUGBY CLUB",
-      "racha": [
-        "P",
-        "G",
-        "P"
-      ],
-      "pt": 5,
-      "pj": 3,
-      "pg": 1,
-      "pe": 0,
-      "pp": 2,
-      "tf": 90,
-      "tc": 109,
-      "dt": -19,
-      "ef": 11,
-      "ec": 16,
-      "de": -5,
-      "bo": 0,
-      "bd": 1,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/80/square_366b6c7131766c643763.jpg"
-    },
-    {
       "posicion": 9,
       "equipo": "COMPLUTENSE CISNEROS",
       "racha": [
         "P",
-        "P",
-        "G"
+        "P"
       ],
-      "pt": 4,
-      "pj": 3,
-      "pg": 1,
+      "pt": 0,
+      "pj": 2,
+      "pg": 0,
       "pe": 0,
       "pp": 2,
-      "tf": 67,
-      "tc": 81,
-      "dt": -14,
-      "ef": 10,
-      "ec": 10,
-      "de": 0,
+      "tf": 31,
+      "tc": 51,
+      "dt": -20,
+      "ef": 5,
+      "ec": 7,
+      "de": -2,
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg"
@@ -3385,20 +3311,19 @@
       "equipo": "CRC POZUELO RUGBY",
       "racha": [
         "P",
-        "P",
         "P"
       ],
       "pt": 0,
-      "pj": 3,
+      "pj": 2,
       "pg": 0,
       "pe": 0,
-      "pp": 3,
-      "tf": 63,
-      "tc": 115,
-      "dt": -52,
-      "ef": 9,
-      "ec": 15,
-      "de": -6,
+      "pp": 2,
+      "tf": 44,
+      "tc": 84,
+      "dt": -40,
+      "ef": 6,
+      "ec": 10,
+      "de": -4,
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/54/square_6e7677343030676c6b30.jpg"
@@ -3421,9 +3346,9 @@
       "id": 1027011,
       "nombre": "SANTIAGO IGNACIO MANSILLA",
       "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
-      "pj": 3,
-      "puntos": 51,
-      "ensayos": 1,
+      "pj": 2,
+      "puntos": 42,
+      "ensayos": 0,
       "amarillas": 0,
       "rojas": 0
     },
@@ -3431,29 +3356,9 @@
       "id": 1025601,
       "nombre": "BALTAZAR TAIBO",
       "equipo": "VRAC QUESOS ENTREPINARES",
-      "pj": 3,
-      "puntos": 34,
-      "ensayos": 2,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1027770,
-      "nombre": "ADRIAN ARIAS LASTRA",
-      "equipo": "INVERSUS LICEO FRANCES",
-      "pj": 3,
-      "puntos": 27,
-      "ensayos": 0,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1060934,
-      "nombre": "AGUSTIN ALTAMIRANO DECICCO",
-      "equipo": "HUESITOS LA VILA RUGBY CLUB",
       "pj": 2,
-      "puntos": 26,
-      "ensayos": 0,
+      "puntos": 20,
+      "ensayos": 1,
       "amarillas": 0,
       "rojas": 0
     },
@@ -3461,28 +3366,18 @@
       "id": 1023937,
       "nombre": "SANTIAGO ORTEGA GRANDELA",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "pj": 3,
-      "puntos": 25,
+      "pj": 2,
+      "puntos": 19,
       "ensayos": 1,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1044307,
-      "nombre": "BEAU FINNIAN PEART",
-      "equipo": "AMPO ORDIZIA",
-      "pj": 3,
-      "puntos": 22,
-      "ensayos": 0,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1044000,
-      "nombre": "HUGO DOUGLAS VENTOSA",
-      "equipo": "CRC POZUELO RUGBY",
-      "pj": 3,
-      "puntos": 16,
+      "id": 1027770,
+      "nombre": "ADRIAN ARIAS LASTRA",
+      "equipo": "INVERSUS LICEO FRANCES",
+      "pj": 2,
+      "puntos": 17,
       "ensayos": 0,
       "amarillas": 0,
       "rojas": 0
@@ -3491,16 +3386,6 @@
       "id": 1030303,
       "nombre": "ALBERT MILLAN DIAZ",
       "equipo": "UNIO ESPORTIVA SANTBOIANA",
-      "pj": 3,
-      "puntos": 16,
-      "ensayos": 0,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1025721,
-      "nombre": "AGUSTIN CITTADINI",
-      "equipo": "SILICIUS ALCOBENDAS RUGBY",
       "pj": 2,
       "puntos": 16,
       "ensayos": 0,
@@ -3508,54 +3393,32 @@
       "rojas": 0
     },
     {
-      "id": 1028426,
-      "nombre": "ADRIANO TALEMAISUVA",
-      "equipo": "INVERSUS LICEO FRANCES",
-      "pj": 3,
-      "puntos": 15,
-      "ensayos": 3,
-      "amarillas": 0,
-      "rojas": 0
-    }
-  ],
-  "temporada_ensayadores": [
-    {
-      "id": 1028426,
-      "nombre": "ADRIANO TALEMAISUVA",
-      "equipo": "INVERSUS LICEO FRANCES",
-      "pj": 3,
-      "puntos": 15,
-      "ensayos": 3,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
       "id": 1025975,
       "nombre": "PEDRO CANE SGRO",
       "equipo": "VRAC QUESOS ENTREPINARES",
-      "pj": 3,
+      "pj": 2,
       "puntos": 15,
       "ensayos": 3,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1023923,
-      "nombre": "DIEGO BLASCO PRIETO",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "pj": 3,
+      "id": 1044307,
+      "nombre": "BEAU FINNIAN PEART",
+      "equipo": "AMPO ORDIZIA",
+      "pj": 2,
       "puntos": 15,
-      "ensayos": 3,
+      "ensayos": 0,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1025601,
-      "nombre": "BALTAZAR TAIBO",
-      "equipo": "VRAC QUESOS ENTREPINARES",
-      "pj": 3,
-      "puntos": 34,
-      "ensayos": 2,
+      "id": 1044000,
+      "nombre": "HUGO DOUGLAS VENTOSA",
+      "equipo": "CRC POZUELO RUGBY",
+      "pj": 2,
+      "puntos": 14,
+      "ensayos": 0,
       "amarillas": 0,
       "rojas": 0
     },
@@ -3563,8 +3426,70 @@
       "id": 1043845,
       "nombre": "BALTAZAR MONTOYA QUIROGA",
       "equipo": "HUESITOS LA VILA RUGBY CLUB",
-      "pj": 3,
+      "pj": 2,
       "puntos": 12,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025402,
+      "nombre": "JERONIMO PANDELO MENDEZ",
+      "equipo": "HUESITOS LA VILA RUGBY CLUB",
+      "pj": 2,
+      "puntos": 12,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    }
+  ],
+  "temporada_ensayadores": [
+    {
+      "id": 1025975,
+      "nombre": "PEDRO CANE SGRO",
+      "equipo": "VRAC QUESOS ENTREPINARES",
+      "pj": 2,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1043845,
+      "nombre": "BALTAZAR MONTOYA QUIROGA",
+      "equipo": "HUESITOS LA VILA RUGBY CLUB",
+      "pj": 2,
+      "puntos": 12,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025960,
+      "nombre": "BORJA IBAÑEZ ESCALERA",
+      "equipo": "CRC POZUELO RUGBY",
+      "pj": 2,
+      "puntos": 10,
+      "ensayos": 2,
+      "amarillas": 1,
+      "rojas": 0
+    },
+    {
+      "id": 1056544,
+      "nombre": "FRANCO MATIAS FERNANDO VELARDE BRANDT",
+      "equipo": "AMPO ORDIZIA",
+      "pj": 1,
+      "puntos": 10,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1032967,
+      "nombre": "ADRIAN FERNANDEZ COUVREUR",
+      "equipo": "CRC POZUELO RUGBY",
+      "pj": 2,
+      "puntos": 10,
       "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
@@ -3954,15 +3879,15 @@
         "filas": [
           {
             "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-            "valor": 98
-          },
-          {
-            "equipo": "HUESITOS LA VILA RUGBY CLUB",
-            "valor": 90
+            "valor": 67
           },
           {
             "equipo": "UNIO ESPORTIVA SANTBOIANA",
-            "valor": 88
+            "valor": 63
+          },
+          {
+            "equipo": "VRAC QUESOS ENTREPINARES",
+            "valor": 62
           }
         ]
       },
@@ -3971,16 +3896,16 @@
         "unidad": "pts en contra",
         "filas": [
           {
-            "equipo": "SILICIUS ALCOBENDAS RUGBY",
-            "valor": 54
+            "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+            "valor": 35
           },
           {
             "equipo": "VRAC QUESOS ENTREPINARES",
-            "valor": 55
+            "valor": 36
           },
           {
-            "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
-            "valor": 59
+            "equipo": "SILICIUS ALCOBENDAS RUGBY",
+            "valor": 37
           }
         ]
       },
@@ -3989,16 +3914,16 @@
         "unidad": "ensayos",
         "filas": [
           {
-            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-            "valor": 14
-          },
-          {
             "equipo": "VRAC QUESOS ENTREPINARES",
-            "valor": 12
+            "valor": 9
           },
           {
-            "equipo": "UNIO ESPORTIVA SANTBOIANA",
-            "valor": 12
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 9
+          },
+          {
+            "equipo": "AMPO ORDIZIA",
+            "valor": 9
           }
         ]
       },

@@ -67,6 +67,12 @@ def test_clasificacion():
     assert filas[2].equipo == "VULCANIZADOS ALVAREZ EL SALVADOR"
 
 
+def test_clasificacion_grupo_sin_tabla():
+    # Grupo que la federación ha dejado vacío al rehacer las fases: sin tabla, sin error
+    html = b"<html><body><h2>CLASIFICACION GENERAL</h2><p>TABLA FASE PRINCIPAL</p></body></html>"
+    assert P.clasificacion(html) == []
+
+
 def test_xv_ideal(comp):
     lineas = [ln for p, a in actas_jornada(comp, 2) for ln in E.lineas_partido(p, a)]
     xv = E.xv_ideal(lineas)

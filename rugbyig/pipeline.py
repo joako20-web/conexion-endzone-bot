@@ -133,6 +133,11 @@ def preparar_jornada(
     cliente = cliente or cliente_para(cfg)
 
     clasificacion = cliente.clasificacion(id_grupo)
+    if not clasificacion:
+        raise RuntimeError(
+            f"{cfg['nombre']}: la federación no publica clasificación en el grupo {id_grupo}. "
+            "Puede que haya rehecho los grupos; hay que actualizar el id en config/competiciones.yaml"
+        )
     competicion = cliente.competicion(id_grupo).filtrar(id_grupo, {f.equipo for f in clasificacion})
     jornada = jornada or competicion.ultima_jornada_jugada()
     if jornada is None:
@@ -167,6 +172,11 @@ def preparar_jornada(
         )
 
     siguiente = competicion.jornada(jornada + 1)
+    ruta = ruta_jornada(comp, grupo, jornada)
+    previo = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
+    # iSquad solo da la clasificación actual: al rehacer una jornada ya pasada se conserva
+    # la tabla (y los máximos de temporada) que se guardaron entonces.
+    pasada = jornada < (competicion.ultima_jornada_jugada() or jornada) and bool(previo.get("clasificacion"))
     datos = {
         "competicion": comp,
         "nombre": cfg["nombre"],
@@ -174,7 +184,7 @@ def preparar_jornada(
         "temporada": cargar_config()["temporada"],
         "jornada": jornada,
         "partidos": [_partido(p) for p in partidos],
-        "partidos_temporada": [_partido(p) for p in competicion.partidos if p.jugado],
+        "partidos_temporada": [_partido(p) for p in competicion.partidos if p.jugado and p.jornada <= jornada],
         "actas_pendientes": pendientes,
         "anotadores": [asdict(x) for x in E.anotadores(lineas, 10)],
         "ensayadores": [asdict(x) for x in E.maximos_ensayadores(lineas, 5)],
@@ -184,8 +194,8 @@ def preparar_jornada(
             (asdict(ln) for ln in lineas if 1 <= ln.dorsal <= 15),
             key=lambda x: (x["dorsal"], -x["nota"]),
         ),
-        "clasificacion": [asdict(f) for f in clasificacion],
-        "escudos": {f.equipo: f.escudo for f in clasificacion if f.escudo},
+        "clasificacion": previo["clasificacion"] if pasada else [asdict(f) for f in clasificacion],
+        "escudos": {**previo.get("escudos", {}), **{f.equipo: f.escudo for f in clasificacion if f.escudo}},
         "temporada_anotadores": [
             asdict(j)
             for j in sorted(jugadores_temporada, key=lambda j: (-j.puntos, -j.ensayos))[:10]
@@ -194,6 +204,7 @@ def preparar_jornada(
             asdict(j)
             for j in sorted(jugadores_temporada, key=lambda j: (-j.ensayos, -j.puntos))[:5]
         ],
+        **({k: previo[k] for k in ("temporada_anotadores", "temporada_ensayadores") if k in previo} if pasada else {}),
         "proxima_jornada": {
             "numero": jornada + 1,
             "partidos": [_partido(p) for p in siguiente],
@@ -215,9 +226,7 @@ def preparar_jornada(
         [asdict(j) for j in competicion.jugadores],
     )
 
-    ruta = ruta_jornada(comp, grupo, jornada)
     ruta.parent.mkdir(parents=True, exist_ok=True)
-    previo = json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
     if previo.get("foto_portada", {}) and previo["foto_portada"].get("archivo"):
         datos["foto_portada"] = previo["foto_portada"]  # foto puesta a mano
     if previo.get("xv_editado"):
