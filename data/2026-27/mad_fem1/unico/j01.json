@@ -71,6 +71,7 @@
       "ronda": ""
     }
   ],
+  "descansa": [],
   "partidos_temporada": [
     {
       "id": 16541,
@@ -561,19 +562,19 @@
       "foto": ""
     },
     "12": {
-      "nombre": "ALBA GARCÍA GARCÍA",
-      "equipo": "AHORRAMAS VALLECAS RUGBY UNIÓN",
+      "nombre": "AZUL MARTÍN PRESA",
+      "equipo": "C.R. MAJADAHONDA",
       "dorsal": 12,
-      "puntos": 18,
-      "ensayos": 2,
-      "conversiones": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
       "margen": 22,
-      "rival": "OLÍMPICO - OSAS",
-      "nota": 30.2,
+      "rival": "LICEO FRANCÉS",
+      "nota": 6.2,
       "foto": ""
     },
     "13": {
@@ -3404,12 +3405,12 @@
       {
         "id": 1333546156,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-18T13:00:00",
         "local": "OLÍMPICO - OSAS",
         "visitante": "SANSE SOTO",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Pozuelo (Valle de las Cañas)",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -3417,12 +3418,12 @@
       {
         "id": 2462676167,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-17T17:00:00",
         "local": "TORRELODONES - VILLALBA",
         "visitante": "AHORRAMAS VALLECAS RUGBY UNIÓN",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Torrelodones (Julián Ariza)",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -3430,12 +3431,12 @@
       {
         "id": 3275317574,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-17T16:00:00",
         "local": "LICEO FRANCÉS",
         "visitante": "CRC - FILO- GEO",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo Ramon Urtubi",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -3443,30 +3444,31 @@
       {
         "id": 1145840508,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
+        "fecha": "2026-10-17T19:00:00",
         "local": "INGENIEROS INDUSTRIALES LAS ROZAS",
         "visitante": "C.R. MAJADAHONDA",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de las Rozas (El Cantizal)",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
       },
       {
-        "id": 3120789017,
+        "id": 286967672,
         "jornada": 2,
-        "fecha": "2026-10-18T00:00:00",
-        "local": "JABATOS MÓSTOLES R.C.",
-        "visitante": "CR VETERINARIA",
+        "fecha": "2026-10-17T16:00:00",
+        "local": "CR VETERINARIA",
+        "visitante": "JABATOS MÓSTOLES R.C.",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Parque Deportivo Puerta de Hierro",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
       }
-    ]
+    ],
+    "descansa": []
   },
   "rankings": {
     "ensayadores": [
@@ -3867,5 +3869,6 @@
       "contexto": "Firmó 3 ensayos ante Vallecas Unión.",
       "equipo": "OLÍMPICO - OSAS"
     }
-  ]
+  ],
+  "xv_editado": true
 }
