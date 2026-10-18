@@ -173,5 +173,21 @@
     "jugados": 2,
     "enviado": "2026-10-12T10:02:09.724529+02:00",
     "pendientes_al_enviar": false
+  },
+  "2026-27_mad_1r_unico_j02": {
+    "competicion": "mad_1r",
+    "grupo": "unico",
+    "jornada": 2,
+    "json": "data/2026-27/mad_1r/unico/j02.json",
+    "actas_pendientes": [],
+    "jugados": 4
+  },
+  "2026-27_mad_2r_B_j02": {
+    "competicion": "mad_2r",
+    "grupo": "B",
+    "jornada": 2,
+    "json": "data/2026-27/mad_2r/B/j02.json",
+    "actas_pendientes": [],
+    "jugados": 6
   }
 }
