@@ -58,6 +58,7 @@
       "ronda": ""
     }
   ],
+  "descansa": [],
   "partidos_temporada": [
     {
       "id": 17910,
@@ -2922,9 +2923,9 @@
       "rojas": 0
     },
     {
-      "id": 1033472,
-      "nombre": "GAIZKA EZCURRA CEBALLOS",
-      "equipo": "LA UNICA RUGBY TALDEA",
+      "id": 1032954,
+      "nombre": "IKER EIZMENDI GOMEZ DE BONILLA",
+      "equipo": "DONOSTIA RUGBY BALEZALEAK",
       "pj": 3,
       "puntos": 18,
       "ensayos": 0,
@@ -2932,9 +2933,9 @@
       "rojas": 0
     },
     {
-      "id": 1032954,
-      "nombre": "IKER EIZMENDI GOMEZ DE BONILLA",
-      "equipo": "DONOSTIA RUGBY BALEZALEAK",
+      "id": 1033472,
+      "nombre": "GAIZKA EZCURRA CEBALLOS",
+      "equipo": "LA UNICA RUGBY TALDEA",
       "pj": 3,
       "puntos": 18,
       "ensayos": 0,
@@ -3059,7 +3060,8 @@
         "grupo": 1300,
         "ronda": ""
       }
-    ]
+    ],
+    "descansa": []
   },
   "rankings": {
     "ensayadores": [

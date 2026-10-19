@@ -71,6 +71,7 @@
       "ronda": ""
     }
   ],
+  "descansa": [],
   "partidos_temporada": [
     {
       "id": 17736,
@@ -3189,7 +3190,8 @@
       "racha": [
         "G",
         "E",
-        "G"
+        "G",
+        "E"
       ],
       "pt": 12,
       "pj": 3,
@@ -3304,7 +3306,8 @@
       "racha": [
         "G",
         "P",
-        "P"
+        "P",
+        "E"
       ],
       "pt": 6,
       "pj": 3,
@@ -3625,7 +3628,8 @@
         "grupo": null,
         "ronda": ""
       }
-    ]
+    ],
+    "descansa": []
   },
   "rankings": {
     "ensayadores": [

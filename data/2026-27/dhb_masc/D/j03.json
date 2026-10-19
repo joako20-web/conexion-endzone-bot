@@ -37,14 +37,15 @@
       "fecha": "2026-10-17T16:00:00",
       "local": "REAL OVIEDO RUGBY",
       "visitante": "CRAT SENIOR MASCULINO",
-      "puntos_local": null,
-      "puntos_visitante": null,
+      "puntos_local": 46,
+      "puntos_visitante": 7,
       "campo": "·",
-      "estado": "pendiente",
+      "estado": "jugado",
       "grupo": 1303,
       "ronda": ""
     }
   ],
+  "descansa": [],
   "partidos_temporada": [
     {
       "id": 18256,
@@ -123,6 +124,19 @@
       "estado": "jugado",
       "grupo": 1303,
       "ronda": ""
+    },
+    {
+      "id": 18261,
+      "jornada": 3,
+      "fecha": "2026-10-17T16:00:00",
+      "local": "REAL OVIEDO RUGBY",
+      "visitante": "CRAT SENIOR MASCULINO",
+      "puntos_local": 46,
+      "puntos_visitante": 7,
+      "campo": "·",
+      "estado": "jugado",
+      "grupo": 1303,
+      "ronda": ""
     }
   ],
   "actas_pendientes": [],
@@ -144,6 +158,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6d696232766876353434.jpg"
     },
     {
+      "nombre": "JUAN GALAN VALLINA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 11,
+      "puntos": 20,
+      "ensayos": 4,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 39.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3367726f706566356930.jpg"
+    },
+    {
       "nombre": "MARIO RAMOS GUTIERREZ",
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
       "dorsal": 8,
@@ -158,6 +188,22 @@
       "rival": "OS INGLESES RUGBY CLUB",
       "nota": 30.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6572793638336a696e66.jpg"
+    },
+    {
+      "nombre": "JOAQUIN MORO MARTINEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 12,
+      "puntos": 11,
+      "ensayos": 0,
+      "conversiones": 4,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 18.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7336356a6f77656c6c75.jpg"
     },
     {
       "nombre": "ALVARO PEREZ LOPEZ",
@@ -190,6 +236,22 @@
       "rival": "OS INGLESES RUGBY CLUB",
       "nota": 22.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3077386e31327362756f.jpg"
+    },
+    {
+      "nombre": "KIRAN ROBERT BYRNE",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 15,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 23.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_31303838626536643866333861336439.jpg"
     },
     {
       "nombre": "MIGUEL GARCIA HOZ",
@@ -224,25 +286,9 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_39337775647966676364.jpg"
     },
     {
-      "nombre": "BRAIS VILA BARCIELA",
-      "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-      "dorsal": 3,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 20,
-      "rival": "OS INGLESES RUGBY CLUB",
-      "nota": 14.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_67377532796b75666662.jpeg"
-    },
-    {
-      "nombre": "EIRIK RONNING SANCHEZ",
-      "equipo": "GIJON RUGBY CLUB",
-      "dorsal": 7,
+      "nombre": "ANGEL SANCHEZ FERNANDEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 10,
       "puntos": 5,
       "ensayos": 1,
       "conversiones": 0,
@@ -250,45 +296,29 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "P",
-      "margen": -91,
-      "rival": "C.R. EL SALVADOR DHB",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
       "nota": 5.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_736c3236386a65616c70.jpg"
-    },
-    {
-      "nombre": "ENRIQUE IGNACIO GARCIA GALAZ",
-      "equipo": "C.R. EL SALVADOR DHB",
-      "dorsal": 7,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 91,
-      "rival": "GIJON RUGBY CLUB",
-      "nota": 15.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_31723571716173776f34.jpg"
-    },
-    {
-      "nombre": "FRANCISCO RODRIGUEZ BIANCHI",
-      "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-      "dorsal": 11,
-      "puntos": 5,
-      "ensayos": 1,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 20,
-      "rival": "OS INGLESES RUGBY CLUB",
-      "nota": 14.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a78786c6b7869727463.jpg"
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6a9e7323791b8.jpeg"
     }
   ],
   "ensayadores": [
+    {
+      "nombre": "JUAN GALAN VALLINA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 11,
+      "puntos": 20,
+      "ensayos": 4,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 39.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3367726f706566356930.jpg"
+    },
     {
       "nombre": "MARIO RAMOS GUTIERREZ",
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
@@ -338,9 +368,9 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3077386e31327362756f.jpg"
     },
     {
-      "nombre": "MIGUEL GARCIA HOZ",
-      "equipo": "C.R. EL SALVADOR DHB",
-      "dorsal": 21,
+      "nombre": "KIRAN ROBERT BYRNE",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 15,
       "puntos": 10,
       "ensayos": 2,
       "conversiones": 0,
@@ -348,26 +378,10 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 91,
-      "rival": "GIJON RUGBY CLUB",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
       "nota": 23.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_323867676c3077613862.jpeg"
-    },
-    {
-      "nombre": "GORKA CAGIGAL ZABALETA",
-      "equipo": "C.R. EL SALVADOR DHB",
-      "dorsal": 10,
-      "puntos": 31,
-      "ensayos": 1,
-      "conversiones": 13,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 91,
-      "rival": "GIJON RUGBY CLUB",
-      "nota": 41.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6d696232766876353434.jpg"
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_31303838626536643866333861336439.jpg"
     }
   ],
   "xv_ideal": {
@@ -420,6 +434,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_67377532796b75666662.jpeg"
     },
     "4": {
+      "nombre": "ALVARO RODRIGUEZ AVELLO",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6d727973656968737732.jpg"
+    },
+    "5": {
       "nombre": "LUIS GARCIA SOUTULLO",
       "equipo": "OS INGLESES RUGBY CLUB",
       "dorsal": 5,
@@ -434,22 +464,6 @@
       "rival": "KALEIDO UNIVERSIDADE DE VIGO",
       "nota": -2.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_627071763168636b776f.jpeg"
-    },
-    "5": {
-      "nombre": "ALEJANDRO GARCIA PEREZ",
-      "equipo": "GIJON RUGBY CLUB",
-      "dorsal": 4,
-      "puntos": 0,
-      "ensayos": 0,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -91,
-      "rival": "C.R. EL SALVADOR DHB",
-      "nota": -3.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_706f736d627435777831.jpg"
     },
     "6": {
       "nombre": "ENRIQUE IGNACIO GARCIA GALAZ",
@@ -468,20 +482,20 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_31723571716173776f34.jpg"
     },
     "7": {
-      "nombre": "EIRIK RONNING SANCHEZ",
-      "equipo": "GIJON RUGBY CLUB",
+      "nombre": "FERNANDO PATALLO SUAREZ",
+      "equipo": "REAL OVIEDO RUGBY",
       "dorsal": 7,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 0,
+      "ensayos": 0,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -91,
-      "rival": "C.R. EL SALVADOR DHB",
-      "nota": 5.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_736c3236386a65616c70.jpg"
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_316d6c30687664673630.jpg"
     },
     "8": {
       "nombre": "MARIO RAMOS GUTIERREZ",
@@ -500,8 +514,8 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6572793638336a696e66.jpg"
     },
     "9": {
-      "nombre": "JUAN GOMEZ DE TOSTON PIÑEIRO",
-      "equipo": "GIJON RUGBY CLUB",
+      "nombre": "RAMON PARADA ESTEVEZ",
+      "equipo": "OS INGLESES RUGBY CLUB",
       "dorsal": 9,
       "puntos": 0,
       "ensayos": 0,
@@ -510,10 +524,10 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "P",
-      "margen": -91,
-      "rival": "C.R. EL SALVADOR DHB",
-      "nota": -3.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_776c6f7362306f6e7239.jpg"
+      "margen": -20,
+      "rival": "KALEIDO UNIVERSIDADE DE VIGO",
+      "nota": -2.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_75716a63326336636d37.jpeg"
     },
     "10": {
       "nombre": "GORKA CAGIGAL ZABALETA",
@@ -532,20 +546,20 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6d696232766876353434.jpg"
     },
     "11": {
-      "nombre": "FRANCISCO RODRIGUEZ BIANCHI",
-      "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
+      "nombre": "JUAN GALAN VALLINA",
+      "equipo": "REAL OVIEDO RUGBY",
       "dorsal": 11,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 20,
+      "ensayos": 4,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 20,
-      "rival": "OS INGLESES RUGBY CLUB",
-      "nota": 14.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a78786c6b7869727463.jpg"
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 39.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3367726f706566356930.jpg"
     },
     "12": {
       "nombre": "ALVARO PEREZ LOPEZ",
@@ -580,8 +594,8 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3077386e31327362756f.jpg"
     },
     "14": {
-      "nombre": "SERGIO PEON PARADA",
-      "equipo": "OS INGLESES RUGBY CLUB",
+      "nombre": "FRANCISCO RODRIGUEZ BIANCHI",
+      "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
       "dorsal": 11,
       "puntos": 5,
       "ensayos": 1,
@@ -589,27 +603,27 @@
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -20,
-      "rival": "KALEIDO UNIVERSIDADE DE VIGO",
-      "nota": 6.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_703665306762756f7639.jpg"
+      "resultado": "G",
+      "margen": 20,
+      "rival": "OS INGLESES RUGBY CLUB",
+      "nota": 14.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a78786c6b7869727463.jpg"
     },
     "15": {
-      "nombre": "TORNIKE TEGETASHVILI",
-      "equipo": "OS INGLESES RUGBY CLUB",
+      "nombre": "KIRAN ROBERT BYRNE",
+      "equipo": "REAL OVIEDO RUGBY",
       "dorsal": 15,
-      "puntos": 5,
-      "ensayos": 1,
+      "puntos": 10,
+      "ensayos": 2,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -20,
-      "rival": "KALEIDO UNIVERSIDADE DE VIGO",
-      "nota": 6.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_356a6a3772336b747765.jpg"
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 23.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_31303838626536643866333861336439.jpg"
     }
   },
   "foto_portada": null,
@@ -629,6 +643,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 15.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3577356d387475306a6f.jpg"
+    },
+    {
+      "nombre": "GUILLERMO VILLAGRA GARCìA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_31776d6c6a6d74693036.jpg"
     },
     {
       "nombre": "DAVID COMESAÑA CALVEIRA",
@@ -679,6 +709,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6aba4a91020b6.jpg"
     },
     {
+      "nombre": "JOSE JULIAN GONZALEZ LEON",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6a646e38386b706d3730.jpg"
+    },
+    {
       "nombre": "JAIME VEGA ZAMACOLA",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 2,
@@ -693,6 +739,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 15.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_35623771716465643377.jpg"
+    },
+    {
+      "nombre": "JOSE ANTONIO MARQUES DE LUIS",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3231327177716b396833.jpg"
     },
     {
       "nombre": "PABLO CABALEIRO COSTAS",
@@ -743,6 +805,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6a313578766179627733.jpg"
     },
     {
+      "nombre": "VALENTINO BARTOLOMEO FRAGA",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_35626b3272686b723939.jpg"
+    },
+    {
       "nombre": "BRAIS VILA BARCIELA",
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
       "dorsal": 3,
@@ -773,6 +851,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 7.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3164646c6c7776733467.jpg"
+    },
+    {
+      "nombre": "LEONEL ARREDONDO GARCIA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_356c6f666f6b6c783461.jpg"
     },
     {
       "nombre": "HUGO ALCALDE SIEIRA",
@@ -807,6 +901,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3773376b316e38683274.jpg"
     },
     {
+      "nombre": "ANSELMO FEDERICO SANCHEZ ELASSEOUI",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_73796f6970793377346f.jpg"
+    },
+    {
       "nombre": "PEDRO ALONSO-VILLALOBOS HERNANDEZ",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 4,
@@ -821,6 +931,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 7.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6e3736316e3370377970.jpg"
+    },
+    {
+      "nombre": "ALVARO RODRIGUEZ AVELLO",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6d727973656968737732.jpg"
     },
     {
       "nombre": "YERAY MESQUIDA COSTA",
@@ -855,6 +981,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_706f736d627435777831.jpg"
     },
     {
+      "nombre": "ARTURO VAZQUEZ LENGUAS",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_73667674783270343532.jpg"
+    },
+    {
       "nombre": "FRANCISCO MIGUENS MIGUENS",
       "equipo": "OS INGLESES RUGBY CLUB",
       "dorsal": 4,
@@ -887,6 +1029,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 15.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6acd4ae60f072.jpeg"
+    },
+    {
+      "nombre": "LUCAS LOPEZ PEREZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_69b1b3e35cbc8.jpeg"
     },
     {
       "nombre": "ALEJANDRO GALDO YAÑEZ",
@@ -937,6 +1095,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_76326c65316861783939.jpg"
     },
     {
+      "nombre": "JORGE ALBERTO ALZATE BARRERA",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_73777269746c39767570.jpg"
+    },
+    {
       "nombre": "NICOLAS USEROS MARTIN",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 6,
@@ -951,6 +1125,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 7.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_706838697937616b7061.jpg"
+    },
+    {
+      "nombre": "JOSE AUGUSTO DIAZ GILETTA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e626666337539317831.jpg"
     },
     {
       "nombre": "MAURO GONZALEZ MONTENEGRO",
@@ -1001,6 +1191,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_726e776373616e357631.jpg"
     },
     {
+      "nombre": "TOMAS COTELO ALVAREZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_67726e6c653079716f6a.jpg"
+    },
+    {
       "nombre": "ENRIQUE IGNACIO GARCIA GALAZ",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 7,
@@ -1015,6 +1221,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 15.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_31723571716173776f34.jpg"
+    },
+    {
+      "nombre": "FERNANDO PATALLO SUAREZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_316d6c30687664673630.jpg"
     },
     {
       "nombre": "MARTIN LOPEZ OROSA",
@@ -1065,6 +1287,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6d3661693078396b7161.jpeg"
     },
     {
+      "nombre": "ALEJANDRO GARCIA RODRIGUEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_62786f6a696f6b30726c.jpg"
+    },
+    {
       "nombre": "MARIO RAMOS GUTIERREZ",
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
       "dorsal": 8,
@@ -1079,6 +1317,22 @@
       "rival": "OS INGLESES RUGBY CLUB",
       "nota": 30.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6572793638336a696e66.jpg"
+    },
+    {
+      "nombre": "FOU AILUA TAGIILIMA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 15.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_32306662646638306537353730663466.jpg"
     },
     {
       "nombre": "ALVARO SANCHEZ CABREJAS",
@@ -1129,6 +1383,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3975367268733065346b.jpeg"
     },
     {
+      "nombre": "ELOY VAZQUEZ FERNANDEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6a9ac7ce650c4.jpeg"
+    },
+    {
       "nombre": "NICOLAS POWYS ROJO",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 9,
@@ -1143,6 +1413,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 15.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_68726661626938773562.jpg"
+    },
+    {
+      "nombre": "GUILLERMO YOLDI MARTINEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_33323974316d38333367.jpg"
     },
     {
       "nombre": "ARTAI PAZOS GONZALEZ",
@@ -1193,6 +1479,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_776c6f7362306f6e7239.jpg"
     },
     {
+      "nombre": "IGNACIO DIAZ VEIRA",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6aa2bf79bc8e7.jpeg"
+    },
+    {
       "nombre": "GORKA CAGIGAL ZABALETA",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 10,
@@ -1225,6 +1527,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_39337775647966676364.jpg"
     },
     {
+      "nombre": "NICOLAS MORO MARTINEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_776d76326d3064686177.jpg"
+    },
+    {
+      "nombre": "ANGEL SANCHEZ FERNANDEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 10,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": 5.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6a9e7323791b8.jpeg"
+    },
+    {
       "nombre": "ARTURO SANTOS BARCIA",
       "equipo": "OS INGLESES RUGBY CLUB",
       "dorsal": 10,
@@ -1255,6 +1589,22 @@
       "rival": "C.R. EL SALVADOR DHB",
       "nota": -3.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_356264757679336f636d.jpeg"
+    },
+    {
+      "nombre": "JUAN GALAN VALLINA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 11,
+      "puntos": 20,
+      "ensayos": 4,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 39.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3367726f706566356930.jpg"
     },
     {
       "nombre": "JULIO SANZ GIL-CEPEDA",
@@ -1321,6 +1671,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_3535346f6f3262386572.jpg"
     },
     {
+      "nombre": "OMAR COUTO CARRETERO",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_696b7973373361323661.jpg"
+    },
+    {
+      "nombre": "JOAQUIN MORO MARTINEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 12,
+      "puntos": 11,
+      "ensayos": 0,
+      "conversiones": 4,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 18.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7336356a6f77656c6c75.jpg"
+    },
+    {
       "nombre": "IÑIGO ARRAIZA COCHO",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 12,
@@ -1351,6 +1733,22 @@
       "rival": "OS INGLESES RUGBY CLUB",
       "nota": 6.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_63306663626661353534323834303131.jpg"
+    },
+    {
+      "nombre": "RODRIGO ALBERTO SANCHEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 12,
+      "puntos": 2,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -1.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68e1bde6b69b9.jpeg"
     },
     {
       "nombre": "JAVIER AMOR LAGES",
@@ -1417,6 +1815,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3077386e31327362756f.jpg"
     },
     {
+      "nombre": "JAVIER CASTAÑO FERNANDEZ-VEGA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_71377033397163673171.jpg"
+    },
+    {
       "nombre": "EMILIO RAÑO PEREZ",
       "equipo": "OS INGLESES RUGBY CLUB",
       "dorsal": 13,
@@ -1449,6 +1863,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_696436767961626d6639.jpg"
     },
     {
+      "nombre": "SANTIAGO MARTINEZ MARTINEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6ab90c34a7970.jpeg"
+    },
+    {
       "nombre": "MANUEL DEL OLMO CASADO",
       "equipo": "C.R. EL SALVADOR DHB",
       "dorsal": 14,
@@ -1463,6 +1893,22 @@
       "rival": "GIJON RUGBY CLUB",
       "nota": 15.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_73386d71386e63793736.jpg"
+    },
+    {
+      "nombre": "VICTOR VILLENA GOMEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_35307776387335786277.jpg"
     },
     {
       "nombre": "LUIS RUBIANES PEREZ-UHIA",
@@ -1511,6 +1957,40 @@
       "rival": "C.R. EL SALVADOR DHB",
       "nota": -3.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_7664666a317871393778.jpg"
+    },
+    {
+      "nombre": "WILFREDO LUIS PUPO CUBA",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -7.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_30643962613763316466346430366566.jpg"
+    },
+    {
+      "nombre": "KIRAN ROBERT BYRNE",
+      "equipo": "REAL OVIEDO RUGBY",
+      "dorsal": 15,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 39,
+      "rival": "CRAT SENIOR MASCULINO",
+      "nota": 23.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_31303838626536643866333861336439.jpg"
     },
     {
       "nombre": "MARTIN TOCA ALTES",
@@ -1575,6 +2055,22 @@
       "rival": "C.R. EL SALVADOR DHB",
       "nota": -3.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3575786d32663031756f.jpg"
+    },
+    {
+      "nombre": "HERNAN DAVID MORALES SANCHEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -39,
+      "rival": "REAL OVIEDO RUGBY",
+      "nota": -3.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_347473626c6f6f6c6c6f.jpeg"
     }
   ],
   "clasificacion": [
@@ -1603,6 +2099,28 @@
     },
     {
       "posicion": 2,
+      "equipo": "REAL OVIEDO RUGBY",
+      "racha": [
+        "G",
+        "G"
+      ],
+      "pt": 10,
+      "pj": 2,
+      "pg": 2,
+      "pe": 0,
+      "pp": 0,
+      "tf": 129,
+      "tc": 12,
+      "dt": 117,
+      "ef": 20,
+      "ec": 2,
+      "de": 18,
+      "bo": 2,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/11/square_38396e6b6b6b77673431.jpg"
+    },
+    {
+      "posicion": 3,
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
       "racha": [
         "P",
@@ -1625,43 +2143,23 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/95/square_6168396c626c78393269.jpg"
     },
     {
-      "posicion": 3,
-      "equipo": "REAL OVIEDO RUGBY",
-      "racha": [
-        "G"
-      ],
-      "pt": 5,
-      "pj": 1,
-      "pg": 1,
-      "pe": 0,
-      "pp": 0,
-      "tf": 83,
-      "tc": 5,
-      "dt": 78,
-      "ef": 13,
-      "ec": 1,
-      "de": 12,
-      "bo": 1,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/11/square_38396e6b6b6b77673431.jpg"
-    },
-    {
       "posicion": 4,
       "equipo": "CRAT SENIOR MASCULINO",
       "racha": [
-        "G"
+        "G",
+        "P"
       ],
       "pt": 4,
-      "pj": 1,
+      "pj": 2,
       "pg": 1,
       "pe": 0,
-      "pp": 0,
-      "tf": 39,
-      "tc": 34,
-      "dt": 5,
-      "ef": 6,
-      "ec": 5,
-      "de": 1,
+      "pp": 1,
+      "tf": 46,
+      "tc": 80,
+      "dt": -34,
+      "ef": 7,
+      "ec": 12,
+      "de": -5,
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg"
@@ -1719,6 +2217,16 @@
       "rojas": 0
     },
     {
+      "id": 1023543,
+      "nombre": "JUAN GALAN VALLINA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "pj": 2,
+      "puntos": 30,
+      "ensayos": 6,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1034485,
       "nombre": "MARIO RAMOS GUTIERREZ",
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
@@ -1749,6 +2257,16 @@
       "rojas": 0
     },
     {
+      "id": 1060949,
+      "nombre": "ANGEL SANCHEZ FERNANDEZ",
+      "equipo": "CRAT SENIOR MASCULINO",
+      "pj": 2,
+      "puntos": 19,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1023239,
       "nombre": "JENARO GUTIERREZ",
       "equipo": "REAL OVIEDO RUGBY",
@@ -1769,30 +2287,10 @@
       "rojas": 0
     },
     {
-      "id": 1027847,
-      "nombre": "JAVIER GEIJO DE LA FUENTE",
+      "id": 1026777,
+      "nombre": "MANUEL DEL OLMO CASADO",
       "equipo": "C.R. EL SALVADOR DHB",
-      "pj": 1,
-      "puntos": 15,
-      "ensayos": 3,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1024331,
-      "nombre": "DAVID BARRIOS LOPEZ",
-      "equipo": "C.R. EL SALVADOR DHB",
-      "pj": 2,
-      "puntos": 15,
-      "ensayos": 3,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1023656,
-      "nombre": "VICTOR VILLENA GOMEZ",
-      "equipo": "REAL OVIEDO RUGBY",
-      "pj": 1,
+      "pj": 3,
       "puntos": 15,
       "ensayos": 3,
       "amarillas": 0,
@@ -1800,6 +2298,16 @@
     }
   ],
   "temporada_ensayadores": [
+    {
+      "id": 1023543,
+      "nombre": "JUAN GALAN VALLINA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "pj": 2,
+      "puntos": 30,
+      "ensayos": 6,
+      "amarillas": 0,
+      "rojas": 0
+    },
     {
       "id": 1026963,
       "nombre": "ALVARO PEREZ LOPEZ",
@@ -1831,20 +2339,10 @@
       "rojas": 0
     },
     {
-      "id": 1027847,
-      "nombre": "JAVIER GEIJO DE LA FUENTE",
+      "id": 1026777,
+      "nombre": "MANUEL DEL OLMO CASADO",
       "equipo": "C.R. EL SALVADOR DHB",
-      "pj": 1,
-      "puntos": 15,
-      "ensayos": 3,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1024331,
-      "nombre": "DAVID BARRIOS LOPEZ",
-      "equipo": "C.R. EL SALVADOR DHB",
-      "pj": 2,
+      "pj": 3,
       "puntos": 15,
       "ensayos": 3,
       "amarillas": 0,
@@ -1888,15 +2386,23 @@
         "visitante": "CRAT SENIOR MASCULINO",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "·",
+        "campo": "ESTADIO DE ATLETISMO DE FONTECARMOA",
         "estado": "pendiente",
         "grupo": 1303,
         "ronda": ""
       }
-    ]
+    ],
+    "descansa": []
   },
   "rankings": {
     "ensayadores": [
+      {
+        "nombre": "JUAN GALAN VALLINA",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": "CRAT SENIOR MASCULINO"
+      },
       {
         "nombre": "MARIO RAMOS GUTIERREZ",
         "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
@@ -1919,6 +2425,13 @@
         "rival": "OS INGLESES RUGBY CLUB"
       },
       {
+        "nombre": "KIRAN ROBERT BYRNE",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "CRAT SENIOR MASCULINO"
+      },
+      {
         "nombre": "MIGUEL GARCIA HOZ",
         "equipo": "C.R. EL SALVADOR DHB",
         "valor": 2,
@@ -1931,20 +2444,6 @@
         "valor": 1,
         "detalle": "31 puntos",
         "rival": "GIJON RUGBY CLUB"
-      },
-      {
-        "nombre": "BRAIS VILA BARCIELA",
-        "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": "OS INGLESES RUGBY CLUB"
-      },
-      {
-        "nombre": "EIRIK RONNING SANCHEZ",
-        "equipo": "GIJON RUGBY CLUB",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": "C.R. EL SALVADOR DHB"
       }
     ],
     "pateadores": [
@@ -1954,6 +2453,13 @@
         "valor": 26,
         "detalle": "13 transf.",
         "rival": "GIJON RUGBY CLUB"
+      },
+      {
+        "nombre": "JOAQUIN MORO MARTINEZ",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 11,
+        "detalle": "4 transf. · 1 golpe",
+        "rival": "CRAT SENIOR MASCULINO"
       },
       {
         "nombre": "ANDRE BALDONEDO DACAL",
@@ -1975,9 +2481,23 @@
         "valor": 3,
         "detalle": "1 drop",
         "rival": "KALEIDO UNIVERSIDADE DE VIGO"
+      },
+      {
+        "nombre": "RODRIGO ALBERTO SANCHEZ",
+        "equipo": "CRAT SENIOR MASCULINO",
+        "valor": 2,
+        "detalle": "1 transf.",
+        "rival": "REAL OVIEDO RUGBY"
       }
     ],
     "ensayadores_t": [
+      {
+        "nombre": "JUAN GALAN VALLINA",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 6,
+        "detalle": "30 puntos",
+        "rival": ""
+      },
       {
         "nombre": "ALVARO PEREZ LOPEZ",
         "equipo": "C.R. EL SALVADOR DHB",
@@ -2019,13 +2539,6 @@
         "valor": 3,
         "detalle": "15 puntos",
         "rival": ""
-      },
-      {
-        "nombre": "MANUEL DEL OLMO CASADO",
-        "equipo": "C.R. EL SALVADOR DHB",
-        "valor": 3,
-        "detalle": "15 puntos",
-        "rival": ""
       }
     ],
     "pateadores_t": [
@@ -2058,6 +2571,13 @@
         "rival": ""
       },
       {
+        "nombre": "JOAQUIN MORO MARTINEZ",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 11,
+        "detalle": "4 transf. · 1 golpe",
+        "rival": ""
+      },
+      {
         "nombre": "ANGEL SANCHEZ FERNANDEZ",
         "equipo": "CRAT SENIOR MASCULINO",
         "valor": 9,
@@ -2069,13 +2589,6 @@
         "equipo": "OS INGLESES RUGBY CLUB",
         "valor": 7,
         "detalle": "2 transf. · 1 golpe",
-        "rival": ""
-      },
-      {
-        "nombre": "ALVARO PEREZ LOPEZ",
-        "equipo": "C.R. EL SALVADOR DHB",
-        "valor": 6,
-        "detalle": "3 transf.",
         "rival": ""
       }
     ],
@@ -2109,6 +2622,13 @@
         "rival": ""
       },
       {
+        "nombre": "DANIEL SANCHEZ VIEJO",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 1,
+        "detalle": "1 amarilla",
+        "rival": ""
+      },
+      {
         "nombre": "FRANCISCO MIGUENS MIGUENS",
         "equipo": "OS INGLESES RUGBY CLUB",
         "valor": 1,
@@ -2118,13 +2638,6 @@
       {
         "nombre": "JUAN JOSE BELOSO BLANCO",
         "equipo": "OS INGLESES RUGBY CLUB",
-        "valor": 1,
-        "detalle": "1 amarilla",
-        "rival": ""
-      },
-      {
-        "nombre": "JUAN MANUEL RODRIGUEZ PALMAS",
-        "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
         "valor": 1,
         "detalle": "1 amarilla",
         "rival": ""
@@ -2191,12 +2704,12 @@
             "valor": 272
           },
           {
-            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-            "valor": 89
+            "equipo": "REAL OVIEDO RUGBY",
+            "valor": 129
           },
           {
-            "equipo": "REAL OVIEDO RUGBY",
-            "valor": 83
+            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
+            "valor": 89
           }
         ]
       },
@@ -2206,7 +2719,7 @@
         "filas": [
           {
             "equipo": "REAL OVIEDO RUGBY",
-            "valor": 5
+            "valor": 12
           },
           {
             "equipo": "C.R. EL SALVADOR DHB",
@@ -2214,7 +2727,7 @@
           },
           {
             "equipo": "CRAT SENIOR MASCULINO",
-            "valor": 34
+            "valor": 80
           }
         ]
       },
@@ -2227,11 +2740,11 @@
             "valor": 40
           },
           {
-            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-            "valor": 13
+            "equipo": "REAL OVIEDO RUGBY",
+            "valor": 20
           },
           {
-            "equipo": "REAL OVIEDO RUGBY",
+            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
             "valor": 13
           }
         ]
@@ -2245,11 +2758,11 @@
             "valor": 4
           },
           {
-            "equipo": "OS INGLESES RUGBY CLUB",
-            "valor": 3
+            "equipo": "CRAT SENIOR MASCULINO",
+            "valor": 4
           },
           {
-            "equipo": "CRAT SENIOR MASCULINO",
+            "equipo": "OS INGLESES RUGBY CLUB",
             "valor": 3
           }
         ]
@@ -2257,6 +2770,16 @@
     ]
   },
   "datos_jornada": [
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 87,
+      "numero": "4",
+      "unidad": "ensayos en un partido",
+      "titular": "Exhibición de Juan Galan Vallina",
+      "contexto": "Firmó 4 ensayos ante CRAT Coruña.",
+      "equipo": "REAL OVIEDO RUGBY"
+    },
     {
       "clave": "datos",
       "tipo": "dato",
@@ -2276,16 +2799,6 @@
       "titular": "Hat-trick de Mario Ramos Gutierrez",
       "contexto": "Firmó 3 ensayos ante Os Ingleses.",
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO"
-    },
-    {
-      "clave": "datos",
-      "tipo": "dato",
-      "peso": 52,
-      "numero": "3",
-      "unidad": "partidos sin ganar",
-      "titular": "Os Ingleses sigue sin conocer la victoria",
-      "contexto": "Lleva 3 jornadas buscando su primer triunfo.",
-      "equipo": "OS INGLESES RUGBY CLUB"
     }
   ]
 }

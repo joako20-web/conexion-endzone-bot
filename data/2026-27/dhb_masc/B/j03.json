@@ -58,6 +58,7 @@
       "ronda": ""
     }
   ],
+  "descansa": [],
   "partidos_temporada": [
     {
       "id": 17966,
@@ -2870,10 +2871,10 @@
       "rojas": 0
     },
     {
-      "id": 1024250,
-      "nombre": "NIL SANCHEZ FERMIN",
+      "id": 1030181,
+      "nombre": "SANTIAGO NICOLAS GONZALEZ RIVERA",
       "equipo": "CLUB NATACIO POBLE NOU",
-      "pj": 2,
+      "pj": 3,
       "puntos": 20,
       "ensayos": 4,
       "amarillas": 0,
@@ -2890,10 +2891,10 @@
       "rojas": 0
     },
     {
-      "id": 1030181,
-      "nombre": "SANTIAGO NICOLAS GONZALEZ RIVERA",
+      "id": 1024250,
+      "nombre": "NIL SANCHEZ FERMIN",
       "equipo": "CLUB NATACIO POBLE NOU",
-      "pj": 3,
+      "pj": 2,
       "puntos": 20,
       "ensayos": 4,
       "amarillas": 0,
@@ -2930,14 +2931,14 @@
       "rojas": 0
     },
     {
-      "id": 1027800,
-      "nombre": "GUILLEM TORRO VILANOVA",
-      "equipo": "BARCELONA UNIVERSITARI CLUB",
+      "id": 1026646,
+      "nombre": "FELIPE CRUZ MESONES SEGURA",
+      "equipo": "CAU RUGBY VALENCIA",
       "pj": 3,
       "puntos": 15,
       "ensayos": 3,
-      "amarillas": 2,
-      "rojas": 1
+      "amarillas": 0,
+      "rojas": 0
     },
     {
       "id": 1039707,
@@ -2952,10 +2953,10 @@
   ],
   "temporada_ensayadores": [
     {
-      "id": 1024250,
-      "nombre": "NIL SANCHEZ FERMIN",
+      "id": 1030181,
+      "nombre": "SANTIAGO NICOLAS GONZALEZ RIVERA",
       "equipo": "CLUB NATACIO POBLE NOU",
-      "pj": 2,
+      "pj": 3,
       "puntos": 20,
       "ensayos": 4,
       "amarillas": 0,
@@ -2972,24 +2973,24 @@
       "rojas": 0
     },
     {
-      "id": 1030181,
-      "nombre": "SANTIAGO NICOLAS GONZALEZ RIVERA",
+      "id": 1024250,
+      "nombre": "NIL SANCHEZ FERMIN",
       "equipo": "CLUB NATACIO POBLE NOU",
-      "pj": 3,
+      "pj": 2,
       "puntos": 20,
       "ensayos": 4,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1027800,
-      "nombre": "GUILLEM TORRO VILANOVA",
-      "equipo": "BARCELONA UNIVERSITARI CLUB",
+      "id": 1026646,
+      "nombre": "FELIPE CRUZ MESONES SEGURA",
+      "equipo": "CAU RUGBY VALENCIA",
       "pj": 3,
       "puntos": 15,
       "ensayos": 3,
-      "amarillas": 2,
-      "rojas": 1
+      "amarillas": 0,
+      "rojas": 0
     },
     {
       "id": 1039707,
@@ -3057,7 +3058,8 @@
         "grupo": 1301,
         "ronda": ""
       }
-    ]
+    ],
+    "descansa": []
   },
   "rankings": {
     "ensayadores": [

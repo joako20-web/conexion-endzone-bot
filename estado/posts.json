@@ -160,7 +160,7 @@
     "jornada": 3,
     "json": "data/2026-27/dhb_masc/D/j03.json",
     "actas_pendientes": [],
-    "jugados": 2,
+    "jugados": 3,
     "enviado": "2026-10-12T10:01:53.270763+02:00",
     "pendientes_al_enviar": false
   },
@@ -189,5 +189,25 @@
     "json": "data/2026-27/mad_2r/B/j02.json",
     "actas_pendientes": [],
     "jugados": 6
+  },
+  "2026-27_dh_fem_unico_j02": {
+    "competicion": "dh_fem",
+    "grupo": "unico",
+    "jornada": 2,
+    "json": "data/2026-27/dh_fem/unico/j02.json",
+    "actas_pendientes": [],
+    "jugados": 3,
+    "enviado": "2026-10-19T10:01:10.349768+02:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_fem_unico_j02": {
+    "competicion": "dhb_fem",
+    "grupo": "unico",
+    "jornada": 2,
+    "json": "data/2026-27/dhb_fem/unico/j02.json",
+    "actas_pendientes": [],
+    "jugados": 3,
+    "enviado": "2026-10-19T10:01:33.601686+02:00",
+    "pendientes_al_enviar": false
   }
 }

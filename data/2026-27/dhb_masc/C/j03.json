@@ -58,6 +58,7 @@
       "ronda": ""
     }
   ],
+  "descansa": [],
   "partidos_temporada": [
     {
       "id": 18019,
@@ -3014,7 +3015,7 @@
       {
         "id": 18034,
         "jornada": 4,
-        "fecha": null,
+        "fecha": "2026-10-24T19:00:00",
         "local": "SILICIUS ALCOBENDAS RUGBY B",
         "visitante": "COMPLUTENSE CISNEROS ZETA",
         "puntos_local": null,
@@ -3027,7 +3028,7 @@
       {
         "id": 18031,
         "jornada": 4,
-        "fecha": "2026-10-25T12:00:00",
+        "fecha": "2026-10-25T14:00:00",
         "local": "CLUB JAEN RUGBY",
         "visitante": "C.A.R. CACERES",
         "puntos_local": null,
@@ -3037,7 +3038,8 @@
         "grupo": 1302,
         "ronda": ""
       }
-    ]
+    ],
+    "descansa": []
   },
   "rankings": {
     "ensayadores": [
