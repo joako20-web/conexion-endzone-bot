@@ -19,19 +19,6 @@
       "ronda": ""
     },
     {
-      "id": 18945,
-      "jornada": 2,
-      "fecha": "2026-10-18T12:00:00",
-      "local": "TURIA",
-      "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "puntos_local": null,
-      "puntos_visitante": null,
-      "campo": "Polideportivo Quatre Carreres",
-      "estado": "pendiente",
-      "grupo": null,
-      "ronda": ""
-    },
-    {
       "id": 18946,
       "jornada": 2,
       "fecha": "2026-10-18T12:00:00",
@@ -54,6 +41,19 @@
       "puntos_visitante": 15,
       "campo": "Fadura",
       "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 18945,
+      "jornada": 2,
+      "fecha": "2026-10-25T10:30:00",
+      "local": "TURIA",
+      "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "Polideportivo Quatre Carreres",
+      "estado": "pendiente",
       "grupo": null,
       "ronda": ""
     }
