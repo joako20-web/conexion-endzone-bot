@@ -3485,10 +3485,10 @@
       "rojas": 0
     },
     {
-      "id": 1044000,
-      "nombre": "HUGO DOUGLAS VENTOSA",
-      "equipo": "CRC POZUELO RUGBY",
-      "pj": 3,
+      "id": 1025721,
+      "nombre": "AGUSTIN CITTADINI",
+      "equipo": "SILICIUS ALCOBENDAS RUGBY",
+      "pj": 2,
       "puntos": 16,
       "ensayos": 0,
       "amarillas": 0,
@@ -3505,19 +3505,19 @@
       "rojas": 0
     },
     {
-      "id": 1025721,
-      "nombre": "AGUSTIN CITTADINI",
-      "equipo": "SILICIUS ALCOBENDAS RUGBY",
-      "pj": 2,
+      "id": 1044000,
+      "nombre": "HUGO DOUGLAS VENTOSA",
+      "equipo": "CRC POZUELO RUGBY",
+      "pj": 3,
       "puntos": 16,
       "ensayos": 0,
       "amarillas": 0,
       "rojas": 0
     },
     {
-      "id": 1028426,
-      "nombre": "ADRIANO TALEMAISUVA",
-      "equipo": "INVERSUS LICEO FRANCES",
+      "id": 1023923,
+      "nombre": "DIEGO BLASCO PRIETO",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "pj": 3,
       "puntos": 15,
       "ensayos": 3,
@@ -3527,9 +3527,9 @@
   ],
   "temporada_ensayadores": [
     {
-      "id": 1028426,
-      "nombre": "ADRIANO TALEMAISUVA",
-      "equipo": "INVERSUS LICEO FRANCES",
+      "id": 1023923,
+      "nombre": "DIEGO BLASCO PRIETO",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "pj": 3,
       "puntos": 15,
       "ensayos": 3,
@@ -3547,9 +3547,9 @@
       "rojas": 0
     },
     {
-      "id": 1023923,
-      "nombre": "DIEGO BLASCO PRIETO",
-      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "id": 1028426,
+      "nombre": "ADRIANO TALEMAISUVA",
+      "equipo": "INVERSUS LICEO FRANCES",
       "pj": 3,
       "puntos": 15,
       "ensayos": 3,

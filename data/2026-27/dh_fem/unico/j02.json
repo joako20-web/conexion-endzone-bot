@@ -2305,16 +2305,6 @@
       "rojas": 0
     },
     {
-      "id": 1053276,
-      "nombre": "ADELINA DA COSTA",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
-      "pj": 2,
-      "puntos": 15,
-      "ensayos": 3,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
       "id": 1025159,
       "nombre": "LUISINA CONTRERAS",
       "equipo": "GETXO RUGBY",
@@ -2322,6 +2312,16 @@
       "puntos": 15,
       "ensayos": 3,
       "amarillas": 1,
+      "rojas": 0
+    },
+    {
+      "id": 1053276,
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "pj": 2,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
       "rojas": 0
     },
     {
@@ -2335,23 +2335,13 @@
       "rojas": 0
     },
     {
-      "id": 1031629,
-      "nombre": "NOA VARELA FARIÑA",
+      "id": 1023893,
+      "nombre": "ISABEL RODRIGUEZ VILA",
       "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 2,
       "puntos": 10,
       "ensayos": 2,
       "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1034740,
-      "nombre": "ALBA MASDEVALL JIMENEZ",
-      "equipo": "CLUB DE RUGBY SANT CUGAT",
-      "pj": 2,
-      "puntos": 10,
-      "ensayos": 2,
-      "amarillas": 1,
       "rojas": 0
     },
     {
@@ -2375,13 +2365,23 @@
       "rojas": 0
     },
     {
-      "id": 1023893,
-      "nombre": "ISABEL RODRIGUEZ VILA",
+      "id": 1031629,
+      "nombre": "NOA VARELA FARIÑA",
       "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 2,
       "puntos": 10,
       "ensayos": 2,
       "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1034740,
+      "nombre": "ALBA MASDEVALL JIMENEZ",
+      "equipo": "CLUB DE RUGBY SANT CUGAT",
+      "pj": 2,
+      "puntos": 10,
+      "ensayos": 2,
+      "amarillas": 1,
       "rojas": 0
     }
   ],
@@ -2390,16 +2390,6 @@
       "id": 1023764,
       "nombre": "MARIA MIGUEL GIL",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-      "pj": 2,
-      "puntos": 15,
-      "ensayos": 3,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1053276,
-      "nombre": "ADELINA DA COSTA",
-      "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "pj": 2,
       "puntos": 15,
       "ensayos": 3,
@@ -2417,6 +2407,16 @@
       "rojas": 0
     },
     {
+      "id": 1053276,
+      "nombre": "ADELINA DA COSTA",
+      "equipo": "SILICIUS RUGBY MAJADAHONDA",
+      "pj": 2,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1029189,
       "nombre": "SARA RODRIGUEZ BERDUN",
       "equipo": "RIALTA CRAT CORUÑA.",
@@ -2427,8 +2427,8 @@
       "rojas": 0
     },
     {
-      "id": 1031629,
-      "nombre": "NOA VARELA FARIÑA",
+      "id": 1023893,
+      "nombre": "ISABEL RODRIGUEZ VILA",
       "equipo": "RIALTA CRAT CORUÑA.",
       "pj": 2,
       "puntos": 10,
@@ -2449,19 +2449,6 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "Polideportivo Quatre Carreres",
-        "estado": "pendiente",
-        "grupo": null,
-        "ronda": ""
-      },
-      {
-        "id": 18951,
-        "jornada": 3,
-        "fecha": null,
-        "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
-        "visitante": "BARCELONA UNIVERSITARI CLUB",
-        "puntos_local": null,
-        "puntos_visitante": null,
-        "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -2488,6 +2475,19 @@
         "puntos_local": null,
         "puntos_visitante": null,
         "campo": "Fadura",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 18951,
+        "jornada": 3,
+        "fecha": "2026-11-01T14:00:00",
+        "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "visitante": "BARCELONA UNIVERSITARI CLUB",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
