@@ -209,5 +209,13 @@
     "jugados": 3,
     "enviado": "2026-10-19T10:01:33.601686+02:00",
     "pendientes_al_enviar": false
+  },
+  "2026-27_mad_1r_unico_j03": {
+    "competicion": "mad_1r",
+    "grupo": "unico",
+    "jornada": 3,
+    "json": "data/2026-27/mad_1r/unico/j03.json",
+    "actas_pendientes": [],
+    "jugados": 1
   }
 }
