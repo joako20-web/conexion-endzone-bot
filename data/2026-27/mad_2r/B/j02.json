@@ -4039,12 +4039,12 @@
       {
         "id": 2726655806,
         "jornada": 3,
-        "fecha": "2026-10-25T00:00:00",
+        "fecha": "2026-10-24T12:00:00",
         "local": "SAN ISIDRO TRES OLIVOS",
         "visitante": "XV HORTALEZA ROJO",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Tres Olivos",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -4052,12 +4052,12 @@
       {
         "id": 4118756221,
         "jornada": 3,
-        "fecha": "2026-10-25T00:00:00",
+        "fecha": "2026-10-25T14:30:00",
         "local": "GETAFE CLUB DE RUGBY",
         "visitante": "OSOS DEL PARDO",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Getafe (El Bercial)",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -4065,12 +4065,12 @@
       {
         "id": 156789968,
         "jornada": 3,
-        "fecha": "2026-10-25T00:00:00",
+        "fecha": "2026-10-24T18:30:00",
         "local": "TASMAN RUGBY BOADILLA",
         "visitante": "CLUB RUGBY ALCALÁ",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Complejo Municipal de Boadilla del Monte",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -4078,12 +4078,12 @@
       {
         "id": 362032289,
         "jornada": 3,
-        "fecha": "2026-10-25T00:00:00",
+        "fecha": "2026-10-24T13:45:00",
         "local": "COMPLUTENSE CISNEROS CINCO",
         "visitante": "AERONÁUTICOS BARRIO DEL PILAR",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Paraninfo",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -4091,12 +4091,12 @@
       {
         "id": 3544868577,
         "jornada": 3,
-        "fecha": "2026-10-25T00:00:00",
+        "fecha": "2026-10-25T13:30:00",
         "local": "OLÍMPICO DE POZUELO B",
         "visitante": "PDM RUGBY TOLEDO",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de Pozuelo (Valle de las Cañas)",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
@@ -4104,12 +4104,12 @@
       {
         "id": 2847315477,
         "jornada": 3,
-        "fecha": "2026-10-25T00:00:00",
+        "fecha": "2026-10-24T19:00:00",
         "local": "INGENIEROS INDUSTRIALES LAS ROZAS",
         "visitante": "RUGBY UNIÓN NORTE",
         "puntos_local": null,
         "puntos_visitante": null,
-        "campo": "",
+        "campo": "Campo de las Rozas (El Cantizal)",
         "estado": "pendiente",
         "grupo": null,
         "ronda": ""
