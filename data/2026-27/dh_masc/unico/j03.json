@@ -3586,10 +3586,10 @@
         "fecha": "2026-10-24T16:00:00",
         "local": "COMPLUTENSE CISNEROS",
         "visitante": "UNIO ESPORTIVA SANTBOIANA",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 30,
+        "puntos_visitante": 21,
         "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 1",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3599,10 +3599,10 @@
         "fecha": "2026-10-25T12:00:00",
         "local": "AMPO ORDIZIA",
         "visitante": "VRAC QUESOS ENTREPINARES",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 39,
+        "puntos_visitante": 30,
         "campo": "ALTAMIRA ESTADIOA",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3612,10 +3612,10 @@
         "fecha": "2026-10-25T12:00:00",
         "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
         "visitante": "SILICIUS ALCOBENDAS RUGBY",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 36,
+        "puntos_visitante": 3,
         "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3625,10 +3625,10 @@
         "fecha": "2026-10-25T12:30:00",
         "local": "INVERSUS LICEO FRANCES",
         "visitante": "CRC POZUELO RUGBY",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 37,
+        "puntos_visitante": 11,
         "campo": "ESTADIO RAMON URTUBI",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3638,10 +3638,10 @@
         "fecha": "2026-10-25T13:00:00",
         "local": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
         "visitante": "HUESITOS LA VILA RUGBY CLUB",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 61,
+        "puntos_visitante": 19,
         "campo": "CAMPO DE RUGBY BIENVENIDO NIETO",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       }
@@ -3755,6 +3755,41 @@
       {
         "nombre": "ADRIANO TALEMAISUVA",
         "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "FRANCO MATIAS FERNANDO VELARDE BRANDT",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "JAVIER ANGEL CORONEL",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "PEDRO CANE SGRO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "VALENTIN BUSTOS",
+        "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "BERNAT FERNANDEZ SIERRA",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
         "valor": 3,
         "detalle": "15 puntos",
         "rival": ""
@@ -3765,95 +3800,67 @@
         "valor": 3,
         "detalle": "15 puntos",
         "rival": ""
-      },
-      {
-        "nombre": "PEDRO CANE SGRO",
-        "equipo": "VRAC QUESOS ENTREPINARES",
-        "valor": 3,
-        "detalle": "15 puntos",
-        "rival": ""
-      },
-      {
-        "nombre": "BALTAZAR TAIBO",
-        "equipo": "VRAC QUESOS ENTREPINARES",
-        "valor": 2,
-        "detalle": "34 puntos",
-        "rival": ""
-      },
-      {
-        "nombre": "BALTAZAR MONTOYA QUIROGA",
-        "equipo": "HUESITOS LA VILA RUGBY CLUB",
-        "valor": 2,
-        "detalle": "12 puntos",
-        "rival": ""
-      },
-      {
-        "nombre": "ADRIAN FERNANDEZ COUVREUR",
-        "equipo": "CRC POZUELO RUGBY",
-        "valor": 2,
-        "detalle": "10 puntos",
-        "rival": ""
-      },
-      {
-        "nombre": "ADRIAN LOUIS GABAS RUIZ",
-        "equipo": "INVERSUS LICEO FRANCES",
-        "valor": 2,
-        "detalle": "10 puntos",
-        "rival": ""
       }
     ],
     "pateadores_t": [
       {
         "nombre": "SANTIAGO IGNACIO MANSILLA",
         "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
-        "valor": 46,
-        "detalle": "5 transf. · 12 golpes",
+        "valor": 62,
+        "detalle": "13 transf. · 12 golpes",
         "rival": ""
       },
       {
         "nombre": "ADRIAN ARIAS LASTRA",
         "equipo": "INVERSUS LICEO FRANCES",
-        "valor": 27,
-        "detalle": "6 transf. · 5 golpes",
-        "rival": ""
-      },
-      {
-        "nombre": "AGUSTIN ALTAMIRANO DECICCO",
-        "equipo": "HUESITOS LA VILA RUGBY CLUB",
-        "valor": 26,
-        "detalle": "7 transf. · 3 golpes · 1 drop",
-        "rival": ""
-      },
-      {
-        "nombre": "BALTAZAR TAIBO",
-        "equipo": "VRAC QUESOS ENTREPINARES",
-        "valor": 24,
-        "detalle": "9 transf. · 2 golpes",
+        "valor": 39,
+        "detalle": "9 transf. · 7 golpes",
         "rival": ""
       },
       {
         "nombre": "BEAU FINNIAN PEART",
         "equipo": "AMPO ORDIZIA",
-        "valor": 22,
-        "detalle": "8 transf. · 2 golpes",
+        "valor": 36,
+        "detalle": "12 transf. · 4 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "BALTAZAR TAIBO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 34,
+        "detalle": "11 transf. · 4 golpes",
         "rival": ""
       },
       {
         "nombre": "SANTIAGO ORTEGA GRANDELA",
         "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
-        "valor": 20,
-        "detalle": "4 transf. · 4 golpes",
+        "valor": 31,
+        "detalle": "8 transf. · 5 golpes",
         "rival": ""
       },
       {
-        "nombre": "AGUSTIN CITTADINI",
-        "equipo": "SILICIUS ALCOBENDAS RUGBY",
-        "valor": 16,
-        "detalle": "2 transf. · 4 golpes",
+        "nombre": "AGUSTIN ALTAMIRANO DECICCO",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 30,
+        "detalle": "9 transf. · 3 golpes · 1 drop",
+        "rival": ""
+      },
+      {
+        "nombre": "HUGO DOUGLAS VENTOSA",
+        "equipo": "CRC POZUELO RUGBY",
+        "valor": 22,
+        "detalle": "5 transf. · 4 golpes",
         "rival": ""
       }
     ],
     "disciplina": [
+      {
+        "nombre": "FERNANDO MARTIN LOPEZ PEREZ",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 3,
+        "detalle": "3 amarillas",
+        "rival": ""
+      },
       {
         "nombre": "ALEJANDRO SUAREZ RODRIGUEZ",
         "equipo": "SILICIUS ALCOBENDAS RUGBY",
@@ -3876,13 +3883,6 @@
         "rival": ""
       },
       {
-        "nombre": "FERNANDO MARTIN LOPEZ PEREZ",
-        "equipo": "AMPO ORDIZIA",
-        "valor": 2,
-        "detalle": "2 amarillas",
-        "rival": ""
-      },
-      {
         "nombre": "HECTOR MATAMOROS ABAD",
         "equipo": "HUESITOS LA VILA RUGBY CLUB",
         "valor": 2,
@@ -3897,14 +3897,35 @@
         "rival": ""
       },
       {
-        "nombre": "DIEGO CARVAJALES RODRIGUEZ",
-        "equipo": "SILICIUS ALCOBENDAS RUGBY",
-        "valor": 1,
-        "detalle": "1 roja",
+        "nombre": "RODRIGO PELAZ ALDAMA",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 2,
+        "detalle": "2 amarillas",
         "rival": ""
       }
     ],
     "banquillo": [
+      {
+        "nombre": "ANDER ALBERDI MENDIZABAL",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 10,
+        "detalle": "2 ensayos",
+        "rival": ""
+      },
+      {
+        "nombre": "BERNAT FERNANDEZ SIERRA",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 10,
+        "detalle": "2 ensayos",
+        "rival": ""
+      },
+      {
+        "nombre": "JAVIER ANGEL CORONEL",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 10,
+        "detalle": "2 ensayos",
+        "rival": ""
+      },
       {
         "nombre": "SANTIAGO ORTEGA GRANDELA",
         "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
@@ -3920,36 +3941,15 @@
         "rival": ""
       },
       {
+        "nombre": "ADRIANO TALEMAISUVA",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
         "nombre": "AITOR ANGIOZAR BOTO",
         "equipo": "AMPO ORDIZIA",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "ANDER ALBERDI MENDIZABAL",
-        "equipo": "AMPO ORDIZIA",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "ASIER PEREZ CERVILLA",
-        "equipo": "HUESITOS LA VILA RUGBY CLUB",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "BERNAT FERNANDEZ SIERRA",
-        "equipo": "UNIO ESPORTIVA SANTBOIANA",
-        "valor": 5,
-        "detalle": "1 ensayo",
-        "rival": ""
-      },
-      {
-        "nombre": "NICHOLAS GOLDSPINK BOREL",
-        "equipo": "COMPLUTENSE CISNEROS",
         "valor": 5,
         "detalle": "1 ensayo",
         "rival": ""
@@ -4016,15 +4016,15 @@
         "filas": [
           {
             "equipo": "SILICIUS ALCOBENDAS RUGBY",
-            "valor": 8
+            "valor": 10
           },
           {
-            "equipo": "HUESITOS LA VILA RUGBY CLUB",
-            "valor": 4
+            "equipo": "AMPO ORDIZIA",
+            "valor": 7
           },
           {
-            "equipo": "UNIO ESPORTIVA SANTBOIANA",
-            "valor": 4
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 5
           }
         ]
       }

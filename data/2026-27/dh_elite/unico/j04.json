@@ -50,10 +50,10 @@
       "fecha": "2026-10-25T12:00:00",
       "local": "HERNANI CRE",
       "visitante": "VALENCIA RC",
-      "puntos_local": null,
-      "puntos_visitante": null,
+      "puntos_local": 43,
+      "puntos_visitante": 19,
       "campo": "LANDARE TOKI",
-      "estado": "pendiente",
+      "estado": "jugado",
       "grupo": null,
       "ronda": ""
     },
@@ -63,10 +63,10 @@
       "fecha": "2026-10-25T12:30:00",
       "local": "C.P. LES ABELLES",
       "visitante": "BARÇA RUGBI",
-      "puntos_local": null,
-      "puntos_visitante": null,
+      "puntos_local": 21,
+      "puntos_visitante": 26,
       "campo": "Polideportivo Quatre Carreres - Campos de rugby Jorge Diego Pantera",
-      "estado": "pendiente",
+      "estado": "jugado",
       "grupo": null,
       "ronda": ""
     }
@@ -293,6 +293,32 @@
       "estado": "jugado",
       "grupo": null,
       "ronda": ""
+    },
+    {
+      "id": 17748,
+      "jornada": 4,
+      "fecha": "2026-10-25T12:00:00",
+      "local": "HERNANI CRE",
+      "visitante": "VALENCIA RC",
+      "puntos_local": 43,
+      "puntos_visitante": 19,
+      "campo": "LANDARE TOKI",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17750,
+      "jornada": 4,
+      "fecha": "2026-10-25T12:30:00",
+      "local": "C.P. LES ABELLES",
+      "visitante": "BARÇA RUGBI",
+      "puntos_local": 21,
+      "puntos_visitante": 26,
+      "campo": "Polideportivo Quatre Carreres - Campos de rugby Jorge Diego Pantera",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
     }
   ],
   "actas_pendientes": [],
@@ -312,6 +338,22 @@
       "rival": "CLUB DE RUGBY SANT CUGAT",
       "nota": 31.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68ce8a9e555dc.jpeg"
+    },
+    {
+      "nombre": "BEÑAT ARICETA MAESTRO",
+      "equipo": "HERNANI CRE",
+      "dorsal": 13,
+      "puntos": 18,
+      "ensayos": 1,
+      "conversiones": 5,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 27.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64d9fc61c1db0.jpg"
     },
     {
       "nombre": "IÑIGO RAPALLO DE LIS",
@@ -362,6 +404,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_33623432366433316666373439383933.jpg"
     },
     {
+      "nombre": "IBON GONZALEZ PLA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 22.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64ac7edde850f.jpg"
+    },
+    {
       "nombre": "JOAQUIN SANCHEZ BARROSO",
       "equipo": "RECOLETAS SALUD FENIX",
       "dorsal": 8,
@@ -410,8 +468,8 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6a6c796f663832353634.jpg"
     },
     {
-      "nombre": "TALLA SAMB ALDASORO",
-      "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
+      "nombre": "MIKEL PEREZ IGARZABAL",
+      "equipo": "HERNANI CRE",
       "dorsal": 8,
       "puntos": 10,
       "ensayos": 2,
@@ -420,42 +478,10 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 56,
-      "rival": "CLUB DE RUGBY SANT CUGAT",
-      "nota": 23.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_7830656e716673346379.jpg"
-    },
-    {
-      "nombre": "MARLO LOUIS WEICH",
-      "equipo": "STEELPHALT GETXO RUGBY",
-      "dorsal": 15,
-      "puntos": 10,
-      "ensayos": 0,
-      "conversiones": 2,
-      "golpes": 2,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 6,
-      "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
-      "nota": 14.6,
-      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6c783433753732306a6d.jpg"
-    },
-    {
-      "nombre": "BRAIS REY GRANDE",
-      "equipo": "RECOLETAS SALUD FENIX",
-      "dorsal": 13,
-      "puntos": 6,
-      "ensayos": 0,
-      "conversiones": 3,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -14,
-      "rival": "TORREALDAY GERNIKA RUGBY TALDEA",
-      "nota": 4.6,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_32643461383263733264.jpg"
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 22.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b776a65616c72347638.jpg"
     }
   ],
   "ensayadores": [
@@ -476,6 +502,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_766869787531646e736f.jpg"
     },
     {
+      "nombre": "IBON GONZALEZ PLA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 22.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64ac7edde850f.jpg"
+    },
+    {
       "nombre": "JOAQUIN SANCHEZ BARROSO",
       "equipo": "RECOLETAS SALUD FENIX",
       "dorsal": 8,
@@ -522,28 +564,12 @@
       "rival": "CAJASOL REAL CIENCIAS SEVILLA",
       "nota": 13.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6a6c796f663832353634.jpg"
-    },
-    {
-      "nombre": "TALLA SAMB ALDASORO",
-      "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
-      "dorsal": 8,
-      "puntos": 10,
-      "ensayos": 2,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "G",
-      "margen": 56,
-      "rival": "CLUB DE RUGBY SANT CUGAT",
-      "nota": 23.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_7830656e716673346379.jpg"
     }
   ],
   "xv_ideal": {
     "1": {
-      "nombre": "ADRIAN RODRIGO DELGADO",
-      "equipo": "STEELPHALT GETXO RUGBY",
+      "nombre": "TOMAS ALFONSO INFANTE",
+      "equipo": "HERNANI CRE",
       "dorsal": 1,
       "puntos": 0,
       "ensayos": 0,
@@ -552,30 +578,30 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 6,
-      "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
-      "nota": 4.6,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_646f6332396b7767656b.jpg"
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64aad41ab982b.jpeg"
     },
     "2": {
-      "nombre": "RAYNARDT NEL",
-      "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
+      "nombre": "MARIANO PIGATTO VIE",
+      "equipo": "BARÇA RUGBI",
       "dorsal": 2,
-      "puntos": 0,
-      "ensayos": 0,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 14,
-      "rival": "RECOLETAS SALUD FENIX",
-      "nota": 5.4,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_3662716c37616775716c.jpg"
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 12.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_667276656b7872666365.jpg"
     },
     "3": {
-      "nombre": "ALEJANDRO IGLESIAS MENENDEZ",
-      "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
+      "nombre": "ADRIAN SANCHEZ IGLESIAS",
+      "equipo": "HERNANI CRE",
       "dorsal": 3,
       "puntos": 0,
       "ensayos": 0,
@@ -583,11 +609,11 @@
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -6,
-      "rival": "STEELPHALT GETXO RUGBY",
-      "nota": -0.6,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a7238657663666e776d.jpg"
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64a98e189784d.jpeg"
     },
     "4": {
       "nombre": "UNAX GALARRAGA FERNANDEZ",
@@ -638,20 +664,20 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_39633461626633356137633064323936.jpg"
     },
     "7": {
-      "nombre": "MARCOS ENCINAS ESPES",
-      "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
-      "dorsal": 7,
-      "puntos": 0,
-      "ensayos": 0,
+      "nombre": "MIQUEL CINTAS NAVARRO",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 6,
+      "puntos": 5,
+      "ensayos": 1,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
-      "resultado": "P",
-      "margen": -6,
-      "rival": "STEELPHALT GETXO RUGBY",
-      "nota": -0.6,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_336434686f676a797436.jpg"
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 12.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_686f64656e6e37786933.jpg"
     },
     "8": {
       "nombre": "TALLA SAMB ALDASORO",
@@ -702,22 +728,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68ce8a9e555dc.jpeg"
     },
     "11": {
-      "nombre": "IGNACIO MORENO GUZMAN",
-      "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
-      "dorsal": 14,
-      "puntos": 5,
-      "ensayos": 1,
+      "nombre": "IBON GONZALEZ PLA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
       "conversiones": 0,
       "golpes": 0,
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 56,
-      "rival": "CLUB DE RUGBY SANT CUGAT",
-      "nota": 15.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6670303437796d796738.jpg"
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 22.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64ac7edde850f.jpg"
     },
     "12": {
+      "nombre": "BEÑAT ARICETA MAESTRO",
+      "equipo": "HERNANI CRE",
+      "dorsal": 13,
+      "puntos": 18,
+      "ensayos": 1,
+      "conversiones": 5,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 27.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64d9fc61c1db0.jpg"
+    },
+    "13": {
       "nombre": "PEIO URRUTIA ARANDIA",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 13,
@@ -733,25 +775,9 @@
       "nota": 13.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_386f66776f69766e6b6f.jpg"
     },
-    "13": {
-      "nombre": "MAX BELSA ADELL",
-      "equipo": "CLUB DE RUGBY SANT CUGAT",
-      "dorsal": 12,
-      "puntos": 10,
-      "ensayos": 2,
-      "conversiones": 0,
-      "golpes": 0,
-      "drops": 0,
-      "tarjetas": [],
-      "resultado": "P",
-      "margen": -56,
-      "rival": "CAJASOL REAL CIENCIAS SEVILLA",
-      "nota": 13.0,
-      "foto": "https://rugby.isquad.es/images/afiliacion/square_6a6c796f663832353634.jpg"
-    },
     "14": {
-      "nombre": "ANDER ARISTI CAMARA",
-      "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
+      "nombre": "IGNACIO MORENO GUZMAN",
+      "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
       "dorsal": 14,
       "puntos": 5,
       "ensayos": 1,
@@ -760,10 +786,10 @@
       "drops": 0,
       "tarjetas": [],
       "resultado": "G",
-      "margen": 14,
-      "rival": "RECOLETAS SALUD FENIX",
-      "nota": 13.4,
-      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64a4108606caf.jpeg"
+      "margen": 56,
+      "rival": "CLUB DE RUGBY SANT CUGAT",
+      "nota": 15.0,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6670303437796d796738.jpg"
     },
     "15": {
       "nombre": "MARLO LOUIS WEICH",
@@ -801,6 +827,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68cfe13c471c2.jpeg"
     },
     {
+      "nombre": "TOMAS ALFONSO INFANTE",
+      "equipo": "HERNANI CRE",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64aad41ab982b.jpeg"
+    },
+    {
       "nombre": "RUBEN LOURENS ODENDAAL",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 1,
@@ -831,6 +873,38 @@
       "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "nota": 4.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_646f6332396b7767656b.jpg"
+    },
+    {
+      "nombre": "NICOLAS COLLARINI",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6464643430616d313763.jpg"
+    },
+    {
+      "nombre": "SAMUEL JESUS ROJAS MORA",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_716e316b6d3237726130.jpg"
     },
     {
       "nombre": "JUAN GUILLERMO MARTINEZ",
@@ -865,6 +939,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6b763838367861623730.jpg"
     },
     {
+      "nombre": "EMILIANO PIRRO DONZIS",
+      "equipo": "VALENCIA RC",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_62723639756667367769.jpg"
+    },
+    {
       "nombre": "LLUIS OLIVA BRION",
       "equipo": "CLUB DE RUGBY SANT CUGAT",
       "dorsal": 1,
@@ -895,6 +985,38 @@
       "rival": "CLUB DE RUGBY SANT CUGAT",
       "nota": 15.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_707536633430306d696c.jpg"
+    },
+    {
+      "nombre": "MARIANO PIGATTO VIE",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 2,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 12.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_667276656b7872666365.jpg"
+    },
+    {
+      "nombre": "AIMAR BALENCIAGA CIA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64e1ee5851027.jpg"
     },
     {
       "nombre": "RAYNARDT NEL",
@@ -929,6 +1051,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_756c73746b7570766931.jpg"
     },
     {
+      "nombre": "JOSEP MIQUEL ALAPONT VERDEGUER",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6c373272613833377663.jpg"
+    },
+    {
       "nombre": "GONZALO SANZ GUERRERO",
       "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "dorsal": 2,
@@ -959,6 +1097,22 @@
       "rival": "TORREALDAY GERNIKA RUGBY TALDEA",
       "nota": -1.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_723162636d3266727733.jpg"
+    },
+    {
+      "nombre": "ALVARO AVIÑO EDO",
+      "equipo": "VALENCIA RC",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b3378626f316f313073.jpg"
     },
     {
       "nombre": "ASIER GONZALEZ RUIZ",
@@ -993,6 +1147,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_796b6b77643063316372.jpg"
     },
     {
+      "nombre": "ADRIAN SANCHEZ IGLESIAS",
+      "equipo": "HERNANI CRE",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64a98e189784d.jpeg"
+    },
+    {
       "nombre": "TYRAN EDGAR FAGAN",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 3,
@@ -1025,6 +1195,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_30747279306e75333779.jpg"
     },
     {
+      "nombre": "GOGA TURIASHVILI",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_34646338333075677035.jpg"
+    },
+    {
+      "nombre": "MARC ANTHONY MAMMEN",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_71767875376b6f783161.jpg"
+    },
+    {
       "nombre": "ALEJANDRO IGLESIAS MENENDEZ",
       "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "dorsal": 3,
@@ -1039,6 +1241,22 @@
       "rival": "STEELPHALT GETXO RUGBY",
       "nota": -0.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6a7238657663666e776d.jpg"
+    },
+    {
+      "nombre": "JORDY STEVEN CAICEDO ESCOBAR",
+      "equipo": "VALENCIA RC",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e313833717867676130.jpg"
     },
     {
       "nombre": "DIEGO ENRIQUE MEZA CHAPARRO",
@@ -1107,6 +1325,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6a76616b62677464676b.jpg"
     },
     {
+      "nombre": "TELMO IBABE SAGASTA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3173683330666f656468.jpg"
+    },
+    {
       "nombre": "JUAN JOSE HIDALGO ROMERO",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 4,
@@ -1121,6 +1355,38 @@
       "rival": "RECOLETAS SALUD FENIX",
       "nota": 5.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6d786e38323739307964.jpg"
+    },
+    {
+      "nombre": "MAX ARTIGAS GALLAGHER",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_31757976666e74713576.jpg"
+    },
+    {
+      "nombre": "ALEXANDER DE ALBA SMART",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_30636130633661336536633938373361.jpg"
     },
     {
       "nombre": "SERGIO NATALINO FERNANDEZ",
@@ -1153,6 +1419,22 @@
       "rival": "TORREALDAY GERNIKA RUGBY TALDEA",
       "nota": -1.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68c05e9e53466.jpeg"
+    },
+    {
+      "nombre": "GUARDIN GONZALEZ CISCAR",
+      "equipo": "VALENCIA RC",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6f70756f786c33783837.jpg"
     },
     {
       "nombre": "GERARD VIRUEZ ROCA",
@@ -1203,6 +1485,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_7678667532733574736c.jpeg"
     },
     {
+      "nombre": "XABIER GARMENDIA IMAZ",
+      "equipo": "HERNANI CRE",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6f6364717064326e7675.jpg"
+    },
+    {
+      "nombre": "ROBIN PAULUS CLAUDE PENIGAUD",
+      "equipo": "VALENCIA RC",
+      "dorsal": 5,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": 5.6,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_66387937617563786130.jpg"
+    },
+    {
       "nombre": "MARC SAMSO CAPELLADES",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 5,
@@ -1217,6 +1531,38 @@
       "rival": "RECOLETAS SALUD FENIX",
       "nota": 5.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6a211bc1ddee3.jpeg"
+    },
+    {
+      "nombre": "GERSON ORTIZ CAÑAS",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_656e6d7165306e717634.jpg"
+    },
+    {
+      "nombre": "BRUNO VAGNI",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_67666c68326b75773566.jpg"
     },
     {
       "nombre": "CRISTIAN SEBASTIAN ESQUIVEL",
@@ -1283,6 +1629,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_39633461626633356137633064323936.jpg"
     },
     {
+      "nombre": "MIQUEL CINTAS NAVARRO",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 6,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 12.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_686f64656e6e37786933.jpg"
+    },
+    {
       "nombre": "ALVARO MUÑIZ ORIA",
       "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
       "dorsal": 6,
@@ -1299,6 +1661,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_3461317038677264326c.jpg"
     },
     {
+      "nombre": "XABIER LUKAS SOLANO",
+      "equipo": "HERNANI CRE",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_386364347461346a7839.jpg"
+    },
+    {
       "nombre": "PELLO LARRINAGA ZORROZUA",
       "equipo": "STEELPHALT GETXO RUGBY",
       "dorsal": 6,
@@ -1313,6 +1691,22 @@
       "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "nota": 4.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6918828bc23d7.jpeg"
+    },
+    {
+      "nombre": "GONZALO SIDAN",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6e616163303535716371.jpg"
     },
     {
       "nombre": "THEO DORIAN SANCHEZ",
@@ -1347,6 +1741,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64b5a36e22ac5.jpg"
     },
     {
+      "nombre": "SALVADOR PALOMARES LLORET",
+      "equipo": "VALENCIA RC",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3566386666616e786c6f.jpg"
+    },
+    {
       "nombre": "MAXIME SHERBAN MARIE DE PANAFIEU",
       "equipo": "CLUB DE RUGBY SANT CUGAT",
       "dorsal": 6,
@@ -1379,6 +1789,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_37366173307763626d62.jpg"
     },
     {
+      "nombre": "IKER EIZMENDI URIGOITIA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64e4e55e8bbc6.jpg"
+    },
+    {
       "nombre": "MIKEL CALVO DE LA QUINTANA",
       "equipo": "STEELPHALT GETXO RUGBY",
       "dorsal": 7,
@@ -1393,6 +1819,22 @@
       "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "nota": 4.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_67676e6b776e32666835.jpg"
+    },
+    {
+      "nombre": "MILO RIBO PELLEGRINI",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_376177787477326a356a.jpg"
     },
     {
       "nombre": "AGUSTIN BARTOLOME FORURIA ASTORKIA",
@@ -1411,6 +1853,22 @@
       "rival": "RECOLETAS SALUD FENIX",
       "nota": 1.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68af4054abbad.jpeg"
+    },
+    {
+      "nombre": "JULIAN PRIETO RANDEZ",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_676869796c6c62787264.jpg"
     },
     {
       "nombre": "MARCOS ENCINAS ESPES",
@@ -1445,6 +1903,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6b30706c676a696a6879.jpg"
     },
     {
+      "nombre": "FREYDER JULIAN VELANDIA FONTALVO",
+      "equipo": "VALENCIA RC",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6ab43576dd8ef.jpeg"
+    },
+    {
       "nombre": "GERARD GINEL VICEN",
       "equipo": "CLUB DE RUGBY SANT CUGAT",
       "dorsal": 7,
@@ -1475,6 +1949,22 @@
       "rival": "CLUB DE RUGBY SANT CUGAT",
       "nota": 23.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_7830656e716673346379.jpg"
+    },
+    {
+      "nombre": "MIKEL PEREZ IGARZABAL",
+      "equipo": "HERNANI CRE",
+      "dorsal": 8,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 22.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b776a65616c72347638.jpg"
     },
     {
       "nombre": "MARCELO IGNACIO HUERTA MORAGA",
@@ -1509,6 +1999,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_74743735646c38336d38.jpg"
     },
     {
+      "nombre": "MIGUEL BERMEJO ARCOS",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": 7.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b3373346635356d7076.jpg"
+    },
+    {
       "nombre": "SIMBARASHE SIRAHA",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 8,
@@ -1539,6 +2045,38 @@
       "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "nota": 4.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_64756231337676337866.jpg"
+    },
+    {
+      "nombre": "YANDE NKONGE NKONGE",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_30633963613334666134636562656236.jpg"
+    },
+    {
+      "nombre": "MATIAS JORGE VILA SKRZYPEK",
+      "equipo": "VALENCIA RC",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_78337135396363386e67.jpg"
     },
     {
       "nombre": "MARTI CLARIANA I JOSEP",
@@ -1573,6 +2111,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6235726963717672736f.jpg"
     },
     {
+      "nombre": "VICENTE RICOS CARAS",
+      "equipo": "VALENCIA RC",
+      "dorsal": 9,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": 13.6,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b6570396c65626f6771.jpg"
+    },
+    {
       "nombre": "JON AZKORRA MAIR",
       "equipo": "STEELPHALT GETXO RUGBY",
       "dorsal": 9,
@@ -1589,6 +2143,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_683073746e786469656a.jpg"
     },
     {
+      "nombre": "LUCAS MARTIN PEREZ",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 9,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": 7.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6f7979636164786c7976.jpg"
+    },
+    {
+      "nombre": "AIHEKO MINER OLANO",
+      "equipo": "HERNANI CRE",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64a992d8aec2c.jpg"
+    },
+    {
       "nombre": "IKER OLAETA KORTABERRIA",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 9,
@@ -1603,6 +2189,22 @@
       "rival": "RECOLETAS SALUD FENIX",
       "nota": 5.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_377979726e7864616161.jpg"
+    },
+    {
+      "nombre": "ADRIA BONELL NAVARRO",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6b356c336d3171336478.jpg"
     },
     {
       "nombre": "MIGUEL ANGEL OLIVER GONZALEZ",
@@ -1701,6 +2303,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_7630776c746e79646130.jpg"
     },
     {
+      "nombre": "ARTHUR WILLIAM LENNON",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 10,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 10.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_72643733757531387337.jpg"
+    },
+    {
       "nombre": "GABRIEL ENRIQUE TOBIO",
       "equipo": "STEELPHALT GETXO RUGBY",
       "dorsal": 10,
@@ -1715,6 +2333,54 @@
       "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "nota": 6.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_34796c68353079393872.jpg"
+    },
+    {
+      "nombre": "ANARTZ ELOSEGI MUJIKA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64df8f4e5beb8.jpeg"
+    },
+    {
+      "nombre": "ALBERTO VIDAL BORRELL",
+      "equipo": "VALENCIA RC",
+      "dorsal": 10,
+      "puntos": 2,
+      "ensayos": 0,
+      "conversiones": 1,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -0.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3574626b70326536316d.jpg"
+    },
+    {
+      "nombre": "BAUTISTA EDUARDO GUEMES",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_70647863653177743068.jpg"
     },
     {
       "nombre": "FERRAN GIMENO SANTESMASES",
@@ -1749,6 +2415,22 @@
       "rival": "TORREALDAY GERNIKA RUGBY TALDEA",
       "nota": -5.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_35766e6535756e336473.jpg"
+    },
+    {
+      "nombre": "IBON GONZALEZ PLA",
+      "equipo": "HERNANI CRE",
+      "dorsal": 11,
+      "puntos": 10,
+      "ensayos": 2,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 22.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64ac7edde850f.jpg"
     },
     {
       "nombre": "JAUNDRE NEL",
@@ -1815,6 +2497,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_616c70757075346b6838.jpg"
     },
     {
+      "nombre": "GUILLERMO TRILLO MELUS",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_793234306976666a746f.jpg"
+    },
+    {
       "nombre": "KERMAN PASTOR AYO",
       "equipo": "STEELPHALT GETXO RUGBY",
       "dorsal": 11,
@@ -1831,6 +2529,38 @@
       "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "nota": 0.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_39686671337962726779.jpg"
+    },
+    {
+      "nombre": "MICHAEL DURUH ADINDU",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_687331766a7935313839.jpg"
+    },
+    {
+      "nombre": "MARIO CORONADO MICO",
+      "equipo": "VALENCIA RC",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_65337334647030303868.jpg"
     },
     {
       "nombre": "TIZIANO PELOSSO CAMAÑO",
@@ -1865,6 +2595,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6a6c796f663832353634.jpg"
     },
     {
+      "nombre": "DANIEL PIPO GUARDIA",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 12,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 12.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_743379356b7274786862.jpg"
+    },
+    {
       "nombre": "PEDRO OLTRA SAHUQUILLO",
       "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
       "dorsal": 12,
@@ -1879,6 +2625,22 @@
       "rival": "CLUB DE RUGBY SANT CUGAT",
       "nota": 7.0,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_69c156a91b13d.jpeg"
+    },
+    {
+      "nombre": "PERU BURUGAIN CIAURRIZ",
+      "equipo": "HERNANI CRE",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64ab2cae135a6.jpg"
     },
     {
       "nombre": "ANDONI MARTIN IRUETA",
@@ -1913,6 +2675,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64a1cd0a5baf0.jpg"
     },
     {
+      "nombre": "LUCAS BENJAMIN BRAVO PEREZ",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_703765626b3076783137.jpg"
+    },
+    {
       "nombre": "MARIO ANDRINO RAMON",
       "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "dorsal": 12,
@@ -1943,6 +2721,38 @@
       "rival": "TORREALDAY GERNIKA RUGBY TALDEA",
       "nota": -1.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_6b7330716f303374316c.jpg"
+    },
+    {
+      "nombre": "VICENTE JUAN SAEZ ESTRELA",
+      "equipo": "VALENCIA RC",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_61736836303968736561.jpg"
+    },
+    {
+      "nombre": "BEÑAT ARICETA MAESTRO",
+      "equipo": "HERNANI CRE",
+      "dorsal": 13,
+      "puntos": 18,
+      "ensayos": 1,
+      "conversiones": 5,
+      "golpes": 1,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 27.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64d9fc61c1db0.jpg"
     },
     {
       "nombre": "PEIO URRUTIA ARANDIA",
@@ -1977,6 +2787,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_66666e7734706c777078.jpg"
     },
     {
+      "nombre": "JOSE ANTONIO ORTUÑO JIMENEZ",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 13,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": 5.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7364387574796a6c6537.jpg"
+    },
+    {
       "nombre": "BRAIS REY GRANDE",
       "equipo": "RECOLETAS SALUD FENIX",
       "dorsal": 13,
@@ -2009,6 +2835,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_657865696c6f306d3636.jpg"
     },
     {
+      "nombre": "DYLAN VLADIMIR TORRES ROMERO",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_65633937643138797564.jpg"
+    },
+    {
       "nombre": "IGNACIO PELL RICHARDS",
       "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "dorsal": 13,
@@ -2023,6 +2865,22 @@
       "rival": "STEELPHALT GETXO RUGBY",
       "nota": -0.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6161306e626c6874346b.jpg"
+    },
+    {
+      "nombre": "TOMAS LIMES LOPEZ",
+      "equipo": "VALENCIA RC",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_616832773361686a3734.jpg"
     },
     {
       "nombre": "AÏTOR GABRIEL FOURNOL",
@@ -2073,6 +2931,38 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64a4108606caf.jpeg"
     },
     {
+      "nombre": "MARC GENOVES MARTI",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 14,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": 7.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_67a64b92f3588.jpeg"
+    },
+    {
+      "nombre": "OIER ZABALBEASKOA MENDIZABAL",
+      "equipo": "HERNANI CRE",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68c1ae6c97a78.jpg"
+    },
+    {
       "nombre": "PEIO ARRATE ZELAIA",
       "equipo": "STEELPHALT GETXO RUGBY",
       "dorsal": 14,
@@ -2087,6 +2977,22 @@
       "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "nota": 4.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_71316c68766f70656f33.jpg"
+    },
+    {
+      "nombre": "FACUNDO PAOLO ROMANO MONICO",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_616f72306a6a69347270.jpg"
     },
     {
       "nombre": "ROMEO BALTUS",
@@ -2119,6 +3025,22 @@
       "rival": "TORREALDAY GERNIKA RUGBY TALDEA",
       "nota": -1.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6499c5c489376.jpeg"
+    },
+    {
+      "nombre": "PABLO LOPEZ ROSA",
+      "equipo": "VALENCIA RC",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_636b7630337076743132.jpg"
     },
     {
       "nombre": "GUILLEM ROS MAS",
@@ -2169,6 +3091,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_726265316e7331306430.jpg"
     },
     {
+      "nombre": "BEÑAT GARMENDIA BARO",
+      "equipo": "HERNANI CRE",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 24,
+      "rival": "VALENCIA RC",
+      "nota": 6.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_38766634773261307771.jpg"
+    },
+    {
       "nombre": "XABIER ALBIZUA GUINEA",
       "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
       "dorsal": 15,
@@ -2183,6 +3121,22 @@
       "rival": "RECOLETAS SALUD FENIX",
       "nota": 5.4,
       "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6661693832386d696d69.jpg"
+    },
+    {
+      "nombre": "PAU AIRA REBOLLO",
+      "equipo": "BARÇA RUGBI",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 5,
+      "rival": "C.P. LES ABELLES",
+      "nota": 4.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_36726331767733376469.jpg"
     },
     {
       "nombre": "DANIEL RAAM ESCOLA PHIMSEN",
@@ -2201,6 +3155,22 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64c9ee62c1858.jpg"
     },
     {
+      "nombre": "LUCAS GIL GOMEZ",
+      "equipo": "C.P. LES ABELLES",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -5,
+      "rival": "BARÇA RUGBI",
+      "nota": -0.5,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6332763375346a307336.jpg"
+    },
+    {
       "nombre": "IGNACIO MEDINA GONZALEZ-IRUN",
       "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
       "dorsal": 15,
@@ -2215,6 +3185,22 @@
       "rival": "STEELPHALT GETXO RUGBY",
       "nota": -0.6,
       "foto": "https://rugby.isquad.es/images/afiliacion/square_683837356c3137366b62.jpg"
+    },
+    {
+      "nombre": "PAUL ALVAREZ CHOPLET",
+      "equipo": "VALENCIA RC",
+      "dorsal": 15,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -24,
+      "rival": "HERNANI CRE",
+      "nota": -2.4,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_68ec101c03bcb.jpeg"
     },
     {
       "nombre": "SANTIAGO GARCIA",
@@ -2284,6 +3270,30 @@
     },
     {
       "posicion": 3,
+      "equipo": "HERNANI CRE",
+      "racha": [
+        "P",
+        "G",
+        "G",
+        "G"
+      ],
+      "pt": 13,
+      "pj": 4,
+      "pg": 3,
+      "pe": 0,
+      "pp": 1,
+      "tf": 113,
+      "tc": 94,
+      "dt": 19,
+      "ef": 15,
+      "ec": 13,
+      "de": 2,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/92/square_3730336270766b786e71.jpg"
+    },
+    {
+      "posicion": 4,
       "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
       "racha": [
         "P",
@@ -2307,7 +3317,31 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/25/square_62763231767836756f32.jpg"
     },
     {
-      "posicion": 4,
+      "posicion": 5,
+      "equipo": "BARÇA RUGBI",
+      "racha": [
+        "G",
+        "P",
+        "P",
+        "G"
+      ],
+      "pt": 11,
+      "pj": 4,
+      "pg": 2,
+      "pe": 0,
+      "pp": 2,
+      "tf": 118,
+      "tc": 101,
+      "dt": 17,
+      "ef": 18,
+      "ec": 14,
+      "de": 4,
+      "bo": 1,
+      "bd": 2,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/37/square_34393938793774647062.jpg"
+    },
+    {
+      "posicion": 6,
       "equipo": "RECOLETAS SALUD FENIX",
       "racha": [
         "G",
@@ -2329,52 +3363,6 @@
       "bo": 0,
       "bd": 1,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/86/square_656b3338723073396f74.jpg"
-    },
-    {
-      "posicion": 5,
-      "equipo": "HERNANI CRE",
-      "racha": [
-        "P",
-        "G",
-        "G"
-      ],
-      "pt": 8,
-      "pj": 3,
-      "pg": 2,
-      "pe": 0,
-      "pp": 1,
-      "tf": 70,
-      "tc": 75,
-      "dt": -5,
-      "ef": 9,
-      "ec": 10,
-      "de": -1,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/92/square_3730336270766b786e71.jpg"
-    },
-    {
-      "posicion": 6,
-      "equipo": "BARÇA RUGBI",
-      "racha": [
-        "G",
-        "P",
-        "P"
-      ],
-      "pt": 7,
-      "pj": 3,
-      "pg": 1,
-      "pe": 0,
-      "pp": 2,
-      "tf": 92,
-      "tc": 80,
-      "dt": 12,
-      "ef": 14,
-      "ec": 11,
-      "de": 3,
-      "bo": 1,
-      "bd": 2,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/37/square_34393938793774647062.jpg"
     },
     {
       "posicion": 7,
@@ -2406,19 +3394,20 @@
       "racha": [
         "P",
         "E",
-        "G"
+        "G",
+        "P"
       ],
       "pt": 5,
-      "pj": 2,
+      "pj": 3,
       "pg": 1,
       "pe": 0,
-      "pp": 1,
-      "tf": 45,
-      "tc": 46,
-      "dt": -1,
-      "ef": 6,
-      "ec": 8,
-      "de": -2,
+      "pp": 2,
+      "tf": 64,
+      "tc": 89,
+      "dt": -25,
+      "ef": 9,
+      "ec": 14,
+      "de": -5,
       "bo": 0,
       "bd": 1,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/30/square_75756b6a723669773864.jpg"
@@ -2429,21 +3418,22 @@
       "racha": [
         "P",
         "P",
+        "P",
         "P"
       ],
-      "pt": 0,
-      "pj": 3,
+      "pt": 1,
+      "pj": 4,
       "pg": 0,
       "pe": 0,
-      "pp": 3,
-      "tf": 73,
-      "tc": 135,
-      "dt": -62,
-      "ef": 11,
-      "ec": 21,
-      "de": -10,
+      "pp": 4,
+      "tf": 94,
+      "tc": 161,
+      "dt": -67,
+      "ef": 14,
+      "ec": 25,
+      "de": -11,
       "bo": 0,
-      "bd": 0,
+      "bd": 1,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/36/square_6f75337230696d327239.jpg"
     },
     {
@@ -2484,6 +3474,16 @@
     "CLUB DE RUGBY SANT CUGAT": "https://rugby.isquad.es/images/afiliacion_clubs/48/square_666e3068736979736476.jpg"
   },
   "temporada_anotadores": [
+    {
+      "id": 1025753,
+      "nombre": "BEÑAT ARICETA MAESTRO",
+      "equipo": "HERNANI CRE",
+      "pj": 4,
+      "puntos": 41,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
     {
       "id": 1061151,
       "nombre": "LUCAS FERRER SPAGO",
@@ -2573,16 +3573,6 @@
       "ensayos": 0,
       "amarillas": 0,
       "rojas": 0
-    },
-    {
-      "id": 1025753,
-      "nombre": "BEÑAT ARICETA MAESTRO",
-      "equipo": "HERNANI CRE",
-      "pj": 4,
-      "puntos": 23,
-      "ensayos": 0,
-      "amarillas": 0,
-      "rojas": 0
     }
   ],
   "temporada_ensayadores": [
@@ -2607,6 +3597,16 @@
       "rojas": 1
     },
     {
+      "id": 1024811,
+      "nombre": "IBON GONZALEZ PLA",
+      "equipo": "HERNANI CRE",
+      "pj": 4,
+      "puntos": 20,
+      "ensayos": 4,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1028273,
       "nombre": "UNAX GALARRAGA FERNANDEZ",
       "equipo": "STEELPHALT GETXO RUGBY",
@@ -2623,16 +3623,6 @@
       "pj": 4,
       "puntos": 20,
       "ensayos": 4,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1024649,
-      "nombre": "MAX BELSA ADELL",
-      "equipo": "CLUB DE RUGBY SANT CUGAT",
-      "pj": 4,
-      "puntos": 15,
-      "ensayos": 3,
       "amarillas": 0,
       "rojas": 0
     }
@@ -2718,6 +3708,13 @@
         "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY"
       },
       {
+        "nombre": "IBON GONZALEZ PLA",
+        "equipo": "HERNANI CRE",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "VALENCIA RC"
+      },
+      {
         "nombre": "JOAQUIN SANCHEZ BARROSO",
         "equipo": "RECOLETAS SALUD FENIX",
         "valor": 2,
@@ -2739,25 +3736,18 @@
         "rival": "CAJASOL REAL CIENCIAS SEVILLA"
       },
       {
+        "nombre": "MIKEL PEREZ IGARZABAL",
+        "equipo": "HERNANI CRE",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": "VALENCIA RC"
+      },
+      {
         "nombre": "TALLA SAMB ALDASORO",
         "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
         "valor": 2,
         "detalle": "10 puntos",
         "rival": "CLUB DE RUGBY SANT CUGAT"
-      },
-      {
-        "nombre": "MANUEL VAZQUEZ FERNANDEZ",
-        "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
-        "valor": 1,
-        "detalle": "21 puntos",
-        "rival": "CLUB DE RUGBY SANT CUGAT"
-      },
-      {
-        "nombre": "IÑIGO RAPALLO DE LIS",
-        "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
-        "valor": 1,
-        "detalle": "16 puntos",
-        "rival": "STEELPHALT GETXO RUGBY"
       }
     ],
     "pateadores": [
@@ -2767,6 +3757,13 @@
         "valor": 16,
         "detalle": "8 transf.",
         "rival": "CLUB DE RUGBY SANT CUGAT"
+      },
+      {
+        "nombre": "BEÑAT ARICETA MAESTRO",
+        "equipo": "HERNANI CRE",
+        "valor": 13,
+        "detalle": "5 transf. · 1 golpe",
+        "rival": "VALENCIA RC"
       },
       {
         "nombre": "LUCAS FERRER SPAGO",
@@ -2790,25 +3787,18 @@
         "rival": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY"
       },
       {
+        "nombre": "ARTHUR WILLIAM LENNON",
+        "equipo": "BARÇA RUGBI",
+        "valor": 6,
+        "detalle": "3 transf.",
+        "rival": "C.P. LES ABELLES"
+      },
+      {
         "nombre": "BRAIS REY GRANDE",
         "equipo": "RECOLETAS SALUD FENIX",
         "valor": 6,
         "detalle": "3 transf.",
         "rival": "TORREALDAY GERNIKA RUGBY TALDEA"
-      },
-      {
-        "nombre": "DANIEL RAAM ESCOLA PHIMSEN",
-        "equipo": "RECOLETAS SALUD FENIX",
-        "valor": 3,
-        "detalle": "1 golpe",
-        "rival": "TORREALDAY GERNIKA RUGBY TALDEA"
-      },
-      {
-        "nombre": "ESTANISLAO RAMIRO BAY GATTI",
-        "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
-        "valor": 2,
-        "detalle": "1 transf.",
-        "rival": "CLUB DE RUGBY SANT CUGAT"
       }
     ],
     "ensayadores_t": [
@@ -2824,6 +3814,13 @@
         "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
         "valor": 5,
         "detalle": "25 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "IBON GONZALEZ PLA",
+        "equipo": "HERNANI CRE",
+        "valor": 4,
+        "detalle": "20 puntos",
         "rival": ""
       },
       {
@@ -2853,13 +3850,6 @@
         "valor": 3,
         "detalle": "15 puntos",
         "rival": ""
-      },
-      {
-        "nombre": "IBON MARTINEZ ARRIETA",
-        "equipo": "STEELPHALT GETXO RUGBY",
-        "valor": 3,
-        "detalle": "15 puntos",
-        "rival": ""
       }
     ],
     "pateadores_t": [
@@ -2885,17 +3875,17 @@
         "rival": ""
       },
       {
+        "nombre": "BEÑAT ARICETA MAESTRO",
+        "equipo": "HERNANI CRE",
+        "valor": 36,
+        "detalle": "9 transf. · 6 golpes",
+        "rival": ""
+      },
+      {
         "nombre": "IÑIGO RAPALLO DE LIS",
         "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
         "valor": 30,
         "detalle": "12 transf. · 2 golpes",
-        "rival": ""
-      },
-      {
-        "nombre": "BEÑAT ARICETA MAESTRO",
-        "equipo": "HERNANI CRE",
-        "valor": 23,
-        "detalle": "4 transf. · 5 golpes",
         "rival": ""
       },
       {
@@ -3040,15 +4030,15 @@
         "filas": [
           {
             "equipo": "VALENCIA RC",
-            "valor": 46
+            "valor": 89
           },
           {
             "equipo": "HERNANI CRE",
-            "valor": 75
+            "valor": 94
           },
           {
             "equipo": "BARÇA RUGBI",
-            "valor": 80
+            "valor": 101
           }
         ]
       },

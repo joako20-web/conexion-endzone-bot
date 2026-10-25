@@ -3569,10 +3569,10 @@
         "fecha": "2026-10-24T16:00:00",
         "local": "RECOLETAS SALUD FENIX",
         "visitante": "TORREALDAY GERNIKA RUGBY TALDEA",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 24,
+        "puntos_visitante": 38,
         "campo": "Centro Deportivo Municipal David Cañada",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3582,10 +3582,10 @@
         "fecha": "2026-10-24T17:00:00",
         "local": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
         "visitante": "STEELPHALT GETXO RUGBY",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 31,
+        "puntos_visitante": 37,
         "campo": "EL CANTIZAL",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3595,10 +3595,10 @@
         "fecha": "2026-10-24T17:30:00",
         "local": "CAJASOL REAL CIENCIAS SEVILLA",
         "visitante": "CLUB DE RUGBY SANT CUGAT",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 68,
+        "puntos_visitante": 12,
         "campo": "CAMPO JUAN ANTONIO ARENAS POSADAS",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3608,10 +3608,10 @@
         "fecha": "2026-10-25T12:00:00",
         "local": "HERNANI CRE",
         "visitante": "VALENCIA RC",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 43,
+        "puntos_visitante": 19,
         "campo": "LANDARE TOKI",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       },
@@ -3621,10 +3621,10 @@
         "fecha": "2026-10-25T12:30:00",
         "local": "C.P. LES ABELLES",
         "visitante": "BARÇA RUGBI",
-        "puntos_local": null,
-        "puntos_visitante": null,
+        "puntos_local": 21,
+        "puntos_visitante": 26,
         "campo": "Polideportivo Quatre Carreres - Campos de rugby Jorge Diego Pantera",
-        "estado": "pendiente",
+        "estado": "jugado",
         "grupo": null,
         "ronda": ""
       }
@@ -3745,6 +3745,27 @@
       {
         "nombre": "ANDER ARISTI CAMARA",
         "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
+        "valor": 5,
+        "detalle": "25 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "IBON GONZALEZ PLA",
+        "equipo": "HERNANI CRE",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "PEIO URRUTIA ARANDIA",
+        "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
+        "valor": 4,
+        "detalle": "20 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "UNAX GALARRAGA FERNANDEZ",
+        "equipo": "STEELPHALT GETXO RUGBY",
         "valor": 4,
         "detalle": "20 puntos",
         "rival": ""
@@ -3762,77 +3783,56 @@
         "valor": 3,
         "detalle": "15 puntos",
         "rival": ""
-      },
-      {
-        "nombre": "IBON MARTINEZ ARRIETA",
-        "equipo": "STEELPHALT GETXO RUGBY",
-        "valor": 3,
-        "detalle": "15 puntos",
-        "rival": ""
-      },
-      {
-        "nombre": "ISMAEL GARCIA YBAÑEZ",
-        "equipo": "RECOLETAS SALUD FENIX",
-        "valor": 3,
-        "detalle": "15 puntos",
-        "rival": ""
-      },
-      {
-        "nombre": "PEIO URRUTIA ARANDIA",
-        "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
-        "valor": 3,
-        "detalle": "15 puntos",
-        "rival": ""
       }
     ],
     "pateadores_t": [
       {
+        "nombre": "LUCAS FERRER SPAGO",
+        "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
+        "valor": 41,
+        "detalle": "7 transf. · 9 golpes",
+        "rival": ""
+      },
+      {
         "nombre": "DANIEL RAAM ESCOLA PHIMSEN",
         "equipo": "RECOLETAS SALUD FENIX",
-        "valor": 36,
-        "detalle": "6 transf. · 8 golpes",
+        "valor": 39,
+        "detalle": "6 transf. · 9 golpes",
         "rival": ""
       },
       {
         "nombre": "GABRIEL ENRIQUE TOBIO",
         "equipo": "STEELPHALT GETXO RUGBY",
-        "valor": 35,
-        "detalle": "13 transf. · 3 golpes",
-        "rival": ""
-      },
-      {
-        "nombre": "LUCAS FERRER SPAGO",
-        "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
-        "valor": 28,
-        "detalle": "5 transf. · 6 golpes",
+        "valor": 37,
+        "detalle": "14 transf. · 3 golpes",
         "rival": ""
       },
       {
         "nombre": "BEÑAT ARICETA MAESTRO",
         "equipo": "HERNANI CRE",
-        "valor": 23,
-        "detalle": "4 transf. · 5 golpes",
-        "rival": ""
-      },
-      {
-        "nombre": "FERRAN GIMENO SANTESMASES",
-        "equipo": "CLUB DE RUGBY SANT CUGAT",
-        "valor": 21,
-        "detalle": "6 transf. · 3 golpes",
+        "valor": 36,
+        "detalle": "9 transf. · 6 golpes",
         "rival": ""
       },
       {
         "nombre": "IÑIGO RAPALLO DE LIS",
         "equipo": "A.D. INGENIEROS INDUSTRIALES LAS ROZAS RUGBY",
-        "valor": 19,
-        "detalle": "8 transf. · 1 golpe",
+        "valor": 30,
+        "detalle": "12 transf. · 2 golpes",
         "rival": ""
       },
       {
-        "nombre": "TOMAS LAMBOGLIA",
+        "nombre": "FERRAN GIMENO SANTESMASES",
+        "equipo": "CLUB DE RUGBY SANT CUGAT",
+        "valor": 23,
+        "detalle": "7 transf. · 3 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "MANUEL VAZQUEZ FERNANDEZ",
         "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
-        "valor": 18,
-        "detalle": "6 transf. · 2 golpes",
+        "valor": 21,
+        "detalle": "9 transf. · 1 golpe",
         "rival": ""
       }
     ],
@@ -3842,6 +3842,13 @@
         "equipo": "RECOLETAS SALUD FENIX",
         "valor": 2,
         "detalle": "1 amarilla · 1 roja",
+        "rival": ""
+      },
+      {
+        "nombre": "KERMAN PASTOR AYO",
+        "equipo": "STEELPHALT GETXO RUGBY",
+        "valor": 2,
+        "detalle": "2 amarillas",
         "rival": ""
       },
       {
@@ -3866,21 +3873,14 @@
         "rival": ""
       },
       {
-        "nombre": "AIMAR BALENCIAGA CIA",
-        "equipo": "HERNANI CRE",
-        "valor": 1,
-        "detalle": "1 amarilla",
-        "rival": ""
-      },
-      {
-        "nombre": "ANDER ARISTI CAMARA",
+        "nombre": "AGUSTIN BARTOLOME FORURIA ASTORKIA",
         "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
         "valor": 1,
         "detalle": "1 amarilla",
         "rival": ""
       },
       {
-        "nombre": "ANDONI LARRARTE ODRIOZOLA",
+        "nombre": "AIMAR BALENCIAGA CIA",
         "equipo": "HERNANI CRE",
         "valor": 1,
         "detalle": "1 amarilla",
@@ -3999,14 +3999,14 @@
         "filas": [
           {
             "equipo": "RECOLETAS SALUD FENIX",
-            "valor": 6
+            "valor": 9
           },
           {
             "equipo": "TORREALDAY GERNIKA RUGBY TALDEA",
-            "valor": 5
+            "valor": 6
           },
           {
-            "equipo": "CAJASOL REAL CIENCIAS SEVILLA",
+            "equipo": "STEELPHALT GETXO RUGBY",
             "valor": 5
           }
         ]
