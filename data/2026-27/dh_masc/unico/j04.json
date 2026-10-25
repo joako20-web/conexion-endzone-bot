@@ -1,0 +1,1907 @@
+{
+  "competicion": "dh_masc",
+  "nombre": "División de Honor",
+  "grupo": "unico",
+  "temporada": "2026/27",
+  "jornada": 4,
+  "partidos": [
+    {
+      "id": 17658,
+      "jornada": 4,
+      "fecha": "2026-10-24T16:00:00",
+      "local": "COMPLUTENSE CISNEROS",
+      "visitante": "UNIO ESPORTIVA SANTBOIANA",
+      "puntos_local": 30,
+      "puntos_visitante": 21,
+      "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17660,
+      "jornada": 4,
+      "fecha": "2026-10-25T12:00:00",
+      "local": "AMPO ORDIZIA",
+      "visitante": "VRAC QUESOS ENTREPINARES",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "ALTAMIRA ESTADIOA",
+      "estado": "pendiente",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17661,
+      "jornada": 4,
+      "fecha": "2026-10-25T12:00:00",
+      "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "visitante": "SILICIUS ALCOBENDAS RUGBY",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
+      "estado": "pendiente",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17662,
+      "jornada": 4,
+      "fecha": "2026-10-25T12:30:00",
+      "local": "INVERSUS LICEO FRANCES",
+      "visitante": "CRC POZUELO RUGBY",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "ESTADIO RAMON URTUBI",
+      "estado": "pendiente",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17659,
+      "jornada": 4,
+      "fecha": "2026-10-25T13:00:00",
+      "local": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "visitante": "HUESITOS LA VILA RUGBY CLUB",
+      "puntos_local": null,
+      "puntos_visitante": null,
+      "campo": "CAMPO DE RUGBY BIENVENIDO NIETO",
+      "estado": "pendiente",
+      "grupo": null,
+      "ronda": ""
+    }
+  ],
+  "descansa": [],
+  "partidos_temporada": [
+    {
+      "id": 17643,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:00:00",
+      "local": "VRAC QUESOS ENTREPINARES",
+      "visitante": "HUESITOS LA VILA RUGBY CLUB",
+      "puntos_local": 40,
+      "puntos_visitante": 24,
+      "campo": "CAMPOS DE RUGBY DE PEPE ROJO (INSTALACIONES DEPORTIVAS CIUDAD DE VALLADOLID)",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17647,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:00:00",
+      "local": "UNIO ESPORTIVA SANTBOIANA",
+      "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "puntos_local": 30,
+      "puntos_visitante": 22,
+      "campo": "ESTADI BALDIRI ALEU",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17644,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:30:00",
+      "local": "SILICIUS ALCOBENDAS RUGBY",
+      "visitante": "COMPLUTENSE CISNEROS",
+      "puntos_local": 29,
+      "puntos_visitante": 19,
+      "campo": "Las Terrazas",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17646,
+      "jornada": 1,
+      "fecha": "2026-09-27T12:30:00",
+      "local": "INVERSUS LICEO FRANCES",
+      "visitante": "AMPO ORDIZIA",
+      "puntos_local": 25,
+      "puntos_visitante": 15,
+      "campo": "ESTADIO RAMON URTUBI",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17645,
+      "jornada": 1,
+      "fecha": "2026-09-27T13:00:00",
+      "local": "CRC POZUELO RUGBY",
+      "visitante": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "puntos_local": 20,
+      "puntos_visitante": 39,
+      "campo": "ECOPILAS VALLE DE LAS CAÑAS",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17648,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:00:00",
+      "local": "HUESITOS LA VILA RUGBY CLUB",
+      "visitante": "UNIO ESPORTIVA SANTBOIANA",
+      "puntos_local": 36,
+      "puntos_visitante": 33,
+      "campo": "Estadio de Rugby de Villajoyosa",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17651,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:00:00",
+      "local": "AMPO ORDIZIA",
+      "visitante": "CRC POZUELO RUGBY",
+      "puntos_local": 45,
+      "puntos_visitante": 24,
+      "campo": "ALTAMIRA ESTADIOA",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17652,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:00:00",
+      "local": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "visitante": "INVERSUS LICEO FRANCES",
+      "puntos_local": 45,
+      "puntos_visitante": 20,
+      "campo": "CAMPO DE RUGBY DE PEPE ROJO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17649,
+      "jornada": 2,
+      "fecha": "2026-10-04T12:30:00",
+      "local": "COMPLUTENSE CISNEROS",
+      "visitante": "VRAC QUESOS ENTREPINARES",
+      "puntos_local": 12,
+      "puntos_visitante": 22,
+      "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17650,
+      "jornada": 2,
+      "fecha": "2026-10-04T13:00:00",
+      "local": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "visitante": "SILICIUS ALCOBENDAS RUGBY",
+      "puntos_local": 18,
+      "puntos_visitante": 15,
+      "campo": "CAMPO DE RUGBY BIENVENIDO NIETO",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17657,
+      "jornada": 3,
+      "fecha": "2026-10-10T16:00:00",
+      "local": "UNIO ESPORTIVA SANTBOIANA",
+      "visitante": "INVERSUS LICEO FRANCES",
+      "puntos_local": 25,
+      "puntos_visitante": 25,
+      "campo": "ESTADI BALDIRI ALEU",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17653,
+      "jornada": 3,
+      "fecha": "2026-10-10T17:00:00",
+      "local": "HUESITOS LA VILA RUGBY CLUB",
+      "visitante": "COMPLUTENSE CISNEROS",
+      "puntos_local": 30,
+      "puntos_visitante": 36,
+      "campo": "Estadio de Rugby de Villajoyosa",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17654,
+      "jornada": 3,
+      "fecha": "2026-10-11T12:00:00",
+      "local": "VRAC QUESOS ENTREPINARES",
+      "visitante": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "puntos_local": 24,
+      "puntos_visitante": 19,
+      "campo": "CAMPOS DE RUGBY DE PEPE ROJO (INSTALACIONES DEPORTIVAS CIUDAD DE VALLADOLID)",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17655,
+      "jornada": 3,
+      "fecha": "2026-10-11T12:30:00",
+      "local": "SILICIUS ALCOBENDAS RUGBY",
+      "visitante": "AMPO ORDIZIA",
+      "puntos_local": 16,
+      "puntos_visitante": 17,
+      "campo": "Las Terrazas",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17656,
+      "jornada": 3,
+      "fecha": "2026-10-11T12:30:00",
+      "local": "CRC POZUELO RUGBY",
+      "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "puntos_local": 19,
+      "puntos_visitante": 31,
+      "campo": "ECOPILAS VALLE DE LAS CAÑAS",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
+      "id": 17658,
+      "jornada": 4,
+      "fecha": "2026-10-24T16:00:00",
+      "local": "COMPLUTENSE CISNEROS",
+      "visitante": "UNIO ESPORTIVA SANTBOIANA",
+      "puntos_local": 30,
+      "puntos_visitante": 21,
+      "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 1",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    }
+  ],
+  "actas_pendientes": [],
+  "anotadores": [
+    {
+      "nombre": "GUZMAN VINUESA GARCIA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 15,
+      "puntos": 25,
+      "ensayos": 2,
+      "conversiones": 3,
+      "golpes": 3,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 35.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6acdf8a2ef7b6.jpeg"
+    },
+    {
+      "nombre": "MARCEL SIRVENT SANSO",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 10,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 5.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_703279637977656b3074.jpg"
+    },
+    {
+      "nombre": "ANDRES PETROS MENDOZA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 2,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 12.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7076787735616f6c7377.jpg"
+    },
+    {
+      "nombre": "BERNAT FERNANDEZ SIERRA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 21,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_31306d746c3974756d35.jpg"
+    },
+    {
+      "nombre": "MARÇAL CARRERAS CUESTA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_63686b353677386f6d66.jpg"
+    },
+    {
+      "nombre": "NICCOLO ELIANTO GRASSI",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 15,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_63323232656266386138343134666562.jpg"
+    }
+  ],
+  "ensayadores": [
+    {
+      "nombre": "GUZMAN VINUESA GARCIA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 15,
+      "puntos": 25,
+      "ensayos": 2,
+      "conversiones": 3,
+      "golpes": 3,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 35.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6acdf8a2ef7b6.jpeg"
+    },
+    {
+      "nombre": "ANDRES PETROS MENDOZA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 2,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 12.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7076787735616f6c7377.jpg"
+    },
+    {
+      "nombre": "BERNAT FERNANDEZ SIERRA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 21,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_31306d746c3974756d35.jpg"
+    },
+    {
+      "nombre": "MARÇAL CARRERAS CUESTA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_63686b353677386f6d66.jpg"
+    },
+    {
+      "nombre": "NICCOLO ELIANTO GRASSI",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 15,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_63323232656266386138343134666562.jpg"
+    }
+  ],
+  "xv_ideal": {
+    "2": {
+      "nombre": "ANDRES PETROS MENDOZA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 2,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 12.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7076787735616f6c7377.jpg"
+    },
+    "3": {
+      "nombre": "ANDRES VALLEJO LOPEZ",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_74687770666964706930.jpg"
+    },
+    "4": {
+      "nombre": "CIARAN JOHN BOLGER",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_756a7139753178667166.jpg"
+    },
+    "8": {
+      "nombre": "MARÇAL CARRERAS CUESTA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_63686b353677386f6d66.jpg"
+    },
+    "9": {
+      "nombre": "ALBERT MILLAN DIAZ",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_696b746e657767346b62.jpg"
+    },
+    "10": {
+      "nombre": "MARCEL SIRVENT SANSO",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 10,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 5.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_703279637977656b3074.jpg"
+    },
+    "11": {
+      "nombre": "ARNAU ANDRES I COMES",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64d8a8a6a4c3e.jpeg"
+    },
+    "15": {
+      "nombre": "GUZMAN VINUESA GARCIA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 15,
+      "puntos": 25,
+      "ensayos": 2,
+      "conversiones": 3,
+      "golpes": 3,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 35.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6acdf8a2ef7b6.jpeg"
+    }
+  },
+  "foto_portada": null,
+  "candidatos_xv": [
+    {
+      "nombre": "FACUNDO NICOLAS AVILA RECIO",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_34726c78376662796571.jpg"
+    },
+    {
+      "nombre": "TOMAS LEONORI SEARA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 1,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_766b6a3772396477726e.jpg"
+    },
+    {
+      "nombre": "ANDRES PETROS MENDOZA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 2,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 12.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7076787735616f6c7377.jpg"
+    },
+    {
+      "nombre": "PAU MASSONI SALADO",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 2,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_6e717667723977317133.jpg"
+    },
+    {
+      "nombre": "ANDRES VALLEJO LOPEZ",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_74687770666964706930.jpg"
+    },
+    {
+      "nombre": "NICOLAS NAHUEL JURADO",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 3,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3732306e337862616d6f.jpg"
+    },
+    {
+      "nombre": "TOMAS FERNANDO ANTOZZI",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7675756e653367627839.jpg"
+    },
+    {
+      "nombre": "MATTHEW ROBERT FOULDS",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 4,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_79336b32336278773631.jpg"
+    },
+    {
+      "nombre": "CIARAN JOHN BOLGER",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_756a7139753178667166.jpg"
+    },
+    {
+      "nombre": "IGNASI CARBONELL COLOME",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 5,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_636763687839346e7768.jpg"
+    },
+    {
+      "nombre": "NICHOLAS GOLDSPINK BOREL",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_3730686c777036626673.jpg"
+    },
+    {
+      "nombre": "NIELS CORNELUS GERARDUS VAN DE VEN",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 6,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_37616338643031656237316265323435.jpg"
+    },
+    {
+      "nombre": "JOSE RAMON BORRAZ HERNANDEZ",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_39786b373861346a6c63.jpg"
+    },
+    {
+      "nombre": "NICOLAS MOLETI LOBERA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 7,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6831666269666b633132.jpg"
+    },
+    {
+      "nombre": "MARÇAL CARRERAS CUESTA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 8,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_63686b353677386f6d66.jpg"
+    },
+    {
+      "nombre": "MANEX PUJANA LENDINEZ",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 8,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_6732386967636a783478.jpg"
+    },
+    {
+      "nombre": "FACUNDO VILLALBA KOHN",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_63313339346135366539333831313963.jpg"
+    },
+    {
+      "nombre": "ALBERT MILLAN DIAZ",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 9,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_696b746e657767346b62.jpg"
+    },
+    {
+      "nombre": "MARCEL SIRVENT SANSO",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 10,
+      "puntos": 6,
+      "ensayos": 0,
+      "conversiones": 3,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 5.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_703279637977656b3074.jpg"
+    },
+    {
+      "nombre": "IKE IRUSTA SALLES",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 10,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [
+        "amarilla"
+      ],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_64363237766638343778.jpg"
+    },
+    {
+      "nombre": "MIGUEL PEREZ BAZA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_70656877683775616266.jpg"
+    },
+    {
+      "nombre": "DYLAN DIAZ PALOMO",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 11,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_706d6335796a37356e76.jpg"
+    },
+    {
+      "nombre": "NICOLAS PETROS MENDOZA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_71767238367067333432.jpg"
+    },
+    {
+      "nombre": "ROGER XAVIER MENDIZABAL CASAÑE",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 12,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_68307433797733366d39.jpg"
+    },
+    {
+      "nombre": "JUAN FONSECA BUELGA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_72376b78657032693961.jpg"
+    },
+    {
+      "nombre": "JACK DANIELS MARTINEZ",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 13,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_7762706b65306c6d7732.jpg"
+    },
+    {
+      "nombre": "YAKO IRUSTA SALLES",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 4.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/square_39747265767867796c33.jpg"
+    },
+    {
+      "nombre": "ARNAU ANDRES I COMES",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 14,
+      "puntos": 0,
+      "ensayos": 0,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": -0.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_64d8a8a6a4c3e.jpeg"
+    },
+    {
+      "nombre": "GUZMAN VINUESA GARCIA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "dorsal": 15,
+      "puntos": 25,
+      "ensayos": 2,
+      "conversiones": 3,
+      "golpes": 3,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "G",
+      "margen": 9,
+      "rival": "UNIO ESPORTIVA SANTBOIANA",
+      "nota": 35.9,
+      "foto": "https://rugby.isquad.es/images/afiliacion/imagen_6acdf8a2ef7b6.jpeg"
+    },
+    {
+      "nombre": "NICCOLO ELIANTO GRASSI",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "dorsal": 15,
+      "puntos": 5,
+      "ensayos": 1,
+      "conversiones": 0,
+      "golpes": 0,
+      "drops": 0,
+      "tarjetas": [],
+      "resultado": "P",
+      "margen": -9,
+      "rival": "COMPLUTENSE CISNEROS",
+      "nota": 7.1,
+      "foto": "https://rugby.isquad.es/images/afiliacion/foto/square_63323232656266386138343134666562.jpg"
+    }
+  ],
+  "clasificacion": [
+    {
+      "posicion": 1,
+      "equipo": "VRAC QUESOS ENTREPINARES",
+      "racha": [
+        "G",
+        "G",
+        "G"
+      ],
+      "pt": 13,
+      "pj": 3,
+      "pg": 3,
+      "pe": 0,
+      "pp": 0,
+      "tf": 86,
+      "tc": 55,
+      "dt": 31,
+      "ef": 12,
+      "ec": 8,
+      "de": 4,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/23/square_323530623173766c706f.jpg"
+    },
+    {
+      "posicion": 2,
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "racha": [
+        "P",
+        "G",
+        "G"
+      ],
+      "pt": 9,
+      "pj": 3,
+      "pg": 2,
+      "pe": 0,
+      "pp": 1,
+      "tf": 98,
+      "tc": 69,
+      "dt": 29,
+      "ef": 14,
+      "ec": 9,
+      "de": 5,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg"
+    },
+    {
+      "posicion": 3,
+      "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "racha": [
+        "G",
+        "G",
+        "P"
+      ],
+      "pt": 9,
+      "pj": 3,
+      "pg": 2,
+      "pe": 0,
+      "pp": 1,
+      "tf": 76,
+      "tc": 59,
+      "dt": 17,
+      "ef": 6,
+      "ec": 7,
+      "de": -1,
+      "bo": 0,
+      "bd": 1,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/14/square_75386c65796e356c756b.jpg"
+    },
+    {
+      "posicion": 4,
+      "equipo": "AMPO ORDIZIA",
+      "racha": [
+        "P",
+        "G",
+        "G"
+      ],
+      "pt": 9,
+      "pj": 3,
+      "pg": 2,
+      "pe": 0,
+      "pp": 1,
+      "tf": 77,
+      "tc": 65,
+      "dt": 12,
+      "ef": 11,
+      "ec": 8,
+      "de": 3,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/96/square_796431373766786b3674.jpg"
+    },
+    {
+      "posicion": 5,
+      "equipo": "COMPLUTENSE CISNEROS",
+      "racha": [
+        "P",
+        "P",
+        "G",
+        "G"
+      ],
+      "pt": 8,
+      "pj": 4,
+      "pg": 2,
+      "pe": 0,
+      "pp": 2,
+      "tf": 97,
+      "tc": 102,
+      "dt": -5,
+      "ef": 13,
+      "ec": 13,
+      "de": 0,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg"
+    },
+    {
+      "posicion": 6,
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "racha": [
+        "G",
+        "P",
+        "E",
+        "P"
+      ],
+      "pt": 7,
+      "pj": 4,
+      "pg": 1,
+      "pe": 1,
+      "pp": 2,
+      "tf": 109,
+      "tc": 113,
+      "dt": -4,
+      "ef": 15,
+      "ec": 13,
+      "de": 2,
+      "bo": 0,
+      "bd": 1,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/39/square_62397833623562636372.jpg"
+    },
+    {
+      "posicion": 7,
+      "equipo": "SILICIUS ALCOBENDAS RUGBY",
+      "racha": [
+        "G",
+        "P",
+        "P"
+      ],
+      "pt": 6,
+      "pj": 3,
+      "pg": 1,
+      "pe": 0,
+      "pp": 2,
+      "tf": 60,
+      "tc": 54,
+      "dt": 6,
+      "ef": 7,
+      "ec": 5,
+      "de": 2,
+      "bo": 0,
+      "bd": 2,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/27/square_643638336c63366d3766.jpg"
+    },
+    {
+      "posicion": 8,
+      "equipo": "INVERSUS LICEO FRANCES",
+      "racha": [
+        "G",
+        "P",
+        "E"
+      ],
+      "pt": 6,
+      "pj": 3,
+      "pg": 1,
+      "pe": 1,
+      "pp": 1,
+      "tf": 70,
+      "tc": 85,
+      "dt": -15,
+      "ef": 8,
+      "ec": 12,
+      "de": -4,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/28/square_7972786233646a373068.jpg"
+    },
+    {
+      "posicion": 9,
+      "equipo": "HUESITOS LA VILA RUGBY CLUB",
+      "racha": [
+        "P",
+        "G",
+        "P"
+      ],
+      "pt": 5,
+      "pj": 3,
+      "pg": 1,
+      "pe": 0,
+      "pp": 2,
+      "tf": 90,
+      "tc": 109,
+      "dt": -19,
+      "ef": 11,
+      "ec": 16,
+      "de": -5,
+      "bo": 0,
+      "bd": 1,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/80/square_366b6c7131766c643763.jpg"
+    },
+    {
+      "posicion": 10,
+      "equipo": "CRC POZUELO RUGBY",
+      "racha": [
+        "P",
+        "P",
+        "P"
+      ],
+      "pt": 0,
+      "pj": 3,
+      "pg": 0,
+      "pe": 0,
+      "pp": 3,
+      "tf": 63,
+      "tc": 115,
+      "dt": -52,
+      "ef": 9,
+      "ec": 15,
+      "de": -6,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/54/square_6e7677343030676c6b30.jpg"
+    }
+  ],
+  "escudos": {
+    "VRAC QUESOS ENTREPINARES": "https://rugby.isquad.es/images/afiliacion_clubs/23/square_323530623173766c706f.jpg",
+    "VULCANIZADOS ALVAREZ EL SALVADOR": "https://rugby.isquad.es/images/afiliacion_clubs/21/square_726b7461656e75357439.jpg",
+    "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES": "https://rugby.isquad.es/images/afiliacion_clubs/14/square_75386c65796e356c756b.jpg",
+    "AMPO ORDIZIA": "https://rugby.isquad.es/images/afiliacion_clubs/96/square_796431373766786b3674.jpg",
+    "COMPLUTENSE CISNEROS": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg",
+    "UNIO ESPORTIVA SANTBOIANA": "https://rugby.isquad.es/images/afiliacion_clubs/39/square_62397833623562636372.jpg",
+    "SILICIUS ALCOBENDAS RUGBY": "https://rugby.isquad.es/images/afiliacion_clubs/27/square_643638336c63366d3766.jpg",
+    "INVERSUS LICEO FRANCES": "https://rugby.isquad.es/images/afiliacion_clubs/28/square_7972786233646a373068.jpg",
+    "HUESITOS LA VILA RUGBY CLUB": "https://rugby.isquad.es/images/afiliacion_clubs/80/square_366b6c7131766c643763.jpg",
+    "CRC POZUELO RUGBY": "https://rugby.isquad.es/images/afiliacion_clubs/54/square_6e7677343030676c6b30.jpg"
+  },
+  "temporada_anotadores": [
+    {
+      "id": 1027011,
+      "nombre": "SANTIAGO IGNACIO MANSILLA",
+      "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+      "pj": 4,
+      "puntos": 51,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025601,
+      "nombre": "BALTAZAR TAIBO",
+      "equipo": "VRAC QUESOS ENTREPINARES",
+      "pj": 4,
+      "puntos": 34,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1027770,
+      "nombre": "ADRIAN ARIAS LASTRA",
+      "equipo": "INVERSUS LICEO FRANCES",
+      "pj": 3,
+      "puntos": 27,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1060934,
+      "nombre": "AGUSTIN ALTAMIRANO DECICCO",
+      "equipo": "HUESITOS LA VILA RUGBY CLUB",
+      "pj": 3,
+      "puntos": 26,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1033024,
+      "nombre": "GUZMAN VINUESA GARCIA",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "pj": 3,
+      "puntos": 25,
+      "ensayos": 2,
+      "amarillas": 1,
+      "rojas": 0
+    },
+    {
+      "id": 1023937,
+      "nombre": "SANTIAGO ORTEGA GRANDELA",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 4,
+      "puntos": 25,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1044307,
+      "nombre": "BEAU FINNIAN PEART",
+      "equipo": "AMPO ORDIZIA",
+      "pj": 4,
+      "puntos": 22,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025721,
+      "nombre": "AGUSTIN CITTADINI",
+      "equipo": "SILICIUS ALCOBENDAS RUGBY",
+      "pj": 3,
+      "puntos": 16,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1030303,
+      "nombre": "ALBERT MILLAN DIAZ",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "pj": 4,
+      "puntos": 16,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1044000,
+      "nombre": "HUGO DOUGLAS VENTOSA",
+      "equipo": "CRC POZUELO RUGBY",
+      "pj": 4,
+      "puntos": 16,
+      "ensayos": 0,
+      "amarillas": 0,
+      "rojas": 0
+    }
+  ],
+  "temporada_ensayadores": [
+    {
+      "id": 1023923,
+      "nombre": "DIEGO BLASCO PRIETO",
+      "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+      "pj": 4,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025975,
+      "nombre": "PEDRO CANE SGRO",
+      "equipo": "VRAC QUESOS ENTREPINARES",
+      "pj": 4,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1028426,
+      "nombre": "ADRIANO TALEMAISUVA",
+      "equipo": "INVERSUS LICEO FRANCES",
+      "pj": 3,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1045535,
+      "nombre": "BERNAT FERNANDEZ SIERRA",
+      "equipo": "UNIO ESPORTIVA SANTBOIANA",
+      "pj": 4,
+      "puntos": 15,
+      "ensayos": 3,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1025601,
+      "nombre": "BALTAZAR TAIBO",
+      "equipo": "VRAC QUESOS ENTREPINARES",
+      "pj": 4,
+      "puntos": 34,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    }
+  ],
+  "proxima_jornada": {
+    "numero": 5,
+    "partidos": [
+      {
+        "id": 17663,
+        "jornada": 5,
+        "fecha": "2026-10-31T14:00:00",
+        "local": "COMPLUTENSE CISNEROS",
+        "visitante": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "ESTADIO NACIONAL COMPLUTENSE - CAMPO 1",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 17666,
+        "jornada": 5,
+        "fecha": "2026-10-31T16:00:00",
+        "local": "SILICIUS ALCOBENDAS RUGBY",
+        "visitante": "INVERSUS LICEO FRANCES",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "Las Terrazas",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 17667,
+        "jornada": 5,
+        "fecha": "2026-10-31T16:30:00",
+        "local": "UNIO ESPORTIVA SANTBOIANA",
+        "visitante": "CRC POZUELO RUGBY",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "ESTADI BALDIRI ALEU",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 17664,
+        "jornada": 5,
+        "fecha": "2026-11-01T12:00:00",
+        "local": "HUESITOS LA VILA RUGBY CLUB",
+        "visitante": "AMPO ORDIZIA",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "Estadio de Rugby de Villajoyosa",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      },
+      {
+        "id": 17665,
+        "jornada": 5,
+        "fecha": "2026-11-01T12:00:00",
+        "local": "VRAC QUESOS ENTREPINARES",
+        "visitante": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "puntos_local": null,
+        "puntos_visitante": null,
+        "campo": "CAMPOS DE RUGBY DE PEPE ROJO (INSTALACIONES DEPORTIVAS CIUDAD DE VALLADOLID)",
+        "estado": "pendiente",
+        "grupo": null,
+        "ronda": ""
+      }
+    ],
+    "descansa": []
+  },
+  "rankings": {
+    "ensayadores": [
+      {
+        "nombre": "GUZMAN VINUESA GARCIA",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 2,
+        "detalle": "25 puntos",
+        "rival": "UNIO ESPORTIVA SANTBOIANA"
+      },
+      {
+        "nombre": "ANDRES PETROS MENDOZA",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "UNIO ESPORTIVA SANTBOIANA"
+      },
+      {
+        "nombre": "BERNAT FERNANDEZ SIERRA",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "COMPLUTENSE CISNEROS"
+      },
+      {
+        "nombre": "MARÇAL CARRERAS CUESTA",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "COMPLUTENSE CISNEROS"
+      },
+      {
+        "nombre": "NICCOLO ELIANTO GRASSI",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 1,
+        "detalle": "5 puntos",
+        "rival": "COMPLUTENSE CISNEROS"
+      }
+    ],
+    "pateadores": [
+      {
+        "nombre": "GUZMAN VINUESA GARCIA",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 15,
+        "detalle": "3 transf. · 3 golpes",
+        "rival": "UNIO ESPORTIVA SANTBOIANA"
+      },
+      {
+        "nombre": "MARCEL SIRVENT SANSO",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 6,
+        "detalle": "3 transf.",
+        "rival": "COMPLUTENSE CISNEROS"
+      }
+    ],
+    "ensayadores_t": [
+      {
+        "nombre": "ADRIANO TALEMAISUVA",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "BERNAT FERNANDEZ SIERRA",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "DIEGO BLASCO PRIETO",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "PEDRO CANE SGRO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 3,
+        "detalle": "15 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "BALTAZAR TAIBO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 2,
+        "detalle": "34 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "GUZMAN VINUESA GARCIA",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 2,
+        "detalle": "25 puntos",
+        "rival": ""
+      },
+      {
+        "nombre": "BALTAZAR MONTOYA QUIROGA",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 2,
+        "detalle": "12 puntos",
+        "rival": ""
+      }
+    ],
+    "pateadores_t": [
+      {
+        "nombre": "SANTIAGO IGNACIO MANSILLA",
+        "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+        "valor": 46,
+        "detalle": "5 transf. · 12 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIAN ARIAS LASTRA",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 27,
+        "detalle": "6 transf. · 5 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "AGUSTIN ALTAMIRANO DECICCO",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 26,
+        "detalle": "7 transf. · 3 golpes · 1 drop",
+        "rival": ""
+      },
+      {
+        "nombre": "BALTAZAR TAIBO",
+        "equipo": "VRAC QUESOS ENTREPINARES",
+        "valor": 24,
+        "detalle": "9 transf. · 2 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "BEAU FINNIAN PEART",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 22,
+        "detalle": "8 transf. · 2 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "SANTIAGO ORTEGA GRANDELA",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 20,
+        "detalle": "4 transf. · 4 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "AGUSTIN CITTADINI",
+        "equipo": "SILICIUS ALCOBENDAS RUGBY",
+        "valor": 16,
+        "detalle": "2 transf. · 4 golpes",
+        "rival": ""
+      }
+    ],
+    "disciplina": [
+      {
+        "nombre": "ALEJANDRO SUAREZ RODRIGUEZ",
+        "equipo": "SILICIUS ALCOBENDAS RUGBY",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "BEÑAT AZURMENDI SENAR",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "DANIEL CHICO AYO",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "FERNANDO MARTIN LOPEZ PEREZ",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "HECTOR MATAMOROS ABAD",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "MARCEL SIRVENT SANSO",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "DIEGO CARVAJALES RODRIGUEZ",
+        "equipo": "SILICIUS ALCOBENDAS RUGBY",
+        "valor": 1,
+        "detalle": "1 roja",
+        "rival": ""
+      }
+    ],
+    "banquillo": [
+      {
+        "nombre": "BERNAT FERNANDEZ SIERRA",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 10,
+        "detalle": "2 ensayos",
+        "rival": ""
+      },
+      {
+        "nombre": "SANTIAGO ORTEGA GRANDELA",
+        "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+        "valor": 7,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "ADRIAN LOUIS GABAS RUIZ",
+        "equipo": "INVERSUS LICEO FRANCES",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "AITOR ANGIOZAR BOTO",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "ANDER ALBERDI MENDIZABAL",
+        "equipo": "AMPO ORDIZIA",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "ASIER PEREZ CERVILLA",
+        "equipo": "HUESITOS LA VILA RUGBY CLUB",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "NICHOLAS GOLDSPINK BOREL",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      }
+    ],
+    "equipos": [
+      {
+        "titulo": "Mejor ataque",
+        "unidad": "pts a favor",
+        "filas": [
+          {
+            "equipo": "UNIO ESPORTIVA SANTBOIANA",
+            "valor": 109
+          },
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 98
+          },
+          {
+            "equipo": "COMPLUTENSE CISNEROS",
+            "valor": 97
+          }
+        ]
+      },
+      {
+        "titulo": "Mejor defensa",
+        "unidad": "pts en contra",
+        "filas": [
+          {
+            "equipo": "SILICIUS ALCOBENDAS RUGBY",
+            "valor": 54
+          },
+          {
+            "equipo": "VRAC QUESOS ENTREPINARES",
+            "valor": 55
+          },
+          {
+            "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
+            "valor": 59
+          }
+        ]
+      },
+      {
+        "titulo": "Más ensayos",
+        "unidad": "ensayos",
+        "filas": [
+          {
+            "equipo": "UNIO ESPORTIVA SANTBOIANA",
+            "valor": 15
+          },
+          {
+            "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
+            "valor": 14
+          },
+          {
+            "equipo": "COMPLUTENSE CISNEROS",
+            "valor": 13
+          }
+        ]
+      },
+      {
+        "titulo": "Más tarjetas",
+        "unidad": "tarjetas",
+        "filas": [
+          {
+            "equipo": "SILICIUS ALCOBENDAS RUGBY",
+            "valor": 8
+          },
+          {
+            "equipo": "HUESITOS LA VILA RUGBY CLUB",
+            "valor": 4
+          },
+          {
+            "equipo": "UNIO ESPORTIVA SANTBOIANA",
+            "valor": 4
+          }
+        ]
+      }
+    ]
+  },
+  "datos_jornada": [
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 80,
+      "numero": "25",
+      "unidad": "puntos en un partido",
+      "titular": "Guzman Vinuesa Garcia no falla",
+      "contexto": "Anotó 25 puntos ante Santboiana, la mejor marca de la temporada.",
+      "equipo": "COMPLUTENSE CISNEROS"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 30,
+      "numero": "51",
+      "unidad": "puntos esta temporada",
+      "titular": "Santiago Ignacio Mansilla manda en la tabla de anotadores",
+      "contexto": "Suma 51 puntos en 4 partidos con Aparejadores Burgos.",
+      "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES"
+    }
+  ]
+}

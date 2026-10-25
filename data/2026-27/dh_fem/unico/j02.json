@@ -100,6 +100,19 @@
       "ronda": ""
     },
     {
+      "id": 18942,
+      "jornada": 1,
+      "fecha": "2026-10-24T15:00:00",
+      "local": "OLIMPICO DE POZUELO CR",
+      "visitante": "BARCELONA UNIVERSITARI CLUB",
+      "puntos_local": 22,
+      "puntos_visitante": 22,
+      "campo": "Ciudad deportiva Valle de las Cañas",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
       "id": 18947,
       "jornada": 2,
       "fecha": "2026-10-17T14:15:00",
@@ -2150,7 +2163,8 @@
       "posicion": 4,
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "racha": [
-        "G"
+        "G",
+        "E"
       ],
       "pt": 4,
       "pj": 1,
@@ -2169,6 +2183,49 @@
     },
     {
       "posicion": 5,
+      "equipo": "OLIMPICO DE POZUELO CR",
+      "racha": [
+        "E"
+      ],
+      "pt": 2,
+      "pj": 1,
+      "pg": 0,
+      "pe": 1,
+      "pp": 0,
+      "tf": 22,
+      "tc": 22,
+      "dt": 0,
+      "ef": 3,
+      "ec": 4,
+      "de": -1,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/70/square_6f3974716c7130626f39.jpg"
+    },
+    {
+      "posicion": 6,
+      "equipo": "BARCELONA UNIVERSITARI CLUB",
+      "racha": [
+        "E",
+        "P"
+      ],
+      "pt": 2,
+      "pj": 2,
+      "pg": 0,
+      "pe": 1,
+      "pp": 1,
+      "tf": 28,
+      "tc": 60,
+      "dt": -32,
+      "ef": 4,
+      "ec": 9,
+      "de": -5,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/15/square_63613932323033633064643364653661.jpg"
+    },
+    {
+      "posicion": 7,
       "equipo": "CAJASOL SEVILLA COCOS",
       "racha": [
         "P"
@@ -2189,7 +2246,7 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/82/square_78687075693378306e6c.jpg"
     },
     {
-      "posicion": 6,
+      "posicion": 8,
       "equipo": "SILICIUS RUGBY MAJADAHONDA",
       "racha": [
         "P",
@@ -2211,10 +2268,11 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/44/square_6b6d69766e726e396168.jpg"
     },
     {
-      "posicion": 7,
+      "posicion": 9,
       "equipo": "TURIA",
       "racha": [
-        "P"
+        "P",
+        "E"
       ],
       "pt": 0,
       "pj": 1,
@@ -2230,46 +2288,6 @@
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/67/square_3563376f66686f673933.jpg"
-    },
-    {
-      "posicion": 8,
-      "equipo": "BARCELONA UNIVERSITARI CLUB",
-      "racha": [
-        "P"
-      ],
-      "pt": 0,
-      "pj": 1,
-      "pg": 0,
-      "pe": 0,
-      "pp": 1,
-      "tf": 6,
-      "tc": 38,
-      "dt": -32,
-      "ef": 0,
-      "ec": 6,
-      "de": -6,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/15/square_63613932323033633064643364653661.jpg"
-    },
-    {
-      "posicion": 9,
-      "equipo": "OLIMPICO DE POZUELO CR",
-      "racha": [],
-      "pt": 0,
-      "pj": 0,
-      "pg": 0,
-      "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/70/square_6f3974716c7130626f39.jpg"
     }
   ],
   "escudos": {
@@ -2335,6 +2353,16 @@
       "rojas": 0
     },
     {
+      "id": 1028380,
+      "nombre": "SONIA MONTERO GONZALEZ",
+      "equipo": "OLIMPICO DE POZUELO CR",
+      "pj": 1,
+      "puntos": 12,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1023893,
       "nombre": "ISABEL RODRIGUEZ VILA",
       "equipo": "RIALTA CRAT CORUÑA.",
@@ -2365,23 +2393,13 @@
       "rojas": 0
     },
     {
-      "id": 1031629,
-      "nombre": "NOA VARELA FARIÑA",
-      "equipo": "RIALTA CRAT CORUÑA.",
+      "id": 1029388,
+      "nombre": "ARIADNA ANTONIO LUIS",
+      "equipo": "BARCELONA UNIVERSITARI CLUB",
       "pj": 2,
       "puntos": 10,
       "ensayos": 2,
       "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1034740,
-      "nombre": "ALBA MASDEVALL JIMENEZ",
-      "equipo": "CLUB DE RUGBY SANT CUGAT",
-      "pj": 2,
-      "puntos": 10,
-      "ensayos": 2,
-      "amarillas": 1,
       "rojas": 0
     }
   ],
@@ -2642,8 +2660,8 @@
         "rival": ""
       },
       {
-        "nombre": "GORETI BARRUTIETA BARRENETXEA",
-        "equipo": "GETXO RUGBY",
+        "nombre": "ARIADNA ANTONIO LUIS",
+        "equipo": "BARCELONA UNIVERSITARI CLUB",
         "valor": 2,
         "detalle": "10 puntos",
         "rival": ""
@@ -2672,6 +2690,13 @@
         "rival": ""
       },
       {
+        "nombre": "AXELLE BEATRICE ALEXIA RAMON",
+        "equipo": "BARCELONA UNIVERSITARI CLUB",
+        "valor": 8,
+        "detalle": "1 transf. · 2 golpes",
+        "rival": ""
+      },
+      {
         "nombre": "INES BUESO-INCHAUSTI GARCIA",
         "equipo": "CLUB DE RUGBY SANT CUGAT",
         "valor": 8,
@@ -2691,19 +2716,19 @@
         "valor": 7,
         "detalle": "2 transf. · 1 golpe",
         "rival": ""
-      },
-      {
-        "nombre": "AXELLE BEATRICE ALEXIA RAMON",
-        "equipo": "BARCELONA UNIVERSITARI CLUB",
-        "valor": 6,
-        "detalle": "2 golpes",
-        "rival": ""
       }
     ],
     "disciplina": [
       {
         "nombre": "LUCIA CALVO CORREDERA",
         "equipo": "SILICIUS RUGBY MAJADAHONDA",
+        "valor": 2,
+        "detalle": "2 amarillas",
+        "rival": ""
+      },
+      {
+        "nombre": "MIREIA MARTINEZ JAÑEZ",
+        "equipo": "BARCELONA UNIVERSITARI CLUB",
         "valor": 2,
         "detalle": "2 amarillas",
         "rival": ""
@@ -2742,13 +2767,6 @@
         "valor": 1,
         "detalle": "1 amarilla",
         "rival": ""
-      },
-      {
-        "nombre": "GAÏA MELISANDE PALOMA ELISE TARTINVILLE USAGE TARTINVILLE-BRUANT",
-        "equipo": "SILICIUS RUGBY MAJADAHONDA",
-        "valor": 1,
-        "detalle": "1 amarilla",
-        "rival": ""
       }
     ],
     "banquillo": [
@@ -2771,6 +2789,20 @@
         "equipo": "GETXO RUGBY",
         "valor": 5,
         "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "MARIA KIMBERLY MARCOS NVE",
+        "equipo": "OLIMPICO DE POZUELO CR",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "AXELLE BEATRICE ALEXIA RAMON",
+        "equipo": "BARCELONA UNIVERSITARI CLUB",
+        "valor": 2,
+        "detalle": "",
         "rival": ""
       }
     ],
@@ -2806,7 +2838,7 @@
             "valor": 22
           },
           {
-            "equipo": "CAJASOL SEVILLA COCOS",
+            "equipo": "OLIMPICO DE POZUELO CR",
             "valor": 22
           }
         ]
@@ -2842,8 +2874,8 @@
             "valor": 4
           },
           {
-            "equipo": "GETXO RUGBY",
-            "valor": 2
+            "equipo": "BARCELONA UNIVERSITARI CLUB",
+            "valor": 3
           }
         ]
       }

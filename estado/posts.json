@@ -217,5 +217,13 @@
     "json": "data/2026-27/mad_1r/unico/j03.json",
     "actas_pendientes": [],
     "jugados": 3
+  },
+  "2026-27_dh_elite_unico_j04": {
+    "competicion": "dh_elite",
+    "grupo": "unico",
+    "jornada": 4,
+    "json": "data/2026-27/dh_elite/unico/j04.json",
+    "actas_pendientes": [],
+    "jugados": 3
   }
 }
