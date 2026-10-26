@@ -250,6 +250,8 @@ def preparar_jornada(
     ruta.parent.mkdir(parents=True, exist_ok=True)
     if previo.get("foto_portada", {}) and previo["foto_portada"].get("archivo"):
         datos["foto_portada"] = previo["foto_portada"]  # foto puesta a mano
+    if previo.get("mvp_votacion"):
+        datos["mvp_votacion"] = previo["mvp_votacion"]  # ganador de la votación de Instagram
     if previo.get("xv_editado"):
         # No pisar los cambios manuales del XV al regenerar.
         datos["xv_ideal"] = previo["xv_ideal"]

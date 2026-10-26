@@ -518,7 +518,10 @@ def _render_especial(clave: str, comp: str, grupo: str, destino: Path, formato: 
         return historico.palmares(comp, formato, destino)
     if clave == "mvp_jornada":
         from rugbyig.carteles_mvp import renderizar_mvp
+        from rugbyig.videos.base import datos_jornada
 
+        jornada = jornada or datos_jornada(comp, grupo, None)["jornada"]
+        elegido["jornada"] = jornada
         return renderizar_mvp(comp, grupo, destino, jornada=jornada, formato=formato)
     if clave == "matchday":  # un cartel por partido de la próxima jornada
         from rugbyig.carteles import _datos, renderizar_matchday
@@ -552,6 +555,8 @@ def enviar_especial(tg: Telegram, chat_id, clave: str, comp: str, grupo: str, jo
     filas = [botones]
     if clave in CON_PARTIDO:
         filas.append([("🔄 Cambiar partido", f"pc|{liga}|{cod}|{pid or ''}")])
+    if clave == "mvp_jornada" and elegido.get("jornada"):
+        filas.append([("🗳 Ganador de la votación", f"ym|{liga}|{elegido['jornada']}")])
     nota = "\nPega encima la encuesta de Instagram en el hueco." if clave.startswith("encuesta") else ""
     tg.mensaje(chat_id, f"<b>{_nombre_liga(liga)}</b>{nota}", filas)
     return True
@@ -610,6 +615,76 @@ def _menu_videos(liga: str) -> tuple[str, list]:
     filas = _filas(botones, 2) + [[("⬅️ Volver", f"m2|{liga}"), ("🏠 Inicio", "m1")]]
     return (f"🎬 <b>{_nombre_liga(liga)}</b>\n¿Qué vídeo? Tardan unos 3 minutos y te llegan solos; "
             "mientras puedes seguir pidiendo cosas."), filas
+
+
+def _datos_votacion(liga: str, jornada: int) -> tuple[Path, dict]:
+    from rugbyig.pipeline import ruta_jornada
+
+    comp, grupo = liga.split("/")
+    ruta = ruta_jornada(comp, grupo, jornada)
+    return ruta, json.loads(ruta.read_text(encoding="utf-8"))
+
+
+def _boton_votacion(tg: Telegram, b: dict, partes: list[str]) -> None:
+    """ym: elegir ganador · yw: guardar ganador · yq: pedir porcentajes · yk: rehacer la tarjeta."""
+    from rugbyig.carteles_mvp import guardar_votacion
+
+    chat_id, accion, liga, jornada = b["chat_id"], partes[0], partes[1], int(partes[2])
+    comp, grupo = liga.split("/")
+    ruta, datos = _datos_votacion(liga, jornada)
+    cands = especiales.candidatos_mvp(datos)
+    if accion == "ym":
+        actual = (datos.get("mvp_votacion") or {}).get("ganador")
+        filas = [[(("✅ " if c["nombre"] == actual else "") + f"{'ABCD'[i]} · {nombres.jugador(c['nombre'])['completo']}"
+                   f" ({nombres.equipo_abr(c['equipo'])})", f"yw|{liga}|{jornada}|{i}")] for i, c in enumerate(cands)]
+        filas.append([("↩️ El de mejor nota (sin votación)", f"yw|{liga}|{jornada}|x")])
+        tg.mensaje(chat_id, f"🗳 <b>{_nombre_liga(liga)}</b> · jornada {jornada}\n"
+                   "¿Quién ganó la votación? (mismas letras que en la encuesta «Vota el MVP»)", filas)
+    elif accion == "yw":
+        if partes[3] == "x":
+            guardar_votacion(datos, None)
+            ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
+            enviar_especial(tg, chat_id, "mvp_jornada", comp, grupo, jornada)
+            return
+        ganador = cands[int(partes[3])]["nombre"]
+        guardar_votacion(datos, ganador)
+        ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
+        tg.mensaje(chat_id, f"✔️ MVP de la afición: <b>{nombres.jugador(ganador)['completo']}</b>.\n"
+                   "¿Pongo también los porcentajes de la votación?",
+                   [[("📊 Añadir porcentajes", f"yq|{liga}|{jornada}"), ("✅ Así está bien", f"yk|{liga}|{jornada}")]])
+    elif accion == "yq":
+        b["esperando"] = {"accion": "mvp_pct", "liga": liga, "jornada": jornada}
+        lista = "\n".join(f"{'ABCD'[i]}. {nombres.jugador(c['nombre'])['completo']}" for i, c in enumerate(cands))
+        ej = " ".join(str(x) for x in [48, 24, 19, 9][:len(cands)])
+        tg.mensaje(chat_id, f"📊 Escribe los porcentajes en este orden:\n\n{html.escape(lista)}\n\n"
+                   f"Por ejemplo: <code>{ej}</code>")
+    else:  # yk
+        enviar_especial(tg, chat_id, "mvp_jornada", comp, grupo, jornada)
+
+
+def _porcentajes_mvp(tg: Telegram, b: dict, texto: str) -> None:
+    from rugbyig.carteles_mvp import leer_porcentajes
+
+    esperando = b["esperando"]
+    liga, jornada = esperando["liga"], esperando["jornada"]
+    ruta, datos = _datos_votacion(liga, jornada)
+    cands = especiales.candidatos_mvp(datos)
+    try:
+        pcts = leer_porcentajes(texto, len(cands))
+    except ValueError as e:
+        if interpretar(texto):  # parece un pedido: salir del modo votación
+            b["esperando"] = None
+            _atender_pedido(tg, b["chat_id"], texto)
+        else:
+            tg.mensaje(b["chat_id"], f"🤔 {html.escape(str(e))}")
+        return
+    votacion = datos.get("mvp_votacion") or {}
+    votacion["votos"] = {c["nombre"]: pct for c, pct in zip(cands, pcts)}
+    datos["mvp_votacion"] = votacion
+    ruta.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
+    b["esperando"] = None
+    comp, grupo = liga.split("/")
+    enviar_especial(tg, b["chat_id"], "mvp_jornada", comp, grupo, jornada)
 
 
 def _menu_cambiar_partido(liga: str, cod: str, actual: str) -> tuple[str, list]:
@@ -1053,6 +1128,9 @@ def _boton(tg: Telegram, b: dict, posts: dict, cq: dict) -> None:
         enviar_especial(tg, chat_id, clave, comp, grupo, formato=formato, original=partes[0] == "eo",
                         id_partido=id_partido)
         return
+    if partes[0] in ("ym", "yw", "yq", "yk"):  # MVP elegido por la afición (votación de Instagram)
+        _boton_votacion(tg, b, partes)
+        return
     if partes[0] == "pc":  # elegir otro partido para el partido de la jornada / ¿quién gana?
         texto, filas = _menu_cambiar_partido(partes[1], partes[2], partes[3] if len(partes) > 3 else "")
         tg.mensaje(chat_id, texto, filas)
@@ -1179,6 +1257,8 @@ def _mensaje(tg: Telegram, b: dict, posts: dict, m: dict) -> None:
         esperando["cambios"] = esperando.get("cambios", 0) + 1
         b["esperando"] = esperando
         tg.mensaje(chat_id, f"✔️ {html.escape(resultado)}\n(escribe <code>listo</code> para ver la imagen)")
+    elif texto and esperando.get("accion") == "mvp_pct":
+        _porcentajes_mvp(tg, b, texto)
     elif texto and _atender_pedido(tg, chat_id, texto):
         pass
     else:

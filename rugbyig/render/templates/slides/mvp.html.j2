@@ -37,6 +37,30 @@
 .mv-res .t { font-size: 26px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); }
 .mv-res .t.G { color: var(--acento-txt); }
 .mv-res .m { font-size: 64px; line-height: .9; font-weight: 700; }
+/* Votación de la afición (porcentajes de la encuesta de Instagram) */
+.mv-votos { margin-top: 22px; display: grid; gap: 10px; }
+.mv-voto { display: grid; grid-template-columns: 250px 1fr 92px; align-items: center; gap: 0 18px; }
+.mv-voto .n { font-size: 28px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--gris); }
+.mv-voto .b { height: 18px; background: var(--linea); border-radius: 9px; overflow: hidden; }
+.mv-voto .b i { display: block; height: 100%; background: var(--apagado); border-radius: 9px; }
+.mv-voto .p { font-size: 40px; line-height: 1; font-weight: 700; text-align: right; color: var(--gris); }
+.mv-voto.gana .n, .mv-voto.gana .p { color: var(--texto); }
+.mv-voto.gana .b i { background: var(--acento); }
+.mv-votos-k { font-size: 22px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); }
+.mv > * { flex-shrink: 0; }  /* que nada se aplaste (el apellido se cortaba) */
+.mv.con-votos .mv-top { margin-top: 18px; }
+.mv.con-votos .mv-visual { width: 250px; height: 312px; }
+.mv.con-votos .mv-visual.sin-foto .crest.mv-grande { width: 250px; height: 250px; }
+.mv.con-votos .mv-visual .crest.mv-esc { width: 100px; height: 100px; right: -26px; bottom: -24px; }
+.mv.con-votos .mv-dorsal { font-size: 170px; }
+.mv.con-votos .mv-pila { margin-top: 18px; font-size: 48px; }
+.mv.con-votos .mv-ape { font-size: 112px; }
+.mv.con-votos .mv-ape.l { font-size: 96px; }
+.mv.con-votos .mv-ape.xl { font-size: 80px; }
+.mv.con-votos .mv-stats { margin-top: 14px; }
+.mv.con-votos .mv-stats b { font-size: 84px; }
+.mv.con-votos .mv-stats div { padding: 12px 0 10px; }
+.mv.con-votos .mv-partido { padding-top: 14px; }
 /* Historia 9:16: más aire y foto más grande */
 .f-historia .mv { margin-top: 80px; }
 .f-historia .mv-top { margin-top: 40px; }
@@ -47,11 +71,20 @@
 .f-historia .mv-stats { margin-top: 50px; }
 .f-historia .mv-stats b { font-size: 124px; }
 .f-historia .mv-partido { margin-top: 70px; }
+.f-historia .mv.con-votos .mv-visual { width: 380px; height: 475px; }
+.f-historia .mv.con-votos .mv-visual.sin-foto .crest.mv-grande { width: 360px; height: 360px; }
+.f-historia .mv.con-votos .mv-dorsal { font-size: 260px; }
+.f-historia .mv.con-votos .mv-pila { margin-top: 50px; font-size: 58px; }
+.f-historia .mv.con-votos .mv-ape { font-size: 150px; }
+.f-historia .mv.con-votos .mv-ape.l { font-size: 124px; }
+.f-historia .mv.con-votos .mv-ape.xl { font-size: 100px; }
+.f-historia .mv.con-votos .mv-stats b { font-size: 110px; }
+.f-historia .mv-votos { margin-top: 44px; gap: 16px; }
 </style>
 {% set j = s.j %}
 {% set largo = j.apellidos|length %}
-<div class="mv">
-  <div class="mv-kick">★ Jugador de la jornada {{ s.jornada_n }}</div>
+<div class="mv {{ 'con-votos' if s.votos }}">
+  <div class="mv-kick">{% if s.aficion %}★ MVP de la afición · Jornada {{ s.jornada_n }}{% else %}★ Jugador de la jornada {{ s.jornada_n }}{% endif %}</div>
   <div class="mv-top">
     {% if j.foto %}
     <div class="mv-visual">
@@ -85,6 +118,15 @@
     <div class="{{ 'cero' if not st.valor }}"><b class="mv-num">{{ st.valor }}</b><span>{{ st.texto }}</span></div>
     {% endfor %}
   </div>
+
+  {% if s.votos %}
+  <div class="mv-votos">
+    <div class="mv-votos-k">Votación en Instagram</div>
+    {% for v in s.votos %}
+    <div class="mv-voto {{ 'gana' if v.gana }}"><div class="n">{{ v.corto }}</div><div class="b"><i style="width: {{ v.pct }}%"></i></div><div class="p mv-num">{{ v.pct }}%</div></div>
+    {% endfor %}
+  </div>
+  {% endif %}
 
   {% if j.partido %}
   {% set p = j.partido %}

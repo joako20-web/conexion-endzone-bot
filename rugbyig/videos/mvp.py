@@ -16,8 +16,17 @@ RESULTADO = {"G": "Victoria", "E": "Empate", "P": "Derrota"}
 
 def jugador_jornada(datos: dict) -> tuple[dict, int | None] | None:
     """La mejor línea de la jornada (nota máxima del XV ideal; si no hay XV, el máximo
-    anotador) y su puesto en el XV (1-15) si sale de él."""
+    anotador) y su puesto en el XV (1-15) si sale de él. Si se ha guardado el ganador
+    de la votación de Instagram (`mvp_votacion`), es ese."""
     xv = datos.get("xv_ideal") or {}
+    ganador = (datos.get("mvp_votacion") or {}).get("ganador")
+    if ganador:
+        for puesto, ln in xv.items():
+            if ln["nombre"] == ganador:
+                return ln, int(puesto)
+        for ln in (datos.get("candidatos_xv") or []) + (datos.get("anotadores") or []):
+            if ln["nombre"] == ganador:
+                return ln, None
     if xv:
         puesto = max(xv, key=lambda d: (xv[d].get("nota", 0), xv[d]["puntos"]))
         return xv[puesto], int(puesto)
@@ -73,7 +82,8 @@ def ficha(datos: dict, con_foto: bool = True) -> dict:
         "puntos": m["puntos"], "nota": round(float(m.get("nota") or 0), 1),
         "stats": stats, "partido": _partido(datos, m),
         "foto": base.foto_jugador(m.get("foto", "")) if con_foto else "",
-        "motivo": "Mejor nota del XV ideal" if puesto else "Máximo anotador",
+        "motivo": ("Elegido por la afición" if (datos.get("mvp_votacion") or {}).get("ganador")
+                   else "Mejor nota del XV ideal" if puesto else "Máximo anotador"),
     }
 
 
