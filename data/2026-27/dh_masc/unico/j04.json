@@ -4140,5 +4140,14 @@
       "contexto": "Desbanca a VRAC Entrepinares de lo más alto de la tabla.",
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR"
     }
-  ]
+  ],
+  "mvp_votacion": {
+    "ganador": "GUZMAN VINUESA GARCIA",
+    "votos": {
+      "GUZMAN VINUESA GARCIA": 74,
+      "VALENTIN BUSTOS": 15,
+      "QUIM CULUBRET GAVALDA": 1,
+      "SANTIAGO IGNACIO MANSILLA": 9
+    }
+  }
 }

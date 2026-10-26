@@ -4111,5 +4111,14 @@
       "contexto": "Firmó 3 ensayos ante Las Rozas.",
       "equipo": "STEELPHALT GETXO RUGBY"
     }
-  ]
+  ],
+  "mvp_votacion": {
+    "ganador": "UNAX GALARRAGA FERNANDEZ",
+    "votos": {
+      "MANUEL VAZQUEZ FERNANDEZ": 20,
+      "UNAX GALARRAGA FERNANDEZ": 43,
+      "BEÑAT ARICETA MAESTRO": 32,
+      "TALLA SAMB ALDASORO": 5
+    }
+  }
 }
