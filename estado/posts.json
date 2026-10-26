@@ -196,7 +196,7 @@
     "jornada": 2,
     "json": "data/2026-27/dh_fem/unico/j02.json",
     "actas_pendientes": [],
-    "jugados": 3,
+    "jugados": 4,
     "enviado": "2026-10-19T10:01:10.349768+02:00",
     "pendientes_al_enviar": false
   },
@@ -224,7 +224,9 @@
     "jornada": 4,
     "json": "data/2026-27/dh_elite/unico/j04.json",
     "actas_pendientes": [],
-    "jugados": 5
+    "jugados": 5,
+    "enviado": "2026-10-26T10:01:03.049967+01:00",
+    "pendientes_al_enviar": false
   },
   "2026-27_dh_masc_unico_j04": {
     "competicion": "dh_masc",
@@ -232,6 +234,46 @@
     "jornada": 4,
     "json": "data/2026-27/dh_masc/unico/j04.json",
     "actas_pendientes": [],
-    "jugados": 5
+    "jugados": 5,
+    "enviado": "2026-10-26T10:00:51.789447+01:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_A_j04": {
+    "competicion": "dhb_masc",
+    "grupo": "A",
+    "jornada": 4,
+    "json": "data/2026-27/dhb_masc/A/j04.json",
+    "actas_pendientes": [],
+    "jugados": 4,
+    "enviado": "2026-10-26T10:01:17.907645+01:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_B_j04": {
+    "competicion": "dhb_masc",
+    "grupo": "B",
+    "jornada": 4,
+    "json": "data/2026-27/dhb_masc/B/j04.json",
+    "actas_pendientes": [],
+    "jugados": 3,
+    "enviado": "2026-10-26T10:01:30.719002+01:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_C_j04": {
+    "competicion": "dhb_masc",
+    "grupo": "C",
+    "jornada": 4,
+    "json": "data/2026-27/dhb_masc/C/j04.json",
+    "actas_pendientes": [],
+    "jugados": 4,
+    "enviado": "2026-10-26T10:01:42.836138+01:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_masc_D_j04": {
+    "competicion": "dhb_masc",
+    "grupo": "D",
+    "jornada": 4,
+    "json": "data/2026-27/dhb_masc/D/j04.json",
+    "actas_pendientes": [],
+    "jugados": 3
   }
 }
