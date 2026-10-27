@@ -2232,6 +2232,28 @@
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/79/square_72356834716462353777.jpg"
+    },
+    {
+      "posicion": 6,
+      "equipo": "GIJON RUGBY CLUB",
+      "racha": [
+        "P",
+        "P"
+      ],
+      "pt": 0,
+      "pj": 2,
+      "pg": 0,
+      "pe": 0,
+      "pp": 2,
+      "tf": 22,
+      "tc": 166,
+      "dt": -144,
+      "ef": 4,
+      "ec": 24,
+      "de": -20,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/71/square_78747576656468373463.jpg"
     }
   ],
   "escudos": {
@@ -2239,7 +2261,8 @@
     "KALEIDO UNIVERSIDADE DE VIGO": "https://rugby.isquad.es/images/afiliacion_clubs/95/square_6168396c626c78393269.jpg",
     "REAL OVIEDO RUGBY": "https://rugby.isquad.es/images/afiliacion_clubs/11/square_38396e6b6b6b77673431.jpg",
     "CRAT SENIOR MASCULINO": "https://rugby.isquad.es/images/afiliacion_clubs/64/square_336b6473333976396a36.jpg",
-    "OS INGLESES RUGBY CLUB": "https://rugby.isquad.es/images/afiliacion_clubs/79/square_72356834716462353777.jpg"
+    "OS INGLESES RUGBY CLUB": "https://rugby.isquad.es/images/afiliacion_clubs/79/square_72356834716462353777.jpg",
+    "GIJON RUGBY CLUB": "https://rugby.isquad.es/images/afiliacion_clubs/71/square_78747576656468373463.jpg"
   },
   "temporada_anotadores": [
     {

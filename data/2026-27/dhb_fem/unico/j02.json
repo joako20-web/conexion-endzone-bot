@@ -74,6 +74,19 @@
       "ronda": ""
     },
     {
+      "id": 17882,
+      "jornada": 1,
+      "fecha": "2026-10-24T16:00:00",
+      "local": "UNIO ESPORTIVA SANTBOIANA",
+      "visitante": "COMPLUTENSE CISNEROS",
+      "puntos_local": 11,
+      "puntos_visitante": 58,
+      "campo": "ESTADI BALDIRI ALEU",
+      "estado": "jugado",
+      "grupo": null,
+      "ronda": ""
+    },
+    {
       "id": 19017,
       "jornada": 2,
       "fecha": "2026-10-17T16:30:00",
@@ -2048,6 +2061,28 @@
   "clasificacion": [
     {
       "posicion": 1,
+      "equipo": "COMPLUTENSE CISNEROS",
+      "racha": [
+        "G",
+        "G"
+      ],
+      "pt": 9,
+      "pj": 2,
+      "pg": 2,
+      "pe": 0,
+      "pp": 0,
+      "tf": 75,
+      "tc": 23,
+      "dt": 52,
+      "ef": 12,
+      "ec": 3,
+      "de": 9,
+      "bo": 1,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg"
+    },
+    {
+      "posicion": 2,
       "equipo": "GAZTEDI RT",
       "racha": [
         "G",
@@ -2069,7 +2104,7 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/61/square_683574657438696c6a6a.jpg"
     },
     {
-      "posicion": 2,
+      "posicion": 3,
       "equipo": "EIBAR RUGBY TALDEA",
       "racha": [
         "G",
@@ -2091,7 +2126,7 @@
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/72/square_3276366b6e756677656b.jpg"
     },
     {
-      "posicion": 3,
+      "posicion": 4,
       "equipo": "CLUB DE RUGBY ATLETICO PORTUENSE",
       "racha": [
         "P",
@@ -2111,27 +2146,6 @@
       "bo": 1,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/66/square_6f696b3262316c6a7938.jpg"
-    },
-    {
-      "posicion": 4,
-      "equipo": "COMPLUTENSE CISNEROS",
-      "racha": [
-        "G"
-      ],
-      "pt": 4,
-      "pj": 1,
-      "pg": 1,
-      "pe": 0,
-      "pp": 0,
-      "tf": 17,
-      "tc": 12,
-      "dt": 5,
-      "ef": 3,
-      "ec": 2,
-      "de": 1,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/9/square_6d6662357173746c7130.jpg"
     },
     {
       "posicion": 5,
@@ -2179,18 +2193,20 @@
     {
       "posicion": 7,
       "equipo": "UNIO ESPORTIVA SANTBOIANA",
-      "racha": [],
+      "racha": [
+        "P"
+      ],
       "pt": 0,
-      "pj": 0,
+      "pj": 1,
       "pg": 0,
       "pe": 0,
-      "pp": 0,
-      "tf": 0,
-      "tc": 0,
-      "dt": 0,
-      "ef": 0,
-      "ec": 0,
-      "de": 0,
+      "pp": 1,
+      "tf": 11,
+      "tc": 58,
+      "dt": -47,
+      "ef": 1,
+      "ec": 9,
+      "de": -8,
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/39/square_62397833623562636372.jpg"
@@ -2206,6 +2222,16 @@
     "UNIO ESPORTIVA SANTBOIANA": "https://rugby.isquad.es/images/afiliacion_clubs/39/square_62397833623562636372.jpg"
   },
   "temporada_anotadores": [
+    {
+      "id": 1052794,
+      "nombre": "ENARA ARRUTI SANTA CRUZ",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "pj": 2,
+      "puntos": 25,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
     {
       "id": 1050526,
       "nombre": "ALBA MARLASCA ABASOLO",
@@ -2257,6 +2283,16 @@
       "rojas": 0
     },
     {
+      "id": 1028881,
+      "nombre": "LUCIA MALAGON SANCHEZ",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "pj": 2,
+      "puntos": 10,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1050427,
       "nombre": "CAROLINA NARANJO LONDOÑO",
       "equipo": "UNIVERSITARIO BILBAO RUGBY",
@@ -2285,29 +2321,19 @@
       "ensayos": 1,
       "amarillas": 0,
       "rojas": 0
-    },
-    {
-      "id": 1027374,
-      "nombre": "KATYA PIÑERO SANTOS",
-      "equipo": "COMPLUTENSE CISNEROS",
-      "pj": 1,
-      "puntos": 5,
-      "ensayos": 1,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1051382,
-      "nombre": "ILARGI DIAZ PEREZ",
-      "equipo": "GAZTEDI RT",
-      "pj": 2,
-      "puntos": 5,
-      "ensayos": 1,
-      "amarillas": 0,
-      "rojas": 0
     }
   ],
   "temporada_ensayadores": [
+    {
+      "id": 1052794,
+      "nombre": "ENARA ARRUTI SANTA CRUZ",
+      "equipo": "COMPLUTENSE CISNEROS",
+      "pj": 2,
+      "puntos": 25,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
     {
       "id": 1025991,
       "nombre": "MARIA MARTINEZ CARRETERO",
@@ -2339,22 +2365,12 @@
       "rojas": 0
     },
     {
-      "id": 1050427,
-      "nombre": "CAROLINA NARANJO LONDOÑO",
-      "equipo": "UNIVERSITARIO BILBAO RUGBY",
+      "id": 1028881,
+      "nombre": "LUCIA MALAGON SANCHEZ",
+      "equipo": "COMPLUTENSE CISNEROS",
       "pj": 2,
       "puntos": 10,
       "ensayos": 2,
-      "amarillas": 1,
-      "rojas": 0
-    },
-    {
-      "id": 1050526,
-      "nombre": "ALBA MARLASCA ABASOLO",
-      "equipo": "UNIVERSITARIO BILBAO RUGBY",
-      "pj": 2,
-      "puntos": 23,
-      "ensayos": 1,
       "amarillas": 0,
       "rojas": 0
     }
@@ -2502,6 +2518,13 @@
     ],
     "ensayadores_t": [
       {
+        "nombre": "ENARA ARRUTI SANTA CRUZ",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 2,
+        "detalle": "25 puntos",
+        "rival": ""
+      },
+      {
         "nombre": "MARIA MARTINEZ CARRETERO",
         "equipo": "CLUB DE RUGBY ATLETICO PORTUENSE",
         "valor": 2,
@@ -2523,6 +2546,13 @@
         "rival": ""
       },
       {
+        "nombre": "LUCIA MALAGON SANCHEZ",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 2,
+        "detalle": "10 puntos",
+        "rival": ""
+      },
+      {
         "nombre": "PAULA RUIZ MADRID",
         "equipo": "CLUB DE RUGBY ATLETICO PORTUENSE",
         "valor": 2,
@@ -2535,20 +2565,6 @@
         "valor": 1,
         "detalle": "23 puntos",
         "rival": ""
-      },
-      {
-        "nombre": "LUCIA INES PETRACCARO INCHUSTA",
-        "equipo": "GAZTEDI RT",
-        "valor": 1,
-        "detalle": "7 puntos",
-        "rival": ""
-      },
-      {
-        "nombre": "ADARA ALFONSO BOUBETA",
-        "equipo": "EIBAR RUGBY TALDEA",
-        "valor": 1,
-        "detalle": "5 puntos",
-        "rival": ""
       }
     ],
     "pateadores_t": [
@@ -2557,6 +2573,13 @@
         "equipo": "UNIVERSITARIO BILBAO RUGBY",
         "valor": 18,
         "detalle": "3 transf. · 4 golpes",
+        "rival": ""
+      },
+      {
+        "nombre": "ENARA ARRUTI SANTA CRUZ",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 15,
+        "detalle": "6 transf. · 1 golpe",
         "rival": ""
       },
       {
@@ -2574,10 +2597,10 @@
         "rival": ""
       },
       {
-        "nombre": "ENARA ARRUTI SANTA CRUZ",
-        "equipo": "COMPLUTENSE CISNEROS",
-        "valor": 2,
-        "detalle": "1 transf.",
+        "nombre": "LEIRE AGUILAR GIL",
+        "equipo": "UNIO ESPORTIVA SANTBOIANA",
+        "valor": 6,
+        "detalle": "2 golpes",
         "rival": ""
       },
       {
@@ -2590,13 +2613,6 @@
       {
         "nombre": "MARIA MARTINEZ CARRETERO",
         "equipo": "CLUB DE RUGBY ATLETICO PORTUENSE",
-        "valor": 2,
-        "detalle": "1 transf.",
-        "rival": ""
-      },
-      {
-        "nombre": "MERCEDES RAMOS RODRIGUEZ",
-        "equipo": "GAZTEDI RT",
         "valor": 2,
         "detalle": "1 transf.",
         "rival": ""
@@ -2641,6 +2657,20 @@
     ],
     "banquillo": [
       {
+        "nombre": "ANA CORTES EKOBO",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
+        "nombre": "BEATRIZ RUIZ DURO",
+        "equipo": "COMPLUTENSE CISNEROS",
+        "valor": 5,
+        "detalle": "1 ensayo",
+        "rival": ""
+      },
+      {
         "nombre": "NAROA ANTOLIN LOPEZ DE ARMENTIA",
         "equipo": "GAZTEDI RT",
         "valor": 5,
@@ -2661,16 +2691,16 @@
         "unidad": "pts a favor",
         "filas": [
           {
+            "equipo": "COMPLUTENSE CISNEROS",
+            "valor": 75
+          },
+          {
             "equipo": "GAZTEDI RT",
             "valor": 57
           },
           {
             "equipo": "EIBAR RUGBY TALDEA",
             "valor": 48
-          },
-          {
-            "equipo": "UNIVERSITARIO BILBAO RUGBY",
-            "valor": 38
           }
         ]
       },
@@ -2679,12 +2709,12 @@
         "unidad": "pts en contra",
         "filas": [
           {
-            "equipo": "COMPLUTENSE CISNEROS",
-            "valor": 12
-          },
-          {
             "equipo": "GAZTEDI RT",
             "valor": 15
+          },
+          {
+            "equipo": "COMPLUTENSE CISNEROS",
+            "valor": 23
           },
           {
             "equipo": "EIBAR RUGBY TALDEA",
@@ -2697,15 +2727,15 @@
         "unidad": "ensayos",
         "filas": [
           {
+            "equipo": "COMPLUTENSE CISNEROS",
+            "valor": 12
+          },
+          {
             "equipo": "GAZTEDI RT",
             "valor": 9
           },
           {
             "equipo": "EIBAR RUGBY TALDEA",
-            "valor": 7
-          },
-          {
-            "equipo": "CLUB DE RUGBY ATLETICO PORTUENSE",
             "valor": 7
           }
         ]
@@ -2734,12 +2764,12 @@
     {
       "clave": "datos",
       "tipo": "dato",
-      "peso": 77,
-      "numero": "38",
-      "unidad": "puntos de diferencia",
-      "titular": "Exhibición de Gaztedi RT",
-      "contexto": "Gaztedi RT 38-0 PRB. La mayor diferencia de la temporada.",
-      "equipo": "GAZTEDI RT"
+      "peso": 70,
+      "numero": "9",
+      "unidad": "puntos",
+      "titular": "Cisneros, nuevo líder",
+      "contexto": "Desbanca a Eibar Rugby Taldea de lo más alto de la tabla.",
+      "equipo": "COMPLUTENSE CISNEROS"
     },
     {
       "clave": "datos",
@@ -2750,6 +2780,16 @@
       "titular": "Atletico Portuense gana en el último suspiro",
       "contexto": "Se puso por delante en el minuto 80: Atletico Portuense 25-23 Universitario Bilbao.",
       "equipo": "CLUB DE RUGBY ATLETICO PORTUENSE"
+    },
+    {
+      "clave": "datos",
+      "tipo": "dato",
+      "peso": 57,
+      "numero": "38",
+      "unidad": "puntos de diferencia",
+      "titular": "Exhibición de Gaztedi RT",
+      "contexto": "Gaztedi RT 38-0 PRB. Paliza ante PRB.",
+      "equipo": "GAZTEDI RT"
     }
   ]
 }

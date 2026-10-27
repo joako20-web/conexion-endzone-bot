@@ -2334,7 +2334,7 @@
         "P",
         "E"
       ],
-      "pt": 2,
+      "pt": 1,
       "pj": 4,
       "pg": 0,
       "pe": 1,
@@ -2351,30 +2351,6 @@
     },
     {
       "posicion": 7,
-      "equipo": "UNIVERSIDAD DE MALLORCA EL TORO RC",
-      "racha": [
-        "P",
-        "P",
-        "P",
-        "E"
-      ],
-      "pt": 2,
-      "pj": 4,
-      "pg": 0,
-      "pe": 1,
-      "pp": 3,
-      "tf": 24,
-      "tc": 148,
-      "dt": -124,
-      "ef": 3,
-      "ec": 23,
-      "de": -20,
-      "bo": 0,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/13/square_756a6772326b67696238.jpg"
-    },
-    {
-      "posicion": 8,
       "equipo": "AKRA BARBARA",
       "racha": [
         "P",
@@ -2396,6 +2372,30 @@
       "bo": 0,
       "bd": 1,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/10/square_69667367657332673771.jpg"
+    },
+    {
+      "posicion": 8,
+      "equipo": "UNIVERSIDAD DE MALLORCA EL TORO RC",
+      "racha": [
+        "P",
+        "P",
+        "P",
+        "E"
+      ],
+      "pt": 1,
+      "pj": 4,
+      "pg": 0,
+      "pe": 1,
+      "pp": 3,
+      "tf": 24,
+      "tc": 148,
+      "dt": -124,
+      "ef": 3,
+      "ec": 23,
+      "de": -20,
+      "bo": 0,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/13/square_756a6772326b67696238.jpg"
     }
   ],
   "escudos": {
