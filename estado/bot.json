@@ -1,5 +1,5 @@
 {
-  "offset": 736686959,
+  "offset": 736686970,
   "chat_id": 8634024483,
   "esperando": null,
   "teclado": 4,
@@ -76,6 +76,27 @@
       },
       "ligas": [
         "mad_1r"
+      ],
+      "favoritas": [
+        "dh_masc",
+        "dh_fem",
+        "dh_elite"
+      ]
+    },
+    "1146846131": {
+      "avisos": {
+        "semana": true,
+        "directo": true,
+        "agenda": true,
+        "arbitros": true
+      },
+      "ligas": [
+        "dh_masc",
+        "dh_fem",
+        "dh_elite",
+        "dhb_masc",
+        "dhb_fem",
+        "copa"
       ],
       "favoritas": [
         "dh_masc",
