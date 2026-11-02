@@ -277,5 +277,21 @@
     "jugados": 3,
     "enviado": "2026-10-27T10:00:32.247246+01:00",
     "pendientes_al_enviar": false
+  },
+  "2026-27_dh_fem_unico_j03": {
+    "competicion": "dh_fem",
+    "grupo": "unico",
+    "jornada": 3,
+    "json": "data/2026-27/dh_fem/unico/j03.json",
+    "actas_pendientes": [],
+    "jugados": 4
+  },
+  "2026-27_dh_masc_unico_j05": {
+    "competicion": "dh_masc",
+    "grupo": "unico",
+    "jornada": 5,
+    "json": "data/2026-27/dh_masc/unico/j05.json",
+    "actas_pendientes": [],
+    "jugados": 5
   }
 }
