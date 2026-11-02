@@ -293,5 +293,13 @@
     "json": "data/2026-27/dh_masc/unico/j05.json",
     "actas_pendientes": [],
     "jugados": 5
+  },
+  "2026-27_dh_elite_unico_j05": {
+    "competicion": "dh_elite",
+    "grupo": "unico",
+    "jornada": 5,
+    "json": "data/2026-27/dh_elite/unico/j05.json",
+    "actas_pendientes": [],
+    "jugados": 5
   }
 }

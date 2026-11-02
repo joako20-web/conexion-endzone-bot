@@ -1,5 +1,5 @@
 {
-  "offset": 736686990,
+  "offset": 736687030,
   "chat_id": 8634024483,
   "esperando": null,
   "teclado": 4,
@@ -24,6 +24,11 @@
     "dh_elite:17750",
     "dh_elite:17751",
     "dh_elite:17752",
+    "dh_elite:17753",
+    "dh_elite:17754",
+    "dh_elite:17755",
+    "dh_elite:17756",
+    "dh_elite:17757",
     "dh_fem:17823",
     "dh_fem:17825",
     "dh_fem:17826",
@@ -32,6 +37,10 @@
     "dh_fem:18945",
     "dh_fem:18946",
     "dh_fem:18947",
+    "dh_fem:18948",
+    "dh_fem:18949",
+    "dh_fem:18950",
+    "dh_fem:18951",
     "dh_masc:17643",
     "dh_masc:17644",
     "dh_masc:17645",
@@ -51,11 +60,14 @@
     "dh_masc:17659",
     "dh_masc:17660",
     "dh_masc:17661",
-    "dh_masc:17662"
+    "dh_masc:17662",
+    "dh_masc:17663",
+    "dh_masc:17664",
+    "dh_masc:17665",
+    "dh_masc:17666",
+    "dh_masc:17667"
   ],
-  "finales_vistos": {
-    "17663": 1793459001.086895
-  },
+  "finales_vistos": {},
   "solicitudes": {},
   "invitados": {
     "1146846131": "ALE (@Lafulafuente)"
