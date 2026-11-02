@@ -311,6 +311,17 @@ def _seguro_en_circulo(img, margen: float = 1.08):
         img = img.crop(caja)
     w, h = img.size
     lado = max(1, math.ceil(math.hypot(w, h) * margen))
+    try:
+        # Radio real del dibujo (píxel de tinta más lejano del centro): un escudo redondo
+        # llena el círculo en vez de quedarse pequeño por la diagonal de su caja.
+        import numpy as np
+
+        ys, xs = np.nonzero(np.asarray(tinta.crop(caja or (0, 0, w, h))))
+        if len(xs):
+            radio = float(np.hypot(xs + 0.5 - w / 2, ys + 0.5 - h / 2).max())
+            lado = max(1, min(lado, math.ceil(2 * radio * margen), 1 << 14))
+    except ImportError:
+        pass
     lienzo = Image.new("RGB", (lado, lado), (255, 255, 255))
     lienzo.paste(img, ((lado - w) // 2, (lado - h) // 2))
     return lienzo
