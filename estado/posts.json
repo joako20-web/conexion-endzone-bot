@@ -301,5 +301,29 @@
     "json": "data/2026-27/dh_elite/unico/j05.json",
     "actas_pendientes": [],
     "jugados": 5
+  },
+  "2026-27_dhb_masc_A_j05": {
+    "competicion": "dhb_masc",
+    "grupo": "A",
+    "jornada": 5,
+    "json": "data/2026-27/dhb_masc/A/j05.json",
+    "actas_pendientes": [],
+    "jugados": 4
+  },
+  "2026-27_dhb_masc_B_j05": {
+    "competicion": "dhb_masc",
+    "grupo": "B",
+    "jornada": 5,
+    "json": "data/2026-27/dhb_masc/B/j05.json",
+    "actas_pendientes": [],
+    "jugados": 4
+  },
+  "2026-27_dhb_masc_C_j05": {
+    "competicion": "dhb_masc",
+    "grupo": "C",
+    "jornada": 5,
+    "json": "data/2026-27/dhb_masc/C/j05.json",
+    "actas_pendientes": [],
+    "jugados": 3
   }
 }

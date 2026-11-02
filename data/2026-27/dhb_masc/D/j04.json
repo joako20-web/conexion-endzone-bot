@@ -176,6 +176,19 @@
       "estado": "jugado",
       "grupo": 1303,
       "ronda": ""
+    },
+    {
+      "id": 18847,
+      "jornada": 2,
+      "fecha": "2026-10-31T16:00:00",
+      "local": "GIJON RUGBY CLUB",
+      "visitante": "REAL OVIEDO RUGBY",
+      "puntos_local": 7,
+      "puntos_visitante": 79,
+      "campo": "CAMPO DE RUGBY LA LABORAL",
+      "estado": "jugado",
+      "grupo": 1303,
+      "ronda": ""
     }
   ],
   "actas_pendientes": [],
@@ -732,7 +745,7 @@
       "foto": "https://rugby.isquad.es/images/afiliacion/square_686135716d7937396668.jpg"
     },
     {
-      "nombre": "GUILLERMO VILLAGRA GARCìA",
+      "nombre": "GUILLERMO VILLAGRA GARCÃ¬A",
       "equipo": "REAL OVIEDO RUGBY",
       "dorsal": 1,
       "puntos": 0,
@@ -2141,6 +2154,30 @@
     },
     {
       "posicion": 2,
+      "equipo": "REAL OVIEDO RUGBY",
+      "racha": [
+        "G",
+        "G",
+        "G",
+        "P"
+      ],
+      "pt": 15,
+      "pj": 4,
+      "pg": 3,
+      "pe": 0,
+      "pp": 1,
+      "tf": 223,
+      "tc": 59,
+      "dt": 164,
+      "ef": 36,
+      "ec": 9,
+      "de": 27,
+      "bo": 3,
+      "bd": 0,
+      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/11/square_38396e6b6b6b77673431.jpg"
+    },
+    {
+      "posicion": 3,
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
       "racha": [
         "P",
@@ -2162,29 +2199,6 @@
       "bo": 2,
       "bd": 1,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/95/square_6168396c626c78393269.jpg"
-    },
-    {
-      "posicion": 3,
-      "equipo": "REAL OVIEDO RUGBY",
-      "racha": [
-        "G",
-        "G",
-        "P"
-      ],
-      "pt": 10,
-      "pj": 3,
-      "pg": 2,
-      "pe": 0,
-      "pp": 1,
-      "tf": 144,
-      "tc": 52,
-      "dt": 92,
-      "ef": 23,
-      "ec": 8,
-      "de": 15,
-      "bo": 2,
-      "bd": 0,
-      "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/11/square_38396e6b6b6b77673431.jpg"
     },
     {
       "posicion": 4,
@@ -2238,19 +2252,20 @@
       "equipo": "GIJON RUGBY CLUB",
       "racha": [
         "P",
+        "P",
         "P"
       ],
       "pt": 0,
-      "pj": 2,
+      "pj": 3,
       "pg": 0,
       "pe": 0,
-      "pp": 2,
-      "tf": 22,
-      "tc": 166,
-      "dt": -144,
-      "ef": 4,
-      "ec": 24,
-      "de": -20,
+      "pp": 3,
+      "tf": 29,
+      "tc": 245,
+      "dt": -216,
+      "ef": 5,
+      "ec": 37,
+      "de": -32,
       "bo": 0,
       "bd": 0,
       "escudo": "https://rugby.isquad.es/images/afiliacion_clubs/71/square_78747576656468373463.jpg"
@@ -2286,6 +2301,26 @@
       "rojas": 0
     },
     {
+      "id": 1023543,
+      "nombre": "JUAN GALAN VALLINA",
+      "equipo": "REAL OVIEDO RUGBY",
+      "pj": 4,
+      "puntos": 35,
+      "ensayos": 7,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1023160,
+      "nombre": "JOAQUIN MORO MARTINEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "pj": 3,
+      "puntos": 33,
+      "ensayos": 2,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1026963,
       "nombre": "ALVARO PEREZ LOPEZ",
       "equipo": "C.R. EL SALVADOR DHB",
@@ -2296,12 +2331,12 @@
       "rojas": 0
     },
     {
-      "id": 1023543,
-      "nombre": "JUAN GALAN VALLINA",
+      "id": 1023538,
+      "nombre": "ARTURO MENDEZ SANCHEZ",
       "equipo": "REAL OVIEDO RUGBY",
       "pj": 3,
-      "puntos": 30,
-      "ensayos": 6,
+      "puntos": 25,
+      "ensayos": 5,
       "amarillas": 0,
       "rojas": 0
     },
@@ -2316,10 +2351,20 @@
       "rojas": 0
     },
     {
-      "id": 1023538,
-      "nombre": "ARTURO MENDEZ SANCHEZ",
+      "id": 1023239,
+      "nombre": "JENARO GUTIERREZ",
       "equipo": "REAL OVIEDO RUGBY",
-      "pj": 2,
+      "pj": 3,
+      "puntos": 23,
+      "ensayos": 1,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
+      "id": 1023656,
+      "nombre": "VICTOR VILLENA GOMEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "pj": 3,
       "puntos": 20,
       "ensayos": 4,
       "amarillas": 0,
@@ -2332,36 +2377,6 @@
       "pj": 3,
       "puntos": 20,
       "ensayos": 4,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1024331,
-      "nombre": "DAVID BARRIOS LOPEZ",
-      "equipo": "C.R. EL SALVADOR DHB",
-      "pj": 3,
-      "puntos": 20,
-      "ensayos": 4,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1029432,
-      "nombre": "ENRIQUE IGNACIO GARCIA GALAZ",
-      "equipo": "C.R. EL SALVADOR DHB",
-      "pj": 4,
-      "puntos": 20,
-      "ensayos": 4,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1060949,
-      "nombre": "ANGEL SANCHEZ FERNANDEZ",
-      "equipo": "CRAT SENIOR MASCULINO",
-      "pj": 3,
-      "puntos": 19,
-      "ensayos": 2,
       "amarillas": 0,
       "rojas": 0
     }
@@ -2371,9 +2386,9 @@
       "id": 1023543,
       "nombre": "JUAN GALAN VALLINA",
       "equipo": "REAL OVIEDO RUGBY",
-      "pj": 3,
-      "puntos": 30,
-      "ensayos": 6,
+      "pj": 4,
+      "puntos": 35,
+      "ensayos": 7,
       "amarillas": 0,
       "rojas": 0
     },
@@ -2388,6 +2403,16 @@
       "rojas": 0
     },
     {
+      "id": 1023538,
+      "nombre": "ARTURO MENDEZ SANCHEZ",
+      "equipo": "REAL OVIEDO RUGBY",
+      "pj": 3,
+      "puntos": 25,
+      "ensayos": 5,
+      "amarillas": 0,
+      "rojas": 0
+    },
+    {
       "id": 1034485,
       "nombre": "MARIO RAMOS GUTIERREZ",
       "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
@@ -2398,19 +2423,9 @@
       "rojas": 0
     },
     {
-      "id": 1023538,
-      "nombre": "ARTURO MENDEZ SANCHEZ",
+      "id": 1023656,
+      "nombre": "VICTOR VILLENA GOMEZ",
       "equipo": "REAL OVIEDO RUGBY",
-      "pj": 2,
-      "puntos": 20,
-      "ensayos": 4,
-      "amarillas": 0,
-      "rojas": 0
-    },
-    {
-      "id": 1024325,
-      "nombre": "JULIO SANZ GIL-CEPEDA",
-      "equipo": "C.R. EL SALVADOR DHB",
       "pj": 3,
       "puntos": 20,
       "ensayos": 4,
@@ -2556,8 +2571,8 @@
       {
         "nombre": "JUAN GALAN VALLINA",
         "equipo": "REAL OVIEDO RUGBY",
-        "valor": 6,
-        "detalle": "30 puntos",
+        "valor": 7,
+        "detalle": "35 puntos",
         "rival": ""
       },
       {
@@ -2568,17 +2583,17 @@
         "rival": ""
       },
       {
-        "nombre": "MARIO RAMOS GUTIERREZ",
-        "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
+        "nombre": "ARTURO MENDEZ SANCHEZ",
+        "equipo": "REAL OVIEDO RUGBY",
         "valor": 5,
         "detalle": "25 puntos",
         "rival": ""
       },
       {
-        "nombre": "ARTURO MENDEZ SANCHEZ",
-        "equipo": "REAL OVIEDO RUGBY",
-        "valor": 4,
-        "detalle": "20 puntos",
+        "nombre": "MARIO RAMOS GUTIERREZ",
+        "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
+        "valor": 5,
+        "detalle": "25 puntos",
         "rival": ""
       },
       {
@@ -2619,6 +2634,13 @@
         "rival": ""
       },
       {
+        "nombre": "JOAQUIN MORO MARTINEZ",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 23,
+        "detalle": "10 transf. · 1 golpe",
+        "rival": ""
+      },
+      {
         "nombre": "JENARO GUTIERREZ",
         "equipo": "REAL OVIEDO RUGBY",
         "valor": 18,
@@ -2630,13 +2652,6 @@
         "equipo": "C.R. EL SALVADOR DHB",
         "valor": 12,
         "detalle": "6 transf.",
-        "rival": ""
-      },
-      {
-        "nombre": "JOAQUIN MORO MARTINEZ",
-        "equipo": "REAL OVIEDO RUGBY",
-        "valor": 11,
-        "detalle": "4 transf. · 1 golpe",
         "rival": ""
       },
       {
@@ -2660,6 +2675,13 @@
         "equipo": "CRAT SENIOR MASCULINO",
         "valor": 2,
         "detalle": "1 amarilla · 1 roja",
+        "rival": ""
+      },
+      {
+        "nombre": "GUILLERMO YOLDI MARTINEZ",
+        "equipo": "REAL OVIEDO RUGBY",
+        "valor": 2,
+        "detalle": "2 amarillas",
         "rival": ""
       },
       {
@@ -2693,13 +2715,6 @@
       {
         "nombre": "BREIXO RIVAS FERNANDEZ",
         "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-        "valor": 1,
-        "detalle": "1 amarilla",
-        "rival": ""
-      },
-      {
-        "nombre": "CARLOS BUSTAMANTE NAVARRO",
-        "equipo": "CRAT SENIOR MASCULINO",
         "valor": 1,
         "detalle": "1 amarilla",
         "rival": ""
@@ -2766,12 +2781,12 @@
             "valor": 312
           },
           {
-            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-            "valor": 159
+            "equipo": "REAL OVIEDO RUGBY",
+            "valor": 223
           },
           {
-            "equipo": "REAL OVIEDO RUGBY",
-            "valor": 144
+            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
+            "valor": 159
           }
         ]
       },
@@ -2785,7 +2800,7 @@
           },
           {
             "equipo": "REAL OVIEDO RUGBY",
-            "valor": 52
+            "valor": 59
           },
           {
             "equipo": "CRAT SENIOR MASCULINO",
@@ -2802,11 +2817,11 @@
             "valor": 46
           },
           {
-            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
-            "valor": 23
+            "equipo": "REAL OVIEDO RUGBY",
+            "valor": 36
           },
           {
-            "equipo": "REAL OVIEDO RUGBY",
+            "equipo": "KALEIDO UNIVERSIDADE DE VIGO",
             "valor": 23
           }
         ]
@@ -2824,7 +2839,7 @@
             "valor": 4
           },
           {
-            "equipo": "OS INGLESES RUGBY CLUB",
+            "equipo": "REAL OVIEDO RUGBY",
             "valor": 3
           }
         ]
