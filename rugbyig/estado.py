@@ -5,13 +5,16 @@ El workflow de GitHub Actions lo lee al empezar y lo commitea al acabar.
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from rugbyig.pipeline import RAIZ
 
 MADRID = ZoneInfo("Europe/Madrid")
-ESTADO = RAIZ / "estado"
+# RUGBYIG_ESTADO permite una segunda instancia (laboratorio) con su propio estado,
+# sin tocar el de producción. Ruta relativa = respecto a la raíz del repo.
+ESTADO = RAIZ / os.environ.get("RUGBYIG_ESTADO", "estado")
 FOTOS = RAIZ / "data" / "fotos"
 
 
@@ -21,7 +24,7 @@ def _leer(nombre: str, defecto):
 
 
 def _escribir(nombre: str, datos) -> None:
-    ESTADO.mkdir(exist_ok=True)
+    ESTADO.mkdir(parents=True, exist_ok=True)
     (ESTADO / nombre).write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
