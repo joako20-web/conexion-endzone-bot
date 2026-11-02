@@ -101,7 +101,12 @@ class ISquad:
     def acta(self, id_partido: int) -> Acta:
         # Un acta de partido finalizado ya no cambia: se cachea.
         raw = self._get("acta.php", {"id_partido": id_partido}, cachear=True)
-        return parsers.acta(raw, id_partido)
+        acta = parsers.acta(raw, id_partido)
+        if not acta.local and self.usar_cache:
+            # Página sin alineaciones: no la dejamos cacheada para reintentarla luego.
+            clave = hashlib.sha1(f"{BASE}/acta.php?{sorted({'id_partido': id_partido}.items())}".encode()).hexdigest()
+            (self.cache_dir / f"{clave}.html").unlink(missing_ok=True)
+        return acta
 
 
 _COMPARTIDO: ISquad | None = None

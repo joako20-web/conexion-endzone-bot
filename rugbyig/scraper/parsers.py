@@ -135,7 +135,11 @@ def acta(raw: bytes, id_partido: int) -> Acta:
             )
 
     def alineacion(div) -> tuple[str, list[Jugador]]:
-        img = div.find("thead").find("img")
+        # Acta aún sin rellenar (o rehecha por la federación): sin cabecera ni alineación.
+        if div is None or div.find("tbody") is None:
+            return "", []
+        thead = div.find("thead")
+        img = thead.find("img") if thead else None
         equipo = limpiar(img.get("alt", "")) if img else ""
         jugadores = []
         for tr in div.find("tbody").find_all("tr"):

@@ -83,3 +83,8 @@ def test_xv_ideal(comp):
 
 def test_ids_partidos_jornada():
     assert P.ids_partidos_jornada(leer("jornada_2.html")) == [17648, 17649, 17650, 17651, 17652]
+
+
+def test_acta_sin_alineaciones_no_rompe():
+    a = P.acta(b"<html><body><div class='local'></div></body></html>", 1)
+    assert a.local == "" and a.visitante == "" and a.eventos == []
