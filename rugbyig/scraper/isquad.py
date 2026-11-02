@@ -99,14 +99,17 @@ class ISquad:
         return self._get(url, {}, cachear=True)
 
     def acta(self, id_partido: int) -> Acta:
-        # Un acta de partido finalizado ya no cambia: se cachea.
-        raw = self._get("acta.php", {"id_partido": id_partido}, cachear=True)
-        acta = parsers.acta(raw, id_partido)
-        if not acta.local and self.usar_cache:
-            # Página sin alineaciones: no la dejamos cacheada para reintentarla luego.
-            clave = hashlib.sha1(f"{BASE}/acta.php?{sorted({'id_partido': id_partido}.items())}".encode()).hexdigest()
+        # La página acta.php se pinta con JavaScript: los datos vienen del proxy JSON.
+        # Un acta de partido finalizado ya no cambia: se cachea (si trae datos).
+        params = {"recurso": "acta", "id_partido": id_partido}
+        raw = self._get("json/isquad_proxy.php", params, cachear=True)
+        try:
+            return parsers.acta_json(raw, id_partido)
+        except (ValueError, KeyError):
+            # Respuesta sin datos: no la dejamos cacheada para reintentarla luego.
+            clave = hashlib.sha1(f"{BASE}/json/isquad_proxy.php?{sorted(params.items())}".encode()).hexdigest()
             (self.cache_dir / f"{clave}.html").unlink(missing_ok=True)
-        return acta
+            raise
 
 
 _COMPARTIDO: ISquad | None = None

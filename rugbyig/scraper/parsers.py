@@ -8,6 +8,7 @@ from urllib.parse import parse_qs, urlparse
 from bs4 import BeautifulSoup
 
 from rugbyig.models import (
+    PUNTOS,
     Acta,
     Competicion,
     Evento,
@@ -160,6 +161,50 @@ def acta(raw: bytes, id_partido: int) -> Acta:
     local, al_local = alineacion(s.find("div", class_="local"))
     visitante, al_vis = alineacion(s.find("div", class_="visitante"))
     return Acta(id_partido, local, visitante, eventos, al_local, al_vis)
+
+
+def acta_json(raw: bytes, id_partido: int) -> Acta:
+    """Acta desde el JSON del proxy de iSquad (la página HTML ahora se pinta con JavaScript)."""
+    import json
+
+    resp = json.loads(raw)
+    if not resp.get("status"):
+        raise ValueError(f"acta {id_partido}: {resp.get('message', 'respuesta sin datos')}")
+    d = resp["data"]
+    part = d["partido"]
+    local, visitante = limpiar(part["local"]["nombre"]), limpiar(part["visitante"]["nombre"])
+    nombres = {int(k): limpiar(v.get("nombre", "")) for k, v in (d.get("equipos") or {}).items()}
+    nombres[int(part["local"]["id_equipo"])] = local
+    nombres[int(part["visitante"]["id_equipo"])] = visitante
+
+    eventos: list[Evento] = []
+    marcador = {local: 0, visitante: 0}
+    for e in d.get("eventos") or []:
+        tipo = tipo_evento(e["tipo_evento"])
+        equipo = nombres.get(int(e["id_equipo"]), "")
+        if tipo in PUNTOS and equipo in marcador:
+            marcador[equipo] += PUNTOS[tipo]
+        eventos.append(
+            Evento(
+                minuto=_int(str(e.get("minuto", "")).split(":")[0]),
+                tipo=tipo,
+                tipo_original=limpiar(e["tipo_evento"]),
+                marcador=(marcador[local], marcador[visitante]),
+                equipo=equipo,
+                jugador=limpiar(e.get("jugador") or ""),
+            )
+        )
+
+    def foto(url: str) -> str:
+        return "https:" + url if url.startswith("//") else (url or "")
+
+    al: dict[str, list[Jugador]] = {local: [], visitante: []}
+    for j in d.get("alineaciones") or []:
+        equipo = nombres.get(int(j["id_equipo"]), "")
+        if equipo in al and j.get("dorsal") is not None and int(j["dorsal"]) > 0:  # dorsal 0 = fuera de la convocatoria
+            al[equipo].append(Jugador(limpiar(j["nombre_jugador"] or ""), int(j["dorsal"]), _int(str(j.get("goles", 0))), foto(j.get("url_foto") or "")))
+    eventos.reverse()  # como la página antigua: el más reciente primero
+    return Acta(id_partido, local, visitante, eventos, al[local], al[visitante])
 
 
 def clasificacion(raw: bytes) -> list[FilaClasificacion]:

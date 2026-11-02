@@ -88,3 +88,19 @@ def test_ids_partidos_jornada():
 def test_acta_sin_alineaciones_no_rompe():
     a = P.acta(b"<html><body><div class='local'></div></body></html>", 1)
     assert a.local == "" and a.visitante == "" and a.eventos == []
+
+
+def test_acta_json_equivale_al_html():
+    fx = Path(__file__).parent / "fixtures"
+    h = P.acta((fx / "acta_17643.html").read_bytes(), 17643)
+    j = P.acta_json((fx / "acta_17643.json").read_bytes(), 17643)
+    clave = lambda e: (e.minuto, e.tipo, e.equipo, e.jugador, e.marcador)
+    assert (h.local, h.visitante) == (j.local, j.visitante)
+    assert sorted(map(clave, h.eventos), key=str) == sorted(map(clave, j.eventos), key=str)
+    assert h.alineacion_local == j.alineacion_local and h.alineacion_visitante == j.alineacion_visitante
+    assert j.marcador_por_eventos() == (40, 24)
+
+
+def test_acta_json_sin_datos_falla_claro():
+    with pytest.raises(ValueError):
+        P.acta_json(b'{"status":false,"message":"id_partido requerido"}', 1)
