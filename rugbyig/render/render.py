@@ -587,7 +587,12 @@ def renderizar_slides(
                                     "destino": str(destino), "problemas": problemas}, ensure_ascii=False) + "\n")
         for sec, s in zip(pagina.query_selector_all("section.slide"), slides):
             jpg = destino / f"{len(generados) + 1:02d}_{s['clave']}.jpg"
-            sec.screenshot(path=str(jpg), type="jpeg", quality=95)
+            # PNG -> JPEG sin submuestreo de color: los bordes de alto contraste (círculos de
+            # los escudos sobre fondo oscuro) no se rompen en bloques como con el 4:2:0 de Chromium.
+            from PIL import Image
+
+            Image.open(io.BytesIO(sec.screenshot(type="png"))).convert("RGB").save(
+                jpg, "JPEG", quality=97, subsampling=0, optimize=True)
             generados.append(jpg)
     finally:
         pagina.close()
