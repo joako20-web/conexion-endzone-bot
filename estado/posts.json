@@ -284,7 +284,9 @@
     "jornada": 3,
     "json": "data/2026-27/dh_fem/unico/j03.json",
     "actas_pendientes": [],
-    "jugados": 4
+    "jugados": 4,
+    "enviado": "2026-11-03T10:01:29.389992+01:00",
+    "pendientes_al_enviar": false
   },
   "2026-27_dh_masc_unico_j05": {
     "competicion": "dh_masc",
@@ -292,7 +294,9 @@
     "jornada": 5,
     "json": "data/2026-27/dh_masc/unico/j05.json",
     "actas_pendientes": [],
-    "jugados": 5
+    "jugados": 5,
+    "enviado": "2026-11-03T10:01:14.755380+01:00",
+    "pendientes_al_enviar": false
   },
   "2026-27_dh_elite_unico_j05": {
     "competicion": "dh_elite",
@@ -300,7 +304,9 @@
     "jornada": 5,
     "json": "data/2026-27/dh_elite/unico/j05.json",
     "actas_pendientes": [],
-    "jugados": 5
+    "jugados": 5,
+    "enviado": "2026-11-03T10:01:45.274244+01:00",
+    "pendientes_al_enviar": false
   },
   "2026-27_dhb_masc_A_j05": {
     "competicion": "dhb_masc",
@@ -308,7 +314,9 @@
     "jornada": 5,
     "json": "data/2026-27/dhb_masc/A/j05.json",
     "actas_pendientes": [],
-    "jugados": 4
+    "jugados": 4,
+    "enviado": "2026-11-03T10:01:59.467805+01:00",
+    "pendientes_al_enviar": false
   },
   "2026-27_dhb_masc_B_j05": {
     "competicion": "dhb_masc",
@@ -316,7 +324,9 @@
     "jornada": 5,
     "json": "data/2026-27/dhb_masc/B/j05.json",
     "actas_pendientes": [],
-    "jugados": 4
+    "jugados": 4,
+    "enviado": "2026-11-03T10:02:20.793561+01:00",
+    "pendientes_al_enviar": false
   },
   "2026-27_dhb_masc_C_j05": {
     "competicion": "dhb_masc",
@@ -324,6 +334,18 @@
     "jornada": 5,
     "json": "data/2026-27/dhb_masc/C/j05.json",
     "actas_pendientes": [],
-    "jugados": 3
+    "jugados": 3,
+    "enviado": "2026-11-03T10:02:35.053127+01:00",
+    "pendientes_al_enviar": false
+  },
+  "2026-27_dhb_fem_unico_j03": {
+    "competicion": "dhb_fem",
+    "grupo": "unico",
+    "jornada": 3,
+    "json": "data/2026-27/dhb_fem/unico/j03.json",
+    "actas_pendientes": [],
+    "jugados": 3,
+    "enviado": "2026-11-03T10:02:52.141259+01:00",
+    "pendientes_al_enviar": false
   }
 }
