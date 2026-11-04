@@ -347,5 +347,13 @@
     "jugados": 3,
     "enviado": "2026-11-03T10:02:52.141259+01:00",
     "pendientes_al_enviar": false
+  },
+  "2026-27_m23_A_j05": {
+    "competicion": "m23",
+    "grupo": "A",
+    "jornada": 5,
+    "json": "data/2026-27/m23/A/j05.json",
+    "actas_pendientes": [],
+    "jugados": 5
   }
 }
