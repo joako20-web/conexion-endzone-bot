@@ -3319,7 +3319,6 @@
       "equipo": "RECOLETAS SALUD CAJA RURAL BURGOS APAREJADORES",
       "racha": [
         "G",
-        "G",
         "P",
         "G",
         "G"
@@ -3343,7 +3342,6 @@
       "posicion": 2,
       "equipo": "AMPO ORDIZIA",
       "racha": [
-        "P",
         "G",
         "G",
         "G",
@@ -3370,7 +3368,6 @@
       "racha": [
         "G",
         "G",
-        "G",
         "P",
         "G"
       ],
@@ -3393,7 +3390,6 @@
       "posicion": 4,
       "equipo": "VULCANIZADOS ALVAREZ EL SALVADOR",
       "racha": [
-        "P",
         "G",
         "G",
         "G",
@@ -3418,11 +3414,11 @@
       "posicion": 5,
       "equipo": "SILICIUS ALCOBENDAS RUGBY",
       "racha": [
+        "P",
+        "P",
+        "P",
         "G",
-        "P",
-        "P",
-        "P",
-        "G"
+        "E"
       ],
       "pt": 11,
       "pj": 5,
@@ -3443,7 +3439,6 @@
       "posicion": 6,
       "equipo": "UNIO ESPORTIVA SANTBOIANA",
       "racha": [
-        "G",
         "P",
         "E",
         "P",
@@ -3468,7 +3463,6 @@
       "posicion": 7,
       "equipo": "INVERSUS LICEO FRANCES",
       "racha": [
-        "G",
         "P",
         "E",
         "G",
@@ -3494,7 +3488,6 @@
       "equipo": "COMPLUTENSE CISNEROS",
       "racha": [
         "P",
-        "P",
         "G",
         "G",
         "P"
@@ -3518,7 +3511,6 @@
       "posicion": 9,
       "equipo": "HUESITOS LA VILA RUGBY CLUB",
       "racha": [
-        "P",
         "G",
         "P",
         "P",
@@ -3547,7 +3539,7 @@
         "P",
         "P",
         "P",
-        "P"
+        "E"
       ],
       "pt": 1,
       "pj": 5,
@@ -3642,7 +3634,7 @@
       "id": 1044000,
       "nombre": "HUGO DOUGLAS VENTOSA",
       "equipo": "CRC POZUELO RUGBY",
-      "pj": 5,
+      "pj": 6,
       "puntos": 31,
       "ensayos": 0,
       "amarillas": 0,
